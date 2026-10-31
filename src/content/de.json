@@ -9,7 +9,11 @@
     "freebieButton": "Raum 1 holen",
     "pfeil": "→"
   },
-  "laufband": ["[LAUFBAND-TEXT EINS]", "[LAUFBAND-TEXT ZWEI]", "[LAUFBAND-TEXT DREI]"],
+  "laufband": [
+    "[LAUFBAND-TEXT EINS]",
+    "[LAUFBAND-TEXT ZWEI]",
+    "[LAUFBAND-TEXT DREI]"
+  ],
   "freebie": {
     "seo": {
       "titel": "[SEO-Titel Freebie] | Identity Upgrade",
@@ -25,9 +29,18 @@
       "label": "[Label Wiedererkennen]",
       "titel": "[Überschrift zum] *[Wiedererkennen.]*",
       "karten": [
-        { "label": "Geld", "text": "[Kurzer Text zur typischen Situation rund ums Geld.]" },
-        { "label": "Beziehungen", "text": "[Kurzer Text zur typischen Situation in Beziehungen.]" },
-        { "label": "Körper", "text": "[Kurzer Text zur typischen Situation mit dem Körper.]" }
+        {
+          "label": "Geld",
+          "text": "[Kurzer Text zur typischen Situation rund ums Geld.]"
+        },
+        {
+          "label": "Beziehungen",
+          "text": "[Kurzer Text zur typischen Situation in Beziehungen.]"
+        },
+        {
+          "label": "Körper",
+          "text": "[Kurzer Text zur typischen Situation mit dem Körper.]"
+        }
       ]
     },
     "inhalt": {
@@ -47,7 +60,12 @@
     "selbstcheck": {
       "label": "Selbstcheck",
       "titel": "Erkennst du dich *wieder?*",
-      "aussagen": ["[Aussage eins]", "[Aussage zwei]", "[Aussage drei]", "[Aussage vier]"],
+      "aussagen": [
+        "[Aussage eins]",
+        "[Aussage zwei]",
+        "[Aussage drei]",
+        "[Aussage vier]"
+      ],
       "button": "Raum 1 holen"
     },
     "anmeldung": {
@@ -77,9 +95,18 @@
       "label": "[Label Wiedererkennen]",
       "titel": "[Überschrift zum] *[Wiedererkennen.]*",
       "karten": [
-        { "label": "Geld", "text": "[Kurzer Text.]" },
-        { "label": "Beziehungen", "text": "[Kurzer Text.]" },
-        { "label": "Körper", "text": "[Kurzer Text.]" }
+        {
+          "label": "Geld",
+          "text": "[Kurzer Text.]"
+        },
+        {
+          "label": "Beziehungen",
+          "text": "[Kurzer Text.]"
+        },
+        {
+          "label": "Körper",
+          "text": "[Kurzer Text.]"
+        }
       ]
     },
     "haus": {
@@ -98,9 +125,21 @@
       ],
       "raumWort": "Raum",
       "stockwerke": [
-        { "name": "Stockwerk 1", "status": "In diesem Buch · 8 Räume · 48 Spuren", "offen": true },
-        { "name": "Stockwerk 2", "status": "Verschlossen · folgt", "offen": false },
-        { "name": "Stockwerk 3", "status": "Verschlossen · folgt", "offen": false }
+        {
+          "name": "Stockwerk 1",
+          "status": "In diesem Buch · 8 Räume · 48 Spuren",
+          "offen": true
+        },
+        {
+          "name": "Stockwerk 2",
+          "status": "Verschlossen · folgt",
+          "offen": false
+        },
+        {
+          "name": "Stockwerk 3",
+          "status": "Verschlossen · folgt",
+          "offen": false
+        }
       ]
     },
     "ueber": {
@@ -110,7 +149,11 @@
       "label": "Einführungspreis",
       "produkt": "Escape Self-Sabotage · Stockwerk 1",
       "danach": "ab 1. Januar 2027:",
-      "punkte": ["[Leistungspunkt eins]", "[Leistungspunkt zwei]", "[Leistungspunkt drei]"],
+      "punkte": [
+        "[Leistungspunkt eins]",
+        "[Leistungspunkt zwei]",
+        "[Leistungspunkt drei]"
+      ],
       "button": "Jetzt kaufen",
       "sicher": "Sichere Zahlung über Digistore24",
       "format": "E-Book als PDF"
@@ -124,10 +167,22 @@
       "label": "Häufige Fragen",
       "titel": "Gut zu *wissen.*",
       "fragen": [
-        { "f": "In welchem Format erhalte ich das Buch?", "a": "[Antwort Format]" },
-        { "f": "Ersetzt das Buch eine Therapie?", "a": "[Antwort: Das Buch dient der Selbstreflexion und ersetzt keine ärztliche oder psychotherapeutische Behandlung.]" },
-        { "f": "Wann kommen Stockwerk 2 und 3?", "a": "[Antwort Fortsetzung]" },
-        { "f": "[Weitere Frage]", "a": "[Antwort]" }
+        {
+          "f": "In welchem Format erhalte ich das Buch?",
+          "a": "[Antwort Format]"
+        },
+        {
+          "f": "Ersetzt das Buch eine Therapie?",
+          "a": "[Antwort: Das Buch dient der Selbstreflexion und ersetzt keine ärztliche oder psychotherapeutische Behandlung.]"
+        },
+        {
+          "f": "Wann kommen Stockwerk 2 und 3?",
+          "a": "[Antwort Fortsetzung]"
+        },
+        {
+          "f": "[Weitere Frage]",
+          "a": "[Antwort]"
+        }
       ]
     }
   },
@@ -137,13 +192,29 @@
       "titel": "[Kein normales Buch. Ein] *[Escape Room.]*",
       "text": "[Ein bis zwei Sätze, die das Prinzip erklären.]",
       "stationen": [
-        { "titel": "Das Haus", "text": "[Kurzer Satz]" },
-        { "titel": "Der Lift", "text": "[Kurzer Satz]" },
-        { "titel": "Stockwerke", "text": "[Kurzer Satz]" },
-        { "titel": "Räume und Spuren", "text": "[Kurzer Satz]" },
-        { "titel": "Fundstücke", "text": "[Kurzer Satz]" }
+        {
+          "titel": "Das Haus",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Der Lift",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Stockwerke",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Räume",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Spuren",
+          "text": "[Kurzer Satz]"
+        }
       ],
-      "notiz": "[Handschrift-Notiz]"
+      "notiz": "[Handschrift-Notiz]",
+      "_hinweis": "Optional sechste Station: {\"titel\": \"Fundstücke\", \"text\": \"...\"} anhängen."
     },
     "haltung": {
       "label": "[Label Haltungs-Abschnitt]",
@@ -154,12 +225,13 @@
       "label": "Über mich",
       "titel": "[Kurze Überschrift zu] *[dir.]*",
       "text": "[Deine Geschichte in drei bis vier Sätzen. Ohne Foto.]",
-      "signatur": "Heike",
-      "kreis": "Muster­erkennung"
+      "signatur": "Heike"
     }
   },
   "danke": {
-    "seo": { "titel": "Fast geschafft | Identity Upgrade" },
+    "seo": {
+      "titel": "Fast geschafft | Identity Upgrade"
+    },
     "label": "Fast geschafft",
     "titel": "Bitte bestätige deine *E-Mail-Adresse.*",
     "text": "[Wir haben dir eine E-Mail geschickt. Klicke auf den Link darin – danach kommt Raum 1 direkt in dein Postfach.]",
@@ -168,7 +240,9 @@
     "angebotText": "[Ein bis zwei Sätze zum E-Book.]"
   },
   "privacy": {
-    "seo": { "titel": "Impressum & Datenschutz | Identity Upgrade" },
+    "seo": {
+      "titel": "Impressum & Datenschutz | Identity Upgrade"
+    },
     "titel": "Impressum & *Datenschutz*",
     "impressumTitel": "Impressum",
     "anbieterLabel": "Anbieter",
@@ -177,13 +251,34 @@
     "vertretenLabel": "Vertreten durch",
     "datenschutzTitel": "Datenschutzerklärung",
     "abschnitte": [
-      { "t": "Verantwortliche Stelle", "x": "[Entwurf folgt]" },
-      { "t": "Hosting und Auslieferung (Cloudflare)", "x": "[Entwurf folgt]" },
-      { "t": "Anmeldung zum Freebie und E-Mails (Kit)", "x": "[Entwurf folgt]" },
-      { "t": "Kauf des E-Books (Digistore24)", "x": "[Entwurf folgt]" },
-      { "t": "Besucherstatistik ohne Cookies (Cloudflare Web Analytics)", "x": "[Entwurf folgt]" },
-      { "t": "Herkunft der Anmeldung", "x": "[Entwurf folgt]" },
-      { "t": "Deine Rechte", "x": "[Entwurf folgt]" }
+      {
+        "t": "Verantwortliche Stelle",
+        "x": "[Entwurf folgt]"
+      },
+      {
+        "t": "Hosting und Auslieferung (Cloudflare)",
+        "x": "[Entwurf folgt]"
+      },
+      {
+        "t": "Anmeldung zum Freebie und E-Mails (Kit)",
+        "x": "[Entwurf folgt]"
+      },
+      {
+        "t": "Kauf des E-Books (Digistore24)",
+        "x": "[Entwurf folgt]"
+      },
+      {
+        "t": "Besucherstatistik ohne Cookies (Cloudflare Web Analytics)",
+        "x": "[Entwurf folgt]"
+      },
+      {
+        "t": "Herkunft der Anmeldung",
+        "x": "[Entwurf folgt]"
+      },
+      {
+        "t": "Deine Rechte",
+        "x": "[Entwurf folgt]"
+      }
     ]
   }
 }

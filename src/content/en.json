@@ -9,7 +9,11 @@
     "freebieButton": "Get Room 1",
     "pfeil": "→"
   },
-  "laufband": ["[TICKER TEXT ONE]", "[TICKER TEXT TWO]", "[TICKER TEXT THREE]"],
+  "laufband": [
+    "[TICKER TEXT ONE]",
+    "[TICKER TEXT TWO]",
+    "[TICKER TEXT THREE]"
+  ],
   "freebie": {
     "seo": {
       "titel": "[SEO title freebie] | Identity Upgrade",
@@ -25,9 +29,18 @@
       "label": "[Label recognition]",
       "titel": "[Headline about] *[recognition.]*",
       "karten": [
-        { "label": "Money", "text": "[Short text about a typical money situation.]" },
-        { "label": "Relationships", "text": "[Short text about a typical relationship situation.]" },
-        { "label": "Body", "text": "[Short text about a typical body situation.]" }
+        {
+          "label": "Money",
+          "text": "[Short text about a typical money situation.]"
+        },
+        {
+          "label": "Relationships",
+          "text": "[Short text about a typical relationship situation.]"
+        },
+        {
+          "label": "Body",
+          "text": "[Short text about a typical body situation.]"
+        }
       ]
     },
     "inhalt": {
@@ -47,7 +60,12 @@
     "selbstcheck": {
       "label": "Self-check",
       "titel": "Do you recognize *yourself?*",
-      "aussagen": ["[Statement one]", "[Statement two]", "[Statement three]", "[Statement four]"],
+      "aussagen": [
+        "[Statement one]",
+        "[Statement two]",
+        "[Statement three]",
+        "[Statement four]"
+      ],
       "button": "Get Room 1"
     },
     "anmeldung": {
@@ -77,9 +95,18 @@
       "label": "[Label recognition]",
       "titel": "[Headline about] *[recognition.]*",
       "karten": [
-        { "label": "Money", "text": "[Short text.]" },
-        { "label": "Relationships", "text": "[Short text.]" },
-        { "label": "Body", "text": "[Short text.]" }
+        {
+          "label": "Money",
+          "text": "[Short text.]"
+        },
+        {
+          "label": "Relationships",
+          "text": "[Short text.]"
+        },
+        {
+          "label": "Body",
+          "text": "[Short text.]"
+        }
       ]
     },
     "haus": {
@@ -98,9 +125,21 @@
       ],
       "raumWort": "Room",
       "stockwerke": [
-        { "name": "Level 1", "status": "In this book · 8 rooms · 48 clues", "offen": true },
-        { "name": "Level 2", "status": "Locked · coming soon", "offen": false },
-        { "name": "Level 3", "status": "Locked · coming soon", "offen": false }
+        {
+          "name": "Level 1",
+          "status": "In this book · 8 rooms · 48 clues",
+          "offen": true
+        },
+        {
+          "name": "Level 2",
+          "status": "Locked · coming soon",
+          "offen": false
+        },
+        {
+          "name": "Level 3",
+          "status": "Locked · coming soon",
+          "offen": false
+        }
       ]
     },
     "ueber": {
@@ -110,7 +149,11 @@
       "label": "Launch price",
       "produkt": "Escape Self-Sabotage · Level 1",
       "danach": "from January 1, 2027:",
-      "punkte": ["[Benefit one]", "[Benefit two]", "[Benefit three]"],
+      "punkte": [
+        "[Benefit one]",
+        "[Benefit two]",
+        "[Benefit three]"
+      ],
       "button": "Buy now",
       "sicher": "Secure payment via Digistore24",
       "format": "E-book as PDF"
@@ -124,10 +167,22 @@
       "label": "Questions",
       "titel": "Good to *know.*",
       "fragen": [
-        { "f": "What format is the book?", "a": "[Answer format]" },
-        { "f": "Does the book replace therapy?", "a": "[Answer: The book is meant for self-reflection and does not replace medical or psychotherapeutic treatment.]" },
-        { "f": "When will Levels 2 and 3 be available?", "a": "[Answer sequel]" },
-        { "f": "[Another question]", "a": "[Answer]" }
+        {
+          "f": "What format is the book?",
+          "a": "[Answer format]"
+        },
+        {
+          "f": "Does the book replace therapy?",
+          "a": "[Answer: The book is meant for self-reflection and does not replace medical or psychotherapeutic treatment.]"
+        },
+        {
+          "f": "When will Levels 2 and 3 be available?",
+          "a": "[Answer sequel]"
+        },
+        {
+          "f": "[Another question]",
+          "a": "[Answer]"
+        }
       ]
     }
   },
@@ -137,13 +192,29 @@
       "titel": "[Not an ordinary book. An] *[escape room.]*",
       "text": "[One or two sentences explaining the idea.]",
       "stationen": [
-        { "titel": "The house", "text": "[Short sentence]" },
-        { "titel": "The elevator", "text": "[Short sentence]" },
-        { "titel": "Levels", "text": "[Short sentence]" },
-        { "titel": "Rooms and clues", "text": "[Short sentence]" },
-        { "titel": "Finds", "text": "[Short sentence]" }
+        {
+          "titel": "The house",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "The elevator",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "Levels",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "Rooms",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "Clues",
+          "text": "[Short sentence]"
+        }
       ],
-      "notiz": "[Handwritten note]"
+      "notiz": "[Handwritten note]",
+      "_hinweis": "Optional sixth station: append {\"titel\": \"Finds\", \"text\": \"...\"}."
     },
     "haltung": {
       "label": "[Label mindset section]",
@@ -154,12 +225,13 @@
       "label": "About me",
       "titel": "[Short headline about] *[you.]*",
       "text": "[Your story in three or four sentences. No photo.]",
-      "signatur": "Heike",
-      "kreis": "Pattern recognition"
+      "signatur": "Heike"
     }
   },
   "danke": {
-    "seo": { "titel": "Almost there | Identity Upgrade" },
+    "seo": {
+      "titel": "Almost there | Identity Upgrade"
+    },
     "label": "Almost there",
     "titel": "Please confirm your *email address.*",
     "text": "[We've sent you an email. Click the link inside – then Room 1 lands straight in your inbox.]",
@@ -168,7 +240,9 @@
     "angebotText": "[One or two sentences about the e-book.]"
   },
   "privacy": {
-    "seo": { "titel": "Legal notice & privacy | Identity Upgrade" },
+    "seo": {
+      "titel": "Legal notice & privacy | Identity Upgrade"
+    },
     "titel": "Legal notice & *privacy*",
     "impressumTitel": "Legal notice",
     "anbieterLabel": "Provider",
@@ -177,13 +251,34 @@
     "vertretenLabel": "Represented by",
     "datenschutzTitel": "Privacy policy",
     "abschnitte": [
-      { "t": "Controller", "x": "[Draft to follow]" },
-      { "t": "Hosting and delivery (Cloudflare)", "x": "[Draft to follow]" },
-      { "t": "Freebie sign-up and emails (Kit)", "x": "[Draft to follow]" },
-      { "t": "Buying the e-book (Digistore24)", "x": "[Draft to follow]" },
-      { "t": "Cookie-free statistics (Cloudflare Web Analytics)", "x": "[Draft to follow]" },
-      { "t": "Where your sign-up came from", "x": "[Draft to follow]" },
-      { "t": "Your rights", "x": "[Draft to follow]" }
+      {
+        "t": "Controller",
+        "x": "[Draft to follow]"
+      },
+      {
+        "t": "Hosting and delivery (Cloudflare)",
+        "x": "[Draft to follow]"
+      },
+      {
+        "t": "Freebie sign-up and emails (Kit)",
+        "x": "[Draft to follow]"
+      },
+      {
+        "t": "Buying the e-book (Digistore24)",
+        "x": "[Draft to follow]"
+      },
+      {
+        "t": "Cookie-free statistics (Cloudflare Web Analytics)",
+        "x": "[Draft to follow]"
+      },
+      {
+        "t": "Where your sign-up came from",
+        "x": "[Draft to follow]"
+      },
+      {
+        "t": "Your rights",
+        "x": "[Draft to follow]"
+      }
     ]
   }
 }

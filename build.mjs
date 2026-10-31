@@ -96,7 +96,6 @@ function haltung(lang) {
 function ueber(lang, text, farbe = "creme") {
   const u = T[lang].gemeinsam.ueber;
   return `<section class="abschnitt ${farbe} ueber"><div class="huelle">
-  <div class="kreis" aria-hidden="true">${esc(u.kreis)}</div>
   <div>
     <p class="label">${esc(u.label)}</p>
     <h2 class="titel t-mittel">${akzent(u.titel)}</h2>
@@ -185,8 +184,8 @@ ${soFunktionierts(lang, "creme")}
   </div>
 </div></section>
 ${haltung(lang)}
-${ueber(lang, null, "creme")}
-<section class="abschnitt rose mitte linie-oben linie-unten"><div class="huelle">
+${ueber(lang, null, "weiss")}
+<section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
   <p class="label">${esc(f.selbstcheck.label)}</p>
   <h2 class="titel t-gross">${akzent(f.selbstcheck.titel)}</h2>
   <ul class="check">${f.selbstcheck.aussagen.map((a, i) => `<li><label><input type="checkbox" name="check${i}"><span>${esc(a)}</span></label></li>`).join("")}</ul>
@@ -249,14 +248,14 @@ ${soFunktionierts(lang, "creme")}
   </div>
 </div></section>
 ${haltung(lang)}
-${ueber(lang, b.ueber.text, "creme")}
-<section class="abschnitt rose linie-oben linie-unten" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
-<section class="abschnitt weiss mitte"><div class="huelle">
+${ueber(lang, b.ueber.text, "weiss")}
+<section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
+<section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
   <p class="notiz" style="margin:0 0 8px">${esc(b.rueckweg.notiz)}</p>
   <h2 class="titel t-mittel">${akzent(b.rueckweg.titel)}</h2>
-  <a class="button button-leer" href="${PFADE.freebie[lang]}">${esc(b.rueckweg.button)} <span aria-hidden="true">→</span></a>
+  <a class="button button-dunkel" href="${PFADE.freebie[lang]}">${esc(b.rueckweg.button)} <span aria-hidden="true">→</span></a>
 </div></section>
-<section class="abschnitt creme mitte linie-oben"><div class="huelle">
+<section class="abschnitt weiss mitte"><div class="huelle">
   <p class="label">${esc(b.faq.label)}</p>
   <h2 class="titel t-gross">${akzent(b.faq.titel)}</h2>
   <div class="faq">${b.faq.fragen.map((q) => `<details><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}</div>
@@ -285,7 +284,7 @@ ${laufband(lang)}
     <p class="fliess">${esc(d.angebotText)}</p>
   </div>
 </div></section>
-<section class="abschnitt rose linie-oben linie-unten" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
+<section class="abschnitt creme linie-oben" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
 </main>
 ${fuss(lang)}`;
   return seitenRahmen(lang, "danke", { titel: d.seo.titel, noindex: true }, body);

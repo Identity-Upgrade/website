@@ -17,7 +17,7 @@
   --rot: #BE1B1C;
   --rot-dunkel: #9E1617;
   --gruen: #395848;
-  --rose: #F6E1DC;
+  --beige: #F1E9DC;
   --butter: #EFE3BB;
   --tinte: #1F1B1A;
   --text: #5E554C;
@@ -33,7 +33,7 @@
   --abschnitt: 60px;
   --rand-x: 22px;
   --max: 1120px;
-  --schatten: 0 14px 34px rgba(31, 27, 26, 0.16);
+  --schatten: 0 22px 48px rgba(31, 27, 26, 0.24);
 }
 
 @media (min-width: 900px) {
@@ -55,7 +55,7 @@ a { color: inherit; }
 .creme { background: var(--creme); }
 .weiss { background: var(--weiss); }
 .gruen { background: var(--gruen); color: var(--creme); }
-.rose { background: var(--rose); }
+.beige { background: var(--beige); }
 .linie-oben { border-top: 1px solid var(--tinte); }
 .linie-unten { border-bottom: 1px solid var(--tinte); }
 .mitte { text-align: center; }
@@ -80,6 +80,8 @@ a { color: inherit; }
 .button-rot { background: var(--rot); color: #fff; }
 .button-rot:hover { background: var(--rot-dunkel); }
 .button-leer { background: transparent; color: var(--tinte); }
+.button-dunkel { background: var(--tinte); color: var(--creme); }
+.button-dunkel:hover { background: #3A322F; }
 .button-leer:hover { background: rgba(31, 27, 26, 0.06); }
 .button-klein { min-height: 40px; padding: 8px 16px; font-size: 11px; }
 
@@ -99,12 +101,12 @@ a { color: inherit; }
 
 /* Hero */
 .hero .huelle { display: grid; gap: 48px; align-items: center; }
-@media (min-width: 900px) { .hero .huelle { grid-template-columns: 1.15fr 1fr; gap: 56px; } }
-.mockup { position: relative; min-height: 340px; }
-@media (min-width: 900px) { .mockup { min-height: 460px; } }
-.mockup .buch { position: absolute; width: 60%; left: 4%; top: 0; transform: rotate(-4deg); box-shadow: var(--schatten); background: #1B1917; z-index: 2; }
-.mockup .seite { position: absolute; width: 46%; right: 0; bottom: 0; transform: rotate(5deg); box-shadow: var(--schatten); background: #fff; padding: 6px; z-index: 1; }
-@media (min-width: 900px) { .mockup .seite { bottom: 6%; } }
+@media (min-width: 900px) { .hero .huelle { grid-template-columns: 1fr 1.05fr; gap: 48px; } }
+.mockup { position: relative; min-height: 470px; max-width: 520px; margin: 0 auto; width: 100%; }
+@media (min-width: 900px) { .mockup { min-height: 640px; max-width: none; } }
+.mockup .buch { position: absolute; width: 72%; left: 0; top: 0; transform: rotate(-4deg); box-shadow: var(--schatten); background: #1B1917; z-index: 2; }
+.mockup .seite { position: absolute; width: 50%; right: 0; bottom: 0; transform: rotate(5deg); box-shadow: var(--schatten); background: #fff; padding: 6px; z-index: 1; }
+@media (min-width: 900px) { .mockup .seite { bottom: 0; } }
 
 /* Laufband */
 .laufband { background: var(--rot); color: var(--rose-hell); overflow: hidden; border-top: 1px solid var(--tinte); border-bottom: 1px solid var(--tinte); }
@@ -117,14 +119,14 @@ a { color: inherit; }
 /* Karten */
 .karten { display: grid; gap: 18px; margin-top: 40px; text-align: left; }
 @media (min-width: 760px) { .karten { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
-.karte { background: var(--creme); border-radius: 8px; padding: 30px 26px; box-shadow: 0 8px 24px rgba(31, 27, 26, 0.07); }
+.karte { background: var(--creme); border: 1px solid var(--tinte); border-radius: 8px; padding: 30px 26px; box-shadow: 0 12px 28px rgba(31, 27, 26, 0.12); }
 .creme .karte { background: var(--weiss); }
 .karte .label { color: var(--rot); margin-bottom: 12px; }
 .karte p { margin: 0; color: var(--text); }
 
 /* So funktioniert das Buch */
 .stationen { display: grid; gap: 18px; margin: 40px auto 0; padding: 0; list-style: none; max-width: 420px; }
-@media (min-width: 760px) { .stationen { grid-template-columns: repeat(5, 1fr); gap: 18px; } }
+@media (min-width: 760px) { .stationen { grid-auto-flow: column; grid-auto-columns: 1fr; gap: 18px; } }
 .station { display: grid; grid-template-columns: 56px 1fr; column-gap: 16px; align-items: center; text-align: left; }
 .station-zahl { grid-row: span 2; width: 56px; height: 56px; margin: 0; border-radius: 50%; border: 1px solid var(--tinte); background: var(--weiss); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--rot); }
 .station h3 { font-family: var(--label); font-weight: 700; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 6px; }
@@ -161,9 +163,8 @@ a { color: inherit; }
 .gruen .label { color: var(--butter); }
 
 /* Über mich */
-.ueber .huelle { display: grid; gap: 40px; align-items: center; }
-@media (min-width: 900px) { .ueber .huelle { grid-template-columns: 1fr 1.4fr; gap: 64px; } .kreis { width: 220px; height: 220px; } }
-.kreis { width: 170px; height: 170px; margin: 0 auto; border-radius: 50%; border: 1px solid var(--tinte); display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1.05; color: var(--rot); padding: 20px; hyphens: manual; }
+.ueber .huelle > div { max-width: 680px; margin: 0 auto; text-align: center; }
+.ueber .fliess { margin-left: auto; margin-right: auto; }
 .signatur { font-family: var(--hand); font-size: 30px; color: var(--rot); margin: 0; }
 
 /* Selbstcheck */
