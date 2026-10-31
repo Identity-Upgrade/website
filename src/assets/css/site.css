@@ -297,3 +297,10 @@ a { color: inherit; }
 }
 /* Handschrift eine Spur kräftiger (Schrift hat nur einen Schnitt) */
 .notiz, .signatur { -webkit-text-stroke: 0.45px currentColor; paint-order: stroke fill; }
+/* Handy: Fächer ohne Leerraum, gleicher Abstand nach unten wie oben (Abschnittsabstand) */
+@media (max-width: 899px) {
+  .hero .huelle { gap: 40px; }
+  .faecher { height: auto; aspect-ratio: 1 / 1.22; }
+  .faecher img { bottom: 17%; }
+  .faecher .f-mitte { bottom: 19%; }
+}
