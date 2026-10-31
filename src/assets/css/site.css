@@ -304,3 +304,5 @@ a { color: inherit; }
   .faecher img { bottom: 17%; }
   .faecher .f-mitte { bottom: 19%; }
 }
+/* Handschrift-Notiz im Hero: am Computer immer in einer Zeile */
+@media (min-width: 900px) { .hero .notiz { white-space: nowrap; } }
