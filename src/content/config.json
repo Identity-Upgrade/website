@@ -1,0 +1,27 @@
+{
+  "_hinweis": "Zentrale Einstellungen. Alles in eckigen Klammern ist ein Platzhalter und wird vor dem Start ersetzt.",
+  "domain": "https://identity-upgrade.com",
+  "preise": {
+    "de": { "einfuehrung": "12,99 €", "regulaer": "15,99 €" },
+    "en": { "einfuehrung": "$13.99", "regulaer": "$17.99" },
+    "einfuehrungBis": "2026-12-31",
+    "regulaerAb": "2027-01-01"
+  },
+  "kit": {
+    "_hinweis": "Formular-ID aus Kit eintragen. Solange hier ein Platzhalter steht, laeuft das Formular im Vorschaumodus und leitet nur zur Danke-Seite weiter.",
+    "formIdDe": "[KIT-FORM-ID-DE]",
+    "formIdEn": "[KIT-FORM-ID-EN]"
+  },
+  "digistore": {
+    "_hinweis": "Bestell-Links aus Digistore24 eintragen.",
+    "kaufLinkDe": "[DIGISTORE-LINK-DE]",
+    "kaufLinkEn": "[DIGISTORE-LINK-EN]"
+  },
+  "anbieter": {
+    "name": "[NAME DER LLP]",
+    "adresse": "[GESCHÄFTSADRESSE DER LLP, KANADA]",
+    "register": "[REGISTER UND REGISTERNUMMER]",
+    "vertreten": "[VERTRETUNGSBERECHTIGTE PERSON]",
+    "email": "office@klewerinn.com"
+  }
+}

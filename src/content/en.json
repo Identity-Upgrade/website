@@ -1,0 +1,189 @@
+{
+  "_hinweis": "All texts for the English pages. *Asterisks* = italic red accent word. Text in square brackets is a placeholder.",
+  "lang": "en",
+  "ui": {
+    "sprache": "Choose language",
+    "kaufen": "Buy now",
+    "footerRecht": "Legal notice & privacy",
+    "vorschau": "Preview – placeholder texts",
+    "freebieButton": "Get Room 1",
+    "pfeil": "→"
+  },
+  "laufband": ["[TICKER TEXT ONE]", "[TICKER TEXT TWO]", "[TICKER TEXT THREE]"],
+  "freebie": {
+    "seo": {
+      "titel": "[SEO title freebie] | Identity Upgrade",
+      "beschreibung": "[SEO description freebie, about 150 characters]"
+    },
+    "hero": {
+      "label": "[Label · Escape room]",
+      "titel": "[Big headline with an] *[accent word.]*",
+      "text": "[One or two sentences explaining what Room 1 is and why to step inside.]",
+      "notiz": "↑ [short handwritten note]"
+    },
+    "wiedererkennen": {
+      "label": "[Label recognition]",
+      "titel": "[Headline about] *[recognition.]*",
+      "karten": [
+        { "label": "Money", "text": "[Short text about a typical money situation.]" },
+        { "label": "Relationships", "text": "[Short text about a typical relationship situation.]" },
+        { "label": "Body", "text": "[Short text about a typical body situation.]" }
+      ]
+    },
+    "inhalt": {
+      "label": "What's waiting in Room 1",
+      "titel": "[Headline about the] *[contents.]*",
+      "intro": "[One sentence about Room 1.]",
+      "raumTitel": "Room 1 · Why does this keep happening to me?",
+      "spuren": [
+        "If I don't want it – why would it serve a purpose?",
+        "Two goals that don't want the same thing",
+        "What if the result isn't a coincidence?",
+        "What if you aren't sabotaging yourself at all?",
+        "When the behavior suddenly makes sense"
+      ],
+      "spurWort": "Clue"
+    },
+    "selbstcheck": {
+      "label": "Self-check",
+      "titel": "Do you recognize *yourself?*",
+      "aussagen": ["[Statement one]", "[Statement two]", "[Statement three]", "[Statement four]"],
+      "button": "Get Room 1"
+    },
+    "anmeldung": {
+      "label": "Sign up",
+      "titel": "[Headline for the] *[sign-up.]*",
+      "text": "[One sentence about what happens after signing up.]",
+      "vorname": "First name",
+      "nachname": "Last name",
+      "email": "Email address",
+      "button": "Get Room 1",
+      "hinweis": "[Short privacy note with a link to the legal notice & privacy page. Unsubscribe anytime.]",
+      "fehler": "Please fill in all three fields and check your email address."
+    }
+  },
+  "buch": {
+    "seo": {
+      "titel": "[SEO title e-book] | Identity Upgrade",
+      "beschreibung": "[SEO description e-book, about 150 characters]"
+    },
+    "hero": {
+      "label": "Escape Self-Sabotage · Level 1",
+      "titel": "[Big headline with an] *[accent word.]*",
+      "text": "[One or two sentences about the book's promise.]",
+      "notiz": "↑ Launch price until Dec 31"
+    },
+    "wiedererkennen": {
+      "label": "[Label recognition]",
+      "titel": "[Headline about] *[recognition.]*",
+      "karten": [
+        { "label": "Money", "text": "[Short text.]" },
+        { "label": "Relationships", "text": "[Short text.]" },
+        { "label": "Body", "text": "[Short text.]" }
+      ]
+    },
+    "haus": {
+      "label": "The house",
+      "titel": "[Headline about the] *[structure.]*",
+      "stockwerk1": "Level 1 · Why Your Self-Sabotage Makes Sense",
+      "raeume": [
+        "Why does this keep happening to me?",
+        "Behavior needs context",
+        "Your decisions made sense",
+        "The Invisible Rules",
+        "Who planted that thought in your head?",
+        "Which menu did you choose from?",
+        "Knowing better doesn't automatically mean doing better",
+        "The contradictions that give you away"
+      ],
+      "raumWort": "Room",
+      "stockwerke": [
+        { "name": "Level 1", "status": "In this book · 8 rooms · 48 clues", "offen": true },
+        { "name": "Level 2", "status": "Locked · coming soon", "offen": false },
+        { "name": "Level 3", "status": "Locked · coming soon", "offen": false }
+      ]
+    },
+    "ueber": {
+      "text": "[Your story, a little longer than on the freebie page. Three to five sentences.]"
+    },
+    "preis": {
+      "label": "Launch price",
+      "produkt": "Escape Self-Sabotage · Level 1",
+      "danach": "from January 1, 2027:",
+      "punkte": ["[Benefit one]", "[Benefit two]", "[Benefit three]"],
+      "button": "Buy now",
+      "sicher": "Secure payment via Digistore24",
+      "format": "E-book as PDF"
+    },
+    "rueckweg": {
+      "notiz": "Not sure yet?",
+      "titel": "Room 1 is *free.*",
+      "button": "Get Room 1"
+    },
+    "faq": {
+      "label": "Questions",
+      "titel": "Good to *know.*",
+      "fragen": [
+        { "f": "What format is the book?", "a": "[Answer format]" },
+        { "f": "Does the book replace therapy?", "a": "[Answer: The book is meant for self-reflection and does not replace medical or psychotherapeutic treatment.]" },
+        { "f": "When will Levels 2 and 3 be available?", "a": "[Answer sequel]" },
+        { "f": "[Another question]", "a": "[Answer]" }
+      ]
+    }
+  },
+  "gemeinsam": {
+    "sofunktionierts": {
+      "label": "How the book works",
+      "titel": "[Not an ordinary book. An] *[escape room.]*",
+      "text": "[One or two sentences explaining the idea.]",
+      "stationen": [
+        { "titel": "The house", "text": "[Short sentence]" },
+        { "titel": "The elevator", "text": "[Short sentence]" },
+        { "titel": "Levels", "text": "[Short sentence]" },
+        { "titel": "Rooms and clues", "text": "[Short sentence]" },
+        { "titel": "Finds", "text": "[Short sentence]" }
+      ],
+      "notiz": "[Handwritten note]"
+    },
+    "haltung": {
+      "label": "[Label mindset section]",
+      "titel": "[The one big] *[insight.]*",
+      "text": "[Two or three sentences that deepen the thought.]"
+    },
+    "ueber": {
+      "label": "About me",
+      "titel": "[Short headline about] *[you.]*",
+      "text": "[Your story in three or four sentences. No photo.]",
+      "signatur": "Heike",
+      "kreis": "Pattern recognition"
+    }
+  },
+  "danke": {
+    "seo": { "titel": "Almost there | Identity Upgrade" },
+    "label": "Almost there",
+    "titel": "Please confirm your *email address.*",
+    "text": "[We've sent you an email. Click the link inside – then Room 1 lands straight in your inbox.]",
+    "angebotLabel": "While you wait",
+    "angebotTitel": "[Headline about] *[Level 1.]*",
+    "angebotText": "[One or two sentences about the e-book.]"
+  },
+  "privacy": {
+    "seo": { "titel": "Legal notice & privacy | Identity Upgrade" },
+    "titel": "Legal notice & *privacy*",
+    "impressumTitel": "Legal notice",
+    "anbieterLabel": "Provider",
+    "kontaktLabel": "Contact",
+    "registerLabel": "Registration",
+    "vertretenLabel": "Represented by",
+    "datenschutzTitel": "Privacy policy",
+    "abschnitte": [
+      { "t": "Controller", "x": "[Draft to follow]" },
+      { "t": "Hosting and delivery (Cloudflare)", "x": "[Draft to follow]" },
+      { "t": "Freebie sign-up and emails (Kit)", "x": "[Draft to follow]" },
+      { "t": "Buying the e-book (Digistore24)", "x": "[Draft to follow]" },
+      { "t": "Cookie-free statistics (Cloudflare Web Analytics)", "x": "[Draft to follow]" },
+      { "t": "Where your sign-up came from", "x": "[Draft to follow]" },
+      { "t": "Your rights", "x": "[Draft to follow]" }
+    ]
+  }
+}

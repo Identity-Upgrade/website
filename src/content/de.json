@@ -1,0 +1,189 @@
+{
+  "_hinweis": "Alle Texte der deutschen Seiten. *Sternchen* = kursives rotes Akzentwort. Texte in eckigen Klammern sind Platzhalter.",
+  "lang": "de",
+  "ui": {
+    "sprache": "Sprache wählen",
+    "kaufen": "Jetzt kaufen",
+    "footerRecht": "Impressum & Datenschutz",
+    "vorschau": "Vorschau – Platzhaltertexte",
+    "freebieButton": "Raum 1 holen",
+    "pfeil": "→"
+  },
+  "laufband": ["[LAUFBAND-TEXT EINS]", "[LAUFBAND-TEXT ZWEI]", "[LAUFBAND-TEXT DREI]"],
+  "freebie": {
+    "seo": {
+      "titel": "[SEO-Titel Freebie] | Identity Upgrade",
+      "beschreibung": "[SEO-Beschreibung Freebie, etwa 150 Zeichen]"
+    },
+    "hero": {
+      "label": "[Label · Escape Room]",
+      "titel": "[Große Überschrift mit] *[Akzentwort.]*",
+      "text": "[Ein bis zwei Sätze, die erklären, was Raum 1 ist und warum man ihn betreten sollte.]",
+      "notiz": "↑ [kurze Handschrift-Notiz]"
+    },
+    "wiedererkennen": {
+      "label": "[Label Wiedererkennen]",
+      "titel": "[Überschrift zum] *[Wiedererkennen.]*",
+      "karten": [
+        { "label": "Geld", "text": "[Kurzer Text zur typischen Situation rund ums Geld.]" },
+        { "label": "Beziehungen", "text": "[Kurzer Text zur typischen Situation in Beziehungen.]" },
+        { "label": "Körper", "text": "[Kurzer Text zur typischen Situation mit dem Körper.]" }
+      ]
+    },
+    "inhalt": {
+      "label": "Was dich in Raum 1 erwartet",
+      "titel": "[Überschrift zum] *[Inhalt.]*",
+      "intro": "[Ein Satz zu Raum 1.]",
+      "raumTitel": "Raum 1 · Warum passiert mir das immer wieder?",
+      "spuren": [
+        "Wenn ich das nicht will – warum sollte es dann eine Funktion haben?",
+        "Zwei Ziele, die nicht dasselbe wollen",
+        "Was, wenn das Ergebnis kein Zufall ist?",
+        "Was, wenn du dich gar nicht sabotierst?",
+        "Wenn das Verhalten plötzlich Sinn ergibt"
+      ],
+      "spurWort": "Spur"
+    },
+    "selbstcheck": {
+      "label": "Selbstcheck",
+      "titel": "Erkennst du dich *wieder?*",
+      "aussagen": ["[Aussage eins]", "[Aussage zwei]", "[Aussage drei]", "[Aussage vier]"],
+      "button": "Raum 1 holen"
+    },
+    "anmeldung": {
+      "label": "Anmeldung",
+      "titel": "[Überschrift zur] *[Anmeldung.]*",
+      "text": "[Ein Satz, was nach der Anmeldung passiert.]",
+      "vorname": "Vorname",
+      "nachname": "Nachname",
+      "email": "E-Mail-Adresse",
+      "button": "Raum 1 holen",
+      "hinweis": "[Kurzer Datenschutz-Hinweis mit Link zu Impressum & Datenschutz. Abmeldung jederzeit möglich.]",
+      "fehler": "Bitte fülle alle drei Felder aus und prüfe deine E-Mail-Adresse."
+    }
+  },
+  "buch": {
+    "seo": {
+      "titel": "[SEO-Titel E-Book] | Identity Upgrade",
+      "beschreibung": "[SEO-Beschreibung E-Book, etwa 150 Zeichen]"
+    },
+    "hero": {
+      "label": "Escape Self-Sabotage · Stockwerk 1",
+      "titel": "[Große Überschrift mit] *[Akzentwort.]*",
+      "text": "[Ein bis zwei Sätze zum Versprechen des Buches.]",
+      "notiz": "↑ Einführungspreis bis 31.12."
+    },
+    "wiedererkennen": {
+      "label": "[Label Wiedererkennen]",
+      "titel": "[Überschrift zum] *[Wiedererkennen.]*",
+      "karten": [
+        { "label": "Geld", "text": "[Kurzer Text.]" },
+        { "label": "Beziehungen", "text": "[Kurzer Text.]" },
+        { "label": "Körper", "text": "[Kurzer Text.]" }
+      ]
+    },
+    "haus": {
+      "label": "Das Haus",
+      "titel": "[Überschrift zur] *[Struktur.]*",
+      "stockwerk1": "Stockwerk 1 · Warum deine Selbstsabotage Sinn ergibt",
+      "raeume": [
+        "Warum passiert mir das immer wieder?",
+        "Verhalten braucht Kontext",
+        "Deine Entscheidungen haben Sinn ergeben",
+        "Die unsichtbaren Regeln",
+        "Wer hat dir diesen Gedanken eingepflanzt?",
+        "Aus welchem Menü hast du gewählt?",
+        "Es besser zu wissen bedeutet nicht gleichzeitig, es besser zu machen",
+        "Die Widersprüche, die dich verraten"
+      ],
+      "raumWort": "Raum",
+      "stockwerke": [
+        { "name": "Stockwerk 1", "status": "In diesem Buch · 8 Räume · 48 Spuren", "offen": true },
+        { "name": "Stockwerk 2", "status": "Verschlossen · folgt", "offen": false },
+        { "name": "Stockwerk 3", "status": "Verschlossen · folgt", "offen": false }
+      ]
+    },
+    "ueber": {
+      "text": "[Deine Geschichte, etwas ausführlicher als auf der Freebie-Seite. Drei bis fünf Sätze.]"
+    },
+    "preis": {
+      "label": "Einführungspreis",
+      "produkt": "Escape Self-Sabotage · Stockwerk 1",
+      "danach": "ab 1. Januar 2027:",
+      "punkte": ["[Leistungspunkt eins]", "[Leistungspunkt zwei]", "[Leistungspunkt drei]"],
+      "button": "Jetzt kaufen",
+      "sicher": "Sichere Zahlung über Digistore24",
+      "format": "E-Book als PDF"
+    },
+    "rueckweg": {
+      "notiz": "Noch nicht sicher?",
+      "titel": "Raum 1 gibt es *kostenlos.*",
+      "button": "Raum 1 holen"
+    },
+    "faq": {
+      "label": "Häufige Fragen",
+      "titel": "Gut zu *wissen.*",
+      "fragen": [
+        { "f": "In welchem Format erhalte ich das Buch?", "a": "[Antwort Format]" },
+        { "f": "Ersetzt das Buch eine Therapie?", "a": "[Antwort: Das Buch dient der Selbstreflexion und ersetzt keine ärztliche oder psychotherapeutische Behandlung.]" },
+        { "f": "Wann kommen Stockwerk 2 und 3?", "a": "[Antwort Fortsetzung]" },
+        { "f": "[Weitere Frage]", "a": "[Antwort]" }
+      ]
+    }
+  },
+  "gemeinsam": {
+    "sofunktionierts": {
+      "label": "So funktioniert das Buch",
+      "titel": "[Kein normales Buch. Ein] *[Escape Room.]*",
+      "text": "[Ein bis zwei Sätze, die das Prinzip erklären.]",
+      "stationen": [
+        { "titel": "Das Haus", "text": "[Kurzer Satz]" },
+        { "titel": "Der Lift", "text": "[Kurzer Satz]" },
+        { "titel": "Stockwerke", "text": "[Kurzer Satz]" },
+        { "titel": "Räume und Spuren", "text": "[Kurzer Satz]" },
+        { "titel": "Fundstücke", "text": "[Kurzer Satz]" }
+      ],
+      "notiz": "[Handschrift-Notiz]"
+    },
+    "haltung": {
+      "label": "[Label Haltungs-Abschnitt]",
+      "titel": "[Die eine große] *[Erkenntnis.]*",
+      "text": "[Zwei bis drei Sätze, die den Gedanken vertiefen.]"
+    },
+    "ueber": {
+      "label": "Über mich",
+      "titel": "[Kurze Überschrift zu] *[dir.]*",
+      "text": "[Deine Geschichte in drei bis vier Sätzen. Ohne Foto.]",
+      "signatur": "Heike",
+      "kreis": "Muster­erkennung"
+    }
+  },
+  "danke": {
+    "seo": { "titel": "Fast geschafft | Identity Upgrade" },
+    "label": "Fast geschafft",
+    "titel": "Bitte bestätige deine *E-Mail-Adresse.*",
+    "text": "[Wir haben dir eine E-Mail geschickt. Klicke auf den Link darin – danach kommt Raum 1 direkt in dein Postfach.]",
+    "angebotLabel": "Während du wartest",
+    "angebotTitel": "[Überschrift zum Angebot] *[Stockwerk 1.]*",
+    "angebotText": "[Ein bis zwei Sätze zum E-Book.]"
+  },
+  "privacy": {
+    "seo": { "titel": "Impressum & Datenschutz | Identity Upgrade" },
+    "titel": "Impressum & *Datenschutz*",
+    "impressumTitel": "Impressum",
+    "anbieterLabel": "Anbieter",
+    "kontaktLabel": "Kontakt",
+    "registerLabel": "Register",
+    "vertretenLabel": "Vertreten durch",
+    "datenschutzTitel": "Datenschutzerklärung",
+    "abschnitte": [
+      { "t": "Verantwortliche Stelle", "x": "[Entwurf folgt]" },
+      { "t": "Hosting und Auslieferung (Cloudflare)", "x": "[Entwurf folgt]" },
+      { "t": "Anmeldung zum Freebie und E-Mails (Kit)", "x": "[Entwurf folgt]" },
+      { "t": "Kauf des E-Books (Digistore24)", "x": "[Entwurf folgt]" },
+      { "t": "Besucherstatistik ohne Cookies (Cloudflare Web Analytics)", "x": "[Entwurf folgt]" },
+      { "t": "Herkunft der Anmeldung", "x": "[Entwurf folgt]" },
+      { "t": "Deine Rechte", "x": "[Entwurf folgt]" }
+    ]
+  }
+}

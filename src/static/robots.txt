@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /de/danke/
+Disallow: /en/thank-you/
+
+Sitemap: https://identity-upgrade.com/sitemap.xml
