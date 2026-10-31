@@ -295,3 +295,5 @@ a { color: inherit; }
   .faecher img { bottom: 20%; }
   .faecher .f-mitte { bottom: 22%; }
 }
+/* Handschrift eine Spur kräftiger (Schrift hat nur einen Schnitt) */
+.notiz, .signatur { -webkit-text-stroke: 0.45px currentColor; paint-order: stroke fill; }
