@@ -173,7 +173,7 @@ function seiteFreebie(lang) {
     <a class="button button-rot" href="#anmeldung">${esc(f.hero.button || t.ui.freebieButton)} <span aria-hidden="true">→</span></a>
     <p class="notiz notiz-a">${esc(f.hero.notiz)}</p>
   </div>
-  <div class="faecher">${bild(img.spur, "", "f-links")}${bild(img.raum1, "", "f-rechts")}${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "f-mitte")}</div>
+  <div class="faecher">${bild(img.raum1, "", "f-links")}${bild(img.fund, "", "f-rechts")}${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "f-mitte")}</div>
 </div></section>
 ${laufband(lang)}
 ${wiedererkennen(f.wiedererkennen, "weiss")}
