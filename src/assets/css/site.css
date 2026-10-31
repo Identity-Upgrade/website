@@ -251,3 +251,15 @@ a { color: inherit; }
   .faecher img { width: 48%; margin-left: -24%; bottom: 10%; }
   .faecher .f-mitte { width: 56%; margin-left: -28%; bottom: 12%; }
 }
+
+/* Lange Hero-Überschrift (zwei Sätze) */
+.t-hero-lang { font-size: clamp(40px, 6.4vw, 76px); line-height: 1.02; }
+/* Kursiv im Fließtext: nur kursiv, nicht rot */
+.fliess em { font-style: italic; color: inherit; }
+.check li span { line-height: 1.5; }
+.fliess + .fliess { margin-top: -12px; }
+.ueber .signatur { margin-left: auto; margin-right: auto; transform-origin: center; }
+@media (min-width: 900px) {
+  .faecher img { width: 54%; margin-left: -27%; }
+  .faecher .f-mitte { width: 62%; margin-left: -31%; }
+}

@@ -10,9 +10,10 @@
     "pfeil": "→"
   },
   "laufband": [
-    "[LAUFBAND-TEXT EINS]",
-    "[LAUFBAND-TEXT ZWEI]",
-    "[LAUFBAND-TEXT DREI]"
+    "Erkennen",
+    "Hinterfragen",
+    "Verstehen",
+    "Neu entscheiden"
   ],
   "freebie": {
     "seo": {
@@ -20,50 +21,108 @@
       "beschreibung": "[SEO-Beschreibung Freebie, etwa 150 Zeichen]"
     },
     "hero": {
-      "label": "[Label · Escape Room]",
-      "titel": "[Große Überschrift mit] *[Akzentwort.]*",
-      "text": "[Ein bis zwei Sätze, die erklären, was Raum 1 ist und warum man ihn betreten sollte.]",
-      "notiz": "↑ [kurze Handschrift-Notiz]"
+      "label": "Escape Self-Sabotage · Raum 1",
+      "titel": "Du weißt, was du willst. Warum tust du dann immer wieder *das Gegenteil?*",
+      "text": [
+        "Manche Entscheidungen sind im Nachhinein kaum zu verstehen. Vor allem die eigenen.",
+        "Was, wenn dahinter keine Schwäche steckt, sondern eine Logik, die bisher im Verborgenen geblieben ist?"
+      ],
+      "button": "Raum 1 kostenlos betreten",
+      "notiz": "Vielleicht ist nicht alles so unlogisch, wie es aussieht."
     },
     "wiedererkennen": {
-      "label": "[Label Wiedererkennen]",
-      "titel": "[Überschrift zum] *[Wiedererkennen.]*",
+      "label": "",
+      "titel": "Kennst du das Gefühl, immer wieder *am selben Punkt* zu landen?",
+      "text": "Die Situationen verändern sich. Die Menschen auch. Nur das Ergebnis kommt einem verdächtig bekannt vor.",
       "karten": [
         {
           "label": "Geld",
-          "text": "[Kurzer Text zur typischen Situation rund ums Geld.]"
+          "text": "Eigentlich sollte längst mehr übrig bleiben. Trotzdem fühlt es sich an, als müsste immer noch mehr gearbeitet, geleistet oder abgesichert werden."
         },
         {
           "label": "Beziehungen",
-          "text": "[Kurzer Text zur typischen Situation in Beziehungen.]"
+          "text": "Andere Menschen, andere Geschichten. Und irgendwann wieder dieses vertraute Gefühl, sich selbst irgendwo auf dem Weg verloren zu haben."
         },
         {
-          "label": "Körper",
-          "text": "[Kurzer Text zur typischen Situation mit dem Körper.]"
+          "label": "Körper & Alltag",
+          "text": "Der Entschluss steht fest. Diesmal soll etwas anders werden. Doch irgendwann übernimmt wieder das alte Muster, obwohl es eigentlich längst besser bekannt ist."
         }
       ]
     },
     "selbstcheck": {
       "label": "Selbstcheck",
       "titel": "Erkennst du dich *wieder?*",
+      "text": "Manchmal reichen ein paar scheinbar harmlose Sätze, um festzustellen, wie vertraut ein bestimmtes Muster geworden ist.",
       "aussagen": [
-        "[Aussage eins]",
-        "[Aussage zwei]",
-        "[Aussage drei]",
-        "[Aussage vier]"
+        "Ich weiß oft ganz genau, was ich ändern möchte. Und lande trotzdem wieder beim Alten.",
+        "Manche Situationen wiederholen sich in meinem Leben, obwohl ich sie längst hinter mir lassen wollte.",
+        "Ich kann anderen Menschen gute Ratschläge geben, aber bei mir selbst funktioniert das nicht immer.",
+        "Ich habe mich schon gefragt, warum ich manchmal Entscheidungen treffe, die meinen eigenen Zielen widersprechen."
       ],
-      "button": "Raum 1 holen"
+      "button": "Raum 1 kostenlos betreten"
     },
     "anmeldung": {
       "label": "Anmeldung",
-      "titel": "[Überschrift zur] *[Anmeldung.]*",
-      "text": "[Ein Satz, was nach der Anmeldung passiert.]",
+      "titel": "Die erste Tür steht *offen.*",
+      "text": [
+        "Raum 1 ist der kostenlose Einstieg in *Escape Self-Sabotage.*",
+        "Ein erster Perspektivwechsel. Keine fertigen Antworten, keine schnellen Patentrezepte. Sondern der Beginn einer ziemlich interessanten Spurensuche."
+      ],
       "vorname": "Vorname",
       "nachname": "Nachname",
       "email": "E-Mail-Adresse",
-      "button": "Raum 1 holen",
-      "hinweis": "[Kurzer Datenschutz-Hinweis mit Link zu Impressum & Datenschutz. Abmeldung jederzeit möglich.]",
-      "fehler": "Bitte fülle alle drei Felder aus und prüfe deine E-Mail-Adresse."
+      "button": "Raum 1 kostenlos erhalten",
+      "hinweis": "[Datenschutzhinweis und Einwilligungstext werden vor Veröffentlichung ergänzt.]",
+      "fehler": "Bitte fülle alle drei Felder aus und prüfe deine E-Mail-Adresse.",
+      "danach": "Nach der Anmeldung kommt eine E-Mail zur Bestätigung der Adresse. Anschließend wird Raum 1 als PDF zugestellt."
+    },
+    "sofunktionierts": {
+      "label": "So funktioniert das Buch",
+      "titel": "Kein normales Buch. Ein *Escape Room.*",
+      "text": [
+        "Ein Haus. Drei Stockwerke. Hinter jeder Tür wartet ein anderer Blick auf das, was bisher selbstverständlich erschien.",
+        "Hier geht es nicht darum, möglichst schnell einen Ausgang zu finden. Sondern zu verstehen, weshalb bestimmte Türen immer wieder an denselben Ort führen."
+      ],
+      "stationen": [
+        {
+          "titel": "Das Haus",
+          "text": "Ein vertrauter Ort. Nur vielleicht aus einer Perspektive, aus der er bisher noch nie betrachtet wurde."
+        },
+        {
+          "titel": "Der Lift",
+          "text": "Jedes Stockwerk eröffnet eine neue Ebene des Verstehens."
+        },
+        {
+          "titel": "Die Stockwerke",
+          "text": "Vom sichtbaren Verhalten über die Entstehung der Muster bis zur Frage, wer künftig darüber entscheidet."
+        },
+        {
+          "titel": "Die Räume",
+          "text": "Hinter jeder Tür wartet eine Frage, die den Blick ein Stück verändert."
+        },
+        {
+          "titel": "Die Spuren",
+          "text": "Kleine Hinweise, scheinbare Widersprüche und Gedanken, die plötzlich in einem anderen Licht erscheinen."
+        }
+      ],
+      "notiz": "Der Ausgang ist nicht unbedingt dort, wo man ihn vermutet."
+    },
+    "haltung": {
+      "label": "",
+      "titel": "Vielleicht war dein Verhalten nie so *unlogisch,* wie du dachtest.",
+      "text": [
+        "Eine Entscheidung kann von außen völlig unverständlich wirken und innerhalb der eigenen Überzeugungen trotzdem einen Sinn ergeben.",
+        "Erst wenn diese Zusammenhänge sichtbar werden, lässt sich wirklich etwas verändern."
+      ]
+    },
+    "ueber": {
+      "label": "Über mich",
+      "titel": "Mich interessiert nicht nur, was Menschen tun. Sondern *warum.*",
+      "text": [
+        "Ich beschäftige mich mit den Mustern, die sich durch ein Leben ziehen. Mit Überzeugungen, die irgendwann selbstverständlich geworden sind. Und mit Entscheidungen, die oft mehr über unsere innere Logik verraten, als uns bewusst ist.",
+        "Aus dieser Faszination für Mustererkennung ist *Identity Upgrade* entstanden."
+      ],
+      "signatur": "Heike"
     }
   },
   "buch": {

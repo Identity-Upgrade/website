@@ -27,6 +27,9 @@ const VORSCHAU = JSON.stringify(cfg).includes("[") || JSON.stringify(T).includes
 const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const akzent = (s = "") => esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>");
 const zwei = (n) => String(n).padStart(2, "0");
+const liste = (x) => (Array.isArray(x) ? x : x ? [x] : []);
+const absaetze = (x, cls = "fliess") => liste(x).map((p) => `<p class="${cls}">${akzent(p)}</p>`).join("\n  ");
+const labelP = (x) => (x ? `<p class="label">${esc(x)}</p>` : "");
 
 const bild = (name, alt, cls = "") =>
   `<img class="${cls}" src="/assets/img/${name}-960.webp" srcset="/assets/img/${name}-480.webp 480w, /assets/img/${name}-960.webp 960w" sizes="(min-width: 900px) 420px, 60vw" alt="${esc(alt)}" loading="lazy" decoding="async" width="960" height="1358">`;
@@ -67,39 +70,40 @@ function laufband(lang) {
 
 function wiedererkennen(w, farbe = "weiss") {
   return `<section class="abschnitt ${farbe} mitte"><div class="huelle">
-  <p class="label">${esc(w.label)}</p>
+  ${labelP(w.label)}
   <h2 class="titel t-gross">${akzent(w.titel)}</h2>
+  ${absaetze(w.text)}
   <div class="karten">${w.karten.map((k) => `<article class="karte"><h3 class="label">${esc(k.label)}</h3><p>${esc(k.text)}</p></article>`).join("")}</div>
 </div></section>`;
 }
 
-function soFunktionierts(lang, farbe = "creme") {
-  const s = T[lang].gemeinsam.sofunktionierts;
+function soFunktionierts(lang, farbe = "creme", daten) {
+  const s = daten || T[lang].gemeinsam.sofunktionierts;
   return `<section class="abschnitt ${farbe} mitte"><div class="huelle">
-  <p class="label">${esc(s.label)}</p>
+  ${labelP(s.label)}
   <h2 class="titel t-gross">${akzent(s.titel)}</h2>
-  <p class="fliess">${esc(s.text)}</p>
+  ${absaetze(s.text)}
   <ol class="stationen">${s.stationen.map((st, i) => `<li class="station"><div class="station-zahl" aria-hidden="true">${i + 1}</div><h3>${esc(st.titel)}</h3><p>${esc(st.text)}</p></li>`).join("")}</ol>
   <p class="notiz notiz-b">${esc(s.notiz)}</p>
 </div></section>`;
 }
 
-function haltung(lang) {
-  const h = T[lang].gemeinsam.haltung;
+function haltung(lang, daten) {
+  const h = daten || T[lang].gemeinsam.haltung;
   return `<section class="abschnitt gruen mitte"><div class="huelle">
-  <p class="label">${esc(h.label)}</p>
+  ${labelP(h.label)}
   <h2 class="titel t-gross">${akzent(h.titel)}</h2>
-  <p class="fliess">${esc(h.text)}</p>
+  ${absaetze(h.text)}
 </div></section>`;
 }
 
-function ueber(lang, text, farbe = "creme") {
-  const u = T[lang].gemeinsam.ueber;
+function ueber(lang, text, farbe = "creme", daten) {
+  const u = daten || T[lang].gemeinsam.ueber;
   return `<section class="abschnitt ${farbe} ueber"><div class="huelle">
   <div>
-    <p class="label">${esc(u.label)}</p>
+    ${labelP(u.label)}
     <h2 class="titel t-mittel">${akzent(u.titel)}</h2>
-    <p class="fliess">${esc(text || u.text)}</p>
+    ${absaetze(text || u.text)}
     <p class="signatur notiz-d">${esc(u.signatur)}</p>
   </div>
 </div></section>`;
@@ -119,6 +123,7 @@ function formular(lang) {
   <p class="formular-fehler" role="alert" aria-live="polite"></p>
   <button class="button button-rot" type="submit">${esc(a.button)} <span aria-hidden="true">→</span></button>
 </form>
+${a.danach ? `<p class="kleingedruckt">${esc(a.danach)}</p>` : ""}
 <p class="kleingedruckt">${esc(a.hinweis)} <a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerRecht)}</a></p>`;
 }
 
@@ -163,28 +168,29 @@ function seiteFreebie(lang) {
 <section class="abschnitt creme hero"><div class="huelle">
   <div>
     <p class="label">${esc(f.hero.label)}</p>
-    <h1 class="titel t-hero">${akzent(f.hero.titel)}</h1>
-    <p class="fliess">${esc(f.hero.text)}</p>
-    <a class="button button-rot" href="#anmeldung">${esc(t.ui.freebieButton)} <span aria-hidden="true">→</span></a>
+    <h1 class="titel t-hero t-hero-lang">${akzent(f.hero.titel)}</h1>
+    ${absaetze(f.hero.text)}
+    <a class="button button-rot" href="#anmeldung">${esc(f.hero.button || t.ui.freebieButton)} <span aria-hidden="true">→</span></a>
     <p class="notiz notiz-a">${esc(f.hero.notiz)}</p>
   </div>
   <div class="faecher">${bild(img.spur, "", "f-links")}${bild(img.fund, "", "f-rechts")}${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "f-mitte")}</div>
 </div></section>
 ${laufband(lang)}
 ${wiedererkennen(f.wiedererkennen, "weiss")}
-${soFunktionierts(lang, "creme")}
-${haltung(lang)}
-${ueber(lang, null, "weiss")}
+${soFunktionierts(lang, "creme", f.sofunktionierts)}
+${haltung(lang, f.haltung)}
+${ueber(lang, null, "weiss", f.ueber)}
 <section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
   <p class="label">${esc(f.selbstcheck.label)}</p>
   <h2 class="titel t-gross">${akzent(f.selbstcheck.titel)}</h2>
+  ${absaetze(f.selbstcheck.text)}
   <ul class="check">${f.selbstcheck.aussagen.map((a, i) => `<li><label><input type="checkbox" name="check${i}"><span>${esc(a)}</span></label></li>`).join("")}</ul>
   <a class="button button-rot" href="#anmeldung">${esc(f.selbstcheck.button)} <span aria-hidden="true">→</span></a>
 </div></section>
 <section class="abschnitt weiss mitte" id="anmeldung"><div class="huelle">
   <p class="label">${esc(f.anmeldung.label)}</p>
   <h2 class="titel t-gross">${akzent(f.anmeldung.titel)}</h2>
-  <p class="fliess">${esc(f.anmeldung.text)}</p>
+  ${absaetze(f.anmeldung.text)}
   ${formular(lang)}
 </div></section>
 </main>
