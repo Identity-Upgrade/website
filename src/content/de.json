@@ -13,7 +13,8 @@
     "Erkennen",
     "Hinterfragen",
     "Verstehen",
-    "Neu entscheiden"
+    "Neu entscheiden",
+    "Neue Ergebnisse"
   ],
   "freebie": {
     "seo": {
@@ -22,13 +23,13 @@
     },
     "hero": {
       "label": "Escape Self-Sabotage · Raum 1",
-      "titel": "Du weißt, was du willst. Warum tust du dann immer wieder *das Gegenteil?*",
+      "titel": "Du weißt, was du willst. Warum erlebst du dann immer wieder *das Gegenteil?*",
       "text": [
         "Manche Entscheidungen sind im Nachhinein kaum zu verstehen. Vor allem die eigenen.",
-        "Was, wenn dahinter keine Schwäche steckt, sondern eine Logik, die bisher im Verborgenen geblieben ist?"
+        "Was, wenn dahinter keine Schwäche steckt, sondern eine Logik, die dir bisher verborgen war?"
       ],
-      "button": "Raum 1 kostenlos betreten",
-      "notiz": "Vielleicht ist nicht alles so unlogisch, wie es aussieht."
+      "button": "Kostenfreier Zutritt zu Raum 1",
+      "notiz": "Vielleicht ist nicht alles so unlogisch, wie es aussieht …"
     },
     "wiedererkennen": {
       "label": "",

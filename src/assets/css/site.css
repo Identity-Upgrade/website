@@ -263,3 +263,16 @@ a { color: inherit; }
   .faecher img { width: 54%; margin-left: -27%; }
   .faecher .f-mitte { width: 62%; margin-left: -31%; }
 }
+
+/* Fächer zu einer Seite: Cover vorne und allein, Seiten fächern nur nach rechts heraus */
+.faecher img { left: 8%; margin-left: 0; transform-origin: 20% 100%; }
+.faecher .f-mitte { left: 8%; margin-left: 0; transform: rotate(-2deg); z-index: 3; }
+.faecher .f-links { transform: rotate(8deg) translateX(22%); z-index: 2; }
+.faecher .f-rechts { transform: rotate(16deg) translateX(40%); z-index: 1; }
+@media (min-width: 900px) {
+  .faecher img { left: 4%; margin-left: 0; width: 52%; }
+  .faecher .f-mitte { left: 4%; margin-left: 0; width: 56%; }
+}
+@media (max-width: 479px) {
+  .button { font-size: 12px; letter-spacing: .08em; padding: 14px 22px; white-space: nowrap; }
+}
