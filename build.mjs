@@ -35,8 +35,8 @@ const bild = (name, alt, cls = "") =>
   `<img class="${cls}" src="/assets/img/${name}-960.webp" srcset="/assets/img/${name}-480.webp 480w, /assets/img/${name}-960.webp 960w" sizes="(min-width: 900px) 420px, 60vw" alt="${esc(alt)}" loading="lazy" decoding="async" width="960" height="1358">`;
 
 const IMG = {
-  de: { buch: "buch-cover-de", freebie: "freebie-cover-de", spur: "buch-seite-spur-de", fund: "buch-seite-fund-de" },
-  en: { buch: "book-cover-en", freebie: "freebie-cover-en", spur: "book-page-clue-en", fund: "book-page-find-en" },
+  de: { buch: "buch-cover-de", freebie: "freebie-cover-de", raum1: "freebie-raum1-de", spur: "buch-seite-spur-de", fund: "buch-seite-fund-de" },
+  en: { buch: "book-cover-en", freebie: "freebie-cover-en", raum1: "freebie-room1-en", spur: "book-page-clue-en", fund: "book-page-find-en" },
 };
 
 function kopf(lang, seite, { kaufen = false } = {}) {
@@ -173,7 +173,7 @@ function seiteFreebie(lang) {
     <a class="button button-rot" href="#anmeldung">${esc(f.hero.button || t.ui.freebieButton)} <span aria-hidden="true">→</span></a>
     <p class="notiz notiz-a">${esc(f.hero.notiz)}</p>
   </div>
-  <div class="faecher">${bild(img.spur, "", "f-links")}${bild(img.fund, "", "f-rechts")}${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "f-mitte")}</div>
+  <div class="faecher">${bild(img.spur, "", "f-links")}${bild(img.raum1, "", "f-rechts")}${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "f-mitte")}</div>
 </div></section>
 ${laufband(lang)}
 ${wiedererkennen(f.wiedererkennen, "weiss")}
