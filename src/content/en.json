@@ -10,9 +10,11 @@
     "pfeil": "→"
   },
   "laufband": [
-    "[TICKER TEXT ONE]",
-    "[TICKER TEXT TWO]",
-    "[TICKER TEXT THREE]"
+    "Recognize",
+    "Question",
+    "Understand",
+    "Choose differently",
+    "New results"
   ],
   "freebie": {
     "seo": {
@@ -20,10 +22,14 @@
       "beschreibung": "[SEO description freebie, about 150 characters]"
     },
     "hero": {
-      "label": "[Label · Escape room]",
-      "titel": "[Big headline with an] *[accent word.]*",
-      "text": "[One or two sentences explaining what Room 1 is and why to step inside.]",
-      "notiz": "↑ [short handwritten note]"
+      "label": "Escape Self-Sabotage · Freebie",
+      "titel": "You know what you want. So why do you keep ending up with *the exact opposite?*",
+      "text": [
+        "Some decisions are hard to make sense of in hindsight. Especially your own.",
+        "What if it's not a weakness at all, but a logic you just haven't cracked yet?"
+      ],
+      "button": "Free access to Room 1",
+      "notiz": "Maybe not everything is as illogical as it looks …"
     },
     "wiedererkennen": {
       "label": "[Label recognition]",
