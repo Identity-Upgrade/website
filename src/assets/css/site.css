@@ -276,3 +276,18 @@ a { color: inherit; }
 @media (max-width: 479px) {
   .button { font-size: 12px; letter-spacing: .08em; padding: 14px 22px; white-space: nowrap; }
 }
+
+/* Hero: Mockup deutlich größer */
+@media (min-width: 900px) {
+  .hero .huelle { grid-template-columns: 0.9fr 1.1fr; gap: 24px; }
+  .faecher { height: 720px; margin-right: -40px; }
+  .faecher img { left: 2%; width: 62%; bottom: 6%; }
+  .faecher .f-mitte { left: 2%; width: 66%; bottom: 8%; }
+  .t-hero-lang { font-size: clamp(40px, 5.2vw, 68px); }
+}
+@media (max-width: 899px) {
+  .faecher { height: 500px; max-width: 520px; }
+  .faecher img { width: 62%; left: 4%; }
+  .faecher .f-mitte { width: 68%; left: 2%; }
+}
+.hero { overflow: hidden; }
