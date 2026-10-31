@@ -291,3 +291,7 @@ a { color: inherit; }
   .faecher .f-mitte { width: 68%; left: 2%; }
 }
 .hero { overflow: hidden; }
+@media (min-width: 900px) {
+  .faecher img { bottom: 20%; }
+  .faecher .f-mitte { bottom: 22%; }
+}
