@@ -230,11 +230,6 @@ a { color: inherit; }
   .kopf .button-klein { display: none; }
 }
 
-/* Freebie-Hero mit drei Bildern: Cover vorne, zwei Seiten aufgefächert dahinter */
-.mockup-drei .buch { width: 64%; left: 2%; top: 4%; z-index: 3; }
-.mockup-drei .seite { width: 50%; right: 4%; bottom: 2%; transform: rotate(6deg); z-index: 2; }
-.mockup-drei .seite-hinten { width: 46%; right: 5%; bottom: auto; top: 2%; transform: rotate(10deg); z-index: 1; }
-@media (min-width: 900px) { .mockup-drei .seite-hinten { right: 0; transform: rotate(12deg); } }
 
 /* Handschrift: nie gerade, jede Notiz etwas anders geneigt und versetzt */
 .notiz, .signatur { display: block; width: fit-content; transform-origin: left center; }
@@ -244,3 +239,15 @@ a { color: inherit; }
 .notiz-b { transform: rotate(2.2deg) translateX(-10px); }
 .notiz-c { transform: rotate(-4deg); margin: 0 0 14px; }
 .notiz-d { transform: rotate(-6deg) translate(4px, 4px); }
+
+/* Freebie-Hero: drei Bilder als Fächer aus einem gemeinsamen Drehpunkt unten */
+.faecher { position: relative; height: 380px; max-width: 460px; width: 100%; margin: 0 auto; }
+@media (min-width: 900px) { .faecher { height: 600px; max-width: none; } }
+.faecher img { position: absolute; bottom: 6%; left: 50%; width: 44%; margin-left: -22%; transform-origin: 50% 100%; box-shadow: var(--schatten); background: #fff; }
+.faecher .f-links { transform: rotate(-13deg) translateX(-30%); z-index: 1; }
+.faecher .f-rechts { transform: rotate(13deg) translateX(30%); z-index: 2; }
+.faecher .f-mitte { width: 52%; margin-left: -26%; bottom: 8%; z-index: 3; background: #1B1917; }
+@media (min-width: 900px) {
+  .faecher img { width: 48%; margin-left: -24%; bottom: 10%; }
+  .faecher .f-mitte { width: 56%; margin-left: -28%; bottom: 12%; }
+}
