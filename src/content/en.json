@@ -43,20 +43,6 @@
         }
       ]
     },
-    "inhalt": {
-      "label": "What's waiting in Room 1",
-      "titel": "[Headline about the] *[contents.]*",
-      "intro": "[One sentence about Room 1.]",
-      "raumTitel": "Room 1 · Why does this keep happening to me?",
-      "spuren": [
-        "If I don't want it – why would it serve a purpose?",
-        "Two goals that don't want the same thing",
-        "What if the result isn't a coincidence?",
-        "What if you aren't sabotaging yourself at all?",
-        "When the behavior suddenly makes sense"
-      ],
-      "spurWort": "Clue"
-    },
     "selbstcheck": {
       "label": "Self-check",
       "titel": "Do you recognize *yourself?*",

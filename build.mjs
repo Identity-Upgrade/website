@@ -80,7 +80,7 @@ function soFunktionierts(lang, farbe = "creme") {
   <h2 class="titel t-gross">${akzent(s.titel)}</h2>
   <p class="fliess">${esc(s.text)}</p>
   <ol class="stationen">${s.stationen.map((st, i) => `<li class="station"><div class="station-zahl" aria-hidden="true">${i + 1}</div><h3>${esc(st.titel)}</h3><p>${esc(st.text)}</p></li>`).join("")}</ol>
-  <p class="notiz">${esc(s.notiz)}</p>
+  <p class="notiz notiz-b">${esc(s.notiz)}</p>
 </div></section>`;
 }
 
@@ -100,7 +100,7 @@ function ueber(lang, text, farbe = "creme") {
     <p class="label">${esc(u.label)}</p>
     <h2 class="titel t-mittel">${akzent(u.titel)}</h2>
     <p class="fliess">${esc(text || u.text)}</p>
-    <p class="signatur">${esc(u.signatur)}</p>
+    <p class="signatur notiz-d">${esc(u.signatur)}</p>
   </div>
 </div></section>`;
 }
@@ -166,23 +166,13 @@ function seiteFreebie(lang) {
     <h1 class="titel t-hero">${akzent(f.hero.titel)}</h1>
     <p class="fliess">${esc(f.hero.text)}</p>
     <a class="button button-rot" href="#anmeldung">${esc(t.ui.freebieButton)} <span aria-hidden="true">→</span></a>
-    <p class="notiz">${esc(f.hero.notiz)}</p>
+    <p class="notiz notiz-a">${esc(f.hero.notiz)}</p>
   </div>
-  <div class="mockup">${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "buch")}${bild(img.spur, "", "seite")}</div>
+  <div class="mockup mockup-drei">${bild(img.fund, "", "seite seite-hinten")}${bild(img.spur, "", "seite")}${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "buch")}</div>
 </div></section>
 ${laufband(lang)}
 ${wiedererkennen(f.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme")}
-<section class="abschnitt weiss"><div class="huelle zwei-spalten">
-  <div class="aufgeschlagen">${bild(img.spur, "")}${bild(img.fund, "")}</div>
-  <div>
-    <p class="label">${esc(f.inhalt.label)}</p>
-    <h2 class="titel t-gross">${akzent(f.inhalt.titel)}</h2>
-    <p class="fliess">${esc(f.inhalt.intro)}</p>
-    <p class="unterzeile">${esc(f.inhalt.raumTitel)}</p>
-    <ol class="liste">${f.inhalt.spuren.map((s, i) => `<li><span class="nr">${esc(f.inhalt.spurWort)} ${zwei(i + 1)}</span><span>${esc(s)}</span></li>`).join("")}</ol>
-  </div>
-</div></section>
 ${haltung(lang)}
 ${ueber(lang, null, "weiss")}
 <section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
@@ -227,7 +217,7 @@ function seiteBuch(lang) {
     <h1 class="titel t-hero">${akzent(b.hero.titel)}</h1>
     <p class="fliess">${esc(b.hero.text)}</p>
     <a class="button button-rot" href="#preis">${esc(b.preis.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a>
-    <p class="notiz">${esc(b.hero.notiz)}</p>
+    <p class="notiz notiz-a">${esc(b.hero.notiz)}</p>
   </div>
   <div class="mockup">${bild(img.buch, "Escape Self-Sabotage – E-Book", "buch")}${bild(img.fund, "", "seite")}</div>
 </div></section>
@@ -251,7 +241,7 @@ ${haltung(lang)}
 ${ueber(lang, b.ueber.text, "weiss")}
 <section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
 <section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
-  <p class="notiz" style="margin:0 0 8px">${esc(b.rueckweg.notiz)}</p>
+  <p class="notiz notiz-c">${esc(b.rueckweg.notiz)}</p>
   <h2 class="titel t-mittel">${akzent(b.rueckweg.titel)}</h2>
   <a class="button button-dunkel" href="${PFADE.freebie[lang]}">${esc(b.rueckweg.button)} <span aria-hidden="true">→</span></a>
 </div></section>

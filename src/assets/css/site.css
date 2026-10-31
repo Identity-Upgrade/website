@@ -229,3 +229,18 @@ a { color: inherit; }
   .wortmarke { font-size: 21px; }
   .kopf .button-klein { display: none; }
 }
+
+/* Freebie-Hero mit drei Bildern: Cover vorne, zwei Seiten aufgefächert dahinter */
+.mockup-drei .buch { width: 64%; left: 2%; top: 4%; z-index: 3; }
+.mockup-drei .seite { width: 50%; right: 4%; bottom: 2%; transform: rotate(6deg); z-index: 2; }
+.mockup-drei .seite-hinten { width: 46%; right: 5%; bottom: auto; top: 2%; transform: rotate(10deg); z-index: 1; }
+@media (min-width: 900px) { .mockup-drei .seite-hinten { right: 0; transform: rotate(12deg); } }
+
+/* Handschrift: nie gerade, jede Notiz etwas anders geneigt und versetzt */
+.notiz, .signatur { display: block; width: fit-content; transform-origin: left center; }
+.mitte .notiz, .mitte .signatur { margin-left: auto; margin-right: auto; }
+.mitte .notiz, .mitte .signatur { transform-origin: center; }
+.notiz-a { transform: rotate(-3deg) translate(6px, 2px); }
+.notiz-b { transform: rotate(2.2deg) translateX(-10px); }
+.notiz-c { transform: rotate(-4deg); margin: 0 0 14px; }
+.notiz-d { transform: rotate(-6deg) translate(4px, 4px); }

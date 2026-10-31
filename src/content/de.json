@@ -43,20 +43,6 @@
         }
       ]
     },
-    "inhalt": {
-      "label": "Was dich in Raum 1 erwartet",
-      "titel": "[Überschrift zum] *[Inhalt.]*",
-      "intro": "[Ein Satz zu Raum 1.]",
-      "raumTitel": "Raum 1 · Warum passiert mir das immer wieder?",
-      "spuren": [
-        "Wenn ich das nicht will – warum sollte es dann eine Funktion haben?",
-        "Zwei Ziele, die nicht dasselbe wollen",
-        "Was, wenn das Ergebnis kein Zufall ist?",
-        "Was, wenn du dich gar nicht sabotierst?",
-        "Wenn das Verhalten plötzlich Sinn ergibt"
-      ],
-      "spurWort": "Spur"
-    },
     "selbstcheck": {
       "label": "Selbstcheck",
       "titel": "Erkennst du dich *wieder?*",
