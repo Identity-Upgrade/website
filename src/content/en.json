@@ -74,7 +74,7 @@
       "fehler": "Please fill in all fields and check your email address and phone number.",
       "vorwahl": "Country",
       "telefon": "Phone number",
-      "situation": "[Which situation are you in right now?]",
+      "situation": "Your biggest struggle right now",
       "situationLeer": "Please choose",
       "situationen": [
         [
