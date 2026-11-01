@@ -361,3 +361,9 @@ a { color: inherit; }
   .anmeldung-inhalt .fliess { margin-left: 0; margin-right: 0; }
   .anmeldung-inhalt .formular { margin-left: 0; }
 }
+/* Anmeldung: Formular links, Buch rechts (Gegenstück zum Hero) */
+@media (min-width: 900px) {
+  .anmeldung-raster { grid-template-columns: 1.15fr 0.85fr; }
+  .anmeldung-bild { order: 2; justify-self: end; }
+  .anmeldung-inhalt { order: 1; }
+}
