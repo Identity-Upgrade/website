@@ -330,3 +330,5 @@ a { color: inherit; }
 .ueber { border-top: 1px solid var(--tinte); border-bottom: 1px solid var(--tinte); }
 .ueber .huelle > div { max-width: 900px; }
 .ueber .fliess { max-width: 620px; }
+/* Autorenname unter Über mich: wie das Label im Hero, in Rot */
+.ueber .signatur { font-family: var(--label); font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rot); -webkit-text-stroke: 0; margin-top: 32px; }
