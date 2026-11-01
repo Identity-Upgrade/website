@@ -324,4 +324,5 @@ a { color: inherit; }
 /* Grüner Abschnitt: Akzentwort rot, Button mit Abstand */
 .gruen .titel em { color: #D8A440; }
 .gruen .button { margin-top: 32px; }
-.sofunktionierts .notiz { margin-top: 48px; }
+.sofunktionierts .notiz { margin-top: 56px; font-size: 26px; transform: none !important; }
+@media (max-width: 899px) { .sofunktionierts .notiz { font-size: 22px; margin-top: 40px; } }
