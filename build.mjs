@@ -337,6 +337,7 @@ function seitePrivacy(lang) {
   const teil = (x) => `${x.label ? `<h3 class="ds-label">${esc(x.label)}</h3>` : ""}
       ${[].concat(x.p || []).map((y) => `<p>${reich(y)}</p>`).join("")}
       ${x.liste ? `<ul class="ds-liste">${x.liste.map((y) => `<li>${reich(y)}</li>`).join("")}</ul>` : ""}
+      ${x.tabelle ? `<div class="ds-tabelle-huelle"><table class="ds-tabelle"><thead><tr>${x.tabelle.kopf.map((k) => `<th>${esc(k)}</th>`).join("")}</tr></thead><tbody>${x.tabelle.zeilen.map((z) => `<tr>${z.map((c) => `<td>${reich(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}
       ${x.adresse ? `<address class="ds-adresse">${x.adresse.map(esc).join("<br>")}</address>` : ""}`;
   const body = `${kopf(lang, "privacy")}
 <main class="ds">
@@ -350,7 +351,7 @@ function seitePrivacy(lang) {
   <nav class="ds-inhalt" aria-label="${esc(p.inhaltLabel)}"><p class="ds-label">${esc(p.inhaltLabel)}</p>
     <ol>${p.abschnitte.map((a) => `<li><a href="#${a.id}">${esc(a.nav)}</a></li>`).join("")}</ol></nav>
   <div class="ds-text">
-    ${p.abschnitte.map((a) => `<section class="ds-abschnitt" id="${a.id}"><h2>${akzent(a.t)}</h2>${a.teile.map(teil).join("")}</section>`).join("\n    ")}
+    ${p.abschnitte.map((a) => `<section class="ds-abschnitt${a.box ? " ds-box" : ""}" id="${a.id}"><h2>${akzent(a.t)}</h2>${a.teile.map(teil).join("")}</section>`).join("\n    ")}
   </div>
 </div></section>
 <section class="abschnitt butter mitte ds-schluss"><div class="huelle">

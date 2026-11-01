@@ -439,7 +439,7 @@
     "titel": "Daten*schutz.*",
     "stand": "Stand: 1. November 2026",
     "kurzLabel": "Kurz gesagt",
-    "kurz": "Wir erheben deinen Namen und deine E-Mail-Adresse, um dir Raum 1 und unseren Newsletter zu schicken. Keine Cookies, keine Tracking-Tools, und wir *verkaufen deine Daten niemals.* Hier sind die Details.",
+    "kurz": "Wir erheben deinen Namen, deine E-Mail-Adresse und dein größtes Problem, um dir Raum 1 und unseren Newsletter zu schicken. Keine Cookies, keine Tracking-Tools auf der Website, und wir *verkaufen deine Daten niemals.* Hier sind die Details.",
     "inhaltLabel": "Auf dieser Seite",
     "abschnitte": [
       {
@@ -450,86 +450,21 @@
           {
             "p": [
               "Verantwortlich für diese Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die **KlewerINN LLP**, eine Partnerschaft mit beschränkter Haftung mit Sitz in Kanada. Heike Klewer ist die Autorin der Bücher und Inhalte auf dieser Seite. Wenn hier „wir“ oder „uns“ steht, ist die KlewerINN LLP gemeint.",
-              "Du erreichst uns jederzeit unter [[office@klewerinn.com]]. Die vollständige Anschrift findest du ganz unten und im Impressum."
+              "Du erreichst uns jederzeit unter [[office@klewerinn.com]]. Die vollständige Anschrift findest du ganz unten und im Impressum. Einen Datenschutzbeauftragten haben wir nicht benannt, weil wir dazu nicht verpflichtet sind."
             ]
           }
         ]
       },
       {
-        "id": "was",
-        "nav": "Was wir erheben",
-        "t": "Was wir *erheben.*",
-        "teile": [
-          {
-            "label": "Was du uns gibst",
-            "p": "Wenn du dich für Raum 1 anmeldest, gibst du uns:",
-            "liste": [
-              "deinen Vor- und Nachnamen und deine E-Mail-Adresse",
-              "dein größtes Problem (Finanzen, Beziehungen, Körper & Wohlbefinden oder mehrere Bereiche)",
-              "deine Telefonnummer, wenn du sie angeben möchtest. Das ist freiwillig."
-            ]
-          },
-          {
-            "label": "Was automatisch anfällt",
-            "p": [
-              "Diese Website liegt bei Cloudflare. Wie jeder Webserver verarbeitet Cloudflare dabei kurzzeitig technische Daten, damit die Seite bei dir ankommt: deine IP-Adresse, Browser- und Gerätetyp, die aufgerufene Seite und die Uhrzeit.",
-              "Außerdem halten wir fest, woher du kommst, zum Beispiel über einen Kampagnen-Link oder eine verweisende Website, und speichern das mit deiner Anmeldung. Mehr nicht. Keine Cookies, keine Tracking-Pixel, keine Analyse-Tools."
-            ]
-          },
-          {
-            "label": "Was wir nie sehen",
-            "p": "Wenn du das E-Book kaufst, wickelt Digistore24 die Zahlung vollständig ab. Deine Karten- oder Kontodaten gehen direkt dorthin. Wir sehen sie nie."
-          }
-        ]
-      },
-      {
-        "id": "wozu",
-        "nav": "Wofür und auf welcher Grundlage",
-        "t": "Wofür wir sie *nutzen.*",
-        "teile": [
-          {
-            "liste": [
-              "**Raum 1 und Newsletter zuschicken**, mit Themen rund um Selbstsabotage, Mustererkennung und Produkte von Identity Upgrade. Grundlage: deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).",
-              "**E-Mails auf dein größtes Problem abstimmen.** Grundlage: deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).",
-              "**Telefonnummer**, falls angegeben, nur um dich zu fragen, ob du im Rahmen anderer Programme telefonisch oder per SMS kontaktiert werden möchtest. Ohne deine ausdrückliche Zustimmung rufen wir nicht an und schreiben keine SMS. Grundlage: deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).",
-              "**Website ausliefern und absichern** (technische Daten bei Cloudflare). Grundlage: unser berechtigtes Interesse an einer funktionierenden, sicheren Website (Art. 6 Abs. 1 lit. f DSGVO).",
-              "**Herkunft der Anmeldung auswerten**, um zu sehen, welche Kampagnen funktionieren. Grundlage: unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).",
-              "**Auf deine Nachrichten antworten.** Grundlage: Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO."
-            ]
-          },
-          {
-            "p": "Das ist die ganze Liste. Wir verkaufen, vermieten oder tauschen deine Daten nicht."
-          }
-        ]
-      },
-      {
-        "id": "wer-noch",
-        "nav": "Wer sonst damit arbeitet",
-        "t": "Wer sonst damit *arbeitet.*",
-        "teile": [
-          {
-            "p": "Für den Betrieb arbeiten wir mit wenigen Dienstleistern zusammen. Sie bekommen nur, was sie für ihre Aufgabe brauchen.",
-            "liste": [
-              "**Cloudflare, Inc.** (USA) stellt diese Website bereit und liefert sie aus.",
-              "**Kit** (ConvertKit LLC, USA) speichert deine Anmeldung und verschickt unsere E-Mails. Kit erfasst dabei, ob eine E-Mail geöffnet und welche Links angeklickt wurden.",
-              "**Digistore24 GmbH** (Deutschland) verkauft das E-Book als Wiederverkäufer und verarbeitet deinen Kauf in eigener Verantwortung nach seiner eigenen Datenschutzerklärung."
-            ]
-          },
-          {
-            "label": "Übermittlung außerhalb der EU",
-            "p": "Deine Daten werden dadurch auch in Kanada und in den USA verarbeitet. Für Kanada hat die EU-Kommission ein angemessenes Datenschutzniveau festgestellt. Für die USA stützen wir uns auf das EU-US Data Privacy Framework, soweit der Anbieter zertifiziert ist, und sonst auf die Standardvertragsklauseln der EU-Kommission."
-          }
-        ]
-      },
-      {
-        "id": "newsletter",
-        "nav": "Newsletter und Abmeldung",
-        "t": "Newsletter und *Abmeldung.*",
+        "id": "website",
+        "nav": "Website und Server-Logs",
+        "t": "Website und *Server-Logs.*",
         "teile": [
           {
             "p": [
-              "Nach deiner Anmeldung bekommst du eine E-Mail, in der du deine Adresse bestätigst (Double-Opt-in). Erst danach wirst du eingetragen. Zeitpunkt der Anmeldung und der Bestätigung speichern wir als Nachweis deiner Einwilligung.",
-              "Jede E-Mail enthält unten einen Link zum Abmelden. Er wirkt sofort und kostet dich nichts. Du kannst uns auch einfach antworten. Mit der Abmeldung widerrufst du deine Einwilligung für die Zukunft."
+              "Diese Website liegt bei **Cloudflare, Inc.** (USA), die sie über ein weltweites Netz ausliefert. Bei jedem Aufruf verarbeitet Cloudflare kurzzeitig technische Daten, damit die Seite bei dir ankommt und vor Angriffen geschützt ist: deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite, Browser- und Gerätetyp sowie die zuvor besuchte Seite.",
+              "Diese Daten führen wir nicht mit anderen Daten zusammen und werten sie nicht persönlich aus. Cloudflare arbeitet für uns als Auftragsverarbeiter.",
+              "Rechtsgrundlage: unser berechtigtes Interesse an einer funktionierenden und sicheren Website (Art. 6 Abs. 1 lit. f DSGVO)."
             ]
           }
         ]
@@ -540,7 +475,115 @@
         "t": "Cookies und *Statistik.*",
         "teile": [
           {
-            "p": "Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Tools. Wenn du die Startseite aufrufst, leiten wir dich anhand der Spracheinstellung deines Browsers auf die deutsche oder englische Seite. Dabei wird nichts gespeichert."
+            "p": [
+              "Diese Website setzt keine Cookies, speichert nichts in deinem Browser und verwendet keine Analyse- oder Tracking-Tools. Deshalb gibt es auch kein Cookie-Banner.",
+              "Wenn du die Startseite aufrufst, leiten wir dich anhand der Spracheinstellung deines Browsers auf die deutsche oder englische Seite. Dabei wird nichts gespeichert."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "newsletter",
+        "nav": "Raum 1 und Newsletter",
+        "t": "Raum 1 und *Newsletter.*",
+        "teile": [
+          {
+            "p": "Wenn du dich für Raum 1 anmeldest, erheben wir:",
+            "liste": [
+              "Vor- und Nachname und E-Mail-Adresse (Pflichtangaben)",
+              "dein größtes Problem (Finanzen, Beziehungen, Körper & Wohlbefinden oder mehrere Bereiche, Pflichtangabe)",
+              "deine Telefonnummer (freiwillig)",
+              "woher du kommst, zum Beispiel über einen Kampagnen-Link oder eine verweisende Website"
+            ]
+          },
+          {
+            "p": "Damit schicken wir dir Raum 1 und unseren Newsletter rund um Selbstsabotage, Mustererkennung und Produkte von Identity Upgrade. Dein größtes Problem nutzen wir, um unsere E-Mails darauf abzustimmen. Deine Telefonnummer nutzen wir nur, um dich zu fragen, ob du im Rahmen anderer Programme telefonisch oder per SMS kontaktiert werden möchtest. Ohne deine ausdrückliche Zustimmung rufen wir nicht an und schreiben keine SMS."
+          },
+          {
+            "label": "Double-Opt-in und Nachweis",
+            "p": "Nach der Anmeldung bekommst du eine E-Mail, in der du deine Adresse bestätigst. Erst danach wirst du eingetragen. Zeitpunkt der Anmeldung und der Bestätigung sowie deine IP-Adresse speichern wir als Nachweis deiner Einwilligung."
+          },
+          {
+            "label": "Versand mit Kit",
+            "p": "Den Newsletter verschicken wir mit **Kit** (ConvertKit LLC, USA). Kit speichert deine Angaben in unserem Auftrag."
+          },
+          {
+            "label": "Erfolgsmessung",
+            "p": "Unsere E-Mails enthalten Zählpixel und Links, mit denen Kit erfasst, ob eine E-Mail geöffnet und welche Links angeklickt wurden. So sehen wir, welche Inhalte dich interessieren."
+          },
+          {
+            "label": "Abmeldung",
+            "p": "Jede E-Mail enthält einen Link zum Abmelden. Er wirkt sofort. Du kannst uns auch einfach antworten. Mit der Abmeldung widerrufst du deine Einwilligung für die Zukunft, auch für die Erfolgsmessung."
+          },
+          {
+            "p": "Rechtsgrundlage: deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Für die Herkunft der Anmeldung und den Nachweis der Einwilligung: unser berechtigtes Interesse, unsere Werbung auszuwerten und die Einwilligung belegen zu können (Art. 6 Abs. 1 lit. f DSGVO)."
+          }
+        ]
+      },
+      {
+        "id": "kauf",
+        "nav": "Kauf des E-Books",
+        "t": "Kauf des *E-Books.*",
+        "teile": [
+          {
+            "p": [
+              "Das E-Book verkauft die **Digistore24 GmbH** (Deutschland) als Wiederverkäufer. Digistore24 ist dein Vertragspartner, wickelt die Zahlung ab und verarbeitet deine Daten in eigener Verantwortung nach seiner eigenen Datenschutzerklärung. Deine Zahlungsdaten sehen wir nie.",
+              "Digistore24 übermittelt uns deinen Namen, deine E-Mail-Adresse und die Bestelldaten, soweit wir sie brauchen, um dir das E-Book bereitzustellen und bei Fragen zu helfen.",
+              "Rechtsgrundlage: Durchführung des Kaufs (Art. 6 Abs. 1 lit. b DSGVO) und gesetzliche Aufbewahrungspflichten (Art. 6 Abs. 1 lit. c DSGVO)."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kontakt",
+        "nav": "Kontakt per E-Mail",
+        "t": "Kontakt per *E-Mail.*",
+        "teile": [
+          {
+            "p": [
+              "Wenn du uns schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten.",
+              "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, wenn es um einen Kauf oder ein Angebot geht, sonst unser berechtigtes Interesse, Anfragen zu beantworten (Art. 6 Abs. 1 lit. f DSGVO)."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "empfaenger",
+        "nav": "Empfänger und Drittländer",
+        "t": "Empfänger und *Drittländer.*",
+        "teile": [
+          {
+            "p": "Deine Daten geben wir nur an diese Dienstleister weiter, und nur soweit sie sie für ihre Aufgabe brauchen:",
+            "tabelle": {
+              "kopf": [
+                "Empfänger",
+                "Zweck",
+                "Ort / Grundlage"
+              ],
+              "zeilen": [
+                [
+                  "Cloudflare, Inc.",
+                  "Hosting und Auslieferung der Website",
+                  "USA · Data Privacy Framework"
+                ],
+                [
+                  "ConvertKit LLC (Kit)",
+                  "Anmeldung und E-Mail-Versand",
+                  "USA · Data Privacy Framework bzw. Standardvertragsklauseln"
+                ],
+                [
+                  "Digistore24 GmbH",
+                  "Verkauf des E-Books (eigene Verantwortung)",
+                  "Deutschland"
+                ]
+              ]
+            }
+          },
+          {
+            "p": [
+              "Wir selbst sitzen in Kanada. Für Kanada hat die EU-Kommission ein angemessenes Datenschutzniveau festgestellt (Angemessenheitsbeschluss). Für Übermittlungen in die USA stützen wir uns auf das EU-US Data Privacy Framework, soweit der Anbieter zertifiziert ist, und sonst auf die Standardvertragsklauseln der EU-Kommission.",
+              "Wir verkaufen, vermieten oder tauschen deine Daten nicht. Weitergeben würden wir sie nur, wenn ein Gesetz uns dazu verpflichtet."
+            ]
           }
         ]
       },
@@ -550,7 +593,13 @@
         "t": "Wie lange wir *speichern.*",
         "teile": [
           {
-            "p": "Deine Anmeldedaten speichern wir, solange du den Newsletter beziehst. Nach deiner Abmeldung löschen wir sie. Ausgenommen ist der Nachweis deiner Einwilligung und Abmeldung, den wir aufbewahren, solange wir ihn zu unserer rechtlichen Absicherung benötigen. Technische Daten bei Cloudflare werden nur kurzzeitig gespeichert."
+            "liste": [
+              "**Server-Logs bei Cloudflare:** nur kurzzeitig, in der Regel wenige Tage",
+              "**Newsletter-Daten:** solange du angemeldet bist; nach der Abmeldung löschen wir sie",
+              "**Nachweis von Einwilligung und Abmeldung:** solange wir ihn zu unserer rechtlichen Absicherung brauchen, in der Regel bis zu drei Jahre nach der Abmeldung",
+              "**E-Mail-Anfragen:** bis die Anfrage erledigt ist, längstens zwölf Monate, sofern keine Aufbewahrungspflicht besteht",
+              "**Kaufdaten:** so lange, wie es gesetzliche Aufbewahrungspflichten verlangen"
+            ]
           }
         ]
       },
@@ -567,42 +616,42 @@
               "deine Daten löschen zu lassen (Art. 17 DSGVO)",
               "die Verarbeitung einschränken zu lassen (Art. 18 DSGVO)",
               "deine Daten in einem gängigen Format zu erhalten (Art. 20 DSGVO)",
-              "einer Verarbeitung auf Grundlage berechtigter Interessen zu widersprechen (Art. 21 DSGVO)",
               "eine erteilte Einwilligung mit Wirkung für die Zukunft zu widerrufen (Art. 7 Abs. 3 DSGVO)"
             ]
           },
           {
-            "p": "Schreib dafür einfach an [[office@klewerinn.com]]. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel in dem Land, in dem du lebst (Art. 77 DSGVO)."
+            "p": "Schreib dafür einfach an [[office@klewerinn.com]]. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, insbesondere in dem Land, in dem du lebst oder arbeitest (Art. 77 DSGVO)."
           }
         ]
       },
       {
-        "id": "kinder",
-        "nav": "Kinder",
-        "t": "Über *Kinder.*",
+        "id": "widerspruch",
+        "nav": "Widerspruchsrecht",
+        "t": "Dein *Widerspruchsrecht.*",
+        "box": true,
         "teile": [
           {
-            "p": "Diese Website richtet sich an Erwachsene, nicht an Personen unter 16 Jahren. Wenn du glaubst, dass sich dein Kind angemeldet hat, schreib uns, und wir löschen die Daten."
+            "p": [
+              "**Verarbeiten wir deine Daten auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO), kannst du dem jederzeit aus Gründen widersprechen, die sich aus deiner besonderen Situation ergeben (Art. 21 Abs. 1 DSGVO).**",
+              "**Verarbeiten wir deine Daten für Direktwerbung, kannst du dem jederzeit ohne Angabe von Gründen widersprechen (Art. 21 Abs. 2 DSGVO). Dann verwenden wir deine Daten nicht mehr für diesen Zweck.**",
+              "Ein formloser Widerspruch an [[office@klewerinn.com]] oder der Abmeldelink in unseren E-Mails genügt."
+            ]
           }
         ]
       },
       {
-        "id": "sicher",
-        "nav": "Sicherheit",
-        "t": "Sicher *aufbewahrt.*",
+        "id": "hinweise",
+        "nav": "Weitere Hinweise",
+        "t": "Weitere *Hinweise.*",
         "teile": [
           {
-            "p": "Diese Website läuft ausschließlich über eine verschlüsselte Verbindung, und unsere Dienstleister schützen deine Daten nach gängigen Sicherheitsstandards. Kein System ist perfekt, und wir behaupten auch nicht, dass unseres es ist."
-          }
-        ]
-      },
-      {
-        "id": "aenderungen",
-        "nav": "Änderungen",
-        "t": "Wenn sich etwas *ändert.*",
-        "teile": [
-          {
-            "p": "Ändern wir diese Datenschutzerklärung, ändert sich auch das Datum oben. Bei wesentlichen Änderungen informieren wir dich per E-Mail."
+            "p": [
+              "**Pflicht zur Angabe:** Du bist weder gesetzlich noch vertraglich verpflichtet, uns Daten zu geben. Ohne Vorname, Nachname, E-Mail-Adresse und dein größtes Problem können wir dir Raum 1 und den Newsletter aber nicht schicken. Die Telefonnummer ist freiwillig.",
+              "**Mindestalter:** Unsere Angebote richten sich an Erwachsene, nicht an Personen unter 16 Jahren. Wenn du glaubst, dass sich dein Kind angemeldet hat, schreib uns, und wir löschen die Daten.",
+              "**Datensicherheit:** Diese Website läuft ausschließlich über eine verschlüsselte Verbindung (TLS), und unsere Dienstleister schützen deine Daten nach gängigen Sicherheitsstandards. Kein System ist perfekt, und wir behaupten auch nicht, dass unseres es ist.",
+              "**Automatisierte Entscheidungen:** Wir treffen keine automatisierten Entscheidungen im Sinne von Art. 22 DSGVO.",
+              "**Änderungen:** Ändern sich unsere Angebote oder die Rechtslage, passen wir diese Erklärung an. Es gilt die jeweils hier veröffentlichte Fassung; das Datum oben zeigt den Stand."
+            ]
           }
         ]
       },

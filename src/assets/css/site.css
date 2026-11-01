@@ -491,3 +491,13 @@ a { color: inherit; }
 @media (min-width: 700px) { .im-angaben { grid-template-columns: 210px 1fr; gap: 14px 32px; } .im-angaben dt { margin-top: 3px; } }
 @media (min-width: 900px) { .ds-kopf .im-angaben { margin-left: 0; margin-right: 0; } .im-text { max-width: 760px; margin: 0; } }
 .ds-haupt > .huelle { max-width: 960px; }
+.ds-tabelle-huelle { overflow-x: auto; margin: 6px 0 18px; }
+.ds-tabelle { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ds-tabelle th { text-align: left; font-family: var(--label); font-weight: 700; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--tinte); padding: 10px 12px 10px 0; border-bottom: 1px solid var(--tinte); }
+.ds-tabelle td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--rand); color: var(--text); vertical-align: top; line-height: 1.5; }
+.ds-box { background: var(--butter); border: 1px solid var(--tinte); border-radius: 12px; padding: 28px 28px 14px; }
+.ds-box + .ds-abschnitt { border-top: 0; }
+.ds-abschnitt:has(+ .ds-box) { border-bottom: 0; }
+.ds-raster { grid-template-columns: minmax(0, 1fr); } .ds-text { min-width: 0; }
+@media (min-width: 900px) { .ds-raster { grid-template-columns: 200px minmax(0, 1fr); } }
+.ds-box { margin-bottom: 40px; }
