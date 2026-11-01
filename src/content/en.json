@@ -74,10 +74,14 @@
       "fehler": "Please fill in all three fields and check your email address."
     },
     "haltung": {
-      "label": "[Label mindset section]",
-      "titel": "[The one big] *[insight.]*",
-      "text": "[Two or three sentences that deepen the thought.]",
-      "button": "Get Room 1"
+      "label": "",
+      "titel": "Maybe your behavior was never as *illogical* as you thought.",
+      "text": [
+        "You can give other people pretty great advice, but somehow it just doesn't work for you?",
+        "And this is where it gets interesting: your decisions can seem completely incomprehensible from the outside and still make sense within your own world.",
+        "Spoiler: Only when these connections become visible can anything really change. Until then, you keep ending up back at square one."
+      ],
+      "button": "Enter Room 1 for free"
     }
   },
   "buch": {
