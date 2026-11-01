@@ -87,7 +87,7 @@ const SYMBOLE = [
   // Lift
   '<rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M12 3.5v17"/><path d="M7.4 10.2 8.7 8.6l1.3 1.6"/><path d="M14 13.8l1.3 1.6 1.3-1.6"/>',
   // Stockwerke
-  '<path d="M5 20.5V4.5h14v16"/><path d="M5 9.8h14"/><path d="M5 15.1h14"/><path d="M3.5 20.5h17"/>',
+  '<path d="M21.20 17.74 L12.00 23.07 L2.80 17.74"/><path d="M21.20 12.54 L12.00 17.87 L2.80 12.54"/><path d="M12.00 2.00 L21.20 7.34 L12.00 12.67 L2.80 7.34 Z"/><path d="M15.50 4.03 L12.55 5.74" stroke-width="1.1"/><path d="M9.24 7.66 L6.30 9.36" stroke-width="1.1"/><circle cx="7.68" cy="6.54" r=".5" fill="currentColor" stroke="none"/><circle cx="10.90" cy="6.70" r=".5" fill="currentColor" stroke="none"/><circle cx="13.10" cy="7.34" r=".5" fill="currentColor" stroke="none"/><path d="M14.46 7.34l1.70 1.70M16.16 7.34l-1.70 1.70" stroke-width="1.2"/>',
   // Räume (Tür)
   '<path d="M6.5 20.5V4.5h11v16"/><path d="M4.5 20.5h15"/><circle cx="14.6" cy="12.8" r=".9" fill="currentColor" stroke="none"/>',
   // Spuren (Lupe)
