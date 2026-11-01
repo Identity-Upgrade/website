@@ -75,8 +75,117 @@
       "email": "E-Mail-Adresse",
       "button": "Kostenfreier Zutritt zu Raum 1",
       "hinweis": "[Datenschutzhinweis und Einwilligungstext werden vor Veröffentlichung ergänzt.]",
-      "fehler": "Bitte fülle alle drei Felder aus und prüfe deine E-Mail-Adresse.",
-      "danach": "Nach der Anmeldung kommt eine E-Mail zur Bestätigung der Adresse. Anschließend wird Raum 1 als PDF zugestellt."
+      "fehler": "Bitte fülle alle Felder aus und prüfe deine E-Mail-Adresse und Telefonnummer.",
+      "danach": "Nach der Anmeldung kommt eine E-Mail zur Bestätigung der Adresse. Anschließend wird Raum 1 als PDF zugestellt.",
+      "vorwahl": "Land",
+      "telefon": "Telefonnummer",
+      "situation": "In welcher Situation befindest du dich gerade?",
+      "situationLeer": "Bitte auswählen",
+      "situationen": [
+        [
+          "finanzen",
+          "Finanzen"
+        ],
+        [
+          "beziehungen",
+          "Beziehungen"
+        ],
+        [
+          "koerper",
+          "Körper & Wohlbefinden"
+        ],
+        [
+          "mehrere",
+          "Mehrere Bereiche"
+        ]
+      ],
+      "laender": [
+        [
+          "DE",
+          "Deutschland",
+          "+49"
+        ],
+        [
+          "AT",
+          "Österreich",
+          "+43"
+        ],
+        [
+          "CH",
+          "Schweiz",
+          "+41"
+        ],
+        [
+          "LI",
+          "Liechtenstein",
+          "+423"
+        ],
+        [
+          "LU",
+          "Luxemburg",
+          "+352"
+        ],
+        [
+          "NL",
+          "Niederlande",
+          "+31"
+        ],
+        [
+          "BE",
+          "Belgien",
+          "+32"
+        ],
+        [
+          "IT",
+          "Italien",
+          "+39"
+        ],
+        [
+          "ES",
+          "Spanien",
+          "+34"
+        ],
+        [
+          "FR",
+          "Frankreich",
+          "+33"
+        ],
+        [
+          "PL",
+          "Polen",
+          "+48"
+        ],
+        [
+          "DK",
+          "Dänemark",
+          "+45"
+        ],
+        [
+          "SE",
+          "Schweden",
+          "+46"
+        ],
+        [
+          "GB",
+          "Vereinigtes Königreich",
+          "+44"
+        ],
+        [
+          "US",
+          "USA",
+          "+1"
+        ],
+        [
+          "CA",
+          "Kanada",
+          "+1"
+        ],
+        [
+          "AU",
+          "Australien",
+          "+61"
+        ]
+      ]
     },
     "sofunktionierts": {
       "label": "",

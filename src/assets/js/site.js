@@ -42,9 +42,10 @@
     var fehler = form.querySelector(".formular-fehler");
     form.addEventListener("submit", function (ev) {
       var ok = true;
-      form.querySelectorAll("input[required]").forEach(function (el) {
+      form.querySelectorAll("input[required], select[required]").forEach(function (el) {
         var wert = (el.value || "").trim();
-        if (!wert || (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(wert))) {
+        var telefonFalsch = el.hasAttribute("data-telefon") && wert.replace(/[^0-9]/g, "").length < 6;
+        if (!wert || telefonFalsch || (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(wert))) {
           ok = false;
           el.setAttribute("aria-invalid", "true");
         } else {
@@ -59,13 +60,16 @@
         return;
       }
       if (fehler) fehler.textContent = "";
+      // Telefonnummer mit Ländervorwahl zusammensetzen (führende Null entfällt)
+      var vw = form.querySelector("[data-vorwahl]"), tel = form.querySelector("[data-telefon]"), ziel = form.querySelector("input[data-feld='telefon']");
+      if (vw && tel && ziel) ziel.value = vw.value + " " + tel.value.replace(/[^0-9]/g, "").replace(/^0+/, "");
       if (form.getAttribute("data-vorschau") === "ja") {
         ev.preventDefault();
         window.location.href = form.getAttribute("data-danke");
       }
     });
-    form.querySelectorAll("input").forEach(function (el) {
-      el.addEventListener("input", function () {
+    form.querySelectorAll("input, select").forEach(function (el) {
+      el.addEventListener(el.tagName === "SELECT" ? "change" : "input", function () {
         el.removeAttribute("aria-invalid");
         if (fehler) fehler.textContent = "";
       });

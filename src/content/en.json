@@ -71,7 +71,111 @@
       "email": "Email address",
       "button": "Free access to Room 1",
       "hinweis": "[Short privacy note with a link to the legal notice & privacy page. Unsubscribe anytime.]",
-      "fehler": "Please fill in all three fields and check your email address."
+      "fehler": "Please fill in all fields and check your email address and phone number.",
+      "vorwahl": "Country",
+      "telefon": "Phone number",
+      "situation": "[Which situation are you in right now?]",
+      "situationLeer": "Please choose",
+      "situationen": [
+        [
+          "finanzen",
+          "Finances"
+        ],
+        [
+          "beziehungen",
+          "Relationships"
+        ],
+        [
+          "koerper",
+          "Body & Wellbeing"
+        ],
+        [
+          "mehrere",
+          "More than one"
+        ]
+      ],
+      "laender": [
+        [
+          "US",
+          "United States",
+          "+1"
+        ],
+        [
+          "CA",
+          "Canada",
+          "+1"
+        ],
+        [
+          "GB",
+          "United Kingdom",
+          "+44"
+        ],
+        [
+          "AU",
+          "Australia",
+          "+61"
+        ],
+        [
+          "NZ",
+          "New Zealand",
+          "+64"
+        ],
+        [
+          "IE",
+          "Ireland",
+          "+353"
+        ],
+        [
+          "ZA",
+          "South Africa",
+          "+27"
+        ],
+        [
+          "DE",
+          "Germany",
+          "+49"
+        ],
+        [
+          "AT",
+          "Austria",
+          "+43"
+        ],
+        [
+          "CH",
+          "Switzerland",
+          "+41"
+        ],
+        [
+          "NL",
+          "Netherlands",
+          "+31"
+        ],
+        [
+          "FR",
+          "France",
+          "+33"
+        ],
+        [
+          "ES",
+          "Spain",
+          "+34"
+        ],
+        [
+          "IT",
+          "Italy",
+          "+39"
+        ],
+        [
+          "MX",
+          "Mexico",
+          "+52"
+        ],
+        [
+          "IN",
+          "India",
+          "+91"
+        ]
+      ]
     },
     "haltung": {
       "label": "",
