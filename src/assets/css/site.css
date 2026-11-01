@@ -211,7 +211,7 @@ a { color: inherit; }
 .fuss { background: var(--rot); color: var(--creme); padding: 48px 0; border-top: 1px solid var(--tinte); }
 .fuss .huelle { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
 .fuss .wortmarke, .fuss .wortmarke em { color: var(--creme); }
-.fuss a.recht { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--rose-hell); }
+.fuss .recht, .fuss .recht a { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--rose-hell); }
 .fuss small { display: block; width: 100%; font-size: 12px; color: var(--rose-hell); opacity: .85; }
 
 /* Rechtstexte */

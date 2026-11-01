@@ -20,7 +20,8 @@ const PFADE = {
   freebie: { de: "/de/freebie/", en: "/en/freebie/" },
   buch: { de: "/de/escape-self-sabotage/", en: "/en/escape-self-sabotage/" },
   danke: { de: "/de/danke/", en: "/en/thank-you/" },
-  privacy: { de: "/de/privacy/", en: "/en/privacy/" },
+  impressum: { de: "/de/impressum/", en: "/en/legal-notice/" },
+  privacy: { de: "/de/datenschutz/", en: "/en/privacy/" },
 };
 
 const istPlatzhalter = (s) => typeof s === "string" && /^\[.*\]$/.test(s.trim());
@@ -61,7 +62,7 @@ function fuss(lang) {
   const t = T[lang];
   return `<footer class="fuss"><div class="huelle">
   <span class="wortmarke">Identity <em>Upgrade</em><sup>™</sup></span>
-  <a class="recht" href="${PFADE.privacy[lang]}">${esc(t.ui.footerRecht)}</a>
+  <span class="recht"><a href="${PFADE.impressum[lang]}">${esc(t.ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(t.ui.footerDatenschutz)}</a></span>
   <small>© ${new Date().getFullYear()} ${esc(cfg.anbieter.name)}</small>
 </div></footer>`;
 }
@@ -155,7 +156,7 @@ function formular(lang) {
   <button class="button button-rot" type="submit">${esc(a.button)} <span aria-hidden="true">→</span></button>
 </form>
 ${a.danach ? `<p class="kleingedruckt">${esc(a.danach)}</p>` : ""}
-<p class="kleingedruckt">${esc(a.hinweis)} <a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerRecht)}</a></p>`;
+<p class="kleingedruckt">${esc(a.hinweis)} <a href="${PFADE.impressum[lang]}">${esc(T[lang].ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerDatenschutz)}</a></p>`;
 }
 
 function seitenRahmen(lang, seite, { titel, beschreibung, noindex = false, ogBild }, body) {
@@ -310,25 +311,35 @@ ${fuss(lang)}`;
   return seitenRahmen(lang, "danke", { titel: d.seo.titel, noindex: true }, body);
 }
 
-function seitePrivacy(lang) {
+function seiteImpressum(lang) {
   const t = T[lang], p = t.privacy, a = cfg.anbieter;
-  const body = `${kopf(lang, "privacy")}
+  const body = `${kopf(lang, "impressum")}
 <main>
 <section class="abschnitt creme"><div class="huelle recht-text">
-  <h1 class="titel t-gross">${akzent(p.titel)}</h1>
-  <h2>${esc(p.impressumTitel)}</h2>
+  <h1 class="titel t-gross">${esc(p.impressumTitel)}</h1>
   <dl>
     <dt>${esc(p.anbieterLabel)}</dt><dd>${esc(a.name)}<br>${esc(a.adresse)}</dd>
     <dt>${esc(p.vertretenLabel)}</dt><dd>${esc(a.vertreten)}</dd>
     <dt>${esc(p.registerLabel)}</dt><dd>${esc(a.register)}</dd>
     <dt>${esc(p.kontaktLabel)}</dt><dd><a href="mailto:${esc(a.email)}">${esc(a.email)}</a></dd>
   </dl>
-  <h2>${esc(p.datenschutzTitel)}</h2>
+</div></section>
+</main>
+${fuss(lang)}`;
+  return seitenRahmen(lang, "impressum", { titel: `${p.impressumTitel} | Identity Upgrade` }, body);
+}
+
+function seitePrivacy(lang) {
+  const t = T[lang], p = t.privacy;
+  const body = `${kopf(lang, "privacy")}
+<main>
+<section class="abschnitt creme"><div class="huelle recht-text">
+  <h1 class="titel t-gross">${esc(p.datenschutzTitel)}</h1>
   ${p.abschnitte.map((s) => `<h3>${esc(s.t)}</h3><p>${esc(s.x)}</p>`).join("")}
 </div></section>
 </main>
 ${fuss(lang)}`;
-  return seitenRahmen(lang, "privacy", { titel: p.seo.titel }, body);
+  return seitenRahmen(lang, "privacy", { titel: `${p.datenschutzTitel} | Identity Upgrade` }, body);
 }
 
 function startseite() {
@@ -383,12 +394,13 @@ for (const lang of ["de", "en"]) {
   schreibe(PFADE.freebie[lang], seiteFreebie(lang));
   schreibe(PFADE.buch[lang], seiteBuch(lang));
   schreibe(PFADE.danke[lang], seiteDanke(lang));
+  schreibe(PFADE.impressum[lang], seiteImpressum(lang));
   schreibe(PFADE.privacy[lang], seitePrivacy(lang));
 }
 schreibe("/", startseite());
 schreibe("/404.html", seite404());
 
-const indexierbar = ["freebie", "buch", "privacy"].flatMap((s) => ["de", "en"].map((l) => cfg.domain + PFADE[s][l]));
+const indexierbar = ["freebie", "buch", "impressum", "privacy"].flatMap((s) => ["de", "en"].map((l) => cfg.domain + PFADE[s][l]));
 schreibe("/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${indexierbar.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}

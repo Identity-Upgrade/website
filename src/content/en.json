@@ -7,7 +7,9 @@
     "footerRecht": "Legal notice & privacy",
     "vorschau": "Preview – placeholder texts",
     "freebieButton": "Free access to Room 1",
-    "pfeil": "→"
+    "pfeil": "→",
+    "footerImpressum": "Legal notice",
+    "footerDatenschutz": "Privacy"
   },
   "laufband": [
     "Recognize",
@@ -70,7 +72,7 @@
       "nachname": "Last name",
       "email": "Email address",
       "button": "Free access to Room 1",
-      "hinweis": "[Short privacy note with a link to the legal notice & privacy page. Unsubscribe anytime.]",
+      "hinweis": "When you sign up, you'll get Room 1 plus my newsletter on self-sabotage, pattern recognition, and Identity Upgrade, including updates about my books and programs. You can unsubscribe anytime with one click.",
       "fehler": "Please fill in your first name, last name, and email address, choose your biggest struggle, and check your details.",
       "vorwahl": "Country",
       "telefon": "Phone number",
