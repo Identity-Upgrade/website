@@ -38,7 +38,7 @@
       "karten": [
         {
           "label": "Finances",
-          "text": "You work so hard that you should have more than enough left over by now. And yet, somehow, it feels like you're running on a hamster wheel that just keeps spinning faster. You have to keep pushing harder just to make ends meet. And there's barely anything left for yourself."
+          "text": "You work so hard that you should have more than enough left over by now. And yet it feels like you're running on a hamster wheel that just keeps spinning faster. You have to keep pushing harder just to make ends meet. And there's barely anything left for yourself."
         },
         {
           "label": "Relationships",
@@ -46,9 +46,10 @@
         },
         {
           "label": "Body & Wellbeing",
-          "text": "The decision is made. And you're disciplined. This time, it's finally paying off and you're getting exactly the results you want. Until the progress stops, and your old patterns take over again, even though you should have known better by now."
+          "text": "The decision is made. And you're disciplined. This time, it's finally paying off and you're getting exactly the results you want. Until the progress suddenly stops, and your old patterns take over again, even though you really should have known better by now."
         }
-      ]
+      ],
+      "abschluss": "Why does this keep happening to you?"
     },
     "selbstcheck": {
       "label": "Self-check",

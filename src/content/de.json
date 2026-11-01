@@ -23,7 +23,7 @@
     },
     "hero": {
       "label": "Escape Self-Sabotage · Leseprobe",
-      "titel": "Du weißt, was du willst. Warum erlebst du dann immer wieder *das\u00a0Gegenteil?*",
+      "titel": "Du weißt, was du willst. Warum erlebst du dann immer wieder *das Gegenteil?*",
       "text": [
         "Manche Entscheidungen sind im Nachhinein kaum zu verstehen. Vor allem die eigenen.",
         "Was, wenn dahinter keine Schwäche steckt, sondern eine Logik, die du bisher noch nicht erkannt hast?"
@@ -48,7 +48,8 @@
           "label": "Körper & Wohlbefinden",
           "text": "Dein Entschluss steht fest. Und du bist diszipliniert. Diesmal bekommst du endlich die Ergebnisse, die du dir wünschst. Bis sie eben nicht mehr kommen und dein altes Muster das Ruder wieder übernimmt, obwohl du es doch eigentlich längst besser weißt."
         }
-      ]
+      ],
+      "abschluss": "Warum passiert dir das immer wieder?"
     },
     "selbstcheck": {
       "label": "Selbstcheck",

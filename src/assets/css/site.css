@@ -317,3 +317,5 @@ a { color: inherit; }
 /* Abschnittsüberschriften: Zeilen ausgewogen, kein Wort allein */
 .t-gross { text-wrap: balance; }
 .karte p + p { margin-top: 0.8em; }
+.wieder-frage { font-size: 26px; margin: 56px auto 0; }
+@media (max-width: 899px) { .wieder-frage { font-size: 22px; margin-top: 40px; } }
