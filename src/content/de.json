@@ -701,10 +701,6 @@
         "[Straße und Hausnummer]\n[Ort, Provinz, Postleitzahl]\nKanada"
       ],
       [
-        "Vertreten durch",
-        "[Name der vertretungsberechtigten Person], [Funktion]"
-      ],
-      [
         "Kontakt",
         "E-Mail: [[EMAIL]]"
       ],
@@ -715,10 +711,6 @@
       [
         "Registernummer",
         "[Nummer]"
-      ],
-      [
-        "Steuernummer",
-        "[falls vorhanden, sonst streichen]"
       ]
     ],
     "abschnitte": [
