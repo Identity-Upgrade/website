@@ -2,8 +2,14 @@
   "_hinweis": "Zentrale Einstellungen. Alles in eckigen Klammern ist ein Platzhalter und wird vor dem Start ersetzt.",
   "domain": "https://identity-upgrade.com",
   "preise": {
-    "de": { "einfuehrung": "12,99 €", "regulaer": "15,99 €" },
-    "en": { "einfuehrung": "$13.99", "regulaer": "$17.99" },
+    "de": {
+      "einfuehrung": "12,99 €",
+      "regulaer": "15,99 €"
+    },
+    "en": {
+      "einfuehrung": "$13.99",
+      "regulaer": "$17.99"
+    },
     "einfuehrungBis": "2026-12-31",
     "regulaerAb": "2027-01-01"
   },
@@ -18,7 +24,7 @@
     "kaufLinkEn": "[DIGISTORE-LINK-EN]"
   },
   "anbieter": {
-    "name": "[NAME DER LLP]",
+    "name": "KlewerINN LLP",
     "adresse": "[GESCHÄFTSADRESSE DER LLP, KANADA]",
     "register": "[REGISTER UND REGISTERNUMMER]",
     "vertreten": "[VERTRETUNGSBERECHTIGTE PERSON]",
