@@ -311,7 +311,7 @@ a { color: inherit; }
 @media (min-width: 900px) { .hero .button { white-space: nowrap; } }
 /* Wiedererkennen: großzügiger am Computer, dünne Linie zum nächsten Abschnitt */
 .wiedererkennen { border-bottom: 1px solid var(--tinte); }
-@media (min-width: 900px) { .wiedererkennen, .haltung, .sofunktionierts, .ueber { padding: 122px 0; } }
+@media (min-width: 900px) { .wiedererkennen, .haltung, .sofunktionierts, .ueber, .anmeldung { padding: 122px 0; } }
 /* Kein einzelnes Wort allein in der letzten Zeile */
 .karte p, .fliess, .station p { text-wrap: pretty; }
 /* Abschnittsüberschriften: Zeilen ausgewogen, kein Wort allein */

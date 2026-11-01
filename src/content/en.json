@@ -63,7 +63,7 @@
       "button": "Free access to Room 1"
     },
     "anmeldung": {
-      "label": "Sign up",
+      "label": "",
       "titel": "[Headline for the] *[sign-up.]*",
       "text": "[One sentence about what happens after signing up.]",
       "vorname": "First name",

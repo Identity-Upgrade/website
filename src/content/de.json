@@ -64,7 +64,7 @@
       "button": "Kostenfreier Zutritt zu Raum 1"
     },
     "anmeldung": {
-      "label": "Anmeldung",
+      "label": "",
       "titel": "Die erste Tür steht *offen.*",
       "text": [
         "Raum 1 ist der kostenlose Einstieg in *Escape Self-Sabotage.*",
