@@ -372,3 +372,15 @@ a { color: inherit; }
 .anmeldung-bild { margin-bottom: 0; }
 .anmeldung-notiz { font-size: 24px; margin: 28px auto 32px; }
 @media (min-width: 900px) { .anmeldung-notiz { margin: 36px auto 0; } }
+/* Über mich am Computer: linksbündig, Text in zwei Spalten nebeneinander */
+@media (min-width: 900px) {
+  .ueber .huelle > div { max-width: none; text-align: left; display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; align-items: start; }
+  .ueber .huelle > div > .titel { grid-column: 1 / -1; margin-bottom: 36px; }
+  .ueber .huelle > div > .fliess { max-width: none; margin: 0; }
+  .ueber .signatur { grid-column: 2; margin: 28px 0 0; }
+}
+@media (min-width: 900px) {
+  .ueber .huelle > div > .fliess:nth-of-type(1) { grid-column: 1; grid-row: 2; }
+  .ueber .huelle > div > .fliess:nth-of-type(2) { grid-column: 2; grid-row: 2; align-self: start; }
+  .ueber .signatur { grid-column: 2; grid-row: 2; align-self: end; margin: 0 0 6px; }
+}
