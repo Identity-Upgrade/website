@@ -141,13 +141,13 @@ function formular(lang) {
   <div class="feld"><label class="nur-vorlesen" for="email-${lang}">${esc(a.email)}</label><input id="email-${lang}" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="${esc(a.email)}" required></div>
   <div class="feld"><label class="nur-vorlesen" for="telefon-${lang}">${esc(a.telefon)}</label>
     <div class="telefon-reihe">
-      <select id="vorwahl-${lang}" aria-label="${esc(a.vorwahl)}" data-vorwahl required>${(a.laender || []).map(([c, n, v], i) => `<option value="${esc(v)}"${i === 0 ? " selected" : ""}>${esc(c)} ${esc(v)}</option>`).join("")}</select>
-      <input id="telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(a.telefon)}" data-telefon required>
+      <select id="vorwahl-${lang}" aria-label="${esc(a.vorwahl)}" data-vorwahl>${(a.laender || []).map(([c, n, v], i) => `<option value="${esc(v)}"${i === 0 ? " selected" : ""}>${esc(c)} ${esc(v)}</option>`).join("")}</select>
+      <input id="telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(a.telefon)}" data-telefon>
     </div>
   </div>
   <input type="hidden" name="fields[telefon]" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="situation-${lang}">${esc(a.situation)}</label>
-    <select id="situation-${lang}" name="fields[situation]" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
+    <select id="situation-${lang}" name="fields[situation]"><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
   </div>
   <input type="hidden" name="fields[quelle]" data-feld="quelle">
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">

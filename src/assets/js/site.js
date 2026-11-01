@@ -42,10 +42,11 @@
     var fehler = form.querySelector(".formular-fehler");
     form.addEventListener("submit", function (ev) {
       var ok = true;
-      form.querySelectorAll("input[required], select[required]").forEach(function (el) {
+      form.querySelectorAll("input[required], select[required], input[data-telefon]").forEach(function (el) {
         var wert = (el.value || "").trim();
-        var telefonFalsch = el.hasAttribute("data-telefon") && wert.replace(/[^0-9]/g, "").length < 6;
-        if (!wert || telefonFalsch || (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(wert))) {
+        var istTelefon = el.hasAttribute("data-telefon");
+        var telefonFalsch = istTelefon && wert !== "" && wert.replace(/[^0-9]/g, "").length < 6;
+        if ((!wert && !istTelefon) || telefonFalsch || (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(wert))) {
           ok = false;
           el.setAttribute("aria-invalid", "true");
         } else {
@@ -62,7 +63,7 @@
       if (fehler) fehler.textContent = "";
       // Telefonnummer mit Ländervorwahl zusammensetzen (führende Null entfällt)
       var vw = form.querySelector("[data-vorwahl]"), tel = form.querySelector("[data-telefon]"), ziel = form.querySelector("input[data-feld='telefon']");
-      if (vw && tel && ziel) ziel.value = vw.value + " " + tel.value.replace(/[^0-9]/g, "").replace(/^0+/, "");
+      if (vw && tel && ziel) { var nr = tel.value.replace(/[^0-9]/g, "").replace(/^0+/, ""); ziel.value = nr ? vw.value + " " + nr : ""; }
       if (form.getAttribute("data-vorschau") === "ja") {
         ev.preventDefault();
         window.location.href = form.getAttribute("data-danke");
