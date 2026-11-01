@@ -368,3 +368,7 @@ a { color: inherit; }
 .fuss .recht { justify-self: end; }
 @media (max-width: 699px) { .fuss .huelle { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 8px; } .fuss .recht { justify-self: center; } }
 .sofunktionierts .button { margin-top: 36px; }
+/* Handschrift-Notiz unter dem Buch im Formular-Abschnitt */
+.anmeldung-bild { margin-bottom: 0; }
+.anmeldung-notiz { font-size: 24px; margin: 28px auto 32px; }
+@media (min-width: 900px) { .anmeldung-notiz { margin: 36px auto 0; } }

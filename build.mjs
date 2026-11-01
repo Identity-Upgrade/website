@@ -218,7 +218,10 @@ ${soFunktionierts(lang, "creme", f.sofunktionierts)}
 ${ueber(lang, null, "weiss", f.ueber)}
 <section class="abschnitt beige mitte anmeldung" id="anmeldung"><div class="huelle">
   <div class="anmeldung-raster">
-    <div class="anmeldung-bild" aria-hidden="true">${bild(img.raum1, "", "ab-hinten")}${bild(img.freebie, "", "ab-vorne")}</div>
+    <div class="anmeldung-bild-spalte">
+      <div class="anmeldung-bild" aria-hidden="true">${bild(img.raum1, "", "ab-hinten")}${bild(img.freebie, "", "ab-vorne")}</div>
+      ${f.anmeldung.bildNotiz ? `<p class="notiz notiz-c anmeldung-notiz">${esc(f.anmeldung.bildNotiz)}</p>` : ""}
+    </div>
     <div class="anmeldung-inhalt">
       ${labelP(f.anmeldung.label)}
       <h2 class="titel t-gross">${akzent(f.anmeldung.titel)}</h2>
