@@ -450,7 +450,7 @@
           {
             "p": [
               "Verantwortlich für diese Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die **KlewerINN LLP**, eine Partnerschaft mit beschränkter Haftung mit Sitz in Kanada. Heike Klewer ist die Autorin der Bücher und Inhalte auf dieser Seite. Wenn hier „wir“ oder „uns“ steht, ist die KlewerINN LLP gemeint.",
-              "Du erreichst uns jederzeit unter [[office@klewerinn.com]]. Die vollständige Anschrift findest du ganz unten und im Impressum. Einen Datenschutzbeauftragten haben wir nicht benannt, weil wir dazu nicht verpflichtet sind."
+              "Du erreichst uns jederzeit unter [[EMAIL]]. Die vollständige Anschrift findest du ganz unten und im Impressum. Einen Datenschutzbeauftragten haben wir nicht benannt, weil wir dazu nicht verpflichtet sind."
             ]
           }
         ]
@@ -620,7 +620,7 @@
             ]
           },
           {
-            "p": "Schreib dafür einfach an [[office@klewerinn.com]]. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, insbesondere in dem Land, in dem du lebst oder arbeitest (Art. 77 DSGVO)."
+            "p": "Schreib dafür einfach an [[EMAIL]]. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, insbesondere in dem Land, in dem du lebst oder arbeitest (Art. 77 DSGVO)."
           }
         ]
       },
@@ -634,7 +634,7 @@
             "p": [
               "**Verarbeiten wir deine Daten auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO), kannst du dem jederzeit aus Gründen widersprechen, die sich aus deiner besonderen Situation ergeben (Art. 21 Abs. 1 DSGVO).**",
               "**Verarbeiten wir deine Daten für Direktwerbung, kannst du dem jederzeit ohne Angabe von Gründen widersprechen (Art. 21 Abs. 2 DSGVO). Dann verwenden wir deine Daten nicht mehr für diesen Zweck.**",
-              "Ein formloser Widerspruch an [[office@klewerinn.com]] oder der Abmeldelink in unseren E-Mails genügt."
+              "Ein formloser Widerspruch an [[EMAIL]] oder der Abmeldelink in unseren E-Mails genügt."
             ]
           }
         ]
@@ -661,7 +661,7 @@
         "t": "Noch *Fragen?*",
         "teile": [
           {
-            "p": "Schreib an [[office@klewerinn.com]] oder per Post an:",
+            "p": "Schreib an [[EMAIL]] oder per Post an:",
             "adresse": [
               "KlewerINN LLP",
               "[Straße und Hausnummer]",
@@ -706,7 +706,7 @@
       ],
       [
         "Kontakt",
-        "E-Mail: [[office@klewerinn.com]]"
+        "E-Mail: [[EMAIL]]"
       ],
       [
         "Register",

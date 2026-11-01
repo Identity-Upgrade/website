@@ -443,7 +443,7 @@
           {
             "p": [
               "Identity Upgrade is run by **KlewerINN LLP**, a limited liability partnership based in Canada. Heike Klewer is the author of the books and content you find here. When this page says “we” or “us,” it means KlewerINN LLP. When it says “you,” that's you.",
-              "You can reach us anytime at [[office@klewerinn.com]]."
+              "You can reach us anytime at [[EMAIL]]."
             ]
           }
         ]
@@ -533,7 +533,7 @@
         "teile": [
           {
             "p": [
-              "You can ask us what we have about you, have it corrected or deleted, and withdraw your consent at any time. Just email [[office@klewerinn.com]]. Depending on where you live, privacy laws such as Canada's PIPEDA, the California Consumer Privacy Act, or the EU's GDPR give you these rights specifically, and you can file a complaint with your privacy regulator.",
+              "You can ask us what we have about you, have it corrected or deleted, and withdraw your consent at any time. Just email [[EMAIL]]. Depending on where you live, privacy laws such as Canada's PIPEDA, the California Consumer Privacy Act, or the EU's GDPR give you these rights specifically, and you can file a complaint with your privacy regulator.",
               "We keep your sign-up data as long as you're subscribed. Once you unsubscribe, we delete it, except for a record of your consent and unsubscribe, which we keep as proof."
             ]
           }
@@ -575,7 +575,7 @@
         "t": "Still have *questions?*",
         "teile": [
           {
-            "p": "Email [[office@klewerinn.com]], or write to us:",
+            "p": "Email [[EMAIL]], or write to us:",
             "adresse": [
               "KlewerINN LLP",
               "[Street address]",
