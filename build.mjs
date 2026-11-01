@@ -83,7 +83,7 @@ function wiedererkennen(w, farbe = "weiss") {
 
 function soFunktionierts(lang, farbe = "creme", daten) {
   const s = daten || T[lang].gemeinsam.sofunktionierts;
-  return `<section class="abschnitt ${farbe} mitte"><div class="huelle">
+  return `<section class="abschnitt ${farbe} mitte sofunktionierts"><div class="huelle">
   ${labelP(s.label)}
   <h2 class="titel t-gross">${akzent(s.titel)}</h2>
   ${absaetze(s.text)}
