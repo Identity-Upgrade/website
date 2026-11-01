@@ -124,7 +124,10 @@ function ueber(lang, text, farbe = "creme", daten) {
   <div>
     ${labelP(u.label)}
     <h2 class="titel t-gross">${akzent(u.titel)}</h2>
-    ${absaetze(text || u.text)}
+    ${(() => { const x = text || u.text; return Array.isArray(x) && x.length === 3
+      ? `<p class="fliess u-a">${akzent(x[0])}</p>
+    <div class="u-rechts"><p class="fliess u-b">${akzent(x[1])}</p> <p class="fliess u-c">${akzent(x[2])}</p></div>`
+      : absaetze(x); })()}
     <p class="signatur notiz-d">${esc(u.signatur)}</p>
   </div>
 </div></section>`;

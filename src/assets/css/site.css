@@ -416,3 +416,31 @@ a { color: inherit; }
 @media (min-width: 900px) and (max-width: 1279px) { .faecher.anmeldung-faecher { margin-left: 0; } }
 /* Handschrift: Zeilen ausgewogen umbrechen, kein einzelnes Wort allein */
 .notiz { text-wrap: balance; }
+/* Über mich: drei Textteile. Computer: Spalte 1 = Teil 1, Spalte 2 = Teil 2+3 fortlaufend.
+   Handy: Teil 1+2 ein Absatz, neuer Absatz ab "Im Juni 2025"; linksbündig */
+.ueber .u-rechts .fliess { display: inline; }
+@media (min-width: 900px) {
+  .ueber .huelle > div > .u-rechts { grid-column: 2; grid-row: 2; }
+  .ueber .u-rechts .fliess { margin: 0; max-width: none; }
+}
+@media (max-width: 899px) {
+  .ueber .huelle > div > .u-a, .ueber .u-b { display: inline; margin: 0; }
+  .ueber .u-rechts { display: contents; }
+  .ueber .u-c { display: block; margin-top: 28px; }
+  .ueber .fliess, .ueber .signatur { text-align: left; margin-left: 0; margin-right: 0; }
+  .ueber .huelle > div { text-align: left; }
+  .ueber .titel { text-align: center; }
+  .ueber .signatur { margin-top: 28px; }
+}
+/* Stationen am Handy: Symbol oben bündig mit der Überschrift */
+@media (max-width: 759px) {
+  .station { align-items: start; }
+  .station-zahl { align-self: start; }
+}
+/* Hero-Fächer am Handy so groß wie im Formular-Abschnitt */
+@media (max-width: 899px) {
+  .hero .faecher { height: auto; aspect-ratio: 1 / 1.05; max-width: 400px; width: 100%; margin: 0 auto; }
+  .hero .faecher img { width: 56%; left: 4%; bottom: 8%; }
+  .hero .faecher .f-mitte { width: 60%; left: 2%; bottom: 10%; }
+}
+@media (max-width: 899px) { .ueber .u-rechts .u-c { display: block; margin-top: 28px; } }
