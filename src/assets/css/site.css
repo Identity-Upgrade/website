@@ -322,5 +322,5 @@ a { color: inherit; }
 /* Handschrift gerade: Abschlussfrage unter den Kästchen und Unterschrift */
 .wieder-frage, .signatur { transform: none !important; }
 /* Grüner Abschnitt: Akzentwort rot, Button mit Abstand */
-.gruen .titel em { color: #E6D6BC; }
+.gruen .titel em { color: #D9C3A0; }
 .gruen .button { margin-top: 32px; }
