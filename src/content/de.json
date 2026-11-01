@@ -34,11 +34,11 @@
     "wiedererkennen": {
       "label": "",
       "titel": "Kennst du das Gefühl, irgendwie immer wieder *am selben Punkt* zu landen?",
-      "text": "Die Situationen verändern sich. Die Menschen auch. Nur das Ergebnis kommt einem verdächtig bekannt vor.",
+      "text": "Die Situationen verändern sich. Die Menschen verändern sich auch. Nur das Ergebnis kommt einem verdächtig bekannt vor.",
       "karten": [
         {
           "label": "Finanzen",
-          "text": "Eigentlich sollte längst mehr übrig bleiben. Trotzdem fühlt es sich an, als müsste immer noch mehr gearbeitet, geleistet oder abgesichert werden."
+          "text": "Du arbeitest so viel, dass eigentlich längst mehr übrig bleiben sollte. Trotzdem hast du das Gefühl, dein Hamsterrad dreht sich immer schneller und du musst noch mehr arbeiten, leisten und absichern, um normal leben zu können. Für dich selbst bleibt da nicht viel übrig."
         },
         {
           "label": "Beziehungen",
