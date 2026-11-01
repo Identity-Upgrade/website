@@ -316,3 +316,4 @@ a { color: inherit; }
 .karte p, .fliess, .station p { text-wrap: pretty; }
 /* Abschnittsüberschriften: Zeilen ausgewogen, kein Wort allein */
 .t-gross { text-wrap: balance; }
+.karte p + p { margin-top: 0.8em; }

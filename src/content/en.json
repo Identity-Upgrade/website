@@ -33,20 +33,26 @@
     },
     "wiedererkennen": {
       "label": "",
-      "titel": "Do you know that feeling of somehow ending up *in the same place* again and again?",
-      "text": "The situations change. The people change too. Only the outcome feels suspiciously familiar.",
+      "titel": "Do you ever feel like you somehow keep ending up *right back where you started?*",
+      "text": [
+        "The situations change. The people change, too.",
+        "But somehow, the outcome feels strangely familiar."
+      ],
       "karten": [
         {
           "label": "Finances",
-          "text": "You work so hard that there really should be more left over by now. And yet it feels like your hamster wheel keeps spinning faster and faster, and you have to do even more just to live a normal life. There's not much left for you."
+          "text": "You work so hard that you should have more than enough left over by now. And yet, somehow, it feels like you're running on a hamster wheel that just keeps spinning faster. You have to keep pushing harder just to make ends meet. And there's barely anything left for yourself."
         },
         {
           "label": "Relationships",
-          "text": "Different people, different stories, everything was different this time. And yet, at some point, there it was again: that familiar feeling that everything is slipping away from you once more, and that somewhere along the way, you lost yourself."
+          "text": "Different people. Different stories. Everything seemed different this time. And yet, sooner or later, that familiar feeling creeps back in. Things start slipping out of your control again, and somewhere along the way, you realize you've lost yourself."
         },
         {
-          "label": "Body & Well-Being",
-          "text": "Your mind is made up. And you're disciplined. This time, you're finally getting the results you want. Until they stop coming and your old pattern takes the wheel again, even though, deep down, you know better by now."
+          "label": "Body & Wellbeing",
+          "text": [
+            "You've made up your mind. You're disciplined. This time, you're finally getting the results you've been hoping for.",
+            "Until the progress stops, and your old patterns take over again, even though you know better by now."
+          ]
         }
       ]
     },

@@ -76,7 +76,7 @@ function wiedererkennen(w, farbe = "weiss") {
   ${labelP(w.label)}
   <h2 class="titel t-gross">${akzent(w.titel)}</h2>
   ${absaetze(w.text)}
-  <div class="karten">${w.karten.map((k) => `<article class="karte"><h3 class="label">${esc(k.label)}</h3><p>${esc(k.text)}</p></article>`).join("")}</div>
+  <div class="karten">${w.karten.map((k) => `<article class="karte"><h3 class="label">${esc(k.label)}</h3>${[].concat(k.text).map((x) => `<p>${esc(x)}</p>`).join("")}</article>`).join("")}</div>
 </div></section>`;
 }
 
