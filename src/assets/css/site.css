@@ -321,3 +321,6 @@ a { color: inherit; }
 @media (max-width: 899px) { .wieder-frage { font-size: 22px; margin-top: 40px; } }
 /* Handschrift gerade: Abschlussfrage unter den Kästchen und Unterschrift */
 .wieder-frage, .signatur { transform: none !important; }
+/* Grüner Abschnitt: Akzentwort rot, Button mit Abstand */
+.gruen .titel em { color: var(--rot); }
+.gruen .button { margin-top: 32px; }

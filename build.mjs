@@ -98,6 +98,7 @@ function haltung(lang, daten) {
   ${labelP(h.label)}
   <h2 class="titel t-gross">${akzent(h.titel)}</h2>
   ${absaetze(h.text)}
+  ${h.button ? `<a class="button button-rot" href="#anmeldung">${esc(h.button)} <span aria-hidden="true">→</span></a>` : ""}
 </div></section>`;
 }
 
@@ -182,13 +183,6 @@ function seiteFreebie(lang) {
 ${laufband(lang)}
 ${wiedererkennen(f.wiedererkennen, "weiss")}
 ${haltung(lang, f.haltung)}
-<section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
-  <p class="label">${esc(f.selbstcheck.label)}</p>
-  <h2 class="titel t-gross">${akzent(f.selbstcheck.titel)}</h2>
-  ${absaetze(f.selbstcheck.text)}
-  <ul class="check">${f.selbstcheck.aussagen.map((a, i) => `<li><label><input type="checkbox" name="check${i}"><span>${esc(a)}</span></label></li>`).join("")}</ul>
-  <a class="button button-rot" href="#anmeldung">${esc(f.selbstcheck.button)} <span aria-hidden="true">→</span></a>
-</div></section>
 ${soFunktionierts(lang, "creme", f.sofunktionierts)}
 ${ueber(lang, null, "weiss", f.ueber)}
 <section class="abschnitt weiss mitte" id="anmeldung"><div class="huelle">

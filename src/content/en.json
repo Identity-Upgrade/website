@@ -72,6 +72,12 @@
       "button": "Get Room 1",
       "hinweis": "[Short privacy note with a link to the legal notice & privacy page. Unsubscribe anytime.]",
       "fehler": "Please fill in all three fields and check your email address."
+    },
+    "haltung": {
+      "label": "[Label mindset section]",
+      "titel": "[The one big] *[insight.]*",
+      "text": "[Two or three sentences that deepen the thought.]",
+      "button": "Get Room 1"
     }
   },
   "buch": {
