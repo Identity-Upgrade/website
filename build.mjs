@@ -20,7 +20,7 @@ const PFADE = {
   freebie: { de: "/de/freebie/", en: "/en/freebie/" },
   buch: { de: "/de/escape-self-sabotage/", en: "/en/escape-self-sabotage/" },
   danke: { de: "/de/danke/", en: "/en/thank-you/" },
-  impressum: { de: "/de/impressum/", en: "/en/legal-notice/" },
+  impressum: { de: "/de/impressum/", en: null }, // Englisch: kein Impressum, nur Privacy
   privacy: { de: "/de/datenschutz/", en: "/en/privacy/" },
 };
 
@@ -47,7 +47,7 @@ function kopf(lang, seite, { kaufen = false } = {}) {
   const t = T[lang];
   const sprache = `<nav class="sprache" aria-label="${esc(t.ui.sprache)}">${
     lang === "de"
-      ? `<span class="aktiv" aria-current="true">DE</span><a href="${PFADE[seite].en}" hreflang="en" lang="en">EN</a>`
+      ? `<span class="aktiv" aria-current="true">DE</span><a href="${PFADE[seite].en || PFADE.privacy.en}" hreflang="en" lang="en">EN</a>`
       : `<a href="${PFADE[seite].de}" hreflang="de" lang="de">DE</a><span class="aktiv" aria-current="true">EN</span>`
   }</nav>`;
   const kauf = kaufen ? `<a class="button button-rot button-klein" href="#preis">${esc(t.ui.kaufen)}</a>` : "";
@@ -63,7 +63,7 @@ function fuss(lang) {
   return `<footer class="fuss"><div class="huelle">
   <span class="wortmarke">Identity <em>Upgrade</em><sup>™</sup></span>
   <small>© ${new Date().getFullYear()} ${esc(cfg.anbieter.name)}</small>
-  <span class="recht"><a href="${PFADE.impressum[lang]}">${esc(t.ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(t.ui.footerDatenschutz)}</a></span>
+  <span class="recht">${PFADE.impressum[lang] ? `<a href="${PFADE.impressum[lang]}">${esc(t.ui.footerImpressum)}</a> · ` : ""}<a href="${PFADE.privacy[lang]}">${esc(t.ui.footerDatenschutz)}</a></span>
 </div></footer>`;
 }
 
@@ -159,7 +159,7 @@ function formular(lang) {
 
 function formularHinweis(lang) {
   const a = T[lang].freebie.anmeldung;
-  return `<p class="kleingedruckt">${esc(a.hinweis)} <a href="${PFADE.impressum[lang]}">${esc(T[lang].ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerDatenschutz)}</a></p>`;
+  return `<p class="kleingedruckt">${esc(a.hinweis)} ${PFADE.impressum[lang] ? `<a href="${PFADE.impressum[lang]}">${esc(T[lang].ui.footerImpressum)}</a> · ` : ""}<a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerDatenschutz)}</a></p>`;
 }
 
 function seitenRahmen(lang, seite, { titel, beschreibung, noindex = false, ogBild }, body) {
@@ -174,9 +174,9 @@ function seitenRahmen(lang, seite, { titel, beschreibung, noindex = false, ogBil
 ${beschreibung ? `<meta name="description" content="${esc(beschreibung)}">` : ""}
 ${noindex ? `<meta name="robots" content="noindex, nofollow">` : ""}
 <link rel="canonical" href="${url}">
-<link rel="alternate" hreflang="de" href="${cfg.domain}${alt.de}">
+${alt.de && alt.en ? `<link rel="alternate" hreflang="de" href="${cfg.domain}${alt.de}">
 <link rel="alternate" hreflang="en" href="${cfg.domain}${alt.en}">
-<link rel="alternate" hreflang="x-default" href="${cfg.domain}${alt.en}">
+<link rel="alternate" hreflang="x-default" href="${cfg.domain}${alt.en}">` : ""}
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(titel)}">
 ${beschreibung ? `<meta property="og:description" content="${esc(beschreibung)}">` : ""}
@@ -403,13 +403,13 @@ for (const lang of ["de", "en"]) {
   schreibe(PFADE.freebie[lang], seiteFreebie(lang));
   schreibe(PFADE.buch[lang], seiteBuch(lang));
   schreibe(PFADE.danke[lang], seiteDanke(lang));
-  schreibe(PFADE.impressum[lang], seiteImpressum(lang));
+  if (PFADE.impressum[lang]) schreibe(PFADE.impressum[lang], seiteImpressum(lang));
   schreibe(PFADE.privacy[lang], seitePrivacy(lang));
 }
 schreibe("/", startseite());
 schreibe("/404.html", seite404());
 
-const indexierbar = ["freebie", "buch", "impressum", "privacy"].flatMap((s) => ["de", "en"].map((l) => cfg.domain + PFADE[s][l]));
+const indexierbar = ["freebie", "buch", "impressum", "privacy"].flatMap((s) => ["de", "en"].filter((l) => PFADE[s][l]).map((l) => cfg.domain + PFADE[s][l]));
 schreibe("/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${indexierbar.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
