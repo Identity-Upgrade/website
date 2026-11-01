@@ -6,7 +6,7 @@
     "kaufen": "Jetzt kaufen",
     "footerRecht": "Impressum & Datenschutz",
     "vorschau": "Vorschau – Platzhaltertexte",
-    "freebieButton": "Raum 1 holen",
+    "freebieButton": "Kostenfreier Zutritt zu Raum 1",
     "pfeil": "→"
   },
   "laufband": [
@@ -61,7 +61,7 @@
         "Ich kann anderen Menschen gute Ratschläge geben, aber bei mir selbst funktioniert das nicht immer.",
         "Ich habe mich schon gefragt, warum ich manchmal Entscheidungen treffe, die meinen eigenen Zielen widersprechen."
       ],
-      "button": "Raum 1 kostenlos betreten"
+      "button": "Kostenfreier Zutritt zu Raum 1"
     },
     "anmeldung": {
       "label": "Anmeldung",
@@ -73,7 +73,7 @@
       "vorname": "Vorname",
       "nachname": "Nachname",
       "email": "E-Mail-Adresse",
-      "button": "Raum 1 kostenlos erhalten",
+      "button": "Kostenfreier Zutritt zu Raum 1",
       "hinweis": "[Datenschutzhinweis und Einwilligungstext werden vor Veröffentlichung ergänzt.]",
       "fehler": "Bitte fülle alle drei Felder aus und prüfe deine E-Mail-Adresse.",
       "danach": "Nach der Anmeldung kommt eine E-Mail zur Bestätigung der Adresse. Anschließend wird Raum 1 als PDF zugestellt."
@@ -113,7 +113,7 @@
       "label": "",
       "titel": "Vielleicht war dein Verhalten nie so *unlogisch,* wie du dachtest.",
       "text": "Du kannst anderen Menschen ziemlich gute Ratschläge geben, aber bei dir selbst funktioniert das irgendwie nicht? Und jetzt wird es interessant, denn all deine Entscheidungen können rückblickend nicht nur von außen, sondern vor allem für dich selbst völlig unverständlich wirken und innerhalb der eigenen Welt trotzdem einen Sinn ergeben haben. Spoiler: Erst wenn diese Zusammenhänge für dich sichtbar werden, kannst du wirklich etwas verändern. Vorher landest du mit absoluter Zuverlässigkeit immer wieder bei Null.",
-      "button": "Raum 1 kostenlos betreten"
+      "button": "Kostenfreier Zutritt zu Raum 1"
     },
     "ueber": {
       "label": "Über mich",
@@ -206,7 +206,7 @@
     "rueckweg": {
       "notiz": "Noch nicht sicher?",
       "titel": "Raum 1 gibt es *kostenlos.*",
-      "button": "Raum 1 holen"
+      "button": "Kostenfreier Zutritt zu Raum 1"
     },
     "faq": {
       "label": "Häufige Fragen",

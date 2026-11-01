@@ -6,7 +6,7 @@
     "kaufen": "Buy now",
     "footerRecht": "Legal notice & privacy",
     "vorschau": "Preview – placeholder texts",
-    "freebieButton": "Get Room 1",
+    "freebieButton": "Free access to Room 1",
     "pfeil": "→"
   },
   "laufband": [
@@ -60,7 +60,7 @@
         "[Statement three]",
         "[Statement four]"
       ],
-      "button": "Get Room 1"
+      "button": "Free access to Room 1"
     },
     "anmeldung": {
       "label": "Sign up",
@@ -69,7 +69,7 @@
       "vorname": "First name",
       "nachname": "Last name",
       "email": "Email address",
-      "button": "Get Room 1",
+      "button": "Free access to Room 1",
       "hinweis": "[Short privacy note with a link to the legal notice & privacy page. Unsubscribe anytime.]",
       "fehler": "Please fill in all three fields and check your email address."
     },
@@ -77,7 +77,7 @@
       "label": "",
       "titel": "Maybe your behavior was never as *illogical* as you thought.",
       "text": "You can give other people pretty great advice, but somehow, when it comes to yourself, it just doesn't work? And now it gets interesting: looking back, all your decisions can seem completely incomprehensible, not only to others, but above all to yourself. Yet they still made perfect sense within your own world. Spoiler: Only when you begin to see how these things connect can real change happen. Until then, like clockwork, you keep ending up back at square one.",
-      "button": "Enter Room 1 for free"
+      "button": "Free access to Room 1"
     }
   },
   "buch": {
@@ -161,7 +161,7 @@
     "rueckweg": {
       "notiz": "Not sure yet?",
       "titel": "Room 1 is *free.*",
-      "button": "Get Room 1"
+      "button": "Free access to Room 1"
     },
     "faq": {
       "label": "Questions",
