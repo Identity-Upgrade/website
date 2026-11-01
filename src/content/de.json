@@ -715,15 +715,6 @@
     ],
     "abschnitte": [
       {
-        "id": "redaktion",
-        "t": "Verantwortlich für die *Inhalte.*",
-        "teile": [
-          {
-            "p": "[Name], Anschrift wie oben."
-          }
-        ]
-      },
-      {
         "id": "hinweis",
         "t": "Wichtiger *Hinweis.*",
         "teile": [
