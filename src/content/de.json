@@ -79,7 +79,7 @@
       "danach": "Nach der Anmeldung kommt eine E-Mail zur Bestätigung der Adresse. Anschließend wird Raum 1 als PDF zugestellt.",
       "vorwahl": "Land",
       "telefon": "Telefonnummer",
-      "situation": "Dein größtes Problem gerade",
+      "situation": "Dein aktuelles Problem",
       "situationLeer": "Bitte auswählen",
       "situationen": [
         [
