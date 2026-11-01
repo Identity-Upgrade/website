@@ -327,6 +327,6 @@ a { color: inherit; }
 .sofunktionierts .notiz { margin-top: 56px; font-size: 26px; transform: none !important; }
 @media (max-width: 899px) { .sofunktionierts .notiz { font-size: 22px; margin-top: 40px; } }
 /* Über mich: Linie zum cremefarbenen Abschnitt davor, Überschrift so breit wie die anderen */
-.ueber { border-top: 1px solid var(--tinte); }
+.ueber { border-top: 1px solid var(--tinte); border-bottom: 1px solid var(--tinte); }
 .ueber .huelle > div { max-width: 900px; }
 .ueber .fliess { max-width: 620px; }

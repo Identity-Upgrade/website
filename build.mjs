@@ -199,7 +199,7 @@ ${wiedererkennen(f.wiedererkennen, "weiss")}
 ${haltung(lang, f.haltung)}
 ${soFunktionierts(lang, "creme", f.sofunktionierts)}
 ${ueber(lang, null, "weiss", f.ueber)}
-<section class="abschnitt weiss mitte" id="anmeldung"><div class="huelle">
+<section class="abschnitt beige mitte anmeldung" id="anmeldung"><div class="huelle">
   <p class="label">${esc(f.anmeldung.label)}</p>
   <h2 class="titel t-gross">${akzent(f.anmeldung.titel)}</h2>
   ${absaetze(f.anmeldung.text)}
