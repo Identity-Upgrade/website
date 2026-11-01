@@ -319,3 +319,5 @@ a { color: inherit; }
 .karte p + p { margin-top: 0.8em; }
 .wieder-frage { font-size: 26px; margin: 56px auto 0; }
 @media (max-width: 899px) { .wieder-frage { font-size: 22px; margin-top: 40px; } }
+/* Handschrift gerade: Abschlussfrage unter den Kästchen und Unterschrift */
+.wieder-frage, .signatur { transform: none !important; }
