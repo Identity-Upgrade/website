@@ -396,3 +396,21 @@ a { color: inherit; }
 .anmeldung-notiz { white-space: nowrap; }
 @media (max-width: 899px) { .anmeldung-notiz { font-size: 21px; margin-top: 8px; } }
 @media (max-width: 899px) { .anmeldung-notiz { margin-top: 44px; margin-bottom: 40px; } }
+/* Formular-Abschnitt am Computer: Fächer größer (wie zuvor das Zwei-Seiten-Mockup), Notiz darunter */
+@media (min-width: 900px) {
+  .anmeldung-raster { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .faecher.anmeldung-faecher { max-width: 540px; aspect-ratio: 1 / 1.08; margin-left: -20px; }
+  .faecher.anmeldung-faecher img { width: 64%; bottom: 6%; }
+  .faecher.anmeldung-faecher .f-mitte { width: 68%; bottom: 8%; }
+  .anmeldung-notiz { margin: 10px auto 0; }
+}
+@media (min-width: 900px) {
+  .faecher.anmeldung-faecher { margin-left: -60px; aspect-ratio: 1 / 1.12; }
+  .faecher.anmeldung-faecher img { bottom: 17%; }
+  .faecher.anmeldung-faecher .f-mitte { bottom: 19%; }
+  .faecher.anmeldung-faecher .f-links { transform: rotate(7deg) translateX(18%); }
+  .faecher.anmeldung-faecher .f-rechts { transform: rotate(13deg) translateX(32%); }
+  .anmeldung-notiz { position: relative; z-index: 5; margin: -40px auto 0; }
+}
+@media (min-width: 900px) { .anmeldung-notiz { margin-top: -6px; } }
+@media (min-width: 900px) and (max-width: 1279px) { .faecher.anmeldung-faecher { margin-left: 0; } }
