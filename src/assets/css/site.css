@@ -388,3 +388,11 @@ a { color: inherit; }
 /* So funktioniert's: Einleitung als breiterer Block, damit der Abschnitt auf eine Bildschirmseite passt */
 @media (min-width: 900px) { .sofunktionierts .fliess { max-width: 820px; } .sofunktionierts .stationen { margin-top: 36px; } .sofunktionierts .notiz { margin-top: 44px; } .sofunktionierts .button { margin-top: 28px; } }
 @media (min-width: 900px) { .sofunktionierts { padding: 96px 0; } .sofunktionierts .fliess { max-width: 860px; } }
+/* Formular-Abschnitt: derselbe Drei-Seiten-Fächer wie im Hero, nur kleiner */
+.faecher.anmeldung-faecher { height: auto; aspect-ratio: 1 / 1.05; max-width: 400px; width: 100%; margin: 0 auto; }
+.faecher.anmeldung-faecher img { width: 56%; left: 4%; bottom: 8%; }
+.faecher.anmeldung-faecher .f-mitte { width: 60%; left: 2%; bottom: 10%; }
+@media (min-width: 900px) { .faecher.anmeldung-faecher { max-width: 460px; margin: 0; } }
+.anmeldung-notiz { white-space: nowrap; }
+@media (max-width: 899px) { .anmeldung-notiz { font-size: 21px; margin-top: 8px; } }
+@media (max-width: 899px) { .anmeldung-notiz { margin-top: 44px; margin-bottom: 40px; } }
