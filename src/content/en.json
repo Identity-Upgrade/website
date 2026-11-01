@@ -240,22 +240,24 @@
       "notiz": "↑ Launch price until Dec 31"
     },
     "wiedererkennen": {
-      "label": "[Label recognition]",
-      "titel": "[Headline about] *[recognition.]*",
+      "label": "",
+      "titel": "Do you ever feel like you somehow keep ending up *in the same place* where you started?",
+      "text": "The situations change. The people change, too. But somehow, the outcome feels strangely familiar.",
       "karten": [
         {
-          "label": "Money",
-          "text": "[Short text.]"
+          "label": "Finances",
+          "text": "You work so hard that you should have more than enough left over by now. And yet it feels like you're running on a hamster wheel that just keeps spinning faster. You have to keep pushing harder just to make ends meet. And there's barely anything left for yourself."
         },
         {
           "label": "Relationships",
-          "text": "[Short text.]"
+          "text": "Different people. Different stories. Everything seemed different this time. And yet, sooner or later, that familiar feeling creeps back in. Things start slipping out of your control again, and somewhere along the way, you realize you've lost yourself."
         },
         {
-          "label": "Body",
-          "text": "[Short text.]"
+          "label": "Body & Wellbeing",
+          "text": "The decision is made. And you're disciplined. This time, it's finally paying off and you're getting exactly the results you want. Until the progress suddenly stops, and your old patterns take over again, even though you really should have known better by now."
         }
-      ]
+      ],
+      "abschluss": "Why does this keep happening to you?"
     },
     "haus": {
       "label": "The house",
@@ -291,7 +293,14 @@
       ]
     },
     "ueber": {
-      "text": "[Your story, a little longer than on the freebie page. Three to five sentences.]"
+      "label": "",
+      "titel": "Who is Heike, *really?*",
+      "text": [
+        "That question took me down paths the little girl who was determined to become an opera singer could never even have dreamed of. More than anything, though, those paths kept leading me, with astonishing consistency, straight into devastating setbacks in the areas of my life that mattered most. So I started digging deep into human behavior, perception, external manipulation, and self-sabotage. I trained as a hypnotist, obsessively researched every possible way to improve my life, and spent more than twenty years building up a pretty extensive body of knowledge.",
+        "And yet, before long, I was right back in it, up to my neck: another toxic relationship, broke again. Once again, nothing was turning out the way I wanted.",
+        "In June 2025, I filled out an enormous questionnaire. As part of a program, my answers were supposed to be analyzed to identify my patterns of self-sabotage. But that never happened, because someone had made sure I was kicked out of the program before we got that far. So I analyzed myself. And what I discovered changed not only how I saw the life I had lived up to that point, but everything that came after."
+      ],
+      "signatur": "Heike Klewer"
     },
     "preis": {
       "label": "Launch price",
@@ -332,6 +341,34 @@
           "a": "[Answer]"
         }
       ]
+    },
+    "sofunktionierts": {
+      "label": "",
+      "titel": "Not an ordinary book. An *escape room.*",
+      "text": "One house. Three levels. Countless rooms, and behind every door, a different perspective on what you've taken pretty much for granted until now. This isn't about finding the exit as fast as possible. It's about you asking the right questions and understanding why certain doors keep leading you back to the same place.",
+      "stationen": [
+        {
+          "titel": "The House",
+          "text": "From the outside, it looks like any other house. But once you're inside, you realize how little you actually know it."
+        },
+        {
+          "titel": "The Elevator",
+          "text": "The elevator connects the levels. But it only comes back for you once you've explored every room on your level."
+        },
+        {
+          "titel": "The Levels",
+          "text": "They take you step by step deeper into the question of why you keep ending up where you don't actually want to be."
+        },
+        {
+          "titel": "The Rooms",
+          "text": "Every room revolves around a question. To move on, you have to examine the clues inside."
+        },
+        {
+          "titel": "The Clues",
+          "text": "Small hints, apparent contradictions, and thoughts that suddenly put everything in a different light."
+        }
+      ],
+      "notiz": "The exit isn't necessarily where you'd expect it to be."
     }
   },
   "gemeinsam": {

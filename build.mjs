@@ -270,7 +270,7 @@ function seiteBuch(lang) {
 </div></section>
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
-${soFunktionierts(lang, "creme")}
+${soFunktionierts(lang, "creme", b.sofunktionierts)}
 <section class="abschnitt weiss"><div class="huelle">
   <div class="mitte">
     <p class="label">${esc(b.haus.label)}</p>
@@ -285,7 +285,7 @@ ${soFunktionierts(lang, "creme")}
   </div>
 </div></section>
 ${haltung(lang)}
-${ueber(lang, b.ueber.text, "weiss")}
+${ueber(lang, null, "weiss", b.ueber)}
 <section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
 <section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
   <p class="notiz notiz-c">${esc(b.rueckweg.notiz)}</p>

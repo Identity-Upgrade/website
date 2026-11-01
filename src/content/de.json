@@ -247,22 +247,24 @@
       "notiz": "↑ Einführungspreis bis 31.12."
     },
     "wiedererkennen": {
-      "label": "[Label Wiedererkennen]",
-      "titel": "[Überschrift zum] *[Wiedererkennen.]*",
+      "label": "",
+      "titel": "Kennst du das Gefühl, irgendwie immer wieder *am selben Punkt* zu landen?",
+      "text": "Die Situationen verändern sich. Die Menschen verändern sich auch. Nur das Ergebnis kommt einem verdächtig bekannt vor.",
       "karten": [
         {
-          "label": "Geld",
-          "text": "[Kurzer Text.]"
+          "label": "Finanzen",
+          "text": "Du leistest so viel, dass eigentlich längst mehr übrig bleiben sollte. Und trotzdem hast du das Gefühl, dein Hamsterrad dreht sich immer schneller und du musst noch mehr tun, um normal leben zu können. Für dich selbst bleibt da nicht viel übrig."
         },
         {
           "label": "Beziehungen",
-          "text": "[Kurzer Text.]"
+          "text": "Andere Menschen, andere Geschichten, alles war anders dieses Mal. Und dennoch war da irgendwann wieder dieses vertraute Gefühl, dass dir schon wieder alles entgleitet und du selbst dich irgendwo auf dem Weg verloren hast."
         },
         {
-          "label": "Körper",
-          "text": "[Kurzer Text.]"
+          "label": "Körper & Wohlbefinden",
+          "text": "Dein Entschluss steht fest. Und du bist diszipliniert. Diesmal bekommst du endlich die Ergebnisse, die du dir wünschst. Bis sie eben nicht mehr kommen und dein altes Muster das Ruder wieder übernimmt, obwohl du es doch eigentlich längst besser weißt."
         }
-      ]
+      ],
+      "abschluss": "Warum passiert dir das immer wieder?"
     },
     "haus": {
       "label": "Das Haus",
@@ -298,7 +300,14 @@
       ]
     },
     "ueber": {
-      "text": "[Deine Geschichte, etwas ausführlicher als auf der Freebie-Seite. Drei bis fünf Sätze.]"
+      "label": "",
+      "titel": "Wer ist eigentlich *Heike?*",
+      "text": [
+        "Diese Frage führte mich auf Wege, von denen das kleine Mädchen, das unbedingt einmal Opernsängerin werden wollte, nicht einmal geträumt hätte. Vor allem jedoch führten diese Wege mich mit erstaunlich zuverlässiger Regelmäßigkeit immer wieder zu massiven Tiefschlägen in wirklich relevanten Bereichen meines Lebens. Also begann ich, mich intensiv mit menschlichem Verhalten, Wahrnehmung, externer Manipulation und Selbstsabotage zu befassen. Ich ließ mich zur Hypnotiseurin ausbilden, recherchierte wie besessen nach allen Möglichkeiten, mein Leben zu verbessern, und eignete mir so über mehr als zwanzig Jahre ein ziemlich umfangreiches Wissen an.",
+        "Und trotzdem steckte ich nach kurzer Zeit schon wieder bis zum Hals fest: schon wieder in einer toxischen Beziehung, schon wieder pleite, schon wieder alles anders, als ich es wollte.",
+        "Im Juni 2025 füllte ich einen riesigen Fragebogen aus. Im Rahmen eines Programms sollten meine Antworten auf meine Selbstsabotage-Muster analysiert werden. Doch dazu kam es nicht mehr, da jemand dafür gesorgt hatte, dass ich vorzeitig aus dem Programm flog. Also analysierte ich mich selbst. Und was ich dabei entdeckte, veränderte nicht nur meinen Blick auf mein bisheriges Leben, sondern alles, was danach kam."
+      ],
+      "signatur": "Heike Klewer"
     },
     "preis": {
       "label": "Einführungspreis",
@@ -339,6 +348,34 @@
           "a": "[Antwort]"
         }
       ]
+    },
+    "sofunktionierts": {
+      "label": "",
+      "titel": "Kein normales Buch. Ein *Escape Room.*",
+      "text": "Ein Haus. Drei Stockwerke. Unzählige Räume und hinter jeder Tür wartet ein anderer Blick auf das, was dir bisher ziemlich selbstverständlich erschien. Hier geht es nicht darum, möglichst schnell einen Ausgang zu finden. Sondern die richtigen Fragen zu stellen und zu verstehen, weshalb bestimmte Türen immer wieder an denselben Ort führen.",
+      "stationen": [
+        {
+          "titel": "Das Haus",
+          "text": "Von außen wirkt es wie jedes andere Haus. Erst drinnen merkst du, wie wenig du es eigentlich kennst."
+        },
+        {
+          "titel": "Der Lift",
+          "text": "Der Lift verbindet die Stockwerke miteinander. Und erst wenn du dort alle Räume durchquert hast, wartet er wieder auf dich."
+        },
+        {
+          "titel": "Die Stockwerke",
+          "text": "Sie führen dich Schritt für Schritt tiefer in die Frage, warum du immer wieder dort landest, wo du eigentlich nicht landen willst."
+        },
+        {
+          "titel": "Die Räume",
+          "text": "In jedem Raum geht es um eine Frage. Um weiterzukommen, musst du die Spuren untersuchen, die darin liegen."
+        },
+        {
+          "titel": "Die Spuren",
+          "text": "Kleine Hinweise, scheinbare Widersprüche und Gedanken, die plötzlich alles in einem anderen Licht erscheinen lassen."
+        }
+      ],
+      "notiz": "Der Ausgang ist nicht unbedingt dort, wo man ihn vermutet."
     }
   },
   "gemeinsam": {
