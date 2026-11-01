@@ -345,17 +345,39 @@ ${fuss(lang)}`;
   return seitenRahmen(lang, "impressum", { titel: `${p.impressumTitel} | Identity Upgrade` }, body);
 }
 
+const reich = (x = "") => esc(x)
+  .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+  .replace(/\*([^*]+)\*/g, "<em>$1</em>")
+  .replace(/\[\[([^\]]+@[^\]]+)\]\]/g, '<a href="mailto:$1">$1</a>');
+
 function seitePrivacy(lang) {
   const t = T[lang], p = t.privacy;
+  const teil = (x) => `${x.label ? `<h3 class="ds-label">${esc(x.label)}</h3>` : ""}
+      ${[].concat(x.p || []).map((y) => `<p>${reich(y)}</p>`).join("")}
+      ${x.liste ? `<ul class="ds-liste">${x.liste.map((y) => `<li>${reich(y)}</li>`).join("")}</ul>` : ""}
+      ${x.adresse ? `<address class="ds-adresse">${x.adresse.map(esc).join("<br>")}</address>` : ""}`;
   const body = `${kopf(lang, "privacy")}
-<main>
-<section class="abschnitt creme"><div class="huelle recht-text">
-  <h1 class="titel t-gross">${esc(p.datenschutzTitel)}</h1>
-  ${p.abschnitte.map((s) => `<h3>${esc(s.t)}</h3><p>${esc(s.x)}</p>`).join("")}
+<main class="ds">
+<section class="abschnitt weiss ds-kopf"><div class="huelle">
+  <p class="label">${esc(p.label)}</p>
+  <h1 class="titel t-gross">${akzent(p.titel)}</h1>
+  <p class="ds-stand">${esc(p.stand)}</p>
+  <div class="ds-kurz"><p class="ds-label">${esc(p.kurzLabel)}</p><p>${reich(p.kurz)}</p></div>
+</div></section>
+<section class="abschnitt weiss ds-haupt"><div class="huelle ds-raster">
+  <nav class="ds-inhalt" aria-label="${esc(p.inhaltLabel)}"><p class="ds-label">${esc(p.inhaltLabel)}</p>
+    <ol>${p.abschnitte.map((a) => `<li><a href="#${a.id}">${esc(a.nav)}</a></li>`).join("")}</ol></nav>
+  <div class="ds-text">
+    ${p.abschnitte.map((a) => `<section class="ds-abschnitt" id="${a.id}"><h2>${akzent(a.t)}</h2>${a.teile.map(teil).join("")}</section>`).join("\n    ")}
+  </div>
+</div></section>
+<section class="abschnitt butter mitte ds-schluss"><div class="huelle">
+  <p class="ds-schluss-satz">${akzent(p.schluss)}</p>
+  <p class="notiz">${esc(p.schlussNotiz)}</p>
 </div></section>
 </main>
 ${fuss(lang)}`;
-  return seitenRahmen(lang, "privacy", { titel: `${p.datenschutzTitel} | Identity Upgrade` }, body);
+  return seitenRahmen(lang, "privacy", { titel: p.seo.titel }, body);
 }
 
 function startseite() {

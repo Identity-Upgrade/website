@@ -426,44 +426,173 @@
   },
   "privacy": {
     "seo": {
-      "titel": "Legal notice & privacy | Identity Upgrade"
+      "titel": "Privacy policy | Identity Upgrade"
     },
-    "titel": "Legal notice & *privacy*",
+    "label": "The fine print",
+    "titel": "Privacy *policy.*",
+    "stand": "Last updated November 1, 2026",
+    "kurzLabel": "In short",
+    "kurz": "We collect your name and email so we can send you Room 1 and our newsletter. No cookies, no tracking tools, and we *never sell your data.* Here are the details.",
+    "inhaltLabel": "On this page",
+    "abschnitte": [
+      {
+        "id": "wer",
+        "nav": "Who's behind this",
+        "t": "Who's *behind this.*",
+        "teile": [
+          {
+            "p": [
+              "Identity Upgrade is run by **KlewerINN LLP**, a limited liability partnership based in Canada. Heike Klewer is the author of the books and content you find here. When this page says “we” or “us,” it means KlewerINN LLP. When it says “you,” that's you.",
+              "You can reach us anytime at [[office@klewerinn.com]]."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "was",
+        "nav": "What we collect",
+        "t": "What we *collect.*",
+        "teile": [
+          {
+            "label": "What you give us",
+            "p": "When you sign up for Room 1, you give us:",
+            "liste": [
+              "your first and last name and your email address",
+              "your biggest struggle (finances, relationships, body & wellbeing, or more than one)",
+              "your phone number, if you choose to add it. It's optional."
+            ]
+          },
+          {
+            "label": "What gets recorded automatically",
+            "p": [
+              "This website is hosted on Cloudflare. Like any web server, it briefly processes some technical data so the page can reach you: your IP address, browser and device type, the page you requested, and the time.",
+              "We also note where you came from, for example a campaign link or the website that sent you, and save it with your sign-up. That's it. No cookies, no tracking pixels, no analytics tools on this site."
+            ]
+          },
+          {
+            "label": "What we never see",
+            "p": "If you buy the e-book, payment is handled entirely by Digistore24. Your card or bank details go straight to them. We never see them."
+          }
+        ]
+      },
+      {
+        "id": "wozu",
+        "nav": "What we do with it",
+        "t": "What we *do with it.*",
+        "teile": [
+          {
+            "liste": [
+              "Send you Room 1",
+              "Send you our newsletter on self-sabotage, pattern recognition, and Identity Upgrade products",
+              "Match our emails to your biggest struggle",
+              "Use your phone number, if you gave it, only to ask whether you'd like to be contacted by phone or text for other programs. We won't call or text you without your explicit consent.",
+              "Answer you when you write to us",
+              "Understand which campaigns bring people here"
+            ]
+          },
+          {
+            "p": "That's the whole list. We don't sell, rent, or trade your personal information."
+          }
+        ]
+      },
+      {
+        "id": "wer-noch",
+        "nav": "Who else handles it",
+        "t": "Who else *handles it.*",
+        "teile": [
+          {
+            "p": "We rely on a few companies to run this. They only get what they need to do their job.",
+            "liste": [
+              "**Cloudflare, Inc.** (USA) hosts and delivers this website",
+              "**Kit** (ConvertKit LLC, USA) stores your sign-up and sends our emails. Kit records whether an email was opened and which links were clicked.",
+              "**Digistore24 GmbH** (Germany) sells the e-book as a reseller and handles your purchase under its own privacy policy"
+            ]
+          },
+          {
+            "p": "This means your data may be processed in the United States and Canada. We may also share information if the law requires it, or if the business is ever sold or transferred, in which case this policy goes with it."
+          }
+        ]
+      },
+      {
+        "id": "email",
+        "nav": "Email, and how to stop it",
+        "t": "Email, and how to *stop it.*",
+        "teile": [
+          {
+            "p": [
+              "After you sign up, you'll get one email asking you to confirm your address. You're only added once you click that link.",
+              "Every email we send has an unsubscribe link at the bottom. It works immediately and costs you nothing. You can also just reply and ask us to take you off."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rechte",
+        "nav": "Your rights",
+        "t": "Your *rights.*",
+        "teile": [
+          {
+            "p": [
+              "You can ask us what we have about you, have it corrected or deleted, and withdraw your consent at any time. Just email [[office@klewerinn.com]]. Depending on where you live, privacy laws such as Canada's PIPEDA, the California Consumer Privacy Act, or the EU's GDPR give you these rights specifically, and you can file a complaint with your privacy regulator.",
+              "We keep your sign-up data as long as you're subscribed. Once you unsubscribe, we delete it, except for a record of your consent and unsubscribe, which we keep as proof."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kinder",
+        "nav": "About kids",
+        "t": "About *kids.*",
+        "teile": [
+          {
+            "p": "This site is for adults. It's not directed at anyone under 16, and we don't knowingly collect their information. If you think your child signed up, email us and we'll delete it."
+          }
+        ]
+      },
+      {
+        "id": "sicher",
+        "nav": "Keeping it safe",
+        "t": "Keeping it *safe.*",
+        "teile": [
+          {
+            "p": "This site only runs over an encrypted connection, and our providers use industry-standard protection. No system is perfect, and we won't pretend ours is."
+          }
+        ]
+      },
+      {
+        "id": "aenderungen",
+        "nav": "When this changes",
+        "t": "When this *changes.*",
+        "teile": [
+          {
+            "p": "If we change this policy, the date at the top changes with it. If it's a significant change, we'll let you know by email."
+          }
+        ]
+      },
+      {
+        "id": "fragen",
+        "nav": "Still have questions?",
+        "t": "Still have *questions?*",
+        "teile": [
+          {
+            "p": "Email [[office@klewerinn.com]], or write to us:",
+            "adresse": [
+              "KlewerINN LLP",
+              "[Street address]",
+              "[City, Province, Postal code]",
+              "Canada"
+            ]
+          }
+        ]
+      }
+    ],
+    "schluss": "We don't sell your information. *Not now, not ever.*",
+    "schlussNotiz": "Some things really are that simple.",
     "impressumTitel": "Legal notice",
     "anbieterLabel": "Provider",
     "kontaktLabel": "Contact",
     "registerLabel": "Registration",
     "vertretenLabel": "Represented by",
-    "datenschutzTitel": "Privacy policy",
-    "abschnitte": [
-      {
-        "t": "Controller",
-        "x": "[Draft to follow]"
-      },
-      {
-        "t": "Hosting and delivery (Cloudflare)",
-        "x": "[Draft to follow]"
-      },
-      {
-        "t": "Freebie sign-up and emails (Kit)",
-        "x": "[Draft to follow]"
-      },
-      {
-        "t": "Buying the e-book (Digistore24)",
-        "x": "[Draft to follow]"
-      },
-      {
-        "t": "Cookie-free statistics (Cloudflare Web Analytics)",
-        "x": "[Draft to follow]"
-      },
-      {
-        "t": "Where your sign-up came from",
-        "x": "[Draft to follow]"
-      },
-      {
-        "t": "Your rights",
-        "x": "[Draft to follow]"
-      }
-    ]
+    "datenschutzTitel": "Privacy policy"
   }
 }

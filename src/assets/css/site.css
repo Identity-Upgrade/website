@@ -444,3 +444,41 @@ a { color: inherit; }
   .hero .faecher .f-mitte { width: 60%; left: 2%; bottom: 10%; }
 }
 @media (max-width: 899px) { .ueber .u-rechts .u-c { display: block; margin-top: 28px; } }
+/* ===== Datenschutz-Seite ===== */
+.butter { background: var(--butter); }
+.ds-kopf { padding-bottom: 24px; }
+.ds-kopf .huelle, .ds-raster { max-width: 960px; }
+.ds-stand { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text); margin: 4px 0 0; }
+.ds-label { font-family: var(--label); font-weight: 700; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--tinte); margin: 0 0 10px; }
+.ds-kurz { margin: 48px 0 0; padding: 26px 28px; background: var(--weiss); border-top: 2px solid var(--rot); border-radius: 0 0 12px 12px; box-shadow: 0 14px 34px rgba(31,27,26,.12); }
+.ds-kurz p:last-child { margin: 0; font-size: 18px; color: var(--tinte); line-height: 1.55; }
+.ds-kurz em { color: var(--rot); font-style: italic; }
+.ds-haupt { padding-top: 40px; }
+.ds-raster { display: grid; gap: 32px; }
+.ds-inhalt ol { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 1px solid var(--rand); }
+.ds-inhalt li { margin: 0 0 9px; }
+.ds-inhalt a { font-size: 13px; color: var(--text); text-decoration: none; }
+.ds-inhalt a:hover { color: var(--rot); }
+.ds-abschnitt { padding: 0 0 40px; margin: 0 0 40px; border-bottom: 1px solid var(--rand); scroll-margin-top: 90px; }
+.ds-abschnitt:last-child { border-bottom: 0; margin-bottom: 0; }
+.ds-abschnitt h2 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.1; margin: 0 0 18px; color: var(--tinte); }
+.ds-abschnitt h2 em { color: var(--rot); }
+.ds-abschnitt .ds-label { margin-top: 26px; }
+.ds-abschnitt p, .ds-abschnitt li { color: var(--text); line-height: 1.65; }
+.ds-abschnitt p { margin: 0 0 14px; }
+.ds-abschnitt strong { color: var(--tinte); font-weight: 600; }
+.ds-abschnitt a { color: var(--rot); }
+.ds-liste { list-style: none; margin: 0 0 16px; padding: 0; }
+.ds-liste li { position: relative; padding-left: 22px; margin: 0 0 8px; }
+.ds-liste li::before { content: "–"; position: absolute; left: 0; color: var(--rot); }
+.ds-adresse { font-style: normal; font-family: var(--mono); font-size: 13px; line-height: 1.7; color: var(--tinte); }
+.ds-schluss .ds-schluss-satz { font-family: var(--serif); font-size: clamp(28px, 4vw, 44px); line-height: 1.15; color: var(--tinte); max-width: 760px; margin: 0 auto; text-wrap: balance; }
+.ds-schluss .ds-schluss-satz em { color: var(--rot); font-style: italic; }
+.ds-schluss .notiz { margin: 18px auto 0; font-size: 24px; }
+@media (min-width: 900px) {
+  .ds-raster { grid-template-columns: 200px 1fr; gap: 56px; align-items: start; }
+  .ds-inhalt { position: sticky; top: 100px; }
+  .ds-kurz { margin-left: 40px; margin-right: 40px; }
+  .ds-text { max-width: 620px; }
+}
+@media (max-width: 899px) { .ds-inhalt { display: none; } .ds-abschnitt h2 { font-size: 28px; } }
