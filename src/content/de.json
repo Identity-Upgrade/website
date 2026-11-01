@@ -112,11 +112,7 @@
     "haltung": {
       "label": "",
       "titel": "Vielleicht war dein Verhalten nie so *unlogisch,* wie du dachtest.",
-      "text": [
-        "Du kannst anderen Menschen ziemlich gute Ratschläge geben, aber bei dir selbst funktioniert das irgendwie nicht?",
-        "Und jetzt wird es interessant, denn deine Entscheidungen können von außen völlig unverständlich wirken und innerhalb der eigenen Welt trotzdem einen Sinn ergeben.",
-        "Spoiler: Erst wenn diese Zusammenhänge sichtbar werden, lässt sich wirklich etwas verändern. Vorher landest du immer wieder am Nullpunkt."
-      ],
+      "text": "Du kannst anderen Menschen ziemlich gute Ratschläge geben, aber bei dir selbst funktioniert das irgendwie nicht? Und jetzt wird es interessant, denn deine Entscheidungen können von außen völlig unverständlich wirken und innerhalb der eigenen Welt trotzdem einen Sinn ergeben. Spoiler: Erst wenn diese Zusammenhänge sichtbar werden, lässt sich wirklich etwas verändern. Vorher landest du immer wieder am Nullpunkt.",
       "button": "Raum 1 kostenlos betreten"
     },
     "ueber": {

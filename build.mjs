@@ -94,7 +94,7 @@ function soFunktionierts(lang, farbe = "creme", daten) {
 
 function haltung(lang, daten) {
   const h = daten || T[lang].gemeinsam.haltung;
-  return `<section class="abschnitt gruen mitte"><div class="huelle">
+  return `<section class="abschnitt gruen mitte haltung"><div class="huelle">
   ${labelP(h.label)}
   <h2 class="titel t-gross">${akzent(h.titel)}</h2>
   ${absaetze(h.text)}
