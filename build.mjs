@@ -104,6 +104,7 @@ function soFunktionierts(lang, farbe = "creme", daten) {
   ${absaetze(s.text)}
   <ol class="stationen">${s.stationen.map((st, i) => `<li class="station"><div class="station-zahl" aria-hidden="true">${SYMBOLE[i] ? symbol(i) : i + 1}</div><h3>${esc(st.titel)}</h3><p>${esc(st.text)}</p></li>`).join("")}</ol>
   <p class="notiz notiz-b">${esc(s.notiz)}</p>
+  ${s.button ? `<a class="button button-rot" href="#anmeldung">${esc(s.button)} <span aria-hidden="true">→</span></a>` : ""}
 </div></section>`;
 }
 

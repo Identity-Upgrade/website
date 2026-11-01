@@ -367,3 +367,4 @@ a { color: inherit; }
 .fuss small { width: auto; text-align: center; }
 .fuss .recht { justify-self: end; }
 @media (max-width: 699px) { .fuss .huelle { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 8px; } .fuss .recht { justify-self: center; } }
+.sofunktionierts .button { margin-top: 36px; }
