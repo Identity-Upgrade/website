@@ -62,8 +62,8 @@ function fuss(lang) {
   const t = T[lang];
   return `<footer class="fuss"><div class="huelle">
   <span class="wortmarke">Identity <em>Upgrade</em><sup>™</sup></span>
-  <span class="recht"><a href="${PFADE.impressum[lang]}">${esc(t.ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(t.ui.footerDatenschutz)}</a></span>
   <small>© ${new Date().getFullYear()} ${esc(cfg.anbieter.name)}</small>
+  <span class="recht"><a href="${PFADE.impressum[lang]}">${esc(t.ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(t.ui.footerDatenschutz)}</a></span>
 </div></footer>`;
 }
 
