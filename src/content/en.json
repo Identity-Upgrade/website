@@ -66,8 +66,11 @@
     },
     "anmeldung": {
       "label": "",
-      "titel": "[Headline for the] *[sign-up.]*",
-      "text": "[One sentence about what happens after signing up.]",
+      "titel": "The first door is *open* for you.",
+      "text": [
+        "Room 1 explores the question it all starts with: Why does this keep happening to me?",
+        "A first shift in perspective. No ready-made answers, no quick fixes. Just the beginning of a pretty interesting hunt for clues."
+      ],
       "vorname": "First name",
       "nachname": "Last name",
       "email": "Email address",
