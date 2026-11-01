@@ -31,7 +31,7 @@ const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").r
 const akzent = (s = "") => esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>");
 const zwei = (n) => String(n).padStart(2, "0");
 const liste = (x) => (Array.isArray(x) ? x : x ? [x] : []);
-const absaetze = (x, cls = "fliess") => liste(x).map((p) => `<p class="${cls}">${akzent(p)}</p>`).join("\n  ");
+const absaetze = (x, cls = "fliess") => liste(x).map((p) => `<p class="${cls}">${akzent(p).replace(/\n/g, "<br>")}</p>`).join("\n  ");
 const labelP = (x) => (x ? `<p class="label">${esc(x)}</p>` : "");
 
 const bild = (name, alt, cls = "") =>
