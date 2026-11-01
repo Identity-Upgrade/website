@@ -312,3 +312,5 @@ a { color: inherit; }
 /* Wiedererkennen: großzügiger am Computer, dünne Linie zum nächsten Abschnitt */
 .wiedererkennen { border-bottom: 1px solid var(--tinte); }
 @media (min-width: 900px) { .wiedererkennen { padding: 122px 0; } }
+/* Kein einzelnes Wort allein in der letzten Zeile */
+.karte p, .fliess, .station p { text-wrap: pretty; }
