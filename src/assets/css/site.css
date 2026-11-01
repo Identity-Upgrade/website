@@ -482,3 +482,12 @@ a { color: inherit; }
   .ds-text { max-width: 620px; }
 }
 @media (max-width: 899px) { .ds-inhalt { display: none; } .ds-abschnitt h2 { font-size: 28px; } }
+/* Impressum */
+.im-angaben { display: grid; grid-template-columns: 1fr; gap: 4px 32px; margin-top: 40px; }
+.im-angaben dt { font-family: var(--label); font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--tinte); margin-top: 12px; }
+.im-angaben dd { margin: 0; color: var(--tinte); line-height: 1.6; }
+.im-angaben dd a { color: var(--rot); }
+.im-text { margin: 0 auto; }
+@media (min-width: 700px) { .im-angaben { grid-template-columns: 210px 1fr; gap: 14px 32px; } .im-angaben dt { margin-top: 3px; } }
+@media (min-width: 900px) { .ds-kopf .im-angaben { margin-left: 0; margin-right: 0; } .im-text { max-width: 760px; margin: 0; } }
+.ds-haupt > .huelle { max-width: 960px; }

@@ -631,5 +631,96 @@
     "registerLabel": "Register",
     "vertretenLabel": "Vertreten durch",
     "datenschutzTitel": "Datenschutzerklärung"
+  },
+  "impressum": {
+    "seo": {
+      "titel": "Impressum | Identity Upgrade"
+    },
+    "label": "Das Kleingedruckte",
+    "titel": "Impres*sum.*",
+    "angaben": [
+      [
+        "Anbieter",
+        "**KlewerINN LLP**\nMarke: Identity Upgrade™"
+      ],
+      [
+        "Rechtsform",
+        "Limited Liability Partnership (Partnerschaft mit beschränkter Haftung nach kanadischem Recht, [Provinz])"
+      ],
+      [
+        "Sitz",
+        "[Straße und Hausnummer]\n[Ort, Provinz, Postleitzahl]\nKanada"
+      ],
+      [
+        "Vertreten durch",
+        "[Name der vertretungsberechtigten Person], [Funktion]"
+      ],
+      [
+        "Kontakt",
+        "E-Mail: [[office@klewerinn.com]]"
+      ],
+      [
+        "Register",
+        "[Registerbehörde]"
+      ],
+      [
+        "Registernummer",
+        "[Nummer]"
+      ],
+      [
+        "Steuernummer",
+        "[falls vorhanden, sonst streichen]"
+      ]
+    ],
+    "abschnitte": [
+      {
+        "id": "redaktion",
+        "t": "Verantwortlich für die *Inhalte.*",
+        "teile": [
+          {
+            "p": "[Name], Anschrift wie oben."
+          }
+        ]
+      },
+      {
+        "id": "hinweis",
+        "t": "Wichtiger *Hinweis.*",
+        "teile": [
+          {
+            "p": "Die Bücher und Inhalte von Identity Upgrade dienen der Selbstreflexion. Sie sind keine Psychotherapie und ersetzen keine psychologische, medizinische oder therapeutische Beratung, Diagnose oder Behandlung."
+          }
+        ]
+      },
+      {
+        "id": "haftung",
+        "t": "Haftung für Inhalte und *Links.*",
+        "teile": [
+          {
+            "p": [
+              "Wir erstellen unsere Inhalte mit Sorgfalt. Für ihre Richtigkeit, Vollständigkeit und Aktualität können wir trotzdem keine Gewähr übernehmen.",
+              "Wo wir auf Websites anderer Anbieter verlinken, haben wir auf deren Inhalte keinen Einfluss; verantwortlich ist der jeweilige Anbieter. Erfahren wir von Rechtsverletzungen, entfernen wir die betroffenen Inhalte oder Links umgehend."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "urheber",
+        "t": "*Urheberrecht.*",
+        "teile": [
+          {
+            "p": "Texte, Bilder, Grafiken und Bücher auf dieser Website sind urheberrechtlich geschützt. Jede Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Verwertung braucht unsere vorherige schriftliche Zustimmung."
+          }
+        ]
+      },
+      {
+        "id": "streit",
+        "t": "*Streitbeilegung.*",
+        "teile": [
+          {
+            "p": "Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+          }
+        ]
+      }
+    ]
   }
 }

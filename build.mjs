@@ -327,24 +327,6 @@ ${fuss(lang)}`;
   return seitenRahmen(lang, "danke", { titel: d.seo.titel, noindex: true }, body);
 }
 
-function seiteImpressum(lang) {
-  const t = T[lang], p = t.privacy, a = cfg.anbieter;
-  const body = `${kopf(lang, "impressum")}
-<main>
-<section class="abschnitt creme"><div class="huelle recht-text">
-  <h1 class="titel t-gross">${esc(p.impressumTitel)}</h1>
-  <dl>
-    <dt>${esc(p.anbieterLabel)}</dt><dd>${esc(a.name)}<br>${esc(a.adresse)}</dd>
-    <dt>${esc(p.vertretenLabel)}</dt><dd>${esc(a.vertreten)}</dd>
-    <dt>${esc(p.registerLabel)}</dt><dd>${esc(a.register)}</dd>
-    <dt>${esc(p.kontaktLabel)}</dt><dd><a href="mailto:${esc(a.email)}">${esc(a.email)}</a></dd>
-  </dl>
-</div></section>
-</main>
-${fuss(lang)}`;
-  return seitenRahmen(lang, "impressum", { titel: `${p.impressumTitel} | Identity Upgrade` }, body);
-}
-
 const reich = (x = "") => esc(x)
   .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
   .replace(/\*([^*]+)\*/g, "<em>$1</em>")
@@ -378,6 +360,25 @@ function seitePrivacy(lang) {
 </main>
 ${fuss(lang)}`;
   return seitenRahmen(lang, "privacy", { titel: p.seo.titel }, body);
+}
+
+
+function seiteImpressum(lang) {
+  const im = T[lang].impressum;
+  const teil = (x) => `${x.label ? `<h3 class="ds-label">${esc(x.label)}</h3>` : ""}${[].concat(x.p || []).map((y) => `<p>${reich(y)}</p>`).join("")}`;
+  const body = `${kopf(lang, "impressum")}
+<main class="ds">
+<section class="abschnitt weiss ds-kopf"><div class="huelle">
+  <p class="label">${esc(im.label)}</p>
+  <h1 class="titel t-gross">${akzent(im.titel)}</h1>
+  <dl class="ds-kurz im-angaben">${im.angaben.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${reich(v).replace(/\n/g, "<br>")}</dd>`).join("")}</dl>
+</div></section>
+<section class="abschnitt weiss ds-haupt"><div class="huelle"><div class="ds-text im-text">
+  ${im.abschnitte.map((a) => `<section class="ds-abschnitt" id="${a.id}"><h2>${akzent(a.t)}</h2>${a.teile.map(teil).join("")}</section>`).join("\n  ")}
+</div></div></section>
+</main>
+${fuss(lang)}`;
+  return seitenRahmen(lang, "impressum", { titel: im.seo.titel }, body);
 }
 
 function startseite() {
