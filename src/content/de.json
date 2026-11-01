@@ -33,11 +33,11 @@
     },
     "wiedererkennen": {
       "label": "",
-      "titel": "Kennst du das Gefühl, immer wieder *am selben Punkt* zu landen?",
+      "titel": "Kennst du das Gefühl, irgendwie immer wieder *am selben Punkt* zu landen?",
       "text": "Die Situationen verändern sich. Die Menschen auch. Nur das Ergebnis kommt einem verdächtig bekannt vor.",
       "karten": [
         {
-          "label": "Geld",
+          "label": "Finanzen",
           "text": "Eigentlich sollte längst mehr übrig bleiben. Trotzdem fühlt es sich an, als müsste immer noch mehr gearbeitet, geleistet oder abgesichert werden."
         },
         {

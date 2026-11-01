@@ -309,3 +309,6 @@ a { color: inherit; }
 /* Hero: Spalten in DE und EN immer gleich breit, Notiz darf über die Textspalte hinausragen */
 @media (min-width: 900px) { .hero .huelle { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } .hero .huelle > div:first-child { min-width: 0; } }
 @media (min-width: 900px) { .hero .button { white-space: nowrap; } }
+/* Wiedererkennen: großzügiger am Computer, dünne Linie zum nächsten Abschnitt */
+.wiedererkennen { border-bottom: 1px solid var(--tinte); }
+@media (min-width: 900px) { .wiedererkennen { padding: 122px 0; } }

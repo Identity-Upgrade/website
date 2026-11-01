@@ -72,7 +72,7 @@ function laufband(lang) {
 }
 
 function wiedererkennen(w, farbe = "weiss") {
-  return `<section class="abschnitt ${farbe} mitte"><div class="huelle">
+  return `<section class="abschnitt ${farbe} mitte wiedererkennen"><div class="huelle">
   ${labelP(w.label)}
   <h2 class="titel t-gross">${akzent(w.titel)}</h2>
   ${absaetze(w.text)}
