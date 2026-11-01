@@ -192,10 +192,7 @@
     "sofunktionierts": {
       "label": "",
       "titel": "Kein normales Buch. Ein *Escape Room.*",
-      "text": [
-        "Ein Haus. Drei Stockwerke. Unzählige Räume und hinter jeder Tür wartet ein anderer Blick auf das, was dir bisher ziemlich selbstverständlich erschien.",
-        "Hier geht es nicht darum, möglichst schnell einen Ausgang zu finden. Sondern die richtigen Fragen zu stellen und zu verstehen, weshalb bestimmte Türen immer wieder an denselben Ort führen."
-      ],
+      "text": "Ein Haus. Drei Stockwerke. Unzählige Räume und hinter jeder Tür wartet ein anderer Blick auf das, was dir bisher ziemlich selbstverständlich erschien. Hier geht es nicht darum, möglichst schnell einen Ausgang zu finden. Sondern die richtigen Fragen zu stellen und zu verstehen, weshalb bestimmte Türen immer wieder an denselben Ort führen.",
       "stationen": [
         {
           "titel": "Das Haus",

@@ -191,10 +191,7 @@
     "sofunktionierts": {
       "label": "",
       "titel": "Not an ordinary book. An *escape room.*",
-      "text": [
-        "One house. Three levels. Countless rooms, and behind every door, a different perspective on what you've taken pretty much for granted until now.",
-        "This isn't about finding the exit as fast as possible. It's about you asking the right questions and understanding why certain doors keep leading you back to the same place."
-      ],
+      "text": "One house. Three levels. Countless rooms, and behind every door, a different perspective on what you've taken pretty much for granted until now. This isn't about finding the exit as fast as possible. It's about you asking the right questions and understanding why certain doors keep leading you back to the same place.",
       "stationen": [
         {
           "titel": "The House",
