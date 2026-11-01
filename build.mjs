@@ -11,6 +11,9 @@ const lies = (p) => JSON.parse(readFileSync(join(ROOT, "src/content", p), "utf8"
 const cfg = lies("config.json");
 const T = { de: lies("de.json"), en: lies("en.json") };
 const VERSION = Date.now().toString(36);
+import { createHash } from "node:crypto";
+const imgV = (datei) => { try { return createHash("md5").update(readFileSync(new URL("./src/assets/img/" + datei, import.meta.url))).digest("hex").slice(0, 8); } catch { return VERSION; } };
+const imgUrl = (datei) => `/assets/img/${datei}?v=${imgV(datei)}`;
 
 // Pfade je Seite und Sprache
 const PFADE = {
@@ -32,7 +35,7 @@ const absaetze = (x, cls = "fliess") => liste(x).map((p) => `<p class="${cls}">$
 const labelP = (x) => (x ? `<p class="label">${esc(x)}</p>` : "");
 
 const bild = (name, alt, cls = "") =>
-  `<img class="${cls}" src="/assets/img/${name}-960.webp" srcset="/assets/img/${name}-480.webp 480w, /assets/img/${name}-960.webp 960w" sizes="(min-width: 900px) 420px, 60vw" alt="${esc(alt)}" loading="lazy" decoding="async" width="960" height="1358">`;
+  `<img class="${cls}" src="${imgUrl(name + "-960.webp")}" srcset="${imgUrl(name + "-480.webp")} 480w, ${imgUrl(name + "-960.webp")} 960w" sizes="(min-width: 900px) 420px, 60vw" alt="${esc(alt)}" loading="lazy" decoding="async" width="960" height="1358">`;
 
 const IMG = {
   de: { buch: "buch-cover-de", freebie: "freebie-cover-de", raum1: "freebie-raum1-de", spur: "buch-seite-spur-de", fund: "buch-seite-fund-de" },
