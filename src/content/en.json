@@ -32,20 +32,21 @@
       "notiz": "Maybe not everything is as illogical as it seems …"
     },
     "wiedererkennen": {
-      "label": "[Label recognition]",
-      "titel": "[Headline about] *[recognition.]*",
+      "label": "",
+      "titel": "Do you know that feeling of somehow ending up *in the same place* again and again?",
+      "text": "The situations change. The people change too. Only the outcome feels suspiciously familiar.",
       "karten": [
         {
-          "label": "Money",
-          "text": "[Short text about a typical money situation.]"
+          "label": "Finances",
+          "text": "You work so hard that there really should be more left over by now. And yet it feels like your hamster wheel keeps spinning faster and faster, and you have to do even more just to live a normal life. There's not much left for you."
         },
         {
           "label": "Relationships",
-          "text": "[Short text about a typical relationship situation.]"
+          "text": "Different people, different stories, everything was different this time. And yet, at some point, there it was again: that familiar feeling that everything is slipping away from you once more, and that somewhere along the way, you lost yourself."
         },
         {
-          "label": "Body",
-          "text": "[Short text about a typical body situation.]"
+          "label": "Body & Well-Being",
+          "text": "Your mind is made up. And you're disciplined. This time, you're finally getting the results you want. Until they stop coming and your old pattern takes the wheel again, even though, deep down, you know better by now."
         }
       ]
     },

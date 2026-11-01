@@ -314,3 +314,5 @@ a { color: inherit; }
 @media (min-width: 900px) { .wiedererkennen { padding: 122px 0; } }
 /* Kein einzelnes Wort allein in der letzten Zeile */
 .karte p, .fliess, .station p { text-wrap: pretty; }
+/* Abschnittsüberschriften: Zeilen ausgewogen, kein Wort allein */
+.t-gross { text-wrap: balance; }
