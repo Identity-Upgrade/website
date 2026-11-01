@@ -159,7 +159,7 @@ function formular(lang) {
 
 function formularHinweis(lang) {
   const a = T[lang].freebie.anmeldung;
-  return `<p class="kleingedruckt">${esc(a.hinweis)} ${PFADE.impressum[lang] ? `<a href="${PFADE.impressum[lang]}">${esc(T[lang].ui.footerImpressum)}</a> · ` : ""}<a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerDatenschutz)}</a></p>`;
+  return `<p class="kleingedruckt">${esc(a.hinweis)}</p>`;
 }
 
 function seitenRahmen(lang, seite, { titel, beschreibung, noindex = false, ogBild }, body) {
