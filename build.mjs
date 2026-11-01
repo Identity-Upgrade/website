@@ -121,7 +121,7 @@ function ueber(lang, text, farbe = "creme", daten) {
   return `<section class="abschnitt ${farbe} ueber"><div class="huelle">
   <div>
     ${labelP(u.label)}
-    <h2 class="titel t-mittel">${akzent(u.titel)}</h2>
+    <h2 class="titel t-gross">${akzent(u.titel)}</h2>
     ${absaetze(text || u.text)}
     <p class="signatur notiz-d">${esc(u.signatur)}</p>
   </div>
