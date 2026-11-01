@@ -81,13 +81,27 @@ function wiedererkennen(w, farbe = "weiss") {
 </div></section>`;
 }
 
+const SYMBOLE = [
+  // Haus
+  '<path d="M4 11.5 12 4.5l8 7"/><path d="M6.5 9.8V19.5h11V9.8"/><path d="M10.2 19.5v-5h3.6v5"/>',
+  // Lift
+  '<rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M12 3.5v17"/><path d="M7.4 10.2 8.7 8.6l1.3 1.6"/><path d="M14 13.8l1.3 1.6 1.3-1.6"/>',
+  // Stockwerke
+  '<path d="M5 20.5V4.5h14v16"/><path d="M5 9.8h14"/><path d="M5 15.1h14"/><path d="M3.5 20.5h17"/>',
+  // Räume (Tür)
+  '<path d="M6.5 20.5V4.5h11v16"/><path d="M4.5 20.5h15"/><circle cx="14.6" cy="12.8" r=".9" fill="currentColor" stroke="none"/>',
+  // Spuren (Lupe)
+  '<circle cx="10.5" cy="10.5" r="5.5"/><path d="m14.6 14.6 5 5"/>',
+];
+const symbol = (i) => `<svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${SYMBOLE[i] || ""}</svg>`;
+
 function soFunktionierts(lang, farbe = "creme", daten) {
   const s = daten || T[lang].gemeinsam.sofunktionierts;
   return `<section class="abschnitt ${farbe} mitte sofunktionierts"><div class="huelle">
   ${labelP(s.label)}
   <h2 class="titel t-gross">${akzent(s.titel)}</h2>
   ${absaetze(s.text)}
-  <ol class="stationen">${s.stationen.map((st, i) => `<li class="station"><div class="station-zahl" aria-hidden="true">${i + 1}</div><h3>${esc(st.titel)}</h3><p>${esc(st.text)}</p></li>`).join("")}</ol>
+  <ol class="stationen">${s.stationen.map((st, i) => `<li class="station"><div class="station-zahl" aria-hidden="true">${SYMBOLE[i] ? symbol(i) : i + 1}</div><h3>${esc(st.titel)}</h3><p>${esc(st.text)}</p></li>`).join("")}</ol>
   <p class="notiz notiz-b">${esc(s.notiz)}</p>
 </div></section>`;
 }
