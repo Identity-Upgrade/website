@@ -154,9 +154,12 @@ function formular(lang) {
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
   <p class="formular-fehler" role="alert" aria-live="polite"></p>
   <button class="button button-rot" type="submit">${esc(a.button)} <span aria-hidden="true">→</span></button>
-</form>
-${a.danach ? `<p class="kleingedruckt">${esc(a.danach)}</p>` : ""}
-<p class="kleingedruckt">${esc(a.hinweis)} <a href="${PFADE.impressum[lang]}">${esc(T[lang].ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerDatenschutz)}</a></p>`;
+</form>`;
+}
+
+function formularHinweis(lang) {
+  const a = T[lang].freebie.anmeldung;
+  return `<p class="kleingedruckt">${esc(a.hinweis)} <a href="${PFADE.impressum[lang]}">${esc(T[lang].ui.footerImpressum)}</a> · <a href="${PFADE.privacy[lang]}">${esc(T[lang].ui.footerDatenschutz)}</a></p>`;
 }
 
 function seitenRahmen(lang, seite, { titel, beschreibung, noindex = false, ogBild }, body) {
@@ -213,10 +216,16 @@ ${haltung(lang, f.haltung)}
 ${soFunktionierts(lang, "creme", f.sofunktionierts)}
 ${ueber(lang, null, "weiss", f.ueber)}
 <section class="abschnitt beige mitte anmeldung" id="anmeldung"><div class="huelle">
-  ${labelP(f.anmeldung.label)}
-  <h2 class="titel t-gross">${akzent(f.anmeldung.titel)}</h2>
-  ${absaetze(f.anmeldung.text)}
-  ${formular(lang)}
+  <div class="anmeldung-raster">
+    <div class="anmeldung-bild" aria-hidden="true">${bild(img.raum1, "", "ab-hinten")}${bild(img.freebie, "", "ab-vorne")}</div>
+    <div class="anmeldung-inhalt">
+      ${labelP(f.anmeldung.label)}
+      <h2 class="titel t-gross">${akzent(f.anmeldung.titel)}</h2>
+      ${absaetze(f.anmeldung.text)}
+      ${formular(lang)}
+    </div>
+  </div>
+  ${formularHinweis(lang)}
 </div></section>
 </main>
 ${fuss(lang)}`;

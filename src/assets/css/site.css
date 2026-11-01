@@ -349,3 +349,15 @@ a { color: inherit; }
 .anmeldung .kleingedruckt { max-width: none; width: 100%; margin: 110px auto 0; text-align: center; text-wrap: balance; }
 @media (min-width: 900px) { .anmeldung { padding-bottom: 32px; } }
 @media (max-width: 899px) { .anmeldung { padding-bottom: 24px; } .anmeldung .kleingedruckt { margin-top: 64px; } }
+/* Anmeldung mit Freebie-Bild: am Computer Bild links, Formular rechts */
+.anmeldung-bild { position: relative; width: 100%; max-width: 300px; aspect-ratio: 1 / 1.2; margin: 0 auto 36px; }
+.anmeldung-bild img { position: absolute; width: 72%; height: auto; bottom: 0; box-shadow: var(--schatten); }
+.anmeldung-bild .ab-hinten { right: 2%; transform: rotate(7deg); transform-origin: 30% 100%; }
+.anmeldung-bild .ab-vorne { left: 2%; transform: rotate(-3deg); }
+@media (min-width: 900px) {
+  .anmeldung-raster { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; }
+  .anmeldung-bild { max-width: 440px; margin: 0; }
+  .anmeldung-inhalt { text-align: left; }
+  .anmeldung-inhalt .fliess { margin-left: 0; margin-right: 0; }
+  .anmeldung-inhalt .formular { margin-left: 0; }
+}
