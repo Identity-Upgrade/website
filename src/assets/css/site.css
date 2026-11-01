@@ -306,3 +306,6 @@ a { color: inherit; }
 }
 /* Handschrift-Notiz im Hero: am Computer immer in einer Zeile */
 @media (min-width: 900px) { .hero .notiz { white-space: nowrap; } }
+/* Hero: Spalten in DE und EN immer gleich breit, Notiz darf über die Textspalte hinausragen */
+@media (min-width: 900px) { .hero .huelle { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); } .hero .huelle > div:first-child { min-width: 0; } }
+@media (min-width: 900px) { .hero .button { white-space: nowrap; } }
