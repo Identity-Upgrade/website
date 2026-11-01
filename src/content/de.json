@@ -75,7 +75,7 @@
       "email": "E-Mail-Adresse",
       "button": "Kostenfreier Zutritt zu Raum 1",
       "hinweis": "[Datenschutzhinweis und Einwilligungstext werden vor Veröffentlichung ergänzt.]",
-      "fehler": "Bitte fülle Vorname, Nachname und E-Mail-Adresse aus und prüfe deine Angaben.",
+      "fehler": "Bitte fülle Vorname, Nachname und E-Mail-Adresse aus, wähle dein größtes Problem und prüfe deine Angaben.",
       "danach": "Nach der Anmeldung kommt eine E-Mail zur Bestätigung der Adresse. Anschließend wird Raum 1 als PDF zugestellt.",
       "vorwahl": "Land",
       "telefon": "Telefonnummer",

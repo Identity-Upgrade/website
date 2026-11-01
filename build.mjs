@@ -147,7 +147,7 @@ function formular(lang) {
   </div>
   <input type="hidden" name="fields[telefon]" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="situation-${lang}">${esc(a.situation)}</label>
-    <select id="situation-${lang}" name="fields[situation]"><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
+    <select id="situation-${lang}" name="fields[situation]" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
   </div>
   <input type="hidden" name="fields[quelle]" data-feld="quelle">
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
