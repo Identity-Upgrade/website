@@ -11,6 +11,7 @@ const lies = (p) => JSON.parse(readFileSync(join(ROOT, "src/content", p), "utf8"
 const cfg = lies("config.json");
 const T = { de: lies("de.json"), en: lies("en.json") };
 const VERSION = Date.now().toString(36);
+const STAND = new Date().toLocaleString("de-DE", { timeZone: "Europe/Berlin", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
 import { createHash } from "node:crypto";
 const imgV = (datei) => { try { return createHash("md5").update(readFileSync(new URL("./src/assets/img/" + datei, import.meta.url))).digest("hex").slice(0, 8); } catch { return VERSION; } };
 const imgUrl = (datei) => `/assets/img/${datei}?v=${imgV(datei)}`;
@@ -51,7 +52,7 @@ function kopf(lang, seite, { kaufen = false } = {}) {
       : `<a href="${PFADE[seite].de}" hreflang="de" lang="de">DE</a><span class="aktiv" aria-current="true">EN</span>`
   }</nav>`;
   const kauf = kaufen ? `<a class="button button-rot button-klein" href="#preis">${esc(t.ui.kaufen)}</a>` : "";
-  return `${VORSCHAU ? `<div class="vorschau-band">${esc(t.ui.vorschau)}</div>` : ""}
+  return `${VORSCHAU ? `<div class="vorschau-band">${esc(t.ui.vorschau)} · Stand ${STAND}</div>` : ""}
 <header class="kopf"><div class="huelle">
   <a class="wortmarke" href="${PFADE.freebie[lang]}">Identity <em>Upgrade</em><sup>™</sup></a>
   <div class="kopf-rechts">${kauf}${sprache}</div>
