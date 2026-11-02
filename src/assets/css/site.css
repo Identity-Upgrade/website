@@ -563,3 +563,28 @@ a { color: inherit; }
   .faecher-vier .f-s1 { transform: rotate(7deg); } .faecher-vier .f-s2 { transform: rotate(14deg); }
   .faecher-vier .f-s3 { transform: rotate(21deg); } .faecher-vier .f-s4 { transform: rotate(28deg); }
 }
+/* E-Book-Fächer: weiter aufgefächert, damit von jeder Seite mehr zu sehen ist */
+@media (min-width: 900px) {
+  .faecher-vier .f-s1 { transform: rotate(9deg); }
+  .faecher-vier .f-s2 { transform: rotate(19deg); }
+  .faecher-vier .f-s3 { transform: rotate(29deg); }
+  .faecher-vier .f-s4 { transform: rotate(39deg); }
+  .hero .faecher-vier { margin-right: -160px; }
+}
+@media (min-width: 900px) {
+  .hero .faecher-vier { margin-right: -40px; }
+  .faecher-vier img { width: 56%; }
+  .faecher-vier .f-mitte { width: 58%; }
+  .faecher-vier .f-s1 { transform: translateX(14%) rotate(5deg); }
+  .faecher-vier .f-s2 { transform: translateX(28%) rotate(10deg); }
+  .faecher-vier .f-s3 { transform: translateX(42%) rotate(15deg); }
+  .faecher-vier .f-s4 { transform: translateX(56%) rotate(20deg); }
+}
+@media (max-width: 899px) {
+  .hero .faecher-vier img { width: 48%; }
+  .hero .faecher-vier .f-mitte { width: 52%; }
+  .faecher-vier .f-s1 { transform: translateX(14%) rotate(5deg); }
+  .faecher-vier .f-s2 { transform: translateX(28%) rotate(10deg); }
+  .faecher-vier .f-s3 { transform: translateX(42%) rotate(15deg); }
+  .faecher-vier .f-s4 { transform: translateX(56%) rotate(20deg); }
+}

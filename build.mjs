@@ -40,8 +40,8 @@ const bild = (name, alt, cls = "") =>
   `<img class="${cls}" src="${imgUrl(name + "-960.webp")}" srcset="${imgUrl(name + "-480.webp")} 480w, ${imgUrl(name + "-960.webp")} 960w" sizes="(min-width: 900px) 420px, 60vw" alt="${esc(alt)}" loading="lazy" decoding="async" width="960" height="1358">`;
 
 const IMG = {
-  de: { buch: "buch-cover-de", freebie: "freebie-cover-de", raum1: "freebie-raum1-de", spur: "buch-seite-spur-de", fund: "buch-seite-fund-de", eb: ["buch-seite-r3-de", "buch-seite-spurensuche-de", "buch-seite-fund5-de", "buch-seite-r8-de"] },
-  en: { buch: "book-cover-en", freebie: "freebie-cover-en", raum1: "freebie-room1-en", spur: "book-page-clue-en", fund: "book-page-find-en", eb: ["book-page-r3-en", "book-page-investigation-en", "book-page-find5-en", "book-page-r8-en"] },
+  de: { buch: "buch-cover-de", freebie: "freebie-cover-de", raum1: "freebie-raum1-de", spur: "buch-seite-spur-de", fund: "buch-seite-fund-de", eb: ["buch-seite-r3-de", "buch-seite-s24-de", "buch-seite-s60-de", "buch-seite-s57-de"] },
+  en: { buch: "book-cover-en", freebie: "freebie-cover-en", raum1: "freebie-room1-en", spur: "book-page-clue-en", fund: "book-page-find-en", eb: ["book-page-r3-en", "book-page-s24-en", "book-page-s58-en", "book-page-s56-en"] },
 };
 
 function kopf(lang, seite, { kaufen = false } = {}) {
