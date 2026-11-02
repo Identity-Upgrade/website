@@ -588,3 +588,22 @@ a { color: inherit; }
   .faecher-vier .f-s3 { transform: translateX(42%) rotate(15deg); }
   .faecher-vier .f-s4 { transform: translateX(56%) rotate(20deg); }
 }
+/* E-Book-Fächer: Cover exakt so groß und so hoch wie auf der Freebie-Seite */
+@media (min-width: 900px) {
+  .hero .faecher-vier { height: 720px; margin-right: 0; }
+  .faecher-vier img { width: 62%; bottom: 20%; left: 2%; }
+  .faecher-vier .f-mitte { width: 66%; bottom: 22%; left: 2%; transform: rotate(-2deg); }
+  .faecher-vier .f-s1 { transform: translateX(11%) rotate(4deg); }
+  .faecher-vier .f-s2 { transform: translateX(22%) rotate(8deg); }
+  .faecher-vier .f-s3 { transform: translateX(33%) rotate(12deg); }
+  .faecher-vier .f-s4 { transform: translateX(44%) rotate(16deg); }
+}
+@media (max-width: 899px) {
+  .hero .faecher-vier { aspect-ratio: 1 / 1.05; }
+  .hero .faecher-vier img { width: 56%; bottom: 8%; left: 2%; }
+  .hero .faecher-vier .f-mitte { width: 60%; bottom: 10%; left: 2%; transform: rotate(-2deg); }
+  .faecher-vier .f-s1 { transform: translateX(10%) rotate(4deg); }
+  .faecher-vier .f-s2 { transform: translateX(20%) rotate(8deg); }
+  .faecher-vier .f-s3 { transform: translateX(30%) rotate(12deg); }
+  .faecher-vier .f-s4 { transform: translateX(40%) rotate(16deg); }
+}
