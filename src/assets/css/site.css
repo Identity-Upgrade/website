@@ -501,3 +501,31 @@ a { color: inherit; }
 .ds-raster { grid-template-columns: minmax(0, 1fr); } .ds-text { min-width: 0; }
 @media (min-width: 900px) { .ds-raster { grid-template-columns: 200px minmax(0, 1fr); } }
 .ds-box { margin-bottom: 40px; }
+/* E-Book-Hero: Fächer mit vier Innenseiten hinter dem Cover */
+.faecher-vier img { left: 2%; }
+.faecher-vier .f-s1 { transform: rotate(4deg) translateX(10%); z-index: 4; }
+.faecher-vier .f-s2 { transform: rotate(8deg) translateX(20%); z-index: 3; }
+.faecher-vier .f-s3 { transform: rotate(12deg) translateX(30%); z-index: 2; }
+.faecher-vier .f-s4 { transform: rotate(16deg) translateX(40%); z-index: 1; }
+.faecher-vier .f-mitte { z-index: 5; }
+@media (max-width: 899px) {
+  .hero .faecher-vier img { width: 52%; }
+  .hero .faecher-vier .f-mitte { width: 56%; }
+  .faecher-vier .f-s4 { transform: rotate(16deg) translateX(38%); }
+}
+.faecher-vier img { transform-origin: 15% 100%; }
+.faecher-vier .f-s1 { transform: rotate(7deg) translateX(9%); }
+.faecher-vier .f-s2 { transform: rotate(14deg) translateX(17%); }
+.faecher-vier .f-s3 { transform: rotate(21deg) translateX(24%); }
+.faecher-vier .f-s4 { transform: rotate(28deg) translateX(30%); }
+.faecher-vier .f-mitte { transform: rotate(-3deg); }
+@media (max-width: 899px) { .faecher-vier .f-s4 { transform: rotate(28deg) translateX(30%); } }
+/* Treppe nach oben rechts: oben und rechts bleibt von jeder Seite ein Streifen mit Inhalt sichtbar */
+.faecher-vier img { transform-origin: 50% 50%; bottom: 4%; }
+.faecher-vier .f-mitte { bottom: 4%; transform: rotate(-2deg); }
+.faecher-vier .f-s1 { transform: translate(9%, -6%) rotate(2deg); }
+.faecher-vier .f-s2 { transform: translate(18%, -12%) rotate(4deg); }
+.faecher-vier .f-s3 { transform: translate(27%, -18%) rotate(6deg); }
+.faecher-vier .f-s4 { transform: translate(36%, -24%) rotate(8deg); }
+@media (min-width: 900px) { .faecher-vier img { width: 56%; } .faecher-vier .f-mitte { width: 60%; } }
+@media (max-width: 899px) { .hero .faecher-vier { aspect-ratio: 1 / 1.2; } .faecher-vier .f-s4 { transform: translate(34%, -24%) rotate(8deg); } }
