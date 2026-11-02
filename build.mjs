@@ -261,12 +261,12 @@ function seiteBuch(lang) {
 <section class="abschnitt creme hero"><div class="huelle">
   <div>
     <p class="label">${esc(b.hero.label)}</p>
-    <h1 class="titel t-hero">${akzent(b.hero.titel)}</h1>
-    <p class="fliess">${esc(b.hero.text)}</p>
-    <a class="button button-rot" href="#preis">${esc(b.preis.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a>
+    <h1 class="titel t-hero t-hero-lang">${akzent(b.hero.titel)}</h1>
+    ${absaetze(b.hero.text)}
+    <a class="button button-rot" href="#preis">${esc(b.hero.button || b.preis.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a>
     <p class="notiz notiz-a">${esc(b.hero.notiz)}</p>
   </div>
-  <div class="mockup">${bild(img.buch, "Escape Self-Sabotage – E-Book", "buch")}${bild(img.fund, "", "seite")}</div>
+  <div class="faecher">${bild(img.spur, "", "f-links")}${bild(img.fund, "", "f-rechts")}${bild(img.buch, "Escape Self-Sabotage – E-Book", "f-mitte")}</div>
 </div></section>
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}

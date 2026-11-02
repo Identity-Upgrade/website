@@ -242,9 +242,13 @@
     },
     "hero": {
       "label": "Escape Self-Sabotage · Stockwerk 1",
-      "titel": "[Große Überschrift mit] *[Akzentwort.]*",
-      "text": "[Ein bis zwei Sätze zum Versprechen des Buches.]",
-      "notiz": "↑ Einführungspreis bis 31.12."
+      "titel": "Die Antworten liegen oft dort, wo du *noch nie gesucht hast.*",
+      "text": [
+        "Acht Räume. Acht unterschiedliche Perspektiven auf die Muster, die dein Denken, deine Entscheidungen und dein Verhalten beeinflussen.",
+        "Entdecke, warum manche Situationen in deinem Leben immer wiederkehren – und weshalb das, was du bisher für Selbstsabotage gehalten hast, möglicherweise einer ganz eigenen Logik folgt."
+      ],
+      "notiz": "Vielleicht ist es Zeit, die richtigen Fragen zu stellen.",
+      "button": "Stockwerk 1 entdecken"
     },
     "wiedererkennen": {
       "label": "",
