@@ -831,3 +831,4 @@ a { color: inherit; }
 
 /* Preis: Vier-Seiten-Fächer wie im Hero, aber in der linken Spalte */
 @media (min-width: 900px) { .preis-abschnitt .faecher-vier { margin-right: 0 !important; margin-left: -90px; } .preis-abschnitt .anmeldung-raster { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 40px; } }
+.preis-zeile .preis-notiz { margin: 0; font-family: var(--hand); font-size: 15px; line-height: 1.25; color: var(--rot); transform: rotate(-4deg); white-space: nowrap; }

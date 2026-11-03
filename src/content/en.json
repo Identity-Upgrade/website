@@ -329,8 +329,7 @@
       "signatur": "Heike Klewer"
     },
     "preis": {
-      "label": "Launch price",
-      "produkt": "Escape Self-Sabotage · Level 1",
+      "label": "Escape Self-Sabotage",
       "danach": "from January 1, 2027:",
       "punkte": [
         "[Benefit one]",
@@ -338,8 +337,6 @@
         "[Benefit three]"
       ],
       "button": "Buy now",
-      "sicher": "Secure payment via Digistore24",
-      "format": "E-book as PDF",
       "titel": "[Pricing headline with *accent.*]",
       "text": [
         "[One or two sentences about buying.]"

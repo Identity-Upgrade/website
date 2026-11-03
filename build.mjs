@@ -254,10 +254,9 @@ function preisAbschnitt(lang) {
       ${labelP(p.label)}
       <h2 class="titel t-gross">${akzent(p.titel)}</h2>
       ${absaetze(p.text)}
-      <div class="preis-zeile"><p class="preis-zahl">${esc(pr.einfuehrung)}</p><p class="preis-danach">${esc(p.produkt)}<br>${esc(p.format)} · ${esc(p.danach)} ${esc(pr.regulaer)}</p></div>
+      <div class="preis-zeile"><p class="preis-zahl">${esc(pr.einfuehrung)}</p><p class="notiz preis-notiz">${esc(p.danach)} ${esc(pr.regulaer)}</p></div>
       <ul class="preis-punkte">${p.punkte.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
       <a class="button button-rot" href="${esc(href)}" rel="nofollow">${esc(p.button)} <span aria-hidden="true">→</span></a>
-      <p class="preis-sicher">${esc(p.sicher)}</p>
     </div>
   </div>
 </div></section>`;

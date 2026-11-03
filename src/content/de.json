@@ -336,8 +336,7 @@
       "signatur": "Heike Klewer"
     },
     "preis": {
-      "label": "Einführungspreis",
-      "produkt": "Escape Self-Sabotage · Stockwerk 1",
+      "label": "Escape Self-Sabotage",
       "danach": "ab 1. Januar 2027:",
       "punkte": [
         "[Leistungspunkt eins]",
@@ -345,8 +344,6 @@
         "[Leistungspunkt drei]"
       ],
       "button": "Jetzt kaufen",
-      "sicher": "Sichere Zahlung über Digistore24",
-      "format": "E-Book als PDF",
       "titel": "[Überschrift Preisbereich mit *Akzent.*]",
       "text": [
         "[Ein bis zwei Sätze zum Kauf.]"
