@@ -405,6 +405,30 @@
         "Many of your beliefs were passed down to you long before you were even able to question them. Some rules you still follow today, without really knowing where they came from. Sometimes, you're simply choosing between options someone else has laid out for you. And ultimately, some decisions you make are shaped by the simple fact that, at the time, you can't possibly know what possibilities you're not yet aware of.",
         "Maybe real change doesn't begin with trying to make better decisions. Maybe it begins with understanding how you came to make those decisions in the first place."
       ]
+    },
+    "fuerwen": {
+      "titel": "Who is *Escape Self-Sabotage* for?",
+      "ja": {
+        "kopf": "This Book Is for You If…",
+        "punkte": [
+          "… you've promised yourself a hundred times you'd never go through something like that again, yet somehow you keep ending up in the same situation.",
+          "… you know exactly what you want to change, but there's a huge gap between knowing what to do and actually doing it.",
+          "… you make decisions that feel right at the time, only to look back later and wonder how you could ever have made them.",
+          "… you're starting to suspect that some of the beliefs and rules you live by aren't really your own, yet you still follow them.",
+          "… you're tired of constantly questioning yourself without ever understanding what's behind the patterns that keep repeating in your life."
+        ]
+      },
+      "nein": {
+        "kopf": "This Book Is Not for You If…",
+        "punkte": [
+          "… you're looking for a quick fix that makes your problems disappear without having to take a closer look at them.",
+          "… you'd rather have someone tell you what to do than find out why you are the way you are.",
+          "… you believe you already know yourself completely and there's nothing else you could possibly need to know.",
+          "… you're unwilling to question your own beliefs and you're convinced that the problem always lies with everyone else.",
+          "… you're only looking for answers that confirm what you already believe about yourself and your life."
+        ]
+      },
+      "button": "Buy now"
     }
   },
   "gemeinsam": {
