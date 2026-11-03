@@ -860,3 +860,7 @@ a { color: inherit; }
 .fw-kopf { font-size: 16px; letter-spacing: .18em; }
 .fw-liste p { font-size: 18px; line-height: 1.7; }
 .fw-nr { height: 31px; }
+.fw-liste p { font-size: 16px; line-height: 1.6; }
+.fw-liste li { padding: 11px 0; }
+.fw-nr { height: 26px; }
+@media (min-width: 900px) { .fw-raster { margin-top: 36px; } .fw-button { margin-top: 40px; } }
