@@ -258,11 +258,13 @@ function preisbox(lang) {
 const SCHLOSS = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.1" fill="currentColor" stroke="none"/></svg>';
 const SCHLUESSEL = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="12" r="4"/><path d="M11.5 12h9.5"/><path d="M18 12v3"/><path d="M21 12v2.2"/></svg>';
 
+const MESSING_SCHLOSS = '<svg viewBox="0 0 34 40" aria-hidden="true"><defs><linearGradient id="ms" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1D58A"/><stop offset=".5" stop-color="#C99A3E"/><stop offset="1" stop-color="#8E6A24"/></linearGradient></defs><path d="M9 18V12a8 8 0 0 1 16 0v6" fill="none" stroke="url(#ms)" stroke-width="3.6"/><rect x="3" y="17" width="28" height="21" rx="3" fill="url(#ms)" stroke="#7A5A1D" stroke-width=".8"/><circle cx="17" cy="25.5" r="2.8" fill="#3A2A0E"/><path d="M15.8 27h2.4l.8 6h-4z" fill="#3A2A0E"/></svg>';
+
 function hausZeichnung(h) {
   return `<div class="haus-bild haus-breit haus-stein" role="img" aria-label="${esc(h.s1)} · ${esc(h.skOffen)}; ${esc(h.s2)}, ${esc(h.s3)} · ${esc(h.skFolgt)}">
   <img src="${imgUrl("haus-stein-1200.webp")}" srcset="${imgUrl("haus-stein-600.webp")} 600w, ${imgUrl("haus-stein-1200.webp")} 1200w" sizes="(min-width: 900px) 460px, 90vw" alt="" loading="lazy" decoding="async">
-  <p class="hz-notiz hz-schloss hz-l3">${SCHLOSS}</p>
-  <p class="hz-notiz hz-schloss hz-l2">${SCHLOSS}</p>
+  <p class="hz-notiz hz-schloss hz-l3">${MESSING_SCHLOSS}</p>
+  <p class="hz-notiz hz-schloss hz-l2">${MESSING_SCHLOSS}</p>
   <p class="hz-notiz hz-n1"><span>${esc(h.s1)} · ${esc(h.skOffen)}</span></p>
   <p class="hz-notiz hz-neg"><span>${esc(h.eg)}</span></p>
 </div>`;
