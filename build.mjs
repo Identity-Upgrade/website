@@ -18,8 +18,8 @@ const imgUrl = (datei) => `/assets/img/${datei}?v=${imgV(datei)}`;
 
 // Pfade je Seite und Sprache
 const PFADE = {
-  freebie: { de: "/de/freebie/", en: "/en/freebie/" },
-  buch: { de: "/de/escape-self-sabotage/", en: "/en/escape-self-sabotage/" },
+  freebie: { de: "/de/freebie-r1/", en: "/en/freebie-r1/" },
+  buch: { de: "/de/escape-self-sabotage-l1/", en: "/en/escape-self-sabotage-l1/" },
   danke: { de: "/de/danke/", en: "/en/thank-you/" },
   impressum: { de: "/de/impressum/", en: null }, // Englisch: kein Impressum, nur Privacy
   privacy: { de: "/de/datenschutz/", en: "/en/privacy/" },
