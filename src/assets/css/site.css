@@ -857,3 +857,6 @@ a { color: inherit; }
 .fw-nr { display: flex; align-items: center; height: 23px; }
 .fw-nr svg { display: block; }
 .fw-ja .fw-kopf, .fw-ja .fw-nr { color: #2F8F3A; }
+.fw-kopf { font-size: 16px; letter-spacing: .18em; }
+.fw-liste p { font-size: 18px; line-height: 1.7; }
+.fw-nr { height: 31px; }
