@@ -306,7 +306,7 @@ ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme", b.sofunktionierts)}
 ${hausAbschnitt(b.haus, "foto", pr.einfuehrung)}
-${haltung(lang)}
+${haltung(lang, b.haltung)}
 ${ueber(lang, null, "weiss", b.ueber)}
 <section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
 <section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">

@@ -395,6 +395,14 @@
         }
       ],
       "notiz": "The exit isn't necessarily where you'd expect it to be."
+    },
+    "haltung": {
+      "label": "",
+      "titel": "Not every decision you make is truly *your own.*",
+      "text": [
+        "Many of your beliefs were handed to you long before you were ever able to question them. Some rules you still follow today without knowing where they actually came from. Sometimes you're only choosing between options someone else laid out for you. And in the end, you make some decisions simply because, in that moment, there's no way of knowing which options you haven't discovered yet.",
+        "Maybe real change doesn't start with trying to make better decisions. Maybe it starts with recognizing how your past decisions came about in the first place."
+      ]
     }
   },
   "gemeinsam": {

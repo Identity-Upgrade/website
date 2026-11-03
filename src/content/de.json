@@ -402,6 +402,14 @@
         }
       ],
       "notiz": "Der Ausgang ist nicht unbedingt dort, wo man ihn vermutet."
+    },
+    "haltung": {
+      "label": "",
+      "titel": "Nicht jede Entscheidung, die du triffst, ist wirklich *deine eigene.*",
+      "text": [
+        "Viele deiner Überzeugungen hast du übernommen, lange bevor du sie überhaupt hinterfragen konntest. Manche Regeln befolgst du noch heute, ohne zu wissen, woher sie eigentlich stammen. Dann entscheidest du manchmal nur zwischen Möglichkeiten, die andere für dich vorgegeben haben. Und schlussendlich triffst du manche Entscheidungen nur deshalb, weil du zum Zeitpunkt deiner Entscheidung gar nicht wissen kannst, welche Möglichkeiten du noch nicht kennst.",
+        "Vielleicht beginnt eine echte Veränderung nicht damit, bessere Entscheidungen treffen zu wollen. Sondern damit, zu erkennen, wie deine bisherigen Entscheidungen überhaupt entstanden sind."
+      ]
     }
   },
   "gemeinsam": {
