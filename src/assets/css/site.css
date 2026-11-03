@@ -439,9 +439,9 @@ a { color: inherit; }
 }
 /* Hero-Fächer am Handy so groß wie im Formular-Abschnitt */
 @media (max-width: 899px) {
-  .hero .faecher { height: auto; aspect-ratio: 1 / 1.05; max-width: 400px; width: 100%; margin: 0 auto; }
-  .hero .faecher img { width: 56%; left: 4%; bottom: 8%; }
-  .hero .faecher .f-mitte { width: 60%; left: 2%; bottom: 10%; }
+  :is(.hero, .preis-abschnitt) .faecher { height: auto; aspect-ratio: 1 / 1.05; max-width: 400px; width: 100%; margin: 0 auto; }
+  :is(.hero, .preis-abschnitt) .faecher img { width: 56%; left: 4%; bottom: 8%; }
+  :is(.hero, .preis-abschnitt) .faecher .f-mitte { width: 60%; left: 2%; bottom: 10%; }
 }
 @media (max-width: 899px) { .ueber .u-rechts .u-c { display: block; margin-top: 28px; } }
 /* ===== Datenschutz-Seite ===== */
@@ -509,8 +509,8 @@ a { color: inherit; }
 .faecher-vier .f-s4 { transform: rotate(16deg) translateX(40%); z-index: 1; }
 .faecher-vier .f-mitte { z-index: 5; }
 @media (max-width: 899px) {
-  .hero .faecher-vier img { width: 52%; }
-  .hero .faecher-vier .f-mitte { width: 56%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier img { width: 52%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier .f-mitte { width: 56%; }
   .faecher-vier .f-s4 { transform: rotate(16deg) translateX(38%); }
 }
 .faecher-vier img { transform-origin: 15% 100%; }
@@ -528,11 +528,11 @@ a { color: inherit; }
 .faecher-vier .f-s3 { transform: translate(27%, -18%) rotate(6deg); }
 .faecher-vier .f-s4 { transform: translate(36%, -24%) rotate(8deg); }
 @media (min-width: 900px) { .faecher-vier img { width: 56%; } .faecher-vier .f-mitte { width: 60%; } }
-@media (max-width: 899px) { .hero .faecher-vier { aspect-ratio: 1 / 1.2; } .faecher-vier .f-s4 { transform: translate(34%, -24%) rotate(8deg); } }
+@media (max-width: 899px) { :is(.hero, .preis-abschnitt) .faecher-vier { aspect-ratio: 1 / 1.2; } .faecher-vier .f-s4 { transform: translate(34%, -24%) rotate(8deg); } }
 /* E-Book-Hero: echter Fächer, größer, Drehpunkt unten links */
 .faecher-vier img, .faecher-vier .f-mitte { left: 4%; bottom: 3%; transform-origin: 0% 100%; }
 @media (min-width: 900px) {
-  .hero .faecher-vier { height: 760px; margin-right: -80px; }
+  :is(.hero, .preis-abschnitt) .faecher-vier { height: 760px; margin-right: -80px; }
   .faecher-vier img { width: 60%; }
   .faecher-vier .f-mitte { width: 62%; }
 }
@@ -542,24 +542,24 @@ a { color: inherit; }
 .faecher-vier .f-s3 { transform: rotate(26deg); }
 .faecher-vier .f-s4 { transform: rotate(35deg); }
 @media (max-width: 899px) {
-  .hero .faecher-vier { aspect-ratio: 1 / 1.15; }
-  .hero .faecher-vier img { width: 50%; }
-  .hero .faecher-vier .f-mitte { width: 52%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier { aspect-ratio: 1 / 1.15; }
+  :is(.hero, .preis-abschnitt) .faecher-vier img { width: 50%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier .f-mitte { width: 52%; }
   .faecher-vier .f-s4 { transform: rotate(35deg); }
 }
 @media (min-width: 900px) {
-  .hero .faecher-vier { height: 780px; margin-right: -120px; }
+  :is(.hero, .preis-abschnitt) .faecher-vier { height: 780px; margin-right: -120px; }
   .faecher-vier img { width: 64%; bottom: 14%; left: 0; }
   .faecher-vier .f-mitte { width: 66%; bottom: 14%; left: 0; }
 }
 @media (max-width: 899px) {
-  .hero .faecher-vier img { bottom: 14%; }
-  .hero .faecher-vier .f-mitte { bottom: 14%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier img { bottom: 14%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier .f-mitte { bottom: 14%; }
 }
 @media (max-width: 899px) {
-  .hero .faecher-vier { aspect-ratio: 1 / 1.05; }
-  .hero .faecher-vier img { width: 56%; bottom: 12%; left: 0; }
-  .hero .faecher-vier .f-mitte { width: 60%; bottom: 12%; left: 0; }
+  :is(.hero, .preis-abschnitt) .faecher-vier { aspect-ratio: 1 / 1.05; }
+  :is(.hero, .preis-abschnitt) .faecher-vier img { width: 56%; bottom: 12%; left: 0; }
+  :is(.hero, .preis-abschnitt) .faecher-vier .f-mitte { width: 60%; bottom: 12%; left: 0; }
   .faecher-vier .f-s1 { transform: rotate(7deg); } .faecher-vier .f-s2 { transform: rotate(14deg); }
   .faecher-vier .f-s3 { transform: rotate(21deg); } .faecher-vier .f-s4 { transform: rotate(28deg); }
 }
@@ -569,10 +569,10 @@ a { color: inherit; }
   .faecher-vier .f-s2 { transform: rotate(19deg); }
   .faecher-vier .f-s3 { transform: rotate(29deg); }
   .faecher-vier .f-s4 { transform: rotate(39deg); }
-  .hero .faecher-vier { margin-right: -160px; }
+  :is(.hero, .preis-abschnitt) .faecher-vier { margin-right: -160px; }
 }
 @media (min-width: 900px) {
-  .hero .faecher-vier { margin-right: -40px; }
+  :is(.hero, .preis-abschnitt) .faecher-vier { margin-right: -40px; }
   .faecher-vier img { width: 56%; }
   .faecher-vier .f-mitte { width: 58%; }
   .faecher-vier .f-s1 { transform: translateX(14%) rotate(5deg); }
@@ -581,8 +581,8 @@ a { color: inherit; }
   .faecher-vier .f-s4 { transform: translateX(56%) rotate(20deg); }
 }
 @media (max-width: 899px) {
-  .hero .faecher-vier img { width: 48%; }
-  .hero .faecher-vier .f-mitte { width: 52%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier img { width: 48%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier .f-mitte { width: 52%; }
   .faecher-vier .f-s1 { transform: translateX(14%) rotate(5deg); }
   .faecher-vier .f-s2 { transform: translateX(28%) rotate(10deg); }
   .faecher-vier .f-s3 { transform: translateX(42%) rotate(15deg); }
@@ -590,7 +590,7 @@ a { color: inherit; }
 }
 /* E-Book-Fächer: Cover exakt so groß und so hoch wie auf der Freebie-Seite */
 @media (min-width: 900px) {
-  .hero .faecher-vier { height: 720px; margin-right: 0; }
+  :is(.hero, .preis-abschnitt) .faecher-vier { height: 720px; margin-right: 0; }
   .faecher-vier img { width: 62%; bottom: 20%; left: 2%; }
   .faecher-vier .f-mitte { width: 66%; bottom: 22%; left: 2%; transform: rotate(-2deg); }
   .faecher-vier .f-s1 { transform: translateX(11%) rotate(4deg); }
@@ -599,9 +599,9 @@ a { color: inherit; }
   .faecher-vier .f-s4 { transform: translateX(44%) rotate(16deg); }
 }
 @media (max-width: 899px) {
-  .hero .faecher-vier { aspect-ratio: 1 / 1.05; }
-  .hero .faecher-vier img { width: 56%; bottom: 8%; left: 2%; }
-  .hero .faecher-vier .f-mitte { width: 60%; bottom: 10%; left: 2%; transform: rotate(-2deg); }
+  :is(.hero, .preis-abschnitt) .faecher-vier { aspect-ratio: 1 / 1.05; }
+  :is(.hero, .preis-abschnitt) .faecher-vier img { width: 56%; bottom: 8%; left: 2%; }
+  :is(.hero, .preis-abschnitt) .faecher-vier .f-mitte { width: 60%; bottom: 10%; left: 2%; transform: rotate(-2deg); }
   .faecher-vier .f-s1 { transform: translateX(10%) rotate(4deg); }
   .faecher-vier .f-s2 { transform: translateX(20%) rotate(8deg); }
   .faecher-vier .f-s3 { transform: translateX(30%) rotate(12deg); }
@@ -828,3 +828,6 @@ a { color: inherit; }
 .preis-inhalt .preis-punkte { border-top: 0; padding: 16px 0 0; margin: 0 0 30px; }
 .preis-inhalt .preis-sicher { margin-top: 14px; }
 @media (max-width: 899px) { .preis-inhalt { text-align: left; } .preis-zeile { gap: 16px; } .preis-zeile .preis-zahl { font-size: 48px; } }
+
+/* Preis: Vier-Seiten-Fächer wie im Hero, aber in der linken Spalte */
+@media (min-width: 900px) { .preis-abschnitt .faecher-vier { margin-right: 0 !important; margin-left: -90px; } .preis-abschnitt .anmeldung-raster { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 40px; } }

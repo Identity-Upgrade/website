@@ -247,7 +247,7 @@ function preisAbschnitt(lang) {
   return `<section class="abschnitt creme preis-abschnitt" id="preis"><div class="huelle">
   <div class="anmeldung-raster">
     <div class="anmeldung-bild-spalte">
-      <div class="faecher anmeldung-faecher" aria-hidden="true">${bild(img.eb[1], "", "f-links")}${bild(img.eb[3], "", "f-rechts")}${bild(img.buch, "", "f-mitte")}</div>
+      <div class="faecher faecher-vier preis-faecher" aria-hidden="true">${img.eb.map((n, i) => bild(n, "", "f-s" + (i + 1))).join("")}${bild(img.buch, "", "f-mitte")}</div>
       ${p.bildNotiz ? `<p class="notiz notiz-c anmeldung-notiz">${esc(p.bildNotiz)}</p>` : ""}
     </div>
     <div class="anmeldung-inhalt preis-inhalt">
