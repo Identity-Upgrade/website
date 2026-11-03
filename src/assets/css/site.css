@@ -853,3 +853,6 @@ a { color: inherit; }
 .fuerwen > .huelle > .titel { text-align: center; }
 .fw-ja .fw-kopf, .fw-ja .fw-nr { color: var(--gruen); }
 .fw-nein .fw-kopf, .fw-nein .fw-nr { color: var(--rot); }
+.fw-liste li { align-items: start; }
+.fw-nr { display: flex; align-items: center; height: 23px; }
+.fw-nr svg { display: block; }

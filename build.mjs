@@ -249,11 +249,14 @@ function faqAbschnitt(lang) {
 </div></section>`;
 }
 
+const HAKEN = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg>';
+const KREUZ = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
 function fuerWen(lang) {
   const f = T[lang].buch.fuerwen, pr = cfg.preise[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
   const href = istPlatzhalter(link) ? "#preis" : link;
-  const spalte = (x, art) => `<div class="fw-spalte fw-${art}"><p class="fw-kopf">${esc(x.kopf)}</p><ol class="fw-liste">${x.punkte.map((t, i) => `<li><span class="fw-nr">${zwei(i + 1)}</span><p>${esc(t)}</p></li>`).join("")}</ol></div>`;
+  const spalte = (x, art) => `<div class="fw-spalte fw-${art}"><p class="fw-kopf">${esc(x.kopf)}</p><ol class="fw-liste">${x.punkte.map((t, i) => `<li><span class="fw-nr" aria-hidden="true">${art === "ja" ? HAKEN : KREUZ}</span><p>${esc(t)}</p></li>`).join("")}</ol></div>`;
   return `<section class="abschnitt weiss fuerwen"><div class="huelle">
   <h2 class="titel t-gross">${akzent(f.titel)}</h2>
   <div class="fw-raster">${spalte(f.ja, "ja")}${spalte(f.nein, "nein")}</div>
