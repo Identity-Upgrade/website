@@ -273,7 +273,7 @@ function hausZeichnung(h, stil) {
 }
 
 function hausAbschnitt(hs, stil = hs.stil) {
-  return `<section class="abschnitt creme haus-abschnitt"><div class="huelle">
+  return `<section class="abschnitt beige haus-abschnitt"><div class="huelle">
   <div class="mitte">
     <p class="label">${esc(hs.label)}</p>
     <h2 class="titel t-gross">${akzent(hs.titel)}</h2>

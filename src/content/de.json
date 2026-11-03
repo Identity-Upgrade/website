@@ -272,7 +272,7 @@
     },
     "haus": {
       "label": "Das Haus",
-      "titel": "Ein Stockwerk ist *geöffnet.*",
+      "titel": "Geh hinein, ein Stockwerk ist *geöffnet.*",
       "kopf": "",
       "raumWort": "Raum",
       "raeume": [
