@@ -265,8 +265,8 @@ function hausZeichnung(h, stil) {
   const schloss = foto ? SCHLOSS : "";
   return `<div class="haus-bild haus-${foto ? "foto" : "skizze"}" style="aspect-ratio:${ratio}" role="img" aria-label="${esc(h.s1)}: ${esc(h.s1zu)}">
   <img src="${imgUrl(datei + "-960.webp")}" srcset="${imgUrl(datei + "-480.webp")} 480w, ${imgUrl(datei + "-960.webp")} 960w" sizes="(min-width: 900px) 400px, 80vw" alt="" loading="lazy" decoding="async">
-  <p class="hz-notiz hz-n3">${schloss}<span>${esc(h.s3)}</span><span>${esc(h.skFolgt)}</span></p>
-  <p class="hz-notiz hz-n2">${schloss}<span>${esc(h.s2)}</span><span>${esc(h.skFolgt)}</span></p>
+  <p class="hz-notiz hz-n3 hz-nur-symbol" aria-label="${esc(h.s3)} · ${esc(h.skFolgt)}">${SCHLOSS}</p>
+  <p class="hz-notiz hz-n2 hz-nur-symbol" aria-label="${esc(h.s2)} · ${esc(h.skFolgt)}">${SCHLOSS}</p>
   <p class="hz-notiz hz-n1">${SCHLUESSEL}<span>${esc(h.s1)}</span><span>${esc(h.skOffen)}</span></p>
   <p class="hz-notiz hz-neg"><span>${esc(h.eg)}</span></p>
 </div>`;

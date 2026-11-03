@@ -752,3 +752,6 @@ a { color: inherit; }
 .haus-foto .hz-notiz span { white-space: nowrap; }
 .haus-foto .hz-n3 { top: 22%; } .haus-foto .hz-n2 { top: 41%; } .haus-foto .hz-n1 { top: 60%; } .haus-foto .hz-neg { top: 75.5%; }
 .haus-foto .hz-n1 svg { width: 20px; height: 20px; }
+.haus-foto .hz-nur-symbol { padding: 18px 26px; }
+.haus-foto .hz-nur-symbol svg { width: 30px; height: 30px; }
+@media (max-width: 899px) { .haus-foto .hz-nur-symbol svg { width: 26px; height: 26px; } }
