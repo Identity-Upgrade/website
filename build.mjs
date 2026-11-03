@@ -113,7 +113,7 @@ function haltung(lang, daten) {
   const h = daten || T[lang].gemeinsam.haltung;
   return `<section class="abschnitt gruen mitte haltung"><div class="huelle">
   ${labelP(h.label)}
-  <h2 class="titel t-gross">${akzent(h.titel)}</h2>
+  <h2 class="titel t-gross">${akzent(h.titel).replace(/\n/g, "<br>")}</h2>
   ${absaetze(h.text)}
   ${h.button ? `<a class="button button-rot" href="#anmeldung">${esc(h.button)} <span aria-hidden="true">→</span></a>` : ""}
 </div></section>`;
