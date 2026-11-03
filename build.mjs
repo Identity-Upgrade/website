@@ -270,7 +270,7 @@ function hausZeichnung(h) {
 </div>`;
 }
 
-function hausAbschnitt(hs, stil = hs.stil) {
+function hausAbschnitt(hs, stil = hs.stil, preisText = "") {
   return `<section class="abschnitt beige haus-abschnitt"><div class="huelle">
   <div class="mitte">
     ${hs.label ? `<p class="label">${esc(hs.label)}</p>` : ""}
@@ -281,6 +281,7 @@ function hausAbschnitt(hs, stil = hs.stil) {
       ${hs.kopf ? `<p class="raum-kopf">${esc(hs.kopf)}</p>` : ""}
       <div class="raum-toggles">${hs.raeume.map((r, i) => `<details class="raum-toggle"><summary><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><h3>${esc(r.t)}</h3><span class="raum-plus" aria-hidden="true"></span></summary><p>${esc(r.x)}</p></details>`).join("")}</div>
       ${hs.notiz ? `<p class="notiz notiz-a haus-notiz">${esc(hs.notiz)}</p>` : ""}
+      ${hs.button ? `<a class="button button-rot haus-button" href="#preis">${esc(hs.button)}${preisText ? ` · ${esc(preisText)}` : ""} <span aria-hidden="true">→</span></a>` : ""}
     </div>
     ${hausZeichnung(hs.haus)}
   </div>
@@ -304,7 +305,7 @@ function seiteBuch(lang) {
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme", b.sofunktionierts)}
-${hausAbschnitt(b.haus, "foto")}
+${hausAbschnitt(b.haus, "foto", pr.einfuehrung)}
 ${haltung(lang)}
 ${ueber(lang, null, "weiss", b.ueber)}
 <section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>

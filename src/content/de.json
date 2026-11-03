@@ -322,7 +322,8 @@
         "skOffen": "geöffnet"
       },
       "stil": "foto",
-      "notiz": "Du kannst reingehen. Der Lift wartet."
+      "notiz": "Du kannst reingehen. Der Lift wartet.",
+      "button": "Meine Muster knacken"
     },
     "ueber": {
       "label": "",
