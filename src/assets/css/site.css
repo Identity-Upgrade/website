@@ -311,7 +311,7 @@ a { color: inherit; }
 @media (min-width: 900px) { .hero .button { white-space: nowrap; } }
 /* Wiedererkennen: großzügiger am Computer, dünne Linie zum nächsten Abschnitt */
 .wiedererkennen { border-bottom: 1px solid var(--tinte); }
-@media (min-width: 900px) { .wiedererkennen, .haltung, .sofunktionierts, .ueber, .anmeldung { padding: 122px 0; } }
+@media (min-width: 900px) { .wiedererkennen, .haltung, .sofunktionierts, .ueber, .anmeldung { padding: 120px 0; } }
 /* Kein einzelnes Wort allein in der letzten Zeile */
 .karte p, .fliess, .station p { text-wrap: pretty; }
 /* Abschnittsüberschriften: Zeilen ausgewogen, kein Wort allein */
@@ -764,7 +764,7 @@ a { color: inherit; }
 .haus-breit .hz-notiz { font-family: var(--label); font-weight: 700; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--rot); -webkit-text-stroke: 0; padding: 14px 40px; transform: translate(-50%, -50%); background: radial-gradient(ellipse at center, rgba(251,246,236,1) 0%, rgba(251,246,236,.96) 50%, rgba(251,246,236,0) 74%); }
 .haus-breit .hz-n1 { top: 50.5%; } .haus-breit .hz-neg { top: 69.5%; }
 @media (max-width: 899px) { .haus-breit { max-width: 420px; } .haus-breit .hz-notiz { font-size: 11px; } }
-@media (min-width: 900px) { .haus-abschnitt { padding: 122px 0; } .haus-abschnitt .haus-raster { margin-top: 48px; align-items: center; } }
+@media (min-width: 900px) { .haus-abschnitt { padding: 120px 0; } .haus-abschnitt .haus-raster { margin-top: 48px; align-items: center; } }
 @media (min-width: 900px) and (max-width: 1199px) { .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; } }
 .haus-breit .hz-n1 { top: 58%; } .haus-breit .hz-neg { top: 76.5%; }
 /* Haus Stein: Foto mit Boden, Hintergrund an das Beige angepasst */
@@ -807,4 +807,4 @@ a { color: inherit; }
 .haus-stein .hz-n1, .haus-stein .hz-neg { background: none; padding: 26px 56px; isolation: isolate; }
 .haus-stein .hz-n1::before, .haus-stein .hz-neg::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(250,245,236,.9) 0%, rgba(250,245,236,.7) 35%, rgba(250,245,236,.3) 60%, rgba(250,245,236,0) 80%); filter: blur(6px); }
 @media (min-width: 900px) { .raum-toggle h3 { letter-spacing: .05em; } }
-@media (min-width: 900px) { .sofunktionierts { padding: 122px 0; } }
+@media (min-width: 900px) { .sofunktionierts { padding: 120px 0; } }
