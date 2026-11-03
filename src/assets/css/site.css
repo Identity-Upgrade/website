@@ -792,3 +792,18 @@ a { color: inherit; }
 @media (max-width: 899px) { .raum-toggle h3 { font-size: 13px; letter-spacing: .12em; white-space: normal; } .raum-toggle summary { grid-template-columns: 40px minmax(0, 1fr) 22px; } .raum-toggle p { margin-left: 56px; } }
 @media (min-width: 900px) { .raum-toggle h3 { font-size: 13px; letter-spacing: .09em; white-space: nowrap; } }
 @media (min-width: 900px) { .raum-toggle h3 { letter-spacing: .08em; } } @media (min-width: 900px) and (max-width: 1199px) { .raum-toggle h3 { white-space: normal; } }
+/* Raumtitel 15px wie die Kartenüberschriften */
+@media (min-width: 900px) {
+  .raum-toggle h3 { font-size: 15px; letter-spacing: .07em; }
+  .raum-toggle .raum-nr { font-size: 16px; }
+  .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 420px; gap: 48px; }
+}
+@media (min-width: 900px) and (max-width: 1199px) { .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 340px; } }
+@media (max-width: 899px) { .raum-toggle h3 { font-size: 15px; letter-spacing: .07em; } .raum-toggle .raum-nr { font-size: 15px; } }
+/* "RAUM" wieder über der Nummer, in der Label-Schrift */
+.raum-toggle .raum-nr small { display: block; font-family: var(--label); font-weight: 700; font-size: 9px; letter-spacing: .2em; margin: 0 0 4px; color: var(--rot); }
+.raum-toggle .raum-nr { line-height: 1.1; }
+/* Weiche, dunstige Wolken hinter den Beschriftungen */
+.haus-stein .hz-n1, .haus-stein .hz-neg { background: none; padding: 26px 56px; isolation: isolate; }
+.haus-stein .hz-n1::before, .haus-stein .hz-neg::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(250,245,236,.9) 0%, rgba(250,245,236,.7) 35%, rgba(250,245,236,.3) 60%, rgba(250,245,236,0) 80%); filter: blur(6px); }
+@media (min-width: 900px) { .raum-toggle h3 { letter-spacing: .05em; } }
