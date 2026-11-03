@@ -260,11 +260,11 @@ const SCHLUESSEL = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" 
 
 function hausZeichnung(h, stil) {
   const datei = stil === "skizze" ? "haus-skizze" : "haus-foto";
-  const ratio = stil === "skizze" ? "848 / 1384" : "767 / 1427";
+  const ratio = stil === "skizze" ? "700 / 1384" : "680 / 1400";
   const schilder = stil === "skizze"
     ? `<p class="hz-notiz hz-n3">${esc(h.s3)} · ${esc(h.skFolgt)}</p>
   <p class="hz-notiz hz-n2">${esc(h.s2)} · ${esc(h.skFolgt)}</p>
-  <p class="hz-notiz hz-n1">${esc(h.s1)} – ${esc(h.skOffen)}!</p>
+  <p class="hz-notiz hz-n1">${SCHLUESSEL}<span>${esc(h.s1)} – ${esc(h.skOffen)}!</span></p>
   <p class="hz-notiz hz-neg">${esc(h.eg)}</p>`
     : `<div class="hz-schild hz-f3">${SCHLOSS}<b>${esc(h.s3)}</b><span>${esc(h.zu)}</span></div>
   <div class="hz-schild hz-f2">${SCHLOSS}<b>${esc(h.s2)}</b><span>${esc(h.zu)}</span></div>

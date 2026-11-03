@@ -680,3 +680,20 @@ a { color: inherit; }
 .hz-n1 { top: 61%; transform: translate(-50%, -50%) rotate(-2deg); font-size: 22px; }
 .hz-neg { top: 73.6%; transform: translate(-50%, -50%) rotate(1.5deg); }
 @media (max-width: 899px) { .hz-notiz { font-size: 16px; } .hz-n1 { font-size: 18px; } }
+/* Haus v3: mittig, ohne Schräglage, Beschriftung auf weicher Wolke, größer */
+.hz-f3 { top: 21.8%; } .hz-f2 { top: 40.4%; } .hz-f1 { top: 60.4%; } .hz-feg { top: 72.9%; }
+.haus-bild { max-width: 430px; }
+.haus-bild::before { content: ""; position: absolute; inset: 4% -14% -2%; background: radial-gradient(ellipse at 50% 60%, rgba(241,233,220,.9) 0%, rgba(249,246,239,.6) 45%, rgba(255,255,255,0) 72%); z-index: 0; }
+.haus-bild > img { position: relative; z-index: 1; }
+.haus-bild > .hz-notiz, .haus-bild > .hz-schild { z-index: 2; }
+.hz-notiz { background: radial-gradient(ellipse at center, rgba(251,246,236,.97) 0%, rgba(251,246,236,.92) 45%, rgba(251,246,236,0) 72%); padding: 14px 34px; font-size: 25px; display: flex; align-items: center; gap: 8px; }
+.hz-n3 { top: 25.4%; transform: translate(-50%, -50%); }
+.hz-n2 { top: 41.6%; transform: translate(-50%, -50%); }
+.hz-n1 { top: 57.5%; transform: translate(-50%, -50%); font-size: 28px; }
+.hz-n1 svg { width: 30px; height: 30px; flex: none; }
+.hz-neg { top: 73%; transform: translate(-50%, -50%); }
+@media (max-width: 899px) { .hz-notiz { font-size: 20px; padding: 10px 26px; } .hz-n1 { font-size: 22px; } .hz-n1 svg { width: 24px; height: 24px; } }
+.haus-bild { max-width: 380px; }
+.hz-notiz { font-size: 20px; padding: 12px 30px; background: radial-gradient(ellipse at center, rgba(251,246,236,1) 0%, rgba(251,246,236,.97) 50%, rgba(251,246,236,0) 74%); }
+.hz-n1 { font-size: 22px; } .hz-n1 svg { width: 24px; height: 24px; }
+@media (max-width: 899px) { .hz-notiz { font-size: 18px; } .hz-n1 { font-size: 20px; } }
