@@ -281,10 +281,10 @@ function hausAbschnitt(hs, stil = hs.stil, preisText = "") {
       ${hs.kopf ? `<p class="raum-kopf">${esc(hs.kopf)}</p>` : ""}
       <div class="raum-toggles">${hs.raeume.map((r, i) => `<details class="raum-toggle"><summary><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><h3>${esc(r.t)}</h3><span class="raum-plus" aria-hidden="true"></span></summary><p>${esc(r.x)}</p></details>`).join("")}</div>
       ${hs.notiz ? `<p class="notiz notiz-a haus-notiz">${esc(hs.notiz)}</p>` : ""}
-      ${hs.button ? `<a class="button button-rot haus-button" href="#preis">${esc(hs.button)}${preisText ? ` · ${esc(preisText)}` : ""} <span aria-hidden="true">→</span></a>` : ""}
     </div>
     ${hausZeichnung(hs.haus)}
   </div>
+  ${hs.button ? `<div class="mitte haus-button-zeile"><a class="button button-rot" href="#preis">${esc(hs.button)}${preisText ? ` · ${esc(preisText)}` : ""} <span aria-hidden="true">→</span></a></div>` : ""}
 </div></section>`;
 }
 

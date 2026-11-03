@@ -816,3 +816,5 @@ a { color: inherit; }
 .raum-plus::before, .raum-plus::after, .raum-toggle[open] .raum-plus::before, .raum-toggle[open] .raum-plus::after { background: var(--tinte); }
 .haus-button { margin-top: 28px; }
 .raum-liste p.haus-notiz { margin-top: 30px; }
+.haus-button-zeile { text-align: center; margin-top: 44px; }
+@media (max-width: 899px) { .haus-button-zeile { margin-top: 32px; } }
