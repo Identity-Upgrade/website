@@ -318,10 +318,10 @@
         "s1info": "8 Räume · 48 Spuren",
         "eg": "Eingang · Lift",
         "s1zu": "Geöffnet · 8 Räume",
-        "skFolgt": "folgt",
-        "skOffen": "offen"
+        "skFolgt": "verschlossen",
+        "skOffen": "geöffnet"
       },
-      "stil": "skizze"
+      "stil": "foto"
     },
     "ueber": {
       "label": "",

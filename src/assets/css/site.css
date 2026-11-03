@@ -741,3 +741,14 @@ a { color: inherit; }
 .raum-toggle[open] .raum-plus { background: none; }
 .raum-toggle[open] .raum-plus::before, .raum-toggle[open] .raum-plus::after { background: var(--rot); }
 @media (min-width: 900px) { .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 300px; gap: 52px; } }
+/* Haus Foto: Beschriftung in der Label-Schrift */
+.haus-foto .hz-notiz { font-family: var(--label); font-weight: 700; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; -webkit-text-stroke: 0; padding: 14px 36px; gap: 8px; transform: translate(-50%, -50%); }
+.haus-foto .hz-n3, .haus-foto .hz-n2 { color: var(--tinte); }
+.haus-foto .hz-n1, .haus-foto .hz-neg { color: var(--rot); }
+.haus-foto .hz-notiz svg { width: 16px; height: 16px; }
+@media (max-width: 899px) { .haus-foto .hz-notiz { font-size: 11px; padding: 10px 26px; } }
+/* Beschriftung zweizeilig, damit sie in die Fenster passt */
+.haus-foto .hz-notiz { flex-direction: column; gap: 4px; padding: 16px 40px; line-height: 1.25; text-align: center; }
+.haus-foto .hz-notiz span { white-space: nowrap; }
+.haus-foto .hz-n3 { top: 22%; } .haus-foto .hz-n2 { top: 41%; } .haus-foto .hz-n1 { top: 60%; } .haus-foto .hz-neg { top: 75.5%; }
+.haus-foto .hz-n1 svg { width: 20px; height: 20px; }

@@ -311,10 +311,10 @@
         "s1info": "8 rooms · 48 clues",
         "eg": "Entrance · Elevator",
         "s1zu": "Open · 8 rooms",
-        "skFolgt": "coming soon",
+        "skFolgt": "locked",
         "skOffen": "open"
       },
-      "stil": "skizze"
+      "stil": "foto"
     },
     "ueber": {
       "label": "",
