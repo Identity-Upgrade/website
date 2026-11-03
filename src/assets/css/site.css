@@ -818,3 +818,4 @@ a { color: inherit; }
 .raum-liste p.haus-notiz { margin-top: 30px; }
 .haus-button-zeile { text-align: center; margin-top: 44px; }
 @media (max-width: 899px) { .haus-button-zeile { margin-top: 32px; } }
+@media (min-width: 900px) { .raum-toggle summary { padding: 9px 4px; } .haus-button-zeile { margin-top: 32px; } .raum-liste p.haus-notiz { margin-top: 24px; } }
