@@ -346,7 +346,12 @@
       ],
       "button": "Jetzt kaufen",
       "sicher": "Sichere Zahlung über Digistore24",
-      "format": "E-Book als PDF"
+      "format": "E-Book als PDF",
+      "titel": "[Überschrift Preisbereich mit *Akzent.*]",
+      "text": [
+        "[Ein bis zwei Sätze zum Kauf.]"
+      ],
+      "bildNotiz": "[Handschriftliche Notiz]"
     },
     "rueckweg": {
       "notiz": "Noch nicht sicher?",

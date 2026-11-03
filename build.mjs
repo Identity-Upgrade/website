@@ -240,6 +240,29 @@ ${fuss(lang)}`;
   return seitenRahmen(lang, "freebie", { titel: f.seo.titel, beschreibung: f.seo.beschreibung, ogBild: img.freebie }, body);
 }
 
+function preisAbschnitt(lang) {
+  const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang], img = IMG[lang];
+  const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
+  const href = istPlatzhalter(link) ? "#preis" : link;
+  return `<section class="abschnitt creme preis-abschnitt" id="preis"><div class="huelle">
+  <div class="anmeldung-raster">
+    <div class="anmeldung-bild-spalte">
+      <div class="faecher anmeldung-faecher" aria-hidden="true">${bild(img.eb[1], "", "f-links")}${bild(img.eb[3], "", "f-rechts")}${bild(img.buch, "", "f-mitte")}</div>
+      ${p.bildNotiz ? `<p class="notiz notiz-c anmeldung-notiz">${esc(p.bildNotiz)}</p>` : ""}
+    </div>
+    <div class="anmeldung-inhalt preis-inhalt">
+      ${labelP(p.label)}
+      <h2 class="titel t-gross">${akzent(p.titel)}</h2>
+      ${absaetze(p.text)}
+      <div class="preis-zeile"><p class="preis-zahl">${esc(pr.einfuehrung)}</p><p class="preis-danach">${esc(p.produkt)}<br>${esc(p.format)} · ${esc(p.danach)} ${esc(pr.regulaer)}</p></div>
+      <ul class="preis-punkte">${p.punkte.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+      <a class="button button-rot" href="${esc(href)}" rel="nofollow">${esc(p.button)} <span aria-hidden="true">→</span></a>
+      <p class="preis-sicher">${esc(p.sicher)}</p>
+    </div>
+  </div>
+</div></section>`;
+}
+
 function preisbox(lang) {
   const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
@@ -308,7 +331,7 @@ ${soFunktionierts(lang, "creme", b.sofunktionierts)}
 ${hausAbschnitt(b.haus, "foto", pr.einfuehrung)}
 ${haltung(lang, b.haltung)}
 ${ueber(lang, null, "weiss", b.ueber)}
-<section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
+${preisAbschnitt(lang)}
 <section class="abschnitt beige mitte linie-oben linie-unten"><div class="huelle">
   <p class="notiz notiz-c">${esc(b.rueckweg.notiz)}</p>
   <h2 class="titel t-mittel">${akzent(b.rueckweg.titel)}</h2>

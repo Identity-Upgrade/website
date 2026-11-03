@@ -339,7 +339,12 @@
       ],
       "button": "Buy now",
       "sicher": "Secure payment via Digistore24",
-      "format": "E-book as PDF"
+      "format": "E-book as PDF",
+      "titel": "[Pricing headline with *accent.*]",
+      "text": [
+        "[One or two sentences about buying.]"
+      ],
+      "bildNotiz": "[Handwritten note]"
     },
     "rueckweg": {
       "notiz": "Not sure yet?",

@@ -819,3 +819,12 @@ a { color: inherit; }
 .haus-button-zeile { text-align: center; margin-top: 44px; }
 @media (max-width: 899px) { .haus-button-zeile { margin-top: 32px; } }
 @media (min-width: 900px) { .raum-toggle summary { padding: 9px 4px; } .haus-button-zeile { margin-top: 32px; } .raum-liste p.haus-notiz { margin-top: 24px; } }
+/* Preis-Abschnitt E-Book */
+@media (min-width: 900px) { .preis-abschnitt { padding: 120px 0; } }
+.preis-inhalt .label { color: var(--rot); }
+.preis-zeile { display: flex; align-items: center; gap: 22px; margin: 30px 0 0; padding: 22px 0; border-top: 1px solid var(--rand); border-bottom: 1px solid var(--rand); }
+.preis-zeile .preis-zahl { margin: 0; font-size: 60px; color: var(--tinte); white-space: nowrap; }
+.preis-zeile .preis-danach { margin: 0; text-align: left; font-size: 14px; line-height: 1.5; }
+.preis-inhalt .preis-punkte { border-top: 0; padding: 16px 0 0; margin: 0 0 30px; }
+.preis-inhalt .preis-sicher { margin-top: 14px; }
+@media (max-width: 899px) { .preis-inhalt { text-align: left; } .preis-zeile { gap: 16px; } .preis-zeile .preis-zahl { font-size: 48px; } }
