@@ -783,3 +783,12 @@ a { color: inherit; }
 .haus-stein .hz-schloss { background: none; padding: 0; }
 .haus-stein .hz-schloss svg { width: 34px; height: 40px; filter: drop-shadow(0 2px 3px rgba(0,0,0,.45)); }
 @media (max-width: 899px) { .haus-stein .hz-schloss svg { width: 28px; height: 33px; } }
+/* Raumtitel in der Label-Schrift, Text in IU Sans 15, klare Nummern */
+.raum-toggle h3 { font-family: var(--label); font-weight: 700; text-transform: uppercase; letter-spacing: .14em; line-height: 1.35; font-size: 14px; }
+.raum-toggle summary { grid-template-columns: 46px minmax(0, 1fr) 24px; padding: 18px 4px; }
+.raum-toggle .raum-nr { font-family: var(--label); font-weight: 700; font-size: 15px; letter-spacing: .08em; color: var(--rot); line-height: 1; }
+.raum-toggle .raum-nr small { display: none; }
+.raum-toggle p { font-family: var(--sans); font-size: 15px; margin: -6px 40px 20px 66px; }
+@media (max-width: 899px) { .raum-toggle h3 { font-size: 13px; letter-spacing: .12em; white-space: normal; } .raum-toggle summary { grid-template-columns: 40px minmax(0, 1fr) 22px; } .raum-toggle p { margin-left: 56px; } }
+@media (min-width: 900px) { .raum-toggle h3 { font-size: 13px; letter-spacing: .09em; white-space: nowrap; } }
+@media (min-width: 900px) { .raum-toggle h3 { letter-spacing: .08em; } } @media (min-width: 900px) and (max-width: 1199px) { .raum-toggle h3 { white-space: normal; } }
