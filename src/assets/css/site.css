@@ -700,3 +700,5 @@ a { color: inherit; }
 .haus-foto .hz-n3 { top: 22.5%; } .haus-foto .hz-n2 { top: 41.5%; } .haus-foto .hz-n1 { top: 60.5%; } .haus-foto .hz-neg { top: 76%; }
 .haus-foto .hz-notiz svg { width: 22px; height: 22px; flex: none; }
 .haus-abschnitt + .haus-abschnitt { border-top: 0; }
+.creme .hz-notiz { background: radial-gradient(ellipse at center, rgba(249,246,239,1) 0%, rgba(249,246,239,.97) 50%, rgba(249,246,239,0) 74%); }
+.creme .haus-bild::before { display: none; }

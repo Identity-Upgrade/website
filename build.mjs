@@ -267,13 +267,13 @@ function hausZeichnung(h, stil) {
   <img src="${imgUrl(datei + "-960.webp")}" srcset="${imgUrl(datei + "-480.webp")} 480w, ${imgUrl(datei + "-960.webp")} 960w" sizes="(min-width: 900px) 400px, 80vw" alt="" loading="lazy" decoding="async">
   <p class="hz-notiz hz-n3">${schloss}<span>${esc(h.s3)} · ${esc(h.skFolgt)}</span></p>
   <p class="hz-notiz hz-n2">${schloss}<span>${esc(h.s2)} · ${esc(h.skFolgt)}</span></p>
-  <p class="hz-notiz hz-n1">${SCHLUESSEL}<span>${esc(h.s1)} – ${esc(h.skOffen)}!</span></p>
+  <p class="hz-notiz hz-n1"><span>${esc(h.s1)} – ${esc(h.skOffen)}!</span></p>
   <p class="hz-notiz hz-neg"><span>${esc(h.eg)}</span></p>
 </div>`;
 }
 
 function hausAbschnitt(hs, stil = hs.stil) {
-  return `<section class="abschnitt weiss haus-abschnitt"><div class="huelle">
+  return `<section class="abschnitt creme haus-abschnitt"><div class="huelle">
   <div class="mitte">
     <p class="label">${esc(hs.label)}</p>
     <h2 class="titel t-gross">${akzent(hs.titel)}</h2>
@@ -305,7 +305,6 @@ function seiteBuch(lang) {
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme", b.sofunktionierts)}
-${hausAbschnitt(b.haus, "foto")}
 ${hausAbschnitt(b.haus, "skizze")}
 ${haltung(lang)}
 ${ueber(lang, null, "weiss", b.ueber)}
