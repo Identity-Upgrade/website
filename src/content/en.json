@@ -271,11 +271,11 @@
       "raeume": [
         {
           "t": "Why does this keep happening to me?",
-          "x": "You swore: never again. And yet, here you are again."
+          "x": "You promised yourself you’d never do it again. And yet, here you are."
         },
         {
           "t": "Behavior needs context",
-          "x": "Without knowing the circumstances, almost any decision looks wrong."
+          "x": "Without knowing the circumstances, almost any decision can look like the wrong one."
         },
         {
           "t": "Your decisions made sense",
@@ -283,15 +283,15 @@
         },
         {
           "t": "The invisible rules",
-          "x": "The inner rules that guide you – mostly without you noticing."
+          "x": "The hidden rules that guide you, usually without you even noticing."
         },
         {
           "t": "Who planted that thought in your head?",
-          "x": "How do you know what you’re so sure you know?"
+          "x": "How do you know that what you’re so sure of is actually true?"
         },
         {
           "t": "Which menu did you choose from?",
-          "x": "Who decides what’s on the menu in the first place?"
+          "x": "Who decides what your options are in the first place?"
         },
         {
           "t": "Knowing better doesn’t automatically mean doing better",
