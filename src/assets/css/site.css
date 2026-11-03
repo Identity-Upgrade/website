@@ -807,3 +807,4 @@ a { color: inherit; }
 .haus-stein .hz-n1, .haus-stein .hz-neg { background: none; padding: 26px 56px; isolation: isolate; }
 .haus-stein .hz-n1::before, .haus-stein .hz-neg::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(250,245,236,.9) 0%, rgba(250,245,236,.7) 35%, rgba(250,245,236,.3) 60%, rgba(250,245,236,0) 80%); filter: blur(6px); }
 @media (min-width: 900px) { .raum-toggle h3 { letter-spacing: .05em; } }
+@media (min-width: 900px) { .sofunktionierts { padding: 122px 0; } }
