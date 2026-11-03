@@ -767,3 +767,15 @@ a { color: inherit; }
 @media (min-width: 900px) { .haus-abschnitt { padding: 122px 0; } .haus-abschnitt .haus-raster { margin-top: 48px; align-items: center; } }
 @media (min-width: 900px) and (max-width: 1199px) { .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; } }
 .haus-breit .hz-n1 { top: 58%; } .haus-breit .hz-neg { top: 76.5%; }
+/* Haus Stein: Foto mit Boden, Hintergrund an das Beige angepasst */
+.haus-stein { aspect-ratio: 1024 / 1496; max-width: 480px; }
+.haus-stein > img { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 97%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 97%, transparent 100%); }
+.haus-stein .hz-n1 { top: 61%; } .haus-stein .hz-neg { top: 74%; }
+.haus-stein .hz-l3 { top: 23.5%; } .haus-stein .hz-l2 { top: 41.5%; }
+.haus-stein .hz-schloss { padding: 18px 28px; color: var(--tinte); }
+.haus-stein .hz-schloss svg { width: 28px; height: 28px; }
+@media (min-width: 900px) { .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 470px; } }
+.haus-stein > img { -webkit-mask-image: radial-gradient(ellipse 62% 56% at 50% 52%, #000 82%, transparent 100%); mask-image: radial-gradient(ellipse 62% 56% at 50% 52%, #000 82%, transparent 100%); }
+.haus-stein .hz-notiz { background: radial-gradient(ellipse at center, rgba(246,240,230,.97) 0%, rgba(246,240,230,.9) 48%, rgba(246,240,230,0) 74%); }
+@media (min-width: 900px) and (max-width: 1199px) { .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 340px; } }
+.haus-stein > img { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 2%, #000 98%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 2%, #000 96%, transparent 100%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent 0, #000 2%, #000 98%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 2%, #000 96%, transparent 100%); mask-composite: intersect; }

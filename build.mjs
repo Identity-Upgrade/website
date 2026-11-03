@@ -259,8 +259,10 @@ const SCHLOSS = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" str
 const SCHLUESSEL = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="12" r="4"/><path d="M11.5 12h9.5"/><path d="M18 12v3"/><path d="M21 12v2.2"/></svg>';
 
 function hausZeichnung(h) {
-  return `<div class="haus-bild haus-breit" role="img" aria-label="${esc(h.s1)} · ${esc(h.skOffen)}; ${esc(h.s2)}, ${esc(h.s3)} · ${esc(h.skFolgt)}">
-  <img src="${imgUrl("haus-breit-1200.webp")}" srcset="${imgUrl("haus-breit-600.webp")} 600w, ${imgUrl("haus-breit-1200.webp")} 1200w" sizes="(min-width: 900px) 460px, 90vw" alt="" loading="lazy" decoding="async">
+  return `<div class="haus-bild haus-breit haus-stein" role="img" aria-label="${esc(h.s1)} · ${esc(h.skOffen)}; ${esc(h.s2)}, ${esc(h.s3)} · ${esc(h.skFolgt)}">
+  <img src="${imgUrl("haus-stein-1200.webp")}" srcset="${imgUrl("haus-stein-600.webp")} 600w, ${imgUrl("haus-stein-1200.webp")} 1200w" sizes="(min-width: 900px) 460px, 90vw" alt="" loading="lazy" decoding="async">
+  <p class="hz-notiz hz-schloss hz-l3">${SCHLOSS}</p>
+  <p class="hz-notiz hz-schloss hz-l2">${SCHLOSS}</p>
   <p class="hz-notiz hz-n1"><span>${esc(h.s1)} · ${esc(h.skOffen)}</span></p>
   <p class="hz-notiz hz-neg"><span>${esc(h.eg)}</span></p>
 </div>`;
