@@ -259,24 +259,20 @@ const SCHLOSS = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" str
 const SCHLUESSEL = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="12" r="4"/><path d="M11.5 12h9.5"/><path d="M18 12v3"/><path d="M21 12v2.2"/></svg>';
 
 function hausZeichnung(h, stil) {
-  const datei = stil === "skizze" ? "haus-skizze" : "haus-foto";
-  const ratio = stil === "skizze" ? "700 / 1384" : "680 / 1400";
-  const schilder = stil === "skizze"
-    ? `<p class="hz-notiz hz-n3">${esc(h.s3)} · ${esc(h.skFolgt)}</p>
-  <p class="hz-notiz hz-n2">${esc(h.s2)} · ${esc(h.skFolgt)}</p>
-  <p class="hz-notiz hz-n1">${SCHLUESSEL}<span>${esc(h.s1)} – ${esc(h.skOffen)}!</span></p>
-  <p class="hz-notiz hz-neg">${esc(h.eg)}</p>`
-    : `<div class="hz-schild hz-f3">${SCHLOSS}<b>${esc(h.s3)}</b><span>${esc(h.zu)}</span></div>
-  <div class="hz-schild hz-f2">${SCHLOSS}<b>${esc(h.s2)}</b><span>${esc(h.zu)}</span></div>
-  <div class="hz-schild hz-s1 hz-f1">${SCHLUESSEL}<b>${esc(h.s1)}</b><span>${esc(h.s1zu)}</span></div>
-  <div class="hz-schild hz-eg hz-feg">${esc(h.eg)}</div>`;
-  return `<div class="haus-bild haus-${stil === "skizze" ? "skizze" : "foto"}" style="aspect-ratio:${ratio}" role="img" aria-label="${esc(h.s1)}: ${esc(h.s1zu)}">
+  const foto = stil !== "skizze";
+  const datei = foto ? "haus-foto" : "haus-skizze";
+  const ratio = foto ? "680 / 1400" : "700 / 1384";
+  const schloss = foto ? SCHLOSS : "";
+  return `<div class="haus-bild haus-${foto ? "foto" : "skizze"}" style="aspect-ratio:${ratio}" role="img" aria-label="${esc(h.s1)}: ${esc(h.s1zu)}">
   <img src="${imgUrl(datei + "-960.webp")}" srcset="${imgUrl(datei + "-480.webp")} 480w, ${imgUrl(datei + "-960.webp")} 960w" sizes="(min-width: 900px) 400px, 80vw" alt="" loading="lazy" decoding="async">
-  ${schilder}
+  <p class="hz-notiz hz-n3">${schloss}<span>${esc(h.s3)} · ${esc(h.skFolgt)}</span></p>
+  <p class="hz-notiz hz-n2">${schloss}<span>${esc(h.s2)} · ${esc(h.skFolgt)}</span></p>
+  <p class="hz-notiz hz-n1">${SCHLUESSEL}<span>${esc(h.s1)} – ${esc(h.skOffen)}!</span></p>
+  <p class="hz-notiz hz-neg"><span>${esc(h.eg)}</span></p>
 </div>`;
 }
 
-function hausAbschnitt(hs) {
+function hausAbschnitt(hs, stil = hs.stil) {
   return `<section class="abschnitt weiss haus-abschnitt"><div class="huelle">
   <div class="mitte">
     <p class="label">${esc(hs.label)}</p>
@@ -287,7 +283,7 @@ function hausAbschnitt(hs) {
       ${hs.kopf ? `<p class="raum-kopf">${esc(hs.kopf)}</p>` : ""}
       <ol>${hs.raeume.map((r, i) => `<li><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><div><h3>${esc(r.t)}</h3><p>${esc(r.x)}</p></div></li>`).join("")}</ol>
     </div>
-    ${hausZeichnung(hs.haus, hs.stil)}
+    ${hausZeichnung(hs.haus, stil)}
   </div>
 </div></section>`;
 }
@@ -309,7 +305,8 @@ function seiteBuch(lang) {
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme", b.sofunktionierts)}
-${hausAbschnitt(b.haus)}
+${hausAbschnitt(b.haus, "foto")}
+${hausAbschnitt(b.haus, "skizze")}
 ${haltung(lang)}
 ${ueber(lang, null, "weiss", b.ueber)}
 <section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>

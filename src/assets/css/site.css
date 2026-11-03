@@ -697,3 +697,6 @@ a { color: inherit; }
 .hz-notiz { font-size: 20px; padding: 12px 30px; background: radial-gradient(ellipse at center, rgba(251,246,236,1) 0%, rgba(251,246,236,.97) 50%, rgba(251,246,236,0) 74%); }
 .hz-n1 { font-size: 22px; } .hz-n1 svg { width: 24px; height: 24px; }
 @media (max-width: 899px) { .hz-notiz { font-size: 18px; } .hz-n1 { font-size: 20px; } }
+.haus-foto .hz-n3 { top: 22.5%; } .haus-foto .hz-n2 { top: 41.5%; } .haus-foto .hz-n1 { top: 60.5%; } .haus-foto .hz-neg { top: 76%; }
+.haus-foto .hz-notiz svg { width: 22px; height: 22px; flex: none; }
+.haus-abschnitt + .haus-abschnitt { border-top: 0; }
