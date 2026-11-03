@@ -850,3 +850,6 @@ a { color: inherit; }
 .fw-liste p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--text); }
 .fw-button { text-align: center; margin-top: 52px; }
 @media (max-width: 899px) { .fw-liste li { grid-template-columns: 36px minmax(0, 1fr); gap: 12px; } .fw-button { margin-top: 40px; } }
+.fuerwen > .huelle > .titel { text-align: center; }
+.fw-ja .fw-kopf, .fw-ja .fw-nr { color: var(--gruen); }
+.fw-nein .fw-kopf, .fw-nein .fw-nr { color: var(--rot); }
