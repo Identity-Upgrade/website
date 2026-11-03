@@ -864,3 +864,13 @@ a { color: inherit; }
 .fw-liste li { padding: 11px 0; }
 .fw-nr { height: 26px; }
 @media (min-width: 900px) { .fw-raster { margin-top: 36px; } .fw-button { margin-top: 40px; } }
+/* Für wen: zwei gleich hohe Kästen, Zeilen über beide Kästen ausgerichtet */
+.fw-spalte { background: var(--creme); border: 1px solid var(--tinte); border-radius: 8px; padding: 28px 30px 10px; box-shadow: 0 12px 28px rgba(31, 27, 26, 0.12); display: grid; grid-template-rows: subgrid; grid-row: span 6; row-gap: 0; }
+.fw-raster { row-gap: 0; }
+@media (max-width: 899px) { .fw-raster { row-gap: 0; } .fw-nein { margin-top: 24px; } .fw-spalte { padding: 24px 20px 6px; } }
+.fw-liste { display: contents; }
+.fw-liste li:first-child { border-top: 1px solid var(--rand); }
+.fw-liste li:last-child { border-bottom: 0; }
+.fw-kopf { margin-bottom: 12px; }
+@media (min-width: 900px) { .fw-raster { margin-top: 32px; column-gap: 40px; } .fw-button { margin-top: 36px; } }
+@media (min-width: 900px) { .fw-liste li { padding: 9px 0; } }
