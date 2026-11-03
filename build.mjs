@@ -273,13 +273,14 @@ function hausZeichnung(h) {
 function hausAbschnitt(hs, stil = hs.stil) {
   return `<section class="abschnitt beige haus-abschnitt"><div class="huelle">
   <div class="mitte">
-    <p class="label">${esc(hs.label)}</p>
+    ${hs.label ? `<p class="label">${esc(hs.label)}</p>` : ""}
     <h2 class="titel t-gross">${akzent(hs.titel)}</h2>
   </div>
   <div class="haus-raster">
     <div class="raum-liste">
       ${hs.kopf ? `<p class="raum-kopf">${esc(hs.kopf)}</p>` : ""}
       <div class="raum-toggles">${hs.raeume.map((r, i) => `<details class="raum-toggle"><summary><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><h3>${esc(r.t)}</h3><span class="raum-plus" aria-hidden="true"></span></summary><p>${esc(r.x)}</p></details>`).join("")}</div>
+      ${hs.notiz ? `<p class="notiz notiz-a haus-notiz">${esc(hs.notiz)}</p>` : ""}
     </div>
     ${hausZeichnung(hs.haus)}
   </div>

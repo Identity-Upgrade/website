@@ -271,9 +271,9 @@
       "abschluss": "Warum passiert dir das immer wieder?"
     },
     "haus": {
-      "label": "Das Haus",
+      "label": "",
       "titel": "Geh hinein, ein Stockwerk ist *geöffnet.*",
-      "kopf": "",
+      "kopf": "Stockwerk 1",
       "raumWort": "Raum",
       "raeume": [
         {
@@ -321,7 +321,8 @@
         "skFolgt": "verschlossen",
         "skOffen": "geöffnet"
       },
-      "stil": "foto"
+      "stil": "foto",
+      "notiz": "Du kannst reingehen. Der Lift wartet."
     },
     "ueber": {
       "label": "",

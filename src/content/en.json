@@ -264,9 +264,9 @@
       "abschluss": "Why does this keep happening to you?"
     },
     "haus": {
-      "label": "The house",
-      "titel": "Come in, one level is *open.*",
-      "kopf": "",
+      "label": "",
+      "titel": "Step inside, one level is *open.*",
+      "kopf": "Level 1",
       "raumWort": "Room",
       "raeume": [
         {
@@ -314,7 +314,8 @@
         "skFolgt": "locked",
         "skOffen": "open"
       },
-      "stil": "foto"
+      "stil": "foto",
+      "notiz": "You can go in. The elevator is waiting."
     },
     "ueber": {
       "label": "",
