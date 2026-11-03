@@ -310,8 +310,11 @@
         "s1titel": "Why your self-sabotage makes sense",
         "s1info": "8 rooms · 48 clues",
         "eg": "Entrance · Elevator",
-        "s1zu": "Open · 8 rooms"
-      }
+        "s1zu": "Open · 8 rooms",
+        "skFolgt": "coming soon",
+        "skOffen": "open"
+      },
+      "stil": "foto"
     },
     "ueber": {
       "label": "",

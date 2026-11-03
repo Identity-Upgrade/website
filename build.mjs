@@ -258,27 +258,21 @@ function preisbox(lang) {
 const SCHLOSS = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.1" fill="currentColor" stroke="none"/></svg>';
 const SCHLUESSEL = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="12" r="4"/><path d="M11.5 12h9.5"/><path d="M18 12v3"/><path d="M21 12v2.2"/></svg>';
 
-function hausZeichnung(h) {
-  const fenster = (xs, y, hoehe, cls) => xs.map((x) => `<path d="M${x} ${y + hoehe}V${y + 22}a20 18 0 0 1 40 0v${hoehe - 22}" class="${cls}"/><path d="M${x + 20} ${y + 4}v${hoehe - 4}M${x} ${y + hoehe / 2 + 8}h40" class="hz-sprosse"/>`).join("");
-  const reihe = [56, 104, 296, 344];
-  return `<div class="haus-bild" role="img" aria-label="${esc(h.s1)}: ${esc(h.s1titel)}">
-  <svg viewBox="0 0 440 660" class="haus-svg" aria-hidden="true">
-    <path d="M332 52V22h34v30" class="hz-linie"/>
-    <path d="M30 60h380M40 60v560M400 60v560M34 60v-8h372v8" class="hz-linie"/>
-    ${fenster(reihe, 84, 92, "hz-fenster")}<path d="M40 200h360" class="hz-linie"/>
-    ${fenster(reihe, 224, 92, "hz-fenster")}<path d="M40 340h360" class="hz-linie"/>
-    <rect x="41" y="341" width="358" height="139" class="hz-offen"/>${fenster(reihe, 364, 92, "hz-hell")}<path d="M40 480h360" class="hz-linie"/>
-    <path d="M150 620V576a70 56 0 0 1 140 0v44" class="hz-linie"/>
-    <path d="M162 620V578a58 46 0 0 1 116 0v42" class="hz-tuer"/>
-    <path d="M220 532v88" class="hz-linie"/>
-    <path d="M210 600v-12M230 600v-12" class="hz-linie"/>
-    <path d="M60 540h72v80M380 540h-72v80" class="hz-sprosse"/>
-    <path d="M0 620h440" class="hz-linie"/>
-  </svg>
-  <div class="hz-schild hz-s3">${SCHLOSS}<b>${esc(h.s3)}</b><span>${esc(h.zu)}</span></div>
-  <div class="hz-schild hz-s2">${SCHLOSS}<b>${esc(h.s2)}</b><span>${esc(h.zu)}</span></div>
-  <div class="hz-schild hz-s1">${SCHLUESSEL}<b>${esc(h.s1)}</b><span>${esc(h.s1zu)}</span></div>
-  <div class="hz-schild hz-eg">${esc(h.eg)}</div>
+function hausZeichnung(h, stil) {
+  const datei = stil === "skizze" ? "haus-skizze" : "haus-foto";
+  const ratio = stil === "skizze" ? "848 / 1384" : "767 / 1427";
+  const schilder = stil === "skizze"
+    ? `<p class="hz-notiz hz-n3">${esc(h.s3)} · ${esc(h.skFolgt)}</p>
+  <p class="hz-notiz hz-n2">${esc(h.s2)} · ${esc(h.skFolgt)}</p>
+  <p class="hz-notiz hz-n1">${esc(h.s1)} – ${esc(h.skOffen)}!</p>
+  <p class="hz-notiz hz-neg">${esc(h.eg)}</p>`
+    : `<div class="hz-schild hz-f3">${SCHLOSS}<b>${esc(h.s3)}</b><span>${esc(h.zu)}</span></div>
+  <div class="hz-schild hz-f2">${SCHLOSS}<b>${esc(h.s2)}</b><span>${esc(h.zu)}</span></div>
+  <div class="hz-schild hz-s1 hz-f1">${SCHLUESSEL}<b>${esc(h.s1)}</b><span>${esc(h.s1zu)}</span></div>
+  <div class="hz-schild hz-eg hz-feg">${esc(h.eg)}</div>`;
+  return `<div class="haus-bild haus-${stil === "skizze" ? "skizze" : "foto"}" style="aspect-ratio:${ratio}" role="img" aria-label="${esc(h.s1)}: ${esc(h.s1zu)}">
+  <img src="${imgUrl(datei + "-960.webp")}" srcset="${imgUrl(datei + "-480.webp")} 480w, ${imgUrl(datei + "-960.webp")} 960w" sizes="(min-width: 900px) 400px, 80vw" alt="" loading="lazy" decoding="async">
+  ${schilder}
 </div>`;
 }
 
@@ -293,7 +287,7 @@ function hausAbschnitt(hs) {
       ${hs.kopf ? `<p class="raum-kopf">${esc(hs.kopf)}</p>` : ""}
       <ol>${hs.raeume.map((r, i) => `<li><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><div><h3>${esc(r.t)}</h3><p>${esc(r.x)}</p></div></li>`).join("")}</ol>
     </div>
-    ${hausZeichnung(hs.haus)}
+    ${hausZeichnung(hs.haus, hs.stil)}
   </div>
 </div></section>`;
 }
