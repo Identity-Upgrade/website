@@ -252,7 +252,7 @@ function preisAbschnitt(lang) {
     </div>
     <div class="anmeldung-inhalt preis-inhalt">
       ${labelP(p.label)}
-      <h2 class="titel t-gross">${akzent(p.titel)}</h2>
+      <h2 class="titel t-gross">${akzent(p.titel).replace(/\n/g, "<br>")}</h2>
       ${absaetze(p.text)}
       <div class="preis-zeile"><p class="preis-zahl">${esc(pr.einfuehrung)}</p><p class="notiz preis-notiz">${esc(p.danach)} ${esc(pr.regulaer)}</p></div>
       <ul class="preis-punkte">${p.punkte.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>

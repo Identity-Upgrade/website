@@ -332,16 +332,16 @@
       "label": "Escape Self-Sabotage",
       "danach": "from January 1, 2027:",
       "punkte": [
-        "[Benefit one]",
-        "[Benefit two]",
-        "[Benefit three]"
+        "8 rooms with 48 clues to uncover",
+        "Questions and exercises for self-reflection",
+        "The complete first level as an e-book"
       ],
       "button": "Buy now",
-      "titel": "[Pricing headline with *accent.*]",
+      "titel": "The first level.\nNow it's *yours.*",
       "text": [
-        "[One or two sentences about buying.]"
+        "Eight rooms, 48 clues, and questions that make you look a little closer. This isn't a book that tells you who you should be. It's one that helps you understand what you've been overlooking."
       ],
-      "bildNotiz": "[Handwritten note]"
+      "bildNotiz": "Sometimes a single question changes your whole world."
     },
     "rueckweg": {
       "notiz": "Not sure yet?",

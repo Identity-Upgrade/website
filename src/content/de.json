@@ -339,16 +339,16 @@
       "label": "Escape Self-Sabotage",
       "danach": "ab 1. Januar 2027:",
       "punkte": [
-        "[Leistungspunkt eins]",
-        "[Leistungspunkt zwei]",
-        "[Leistungspunkt drei]"
+        "8 Räume mit 48 Spuren zum Entdecken",
+        "Fragen und Übungen zur Selbstreflexion",
+        "Das komplette erste Stockwerk als E-Book"
       ],
       "button": "Jetzt kaufen",
-      "titel": "[Überschrift Preisbereich mit *Akzent.*]",
+      "titel": "Das erste Stockwerk.\nJetzt gehört es *dir.*",
       "text": [
-        "[Ein bis zwei Sätze zum Kauf.]"
+        "Acht Räume, 48 Spuren und Fragen, die dich genauer hinsehen lassen. Kein Buch, das dir sagt, wie du sein sollst. Sondern eines, das dir hilft zu verstehen, was du bisher übersehen hast."
       ],
-      "bildNotiz": "[Handschriftliche Notiz]"
+      "bildNotiz": "Manchmal verändert eine einzige Frage deine ganze Welt."
     },
     "rueckweg": {
       "notiz": "Noch nicht sicher?",
