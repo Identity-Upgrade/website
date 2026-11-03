@@ -273,7 +273,7 @@
     "haus": {
       "label": "Das Haus",
       "titel": "Ein Stockwerk ist *geöffnet.*",
-      "kopf": "Stockwerk 1 · Die Räume",
+      "kopf": "",
       "raumWort": "Raum",
       "raeume": [
         {
@@ -316,7 +316,8 @@
         "s1": "Stockwerk 1",
         "s1titel": "Warum deine Selbstsabotage Sinn ergibt",
         "s1info": "8 Räume · 48 Spuren",
-        "eg": "Eingang · Lift"
+        "eg": "Eingang · Lift",
+        "s1zu": "Geöffnet · 8 Räume"
       }
     },
     "ueber": {

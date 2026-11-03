@@ -266,7 +266,7 @@
     "haus": {
       "label": "The house",
       "titel": "One level is *open.*",
-      "kopf": "Level 1 · The rooms",
+      "kopf": "",
       "raumWort": "Room",
       "raeume": [
         {
@@ -309,7 +309,8 @@
         "s1": "Level 1",
         "s1titel": "Why your self-sabotage makes sense",
         "s1info": "8 rooms · 48 clues",
-        "eg": "Entrance · Elevator"
+        "eg": "Entrance · Elevator",
+        "s1zu": "Open · 8 rooms"
       }
     },
     "ueber": {

@@ -649,3 +649,22 @@ a { color: inherit; }
   .hz-s1 strong { font-size: 15px; }
 }
 .hz-s1 strong { text-wrap: balance; }
+/* Haus v2: kompakter, Stockwerk 1 wie die anderen Schilder, Eingang mit Portal */
+@media (min-width: 900px) { .haus-abschnitt { padding: 80px 0; } .haus-abschnitt .haus-raster { margin-top: 36px; grid-template-columns: 1.25fr 0.75fr; gap: 56px; } }
+.raum-liste ol { border-top: 1px solid var(--tinte); }
+.raum-liste li { grid-template-columns: 46px 1fr; gap: 14px; padding: 9px 0; align-items: center; }
+.raum-nr { font-size: 26px; }
+.raum-nr small { font-size: 8px; margin-bottom: 2px; }
+.raum-liste h3 { font-size: 19px; margin: 0 0 1px; }
+.raum-liste p { font-size: 13.5px; line-height: 1.4; }
+.haus-bild { aspect-ratio: 440 / 660; max-width: 380px; }
+.hz-tuer { fill: #FBF3DC; stroke: var(--rot); stroke-width: 1; }
+.hz-s1 { top: 61.8%; width: 33%; padding: 10px 8px; min-width: 0; border-color: var(--rot); color: var(--rot); }
+.hz-s1 span { color: var(--rot); }
+.hz-s3 { top: 21.2%; } .hz-s2 { top: 42.4%; } .hz-s1 { top: 63.6%; }
+.hz-eg { top: 75.5%; left: 50%; right: auto; transform: translate(-50%, -50%); width: auto; white-space: nowrap; padding: 6px 12px; font-family: var(--label); font-weight: 700; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--rot); border-color: var(--rot); }
+@media (max-width: 899px) { .hz-s1 { width: auto; } }
+.haus-bild { max-width: 400px; }
+.hz-schild { width: auto; white-space: nowrap; padding: 8px 14px; }
+.hz-s3 { top: 19.7%; } .hz-s2 { top: 40.9%; } .hz-s1 { top: 62.1%; width: auto; padding: 8px 14px; }
+.hz-eg { top: 75.8%; padding: 5px 12px; }
