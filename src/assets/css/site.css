@@ -755,3 +755,15 @@ a { color: inherit; }
 .haus-foto .hz-nur-symbol { padding: 18px 26px; }
 .haus-foto .hz-nur-symbol svg { width: 30px; height: 30px; }
 @media (max-width: 899px) { .haus-foto .hz-nur-symbol svg { width: 26px; height: 26px; } }
+/* Haus breit (Skizze, querformatiger) */
+@media (min-width: 900px) {
+  .haus-abschnitt > .huelle { max-width: 1280px; }
+  .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 460px; gap: 56px; }
+}
+.haus-breit { aspect-ratio: 951 / 1352; max-width: 460px; }
+.haus-breit .hz-notiz { font-family: var(--label); font-weight: 700; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--rot); -webkit-text-stroke: 0; padding: 14px 40px; transform: translate(-50%, -50%); background: radial-gradient(ellipse at center, rgba(251,246,236,1) 0%, rgba(251,246,236,.96) 50%, rgba(251,246,236,0) 74%); }
+.haus-breit .hz-n1 { top: 50.5%; } .haus-breit .hz-neg { top: 69.5%; }
+@media (max-width: 899px) { .haus-breit { max-width: 420px; } .haus-breit .hz-notiz { font-size: 11px; } }
+@media (min-width: 900px) { .haus-abschnitt { padding: 122px 0; } .haus-abschnitt .haus-raster { margin-top: 48px; align-items: center; } }
+@media (min-width: 900px) and (max-width: 1199px) { .haus-abschnitt .haus-raster { grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; } }
+.haus-breit .hz-n1 { top: 58%; } .haus-breit .hz-neg { top: 76.5%; }

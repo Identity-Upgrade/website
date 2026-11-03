@@ -258,16 +258,10 @@ function preisbox(lang) {
 const SCHLOSS = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.1" fill="currentColor" stroke="none"/></svg>';
 const SCHLUESSEL = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="12" r="4"/><path d="M11.5 12h9.5"/><path d="M18 12v3"/><path d="M21 12v2.2"/></svg>';
 
-function hausZeichnung(h, stil) {
-  const foto = stil !== "skizze";
-  const datei = foto ? "haus-foto" : "haus-skizze";
-  const ratio = foto ? "680 / 1400" : "700 / 1384";
-  const schloss = foto ? SCHLOSS : "";
-  return `<div class="haus-bild haus-${foto ? "foto" : "skizze"}" style="aspect-ratio:${ratio}" role="img" aria-label="${esc(h.s1)}: ${esc(h.s1zu)}">
-  <img src="${imgUrl(datei + "-960.webp")}" srcset="${imgUrl(datei + "-480.webp")} 480w, ${imgUrl(datei + "-960.webp")} 960w" sizes="(min-width: 900px) 400px, 80vw" alt="" loading="lazy" decoding="async">
-  <p class="hz-notiz hz-n3 hz-nur-symbol" aria-label="${esc(h.s3)} · ${esc(h.skFolgt)}">${SCHLOSS}</p>
-  <p class="hz-notiz hz-n2 hz-nur-symbol" aria-label="${esc(h.s2)} · ${esc(h.skFolgt)}">${SCHLOSS}</p>
-  <p class="hz-notiz hz-n1">${SCHLUESSEL}<span>${esc(h.s1)}</span><span>${esc(h.skOffen)}</span></p>
+function hausZeichnung(h) {
+  return `<div class="haus-bild haus-breit" role="img" aria-label="${esc(h.s1)} · ${esc(h.skOffen)}; ${esc(h.s2)}, ${esc(h.s3)} · ${esc(h.skFolgt)}">
+  <img src="${imgUrl("haus-breit-1200.webp")}" srcset="${imgUrl("haus-breit-600.webp")} 600w, ${imgUrl("haus-breit-1200.webp")} 1200w" sizes="(min-width: 900px) 460px, 90vw" alt="" loading="lazy" decoding="async">
+  <p class="hz-notiz hz-n1"><span>${esc(h.s1)} · ${esc(h.skOffen)}</span></p>
   <p class="hz-notiz hz-neg"><span>${esc(h.eg)}</span></p>
 </div>`;
 }
@@ -283,7 +277,7 @@ function hausAbschnitt(hs, stil = hs.stil) {
       ${hs.kopf ? `<p class="raum-kopf">${esc(hs.kopf)}</p>` : ""}
       <div class="raum-toggles">${hs.raeume.map((r, i) => `<details class="raum-toggle"><summary><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><h3>${esc(r.t)}</h3><span class="raum-plus" aria-hidden="true"></span></summary><p>${esc(r.x)}</p></details>`).join("")}</div>
     </div>
-    ${hausZeichnung(hs.haus, stil)}
+    ${hausZeichnung(hs.haus)}
   </div>
 </div></section>`;
 }
