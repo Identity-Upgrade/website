@@ -281,7 +281,7 @@ function hausAbschnitt(hs, stil = hs.stil) {
   <div class="haus-raster">
     <div class="raum-liste">
       ${hs.kopf ? `<p class="raum-kopf">${esc(hs.kopf)}</p>` : ""}
-      <ol>${hs.raeume.map((r, i) => `<li><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><div><h3>${esc(r.t)}</h3><p>${esc(r.x)}</p></div></li>`).join("")}</ol>
+      <div class="raum-toggles">${hs.raeume.map((r, i) => `<details class="raum-toggle"><summary><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><h3>${esc(r.t)}</h3><span class="raum-plus" aria-hidden="true"></span></summary><p>${esc(r.x)}</p></details>`).join("")}</div>
     </div>
     ${hausZeichnung(hs.haus, stil)}
   </div>

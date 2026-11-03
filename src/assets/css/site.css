@@ -702,3 +702,28 @@ a { color: inherit; }
 .haus-abschnitt + .haus-abschnitt { border-top: 0; }
 .creme .hz-notiz { background: radial-gradient(ellipse at center, rgba(249,246,239,1) 0%, rgba(249,246,239,.97) 50%, rgba(249,246,239,0) 74%); }
 .creme .haus-bild::before { display: none; }
+/* Räume als aufklappbare Toggles */
+.raum-toggles { border-top: 1px solid var(--rand); }
+.raum-toggle { border-bottom: 1px solid var(--rand); }
+.raum-toggle summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 50px 1fr 28px; gap: 16px; align-items: center; padding: 16px 4px; }
+.raum-toggle summary::-webkit-details-marker { display: none; }
+.raum-toggle summary:hover h3 { color: var(--rot); }
+.raum-toggle summary:focus-visible { outline: 2px solid var(--rot); outline-offset: 2px; }
+.raum-toggle .raum-nr { font-size: 30px; }
+.raum-toggle .raum-nr small { font-size: 9px; }
+.raum-toggle h3 { font-family: var(--serif); font-weight: 400; font-size: var(--raum-titel, 22px); line-height: 1.2; margin: 0; color: var(--tinte); white-space: nowrap; transition: color .15s; }
+.raum-plus { position: relative; width: 28px; height: 28px; border: 1px solid var(--rot); border-radius: 50%; justify-self: end; }
+.raum-plus::before, .raum-plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 11px; height: 1.5px; background: var(--rot); transform: translate(-50%, -50%); transition: transform .2s; }
+.raum-plus::after { transform: translate(-50%, -50%) rotate(90deg); }
+.raum-toggle[open] .raum-plus { background: var(--rot); }
+.raum-toggle[open] .raum-plus::before, .raum-toggle[open] .raum-plus::after { background: var(--weiss); }
+.raum-toggle[open] .raum-plus::after { transform: translate(-50%, -50%) rotate(0deg); }
+.raum-toggle p { margin: -4px 44px 18px 70px; font-size: 15px; line-height: 1.55; color: var(--text); }
+@media (max-width: 899px) { .raum-toggle h3 { white-space: normal; font-size: 19px; } .raum-toggle summary { grid-template-columns: 44px 1fr 26px; gap: 12px; } .raum-toggle p { margin-left: 56px; margin-right: 0; } }
+.raum-toggle h3 { min-width: 0; } .raum-toggle summary { grid-template-columns: 50px minmax(0, 1fr) 28px; }
+/* Titelgröße so, dass der längste Titel (Raum 7) genau eine Zeile füllt */
+@media (min-width: 900px) {
+  .raum-toggles { container-type: inline-size; }
+  .raum-toggle h3 { font-size: clamp(17px, calc((100cqw - 120px) / 22.9), 23px); }
+}
+@media (max-width: 899px) { .raum-toggle p { margin-left: 56px; margin-right: 38px; } }
