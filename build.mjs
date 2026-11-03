@@ -240,6 +240,27 @@ ${fuss(lang)}`;
   return seitenRahmen(lang, "freebie", { titel: f.seo.titel, beschreibung: f.seo.beschreibung, ogBild: img.freebie }, body);
 }
 
+function faqAbschnitt(lang) {
+  const b = T[lang].buch;
+  return `<section class="abschnitt weiss mitte"><div class="huelle">
+  <p class="label">${esc(b.faq.label)}</p>
+  <h2 class="titel t-gross">${akzent(b.faq.titel)}</h2>
+  <div class="faq">${b.faq.fragen.map((q) => `<details><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}</div>
+</div></section>`;
+}
+
+function fuerWen(lang) {
+  const f = T[lang].buch.fuerwen, pr = cfg.preise[lang];
+  const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
+  const href = istPlatzhalter(link) ? "#preis" : link;
+  const spalte = (x, art) => `<div class="fw-spalte fw-${art}"><p class="fw-kopf">${esc(x.kopf)}</p><ol class="fw-liste">${x.punkte.map((t, i) => `<li><span class="fw-nr">${zwei(i + 1)}</span><p>${esc(t)}</p></li>`).join("")}</ol></div>`;
+  return `<section class="abschnitt weiss fuerwen"><div class="huelle">
+  <h2 class="titel t-gross">${akzent(f.titel)}</h2>
+  <div class="fw-raster">${spalte(f.ja, "ja")}${spalte(f.nein, "nein")}</div>
+  <div class="fw-button"><a class="button button-rot" href="${esc(href)}" rel="nofollow">${esc(f.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a></div>
+</div></section>`;
+}
+
 function preisAbschnitt(lang) {
   const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang], img = IMG[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
@@ -336,11 +357,7 @@ ${preisAbschnitt(lang)}
   <h2 class="titel t-mittel">${akzent(b.rueckweg.titel)}</h2>
   <a class="button button-dunkel" href="${PFADE.freebie[lang]}">${esc(b.rueckweg.button)} <span aria-hidden="true">→</span></a>
 </div></section>
-<section class="abschnitt weiss mitte"><div class="huelle">
-  <p class="label">${esc(b.faq.label)}</p>
-  <h2 class="titel t-gross">${akzent(b.faq.titel)}</h2>
-  <div class="faq">${b.faq.fragen.map((q) => `<details><summary>${esc(q.f)}</summary><p>${esc(q.a)}</p></details>`).join("")}</div>
-</div></section>
+${b.fuerwen ? fuerWen(lang) : faqAbschnitt(lang)}
 <section class="abschnitt weiss stimmen" hidden aria-hidden="true"><div class="huelle"><!-- Platz für echte Kundenstimmen --></div></section>
 </main>
 ${fuss(lang)}`;

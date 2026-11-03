@@ -837,3 +837,16 @@ a { color: inherit; }
 @media (max-width: 899px) { .notiz, .sofunktionierts .notiz, .anmeldung-notiz, .raum-liste p.haus-notiz, .ds-schluss .notiz { font-size: 22px; } }
 .preis-zeile p.preis-notiz { font-size: 16px; }
 @media (min-width: 900px) { .abschnitt.linie-oben.linie-unten { padding: 120px 0; } }
+/* Für wen ist das Buch */
+@media (min-width: 900px) { .fuerwen { padding: 120px 0; } .fuerwen > .huelle { max-width: 1280px; } }
+.fw-raster { display: grid; gap: 48px; margin-top: 44px; }
+@media (min-width: 900px) { .fw-raster { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.fw-kopf { font-family: var(--label); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--rot); margin: 0 0 14px; }
+.fw-nein .fw-kopf { color: var(--tinte); }
+.fw-liste { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rand); }
+.fw-liste li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--rand); }
+.fw-nr { font-family: var(--label); font-weight: 700; font-size: 16px; color: var(--rot); }
+.fw-nein .fw-nr { color: var(--tinte); }
+.fw-liste p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--text); }
+.fw-button { text-align: center; margin-top: 52px; }
+@media (max-width: 899px) { .fw-liste li { grid-template-columns: 36px minmax(0, 1fr); gap: 12px; } .fw-button { margin-top: 40px; } }

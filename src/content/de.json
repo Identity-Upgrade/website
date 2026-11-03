@@ -412,6 +412,30 @@
         "Viele deiner Überzeugungen hast du übernommen, lange bevor du sie überhaupt hinterfragen konntest. Manche Regeln befolgst du noch heute, ohne zu wissen, woher sie eigentlich stammen. Dann entscheidest du manchmal nur zwischen Möglichkeiten, die andere für dich vorgegeben haben. Und schlussendlich triffst du manche Entscheidungen nur deshalb, weil du zum Zeitpunkt deiner Entscheidung gar nicht wissen kannst, welche Möglichkeiten du noch nicht kennst.",
         "Vielleicht beginnt eine echte Veränderung nicht damit, bessere Entscheidungen treffen zu wollen. Sondern damit, zu erkennen, wie deine bisherigen Entscheidungen überhaupt entstanden sind."
       ]
+    },
+    "fuerwen": {
+      "titel": "Für wen ist *Escape Self-Sabotage?*",
+      "ja": {
+        "kopf": "Dieses Buch ist für dich, wenn …",
+        "punkte": [
+          "… du dir schon hundertmal geschworen hast, etwas nie wieder zu erleben, und trotzdem immer wieder dabei landest.",
+          "… du genau weißt, was du verändern möchtest, aber zwischen diesem Wissen und deinem tatsächlichen Handeln eine riesige Lücke ist.",
+          "… du Entscheidungen triffst, die sich im Moment richtig anfühlen, und dich später verwundert fragst, wie du jemals so entscheiden konntest.",
+          "… du langsam ahnst, dass manche deiner Überzeugungen und Regeln gar nicht deine eigenen sind, du aber trotzdem nach ihnen lebst.",
+          "… du keine Lust mehr hast, dich ständig selbst zu hinterfragen, ohne jemals zu verstehen, was hinter deinen wiederkehrenden Mustern steckt."
+        ]
+      },
+      "nein": {
+        "kopf": "Dieses Buch ist nicht für dich, wenn …",
+        "punkte": [
+          "… du eine schnelle Lösung suchst, die deine Probleme verschwinden lässt, ohne dass du dich näher mit ihnen beschäftigen musst.",
+          "… du lieber jemanden hast, der dir sagt, was du tun sollst, statt herauszufinden, warum du so bist, wie du bist.",
+          "… du glaubst, dass du dich selbst bereits vollständig kennst und es nichts mehr gibt, was du darüber hinaus noch wissen müsstest.",
+          "… du nicht bereit bist, deine Überzeugungen infrage zu stellen und sicher bist, dass das Problem immer bei den anderen liegt.",
+          "… du ausschließlich nach Antworten suchst, die bestätigen, was du ohnehin schon über dich und dein Leben glaubst."
+        ]
+      },
+      "button": "Jetzt kaufen"
     }
   },
   "gemeinsam": {
