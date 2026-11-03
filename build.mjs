@@ -255,6 +255,46 @@ function preisbox(lang) {
 </div>`;
 }
 
+const SCHLOSS = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.1" fill="currentColor" stroke="none"/></svg>';
+const SCHLUESSEL = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="12" r="4"/><path d="M11.5 12h9.5"/><path d="M18 12v3"/><path d="M21 12v2.2"/></svg>';
+
+function hausZeichnung(h) {
+  const fenster = (xs, y, hoehe, cls) => xs.map((x) => `<path d="M${x} ${y + hoehe}V${y + 22}a20 18 0 0 1 40 0v${hoehe - 22}" class="${cls}"/><path d="M${x + 20} ${y + 4}v${hoehe - 4}M${x} ${y + hoehe / 2 + 8}h40" class="hz-sprosse"/>`).join("");
+  return `<div class="haus-bild" role="img" aria-label="${esc(h.s1)}: ${esc(h.s1titel)}">
+  <svg viewBox="0 0 440 680" class="haus-svg" aria-hidden="true">
+    <path d="M332 52V22h34v30" class="hz-linie"/>
+    <path d="M30 60h380M40 60v580M400 60v580M34 60v-8h372v8" class="hz-linie"/>
+    ${fenster([56, 104, 296, 344], 84, 92, "hz-fenster")}<path d="M40 200h360" class="hz-linie"/>
+    ${fenster([56, 104, 296, 344], 224, 92, "hz-fenster")}<path d="M40 340h360" class="hz-linie"/>
+    <rect x="41" y="341" width="358" height="158" class="hz-offen"/>${fenster([56, 344], 372, 104, "hz-hell")}<path d="M40 500h360" class="hz-linie"/>
+    <rect x="186" y="540" width="68" height="100" class="hz-linie"/><path d="M220 540v100" class="hz-linie"/>
+    <path d="M206 526l7-7 7 7M226 519l7 7 7-7" class="hz-linie"/>
+    <path d="M70 600h70M300 600h70" class="hz-sprosse"/>
+    <path d="M0 640h440" class="hz-linie"/>
+  </svg>
+  <div class="hz-schild hz-s3">${SCHLOSS}<b>${esc(h.s3)}</b><span>${esc(h.zu)}</span></div>
+  <div class="hz-schild hz-s2">${SCHLOSS}<b>${esc(h.s2)}</b><span>${esc(h.zu)}</span></div>
+  <div class="hz-schild hz-s1">${SCHLUESSEL}<b>${esc(h.s1)}</b><strong>${esc(h.s1titel)}</strong><span>${esc(h.s1info)}</span></div>
+  <p class="hz-eg">${esc(h.eg)}</p>
+</div>`;
+}
+
+function hausAbschnitt(hs) {
+  return `<section class="abschnitt weiss haus-abschnitt"><div class="huelle">
+  <div class="mitte">
+    <p class="label">${esc(hs.label)}</p>
+    <h2 class="titel t-gross">${akzent(hs.titel)}</h2>
+  </div>
+  <div class="haus-raster">
+    <div class="raum-liste">
+      <p class="raum-kopf">${esc(hs.kopf)}</p>
+      <ol>${hs.raeume.map((r, i) => `<li><span class="raum-nr"><small>${esc(hs.raumWort)}</small>${zwei(i + 1)}</span><div><h3>${esc(r.t)}</h3><p>${esc(r.x)}</p></div></li>`).join("")}</ol>
+    </div>
+    ${hausZeichnung(hs.haus)}
+  </div>
+</div></section>`;
+}
+
 function seiteBuch(lang) {
   const t = T[lang], b = t.buch, img = IMG[lang], pr = cfg.preise[lang];
   const body = `${kopf(lang, "buch", { kaufen: true })}
@@ -272,19 +312,7 @@ function seiteBuch(lang) {
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme", b.sofunktionierts)}
-<section class="abschnitt weiss"><div class="huelle">
-  <div class="mitte">
-    <p class="label">${esc(b.haus.label)}</p>
-    <h2 class="titel t-gross">${akzent(b.haus.titel)}</h2>
-  </div>
-  <div class="haus-raster">
-    <div>
-      <p class="unterzeile">${esc(b.haus.stockwerk1)}</p>
-      <ol class="liste">${b.haus.raeume.map((r, i) => `<li><span class="nr">${esc(b.haus.raumWort)} ${zwei(i + 1)}</span><span>${esc(r)}</span></li>`).join("")}</ol>
-    </div>
-    <div class="stockwerke">${b.haus.stockwerke.map((s) => `<div class="stockwerk ${s.offen ? "offen" : "zu"}"><p class="label">${esc(s.name)}</p><span>${esc(s.status)}</span></div>`).join("")}</div>
-  </div>
-</div></section>
+${hausAbschnitt(b.haus)}
 ${haltung(lang)}
 ${ueber(lang, null, "weiss", b.ueber)}
 <section class="abschnitt creme" id="preis"><div class="huelle">${preisbox(lang)}</div></section>

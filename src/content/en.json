@@ -265,36 +265,52 @@
     },
     "haus": {
       "label": "The house",
-      "titel": "[Headline about the] *[structure.]*",
-      "stockwerk1": "Level 1 · Why Your Self-Sabotage Makes Sense",
-      "raeume": [
-        "Why does this keep happening to me?",
-        "Behavior needs context",
-        "Your decisions made sense",
-        "The Invisible Rules",
-        "Who planted that thought in your head?",
-        "Which menu did you choose from?",
-        "Knowing better doesn't automatically mean doing better",
-        "The contradictions that give you away"
-      ],
+      "titel": "One level is *open.*",
+      "kopf": "Level 1 · The rooms",
       "raumWort": "Room",
-      "stockwerke": [
+      "raeume": [
         {
-          "name": "Level 1",
-          "status": "In this book · 8 rooms · 48 clues",
-          "offen": true
+          "t": "Why does this keep happening to me?",
+          "x": "When something keeps repeating, even though you’ve long wanted to do it differently."
         },
         {
-          "name": "Level 2",
-          "status": "Locked · coming soon",
-          "offen": false
+          "t": "Behavior needs context",
+          "x": "Why a decision only makes sense once you know the circumstances behind it."
         },
         {
-          "name": "Level 3",
-          "status": "Locked · coming soon",
-          "offen": false
+          "t": "Your decisions made sense",
+          "x": "A different look at the decisions you question today."
+        },
+        {
+          "t": "The invisible rules",
+          "x": "The inner rules that guide you – often without you noticing."
+        },
+        {
+          "t": "Who planted that thought in your head?",
+          "x": "How beliefs take shape and why they last so long."
+        },
+        {
+          "t": "Which menu did you choose from?",
+          "x": "The influences, experiences, and patterns that limit your options."
+        },
+        {
+          "t": "Knowing better doesn’t automatically mean doing better",
+          "x": "Why insight alone often isn’t enough to change anything."
+        },
+        {
+          "t": "The contradictions that give you away",
+          "x": "When what you think doesn’t match what you do."
         }
-      ]
+      ],
+      "haus": {
+        "s3": "Level 3",
+        "s2": "Level 2",
+        "zu": "Locked · coming soon",
+        "s1": "Level 1",
+        "s1titel": "Why your self-sabotage makes sense",
+        "s1info": "8 rooms · 48 clues",
+        "eg": "Entrance · Elevator"
+      }
     },
     "ueber": {
       "label": "",

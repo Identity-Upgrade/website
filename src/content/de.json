@@ -272,36 +272,52 @@
     },
     "haus": {
       "label": "Das Haus",
-      "titel": "[Überschrift zur] *[Struktur.]*",
-      "stockwerk1": "Stockwerk 1 · Warum deine Selbstsabotage Sinn ergibt",
-      "raeume": [
-        "Warum passiert mir das immer wieder?",
-        "Verhalten braucht Kontext",
-        "Deine Entscheidungen haben Sinn ergeben",
-        "Die unsichtbaren Regeln",
-        "Wer hat dir diesen Gedanken eingepflanzt?",
-        "Aus welchem Menü hast du gewählt?",
-        "Es besser zu wissen bedeutet nicht gleichzeitig, es besser zu machen",
-        "Die Widersprüche, die dich verraten"
-      ],
+      "titel": "Ein Stockwerk ist *geöffnet.*",
+      "kopf": "Stockwerk 1 · Die Räume",
       "raumWort": "Raum",
-      "stockwerke": [
+      "raeume": [
         {
-          "name": "Stockwerk 1",
-          "status": "In diesem Buch · 8 Räume · 48 Spuren",
-          "offen": true
+          "t": "Warum passiert mir das immer wieder?",
+          "x": "Wenn sich etwas wiederholt, obwohl du es längst anders machen möchtest."
         },
         {
-          "name": "Stockwerk 2",
-          "status": "Verschlossen · folgt",
-          "offen": false
+          "t": "Verhalten braucht Kontext",
+          "x": "Warum eine Entscheidung erst verständlich wird, wenn du ihre Umstände kennst."
         },
         {
-          "name": "Stockwerk 3",
-          "status": "Verschlossen · folgt",
-          "offen": false
+          "t": "Deine Entscheidungen haben Sinn ergeben",
+          "x": "Ein anderer Blick auf Entscheidungen, die du heute infrage stellst."
+        },
+        {
+          "t": "Die unsichtbaren Regeln",
+          "x": "Welche inneren Regeln dich lenken – oft, ohne dass du es merkst."
+        },
+        {
+          "t": "Wer hat dir diesen Gedanken eingepflanzt?",
+          "x": "Wie Überzeugungen entstehen und warum sie so lange wirken."
+        },
+        {
+          "t": "Aus welchem Menü hast du gewählt?",
+          "x": "Die Prägungen, Erfahrungen und Muster, die deine Optionen begrenzen."
+        },
+        {
+          "t": "Es besser zu wissen bedeutet nicht gleichzeitig, es besser zu machen",
+          "x": "Warum Erkenntnis allein oft nicht ausreicht, um etwas zu verändern."
+        },
+        {
+          "t": "Die Widersprüche, die dich verraten",
+          "x": "Wenn das, was du denkst, nicht mit dem übereinstimmt, was du tust."
         }
-      ]
+      ],
+      "haus": {
+        "s3": "Stockwerk 3",
+        "s2": "Stockwerk 2",
+        "zu": "Verschlossen · folgt",
+        "s1": "Stockwerk 1",
+        "s1titel": "Warum deine Selbstsabotage Sinn ergibt",
+        "s1info": "8 Räume · 48 Spuren",
+        "eg": "Eingang · Lift"
+      }
     },
     "ueber": {
       "label": "",

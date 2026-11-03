@@ -607,3 +607,45 @@ a { color: inherit; }
   .faecher-vier .f-s3 { transform: translateX(30%) rotate(12deg); }
   .faecher-vier .f-s4 { transform: translateX(40%) rotate(16deg); }
 }
+/* ===== E-Book: Das Haus ===== */
+.haus-abschnitt { border-top: 1px solid var(--tinte); border-bottom: 1px solid var(--tinte); }
+@media (min-width: 900px) { .haus-abschnitt { padding: 110px 0; } }
+.haus-abschnitt .haus-raster { margin-top: 48px; }
+@media (min-width: 900px) { .haus-abschnitt .haus-raster { grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center; } }
+.raum-kopf { font-family: var(--label); font-weight: 700; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--tinte); margin: 0 0 6px; padding-bottom: 12px; border-bottom: 1px solid var(--tinte); }
+.raum-liste ol { list-style: none; margin: 0; padding: 0; }
+.raum-liste li { display: grid; grid-template-columns: 58px 1fr; gap: 18px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--rand); }
+.raum-nr { font-family: var(--serif); font-size: 32px; line-height: 1; color: var(--rot); text-align: left; }
+.raum-nr small { display: block; font-family: var(--label); font-weight: 700; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: var(--rot); margin: 0 0 4px; }
+.raum-liste h3 { font-family: var(--serif); font-weight: 400; font-size: 21px; line-height: 1.2; margin: 2px 0 4px; color: var(--tinte); }
+.raum-liste p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--text); }
+.haus-bild { position: relative; width: 100%; max-width: 420px; margin: 0 auto; aspect-ratio: 440 / 620; }
+.haus-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hz-linie { fill: none; stroke: var(--rot); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.hz-fenster { fill: none; stroke: var(--rot); stroke-width: 1; opacity: .35; }
+.hz-hell { fill: var(--butter); stroke: var(--rot); stroke-width: 1; }
+.hz-sprosse { fill: none; stroke: var(--rot); stroke-width: .8; opacity: .3; }
+.hz-offen { fill: #FBF3DC; }
+.hz-schild { position: absolute; left: 50%; transform: translate(-50%, -50%); background: var(--weiss); border: 1px solid var(--rand); padding: 10px 18px; text-align: center; display: grid; justify-items: center; gap: 3px; min-width: 46%; color: #8A8178; }
+.hz-schild b { font-family: var(--label); font-weight: 700; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--tinte); }
+.hz-schild span { font-size: 12px; }
+.hz-s3 { top: 20.6%; } .hz-s2 { top: 41.6%; }
+.hz-s1 { top: 62.6%; border-color: var(--tinte); color: var(--rot); padding: 12px 20px; min-width: 62%; }
+.hz-s1 b { color: var(--rot); }
+.hz-s1 strong { font-family: var(--serif); font-weight: 400; font-size: 19px; line-height: 1.15; color: var(--tinte); }
+.hz-s1 span { color: var(--text); font-size: 12px; letter-spacing: .04em; }
+.hz-eg { position: absolute; left: 0; right: 0; top: 95%; margin: 0; text-align: center; font-family: var(--label); font-weight: 700; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--rot); }
+@media (max-width: 899px) { .haus-bild { max-width: 360px; margin-top: 16px; } .hz-schild { padding: 7px 12px; } .hz-s1 strong { font-size: 16px; } }
+.haus-bild { aspect-ratio: 440 / 680; max-width: 460px; }
+.hz-schild { min-width: 0; width: 33%; padding: 10px 8px; }
+.hz-s3 { top: 19.1%; } .hz-s2 { top: 39.7%; }
+.hz-s1 { top: 61.8%; width: 54%; padding: 14px 12px; }
+.hz-eg { top: 96.2%; }
+@media (max-width: 899px) { .hz-schild span { font-size: 11px; } .hz-schild b { font-size: 10px; } }
+@media (max-width: 899px) {
+  .hz-schild { width: auto; white-space: nowrap; padding: 6px 12px; gap: 2px; }
+  .hz-schild svg { width: 16px; height: 16px; }
+  .hz-s1 { width: 62%; white-space: normal; padding: 8px 10px; }
+  .hz-s1 strong { font-size: 15px; }
+}
+.hz-s1 strong { text-wrap: balance; }
