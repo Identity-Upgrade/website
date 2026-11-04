@@ -901,6 +901,6 @@ a { color: inherit; }
 .fuerwen .fw-button { margin-top: 28px; }
 /* Haus: Liste und Haus näher an die Überschrift (Abstand wie bei „Wer ist Heike?“), Schornstein darf in den Abstand ragen */
 @media (min-width: 900px) {
-  .haus-abschnitt .haus-raster { margin-top: 36px; align-items: start; }
+  .haus-abschnitt .haus-raster { margin-top: 40px; align-items: start; }
   .haus-abschnitt .haus-stein { margin-top: -46px; }
 }
