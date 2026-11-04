@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /de/danke/
-Disallow: /en/thank-you/
+Disallow: /de/escape-self-sabotage-r1-thanks/
+Disallow: /en/escape-self-sabotage-r1-thanks/
+Disallow: /de/escape-self-sabotage-l1-thanks/
+Disallow: /en/escape-self-sabotage-l1-thanks/
 
 Sitemap: https://identity-upgrade.com/sitemap.xml

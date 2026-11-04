@@ -18,11 +18,13 @@ const imgUrl = (datei) => `/assets/img/${datei}?v=${imgV(datei)}`;
 
 // Pfade je Seite und Sprache
 const PFADE = {
-  freebie: { de: "/de/freebie-r1/", en: "/en/freebie-r1/" },
+  freebie: { de: "/de/escape-self-sabotage-r1/", en: "/en/escape-self-sabotage-r1/" },
+  danke: { de: "/de/escape-self-sabotage-r1-thanks/", en: "/en/escape-self-sabotage-r1-thanks/" },
   buch: { de: "/de/escape-self-sabotage-l1/", en: "/en/escape-self-sabotage-l1/" },
-  danke: { de: "/de/danke/", en: "/en/thank-you/" },
-  impressum: { de: "/de/impressum/", en: null }, // Englisch: kein Impressum, nur Privacy
-  privacy: { de: "/de/datenschutz/", en: "/en/privacy/" },
+  buchDanke: { de: "/de/escape-self-sabotage-l1-thanks/", en: "/en/escape-self-sabotage-l1-thanks/" },
+  waitlist: { de: "/de/waitlist/", en: "/en/waitlist/" },
+  impressum: { de: "/de/impressum/", en: "/en/legal-notice/" },
+  privacy: { de: "/de/privacy/", en: "/en/privacy/" },
 };
 
 const istPlatzhalter = (s) => typeof s === "string" && /^\[.*\]$/.test(s.trim());
@@ -447,6 +449,66 @@ ${fuss(lang)}`;
   return seitenRahmen(lang, "impressum", { titel: im.seo.titel }, body);
 }
 
+function seiteBuchDanke(lang) {
+  const d = T[lang].buchDanke;
+  const body = `${kopf(lang, "buchDanke")}
+<main>
+<section class="abschnitt creme mitte danke-schlicht"><div class="huelle">
+  ${labelP(d.label)}
+  <h1 class="titel t-gross">${akzent(d.titel)}</h1>
+  ${absaetze(d.text)}
+  ${d.notiz ? `<p class="notiz notiz-c">${esc(d.notiz)}</p>` : ""}
+</div></section>
+</main>
+${fuss(lang)}`;
+  return seitenRahmen(lang, "buchDanke", { titel: d.seo.titel, noindex: true }, body);
+}
+
+function waitlistFormular(lang) {
+  const w = T[lang].waitlist, a = T[lang].freebie.anmeldung;
+  const id = cfg.kit.waitlistFormId;
+  const vorschau = istPlatzhalter(id);
+  const action = vorschau ? PFADE.waitlist[lang] + "#danke" : `https://app.kit.com/forms/${encodeURIComponent(id)}/subscriptions`;
+  const tag = (k) => (cfg.kit.waitlistTags && !istPlatzhalter(cfg.kit.waitlistTags[k]) ? cfg.kit.waitlistTags[k] : k);
+  return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?eingetragen=1" data-fehler="${esc(w.fehler)}" novalidate>
+  <fieldset class="wl-auswahl" data-auswahl><legend class="wl-legende">${esc(w.auswahlFrage)}</legend>
+    ${w.optionen.map((o) => `<label class="wl-option"><input type="checkbox" name="tags[]" value="${esc(tag(o.key))}" data-fuer="${esc(o.key)}"><span>${esc(o.text)}</span></label>`).join("")}
+  </fieldset>
+  <div class="feld-reihe">
+    <div class="feld"><label class="nur-vorlesen" for="wl-vorname-${lang}">${esc(a.vorname)}</label><input id="wl-vorname-${lang}" name="fields[first_name]" autocomplete="given-name" placeholder="${esc(a.vorname)}" required></div>
+    <div class="feld"><label class="nur-vorlesen" for="wl-nachname-${lang}">${esc(a.nachname)}</label><input id="wl-nachname-${lang}" name="fields[last_name]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
+  </div>
+  <div class="feld"><label class="nur-vorlesen" for="wl-email-${lang}">${esc(a.email)}</label><input id="wl-email-${lang}" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="${esc(a.email)}" required></div>
+  <input type="hidden" name="fields[quelle]" data-feld="quelle">
+  <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
+  <p class="formular-fehler" role="alert" aria-live="polite"></p>
+  <button class="button button-rot" type="submit">${esc(w.button)} <span aria-hidden="true">→</span></button>
+</form>`;
+}
+
+function seiteWaitlist(lang) {
+  const w = T[lang].waitlist;
+  const body = `${kopf(lang, "waitlist")}
+<main>
+<section class="abschnitt creme mitte wl-kopf"><div class="huelle">
+  ${labelP(w.label)}
+  <h1 class="titel t-gross">${akzent(w.titel)}</h1>
+  ${absaetze(w.text)}
+</div></section>
+<section class="abschnitt weiss mitte wl-produkte"><div class="huelle">
+  <div class="karten wl-karten">${w.optionen.map((o) => `<div class="karte" data-produkt="${esc(o.key)}"><h3 class="label">${esc(o.kartenTitel)}</h3><p>${esc(o.kartenText)}</p></div>`).join("")}</div>
+</div></section>
+<section class="abschnitt beige mitte wl-anmeldung" id="anmeldung"><div class="huelle">
+  <h2 class="titel t-mittel">${akzent(w.formTitel)}</h2>
+  <div class="wl-erfolg" data-erfolg hidden><p class="notiz notiz-c">${esc(w.erfolg)}</p></div>
+  ${waitlistFormular(lang)}
+  <p class="kleingedruckt">${esc(w.hinweis)}</p>
+</div></section>
+</main>
+${fuss(lang)}`;
+  return seitenRahmen(lang, "waitlist", { titel: w.seo.titel, beschreibung: w.seo.beschreibung }, body);
+}
+
 function startseite() {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -499,13 +561,15 @@ for (const lang of ["de", "en"]) {
   schreibe(PFADE.freebie[lang], seiteFreebie(lang));
   schreibe(PFADE.buch[lang], seiteBuch(lang));
   schreibe(PFADE.danke[lang], seiteDanke(lang));
+  schreibe(PFADE.buchDanke[lang], seiteBuchDanke(lang));
+  schreibe(PFADE.waitlist[lang], seiteWaitlist(lang));
   if (PFADE.impressum[lang]) schreibe(PFADE.impressum[lang], seiteImpressum(lang));
   schreibe(PFADE.privacy[lang], seitePrivacy(lang));
 }
 schreibe("/", startseite());
 schreibe("/404.html", seite404());
 
-const indexierbar = ["freebie", "buch", "impressum", "privacy"].flatMap((s) => ["de", "en"].filter((l) => PFADE[s][l]).map((l) => cfg.domain + PFADE[s][l]));
+const indexierbar = ["freebie", "buch", "waitlist", "impressum", "privacy"].flatMap((s) => ["de", "en"].filter((l) => PFADE[s][l]).map((l) => cfg.domain + PFADE[s][l]));
 schreibe("/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${indexierbar.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}

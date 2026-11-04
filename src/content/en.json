@@ -8,7 +8,8 @@
     "vorschau": "Preview – placeholder texts",
     "freebieButton": "Free access to Room 1",
     "pfeil": "→",
-    "footerDatenschutz": "Privacy"
+    "footerDatenschutz": "Privacy",
+    "footerImpressum": "Legal notice"
   },
   "laufband": [
     "Recognize",
@@ -654,5 +655,121 @@
     "registerLabel": "Registration",
     "vertretenLabel": "Represented by",
     "datenschutzTitel": "Privacy policy"
+  },
+  "buchDanke": {
+    "seo": {
+      "titel": "Thank you | Identity Upgrade"
+    },
+    "label": "",
+    "titel": "[Thank-you headline after *purchase.*]",
+    "text": [
+      "[One or two sentences: the download link is on its way by email.]"
+    ],
+    "notiz": "[Handwritten note]"
+  },
+  "waitlist": {
+    "seo": {
+      "titel": "Waitlist | Identity Upgrade",
+      "beschreibung": "[Short waitlist description]"
+    },
+    "label": "",
+    "titel": "[Waitlist *headline.*]",
+    "text": [
+      "[One or two sentences about the waitlist.]"
+    ],
+    "optionen": [
+      {
+        "key": "book",
+        "text": "the complete book Escape Self-Sabotage",
+        "kartenTitel": "Escape Self-Sabotage",
+        "kartenText": "[One or two sentences about the complete book.]"
+      },
+      {
+        "key": "course",
+        "text": "the course",
+        "kartenTitel": "[Course]",
+        "kartenText": "[One or two sentences about the course.]"
+      }
+    ],
+    "auswahlFrage": "I'm interested in:",
+    "formTitel": "[Form *headline.*]",
+    "button": "[Button text]",
+    "fehler": "Please choose at least one option and fill in your first name, last name, and email address.",
+    "erfolg": "[Thank you, you're on the list.]",
+    "hinweis": "[Note about newsletter and unsubscribing]"
+  },
+  "impressum": {
+    "seo": {
+      "titel": "Legal notice | Identity Upgrade"
+    },
+    "label": "The fine print",
+    "titel": "Legal *notice.*",
+    "angaben": [
+      [
+        "Provider",
+        "**KlewerINN LLP**\nBrand: Identity Upgrade™"
+      ],
+      [
+        "Legal form",
+        "Limited Liability Partnership under Canadian law ([Province])"
+      ],
+      [
+        "Registered office",
+        "[Street address]\n[City, Province, Postal code]\nCanada"
+      ],
+      [
+        "Contact",
+        "Email: [[EMAIL]]"
+      ],
+      [
+        "Registry",
+        "[Registry authority]"
+      ],
+      [
+        "Registration number",
+        "[Number]"
+      ]
+    ],
+    "abschnitte": [
+      {
+        "id": "hinweis",
+        "t": "Important *note.*",
+        "teile": [
+          {
+            "p": "The books and content of Identity Upgrade are designed for self-reflection. They are not psychotherapy and do not replace psychological, medical, or therapeutic advice, diagnosis, or treatment."
+          }
+        ]
+      },
+      {
+        "id": "haftung",
+        "t": "Liability for content and *links.*",
+        "teile": [
+          {
+            "p": [
+              "We create our content with care. Even so, we cannot guarantee that it is accurate, complete, or up to date.",
+              "Where we link to other websites, we have no control over their content; the respective provider is responsible for it. If we become aware of any legal violations, we will remove the affected content or links immediately."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "urheber",
+        "t": "*Copyright.*",
+        "teile": [
+          {
+            "p": "Texts, images, graphics, and books on this website are protected by copyright. Any reproduction, editing, distribution, or other use requires our prior written consent."
+          }
+        ]
+      },
+      {
+        "id": "streit",
+        "t": "Dispute *resolution.*",
+        "teile": [
+          {
+            "p": "We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board."
+          }
+        ]
+      }
+    ]
   }
 }

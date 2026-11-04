@@ -37,6 +37,27 @@
     });
   }
 
+
+  // Warteliste: Auswahl aus dem Link (?for=book|course) vorbelegen, passende Karte zeigen
+  var wl = document.querySelector("form[data-waitlist]");
+  if (wl) {
+    var fuer = params.get("for");
+    if (fuer) {
+      wl.querySelectorAll("input[data-fuer]").forEach(function (el) { if (el.getAttribute("data-fuer") === fuer) el.checked = true; });
+      document.querySelectorAll("[data-produkt]").forEach(function (k) { if (k.getAttribute("data-produkt") !== fuer) k.hidden = true; });
+    }
+    if (params.get("eingetragen")) {
+      var erfolg = document.querySelector("[data-erfolg]");
+      if (erfolg) { erfolg.hidden = false; wl.hidden = true; }
+    }
+    wl.addEventListener("submit", function (ev) {
+      if (!wl.querySelector("input[data-fuer]:checked")) {
+        ev.preventDefault(); ev.stopImmediatePropagation();
+        var f = wl.querySelector(".formular-fehler"); if (f) f.textContent = wl.getAttribute("data-fehler");
+      }
+    }, true);
+  }
+
   // Formular
   document.querySelectorAll("form[data-formular]").forEach(function (form) {
     var fehler = form.querySelector(".formular-fehler");

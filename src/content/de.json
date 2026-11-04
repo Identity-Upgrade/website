@@ -814,5 +814,47 @@
         ]
       }
     ]
+  },
+  "buchDanke": {
+    "seo": {
+      "titel": "Danke | Identity Upgrade"
+    },
+    "label": "",
+    "titel": "[Danke-Überschrift nach dem *Kauf.*]",
+    "text": [
+      "[Ein bis zwei Sätze: Der Download kommt per E-Mail.]"
+    ],
+    "notiz": "[Handschriftliche Notiz]"
+  },
+  "waitlist": {
+    "seo": {
+      "titel": "Warteliste | Identity Upgrade",
+      "beschreibung": "[Kurzbeschreibung Warteliste]"
+    },
+    "label": "",
+    "titel": "[Überschrift *Warteliste.*]",
+    "text": [
+      "[Ein bis zwei Sätze zur Warteliste.]"
+    ],
+    "optionen": [
+      {
+        "key": "book",
+        "text": "das ganze Buch Escape Self-Sabotage",
+        "kartenTitel": "Escape Self-Sabotage",
+        "kartenText": "[Ein bis zwei Sätze zum ganzen Buch.]"
+      },
+      {
+        "key": "course",
+        "text": "den Kurs",
+        "kartenTitel": "[Kurs]",
+        "kartenText": "[Ein bis zwei Sätze zum Kurs.]"
+      }
+    ],
+    "auswahlFrage": "Ich interessiere mich für:",
+    "formTitel": "[Überschrift *Formular.*]",
+    "button": "[Button-Text]",
+    "fehler": "Bitte wähle mindestens eine Option und fülle Vorname, Nachname und E-Mail-Adresse aus.",
+    "erfolg": "[Danke, du stehst auf der Liste.]",
+    "hinweis": "[Hinweis zu Newsletter und Abmeldung]"
   }
 }

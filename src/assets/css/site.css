@@ -874,3 +874,13 @@ a { color: inherit; }
 .fw-kopf { margin-bottom: 12px; }
 @media (min-width: 900px) { .fw-raster { margin-top: 32px; column-gap: 40px; } .fw-button { margin-top: 36px; } }
 @media (min-width: 900px) { .fw-liste li { padding: 9px 0; } }
+/* Warteliste */
+.wl-karten { max-width: 900px; margin-left: auto; margin-right: auto; }
+@media (min-width: 760px) { .wl-karten { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); } }
+.wl-formular { max-width: 560px; margin: 32px auto 0; text-align: left; }
+.wl-auswahl { border: 0; padding: 0; margin: 0 0 18px; }
+.wl-legende { font-family: var(--label); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--rot); margin-bottom: 10px; }
+.wl-option { display: flex; align-items: center; gap: 12px; padding: 8px 0; font-size: 16px; cursor: pointer; }
+.wl-option input { width: 20px; height: 20px; accent-color: var(--rot); margin: 0; }
+.wl-erfolg { margin-top: 28px; }
+@media (min-width: 900px) { .wl-kopf, .wl-produkte, .wl-anmeldung, .danke-schlicht { padding: 120px 0; } }

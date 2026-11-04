@@ -8,8 +8,14 @@
 /assets/*
   Cache-Control: public, max-age=604800
 
-/de/danke/*
+/de/escape-self-sabotage-r1-thanks/*
   X-Robots-Tag: noindex, nofollow
 
-/en/thank-you/*
+/en/escape-self-sabotage-r1-thanks/*
+  X-Robots-Tag: noindex, nofollow
+
+/de/escape-self-sabotage-l1-thanks/*
+  X-Robots-Tag: noindex, nofollow
+
+/en/escape-self-sabotage-l1-thanks/*
   X-Robots-Tag: noindex, nofollow
