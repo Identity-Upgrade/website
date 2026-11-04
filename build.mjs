@@ -53,7 +53,7 @@ function kopf(lang, seite, { kaufen = false } = {}) {
       ? `<span class="aktiv" aria-current="true">DE</span><a href="${PFADE[seite].en || PFADE.privacy.en}" hreflang="en" lang="en">EN</a>`
       : `<a href="${PFADE[seite].de}" hreflang="de" lang="de">DE</a><span class="aktiv" aria-current="true">EN</span>`
   }</nav>`;
-  const kauf = kaufen ? `<a class="button button-rot button-klein" href="#preis">${esc(t.ui.kaufen)}</a>` : "";
+  const kauf = kaufen ? `<a class="button button-rot button-klein kopf-kauf" href="#preis" data-kopf-kauf tabindex="-1" aria-hidden="true">${esc(t.ui.kaufen)}</a>` : "";
   return `${VORSCHAU ? `<div class="vorschau-band">${esc(t.ui.vorschau)} · Stand ${STAND}</div>` : ""}
 <header class="kopf"><div class="huelle">
   <a class="wortmarke" href="${PFADE.freebie[lang]}">Identity <em>Upgrade</em><sup>™</sup></a>

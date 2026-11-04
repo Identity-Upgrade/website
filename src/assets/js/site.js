@@ -58,6 +58,20 @@
     }, true);
   }
 
+
+  // Kauf-Button in der Kopfleiste: erscheint, sobald das Laufband oben an der Leiste ankommt
+  var kk = document.querySelector("[data-kopf-kauf]"), lb = document.querySelector(".laufband"), kopf = document.querySelector(".kopf");
+  if (kk && lb && kopf) {
+    var pruefe = function () {
+      var an = lb.getBoundingClientRect().top <= kopf.getBoundingClientRect().bottom + 1;
+      kk.classList.toggle("sichtbar", an);
+      if (an) { kk.removeAttribute("tabindex"); kk.removeAttribute("aria-hidden"); } else { kk.setAttribute("tabindex", "-1"); kk.setAttribute("aria-hidden", "true"); }
+    };
+    window.addEventListener("scroll", pruefe, { passive: true });
+    window.addEventListener("resize", pruefe);
+    pruefe();
+  }
+
   // Formular
   document.querySelectorAll("form[data-formular]").forEach(function (form) {
     var fehler = form.querySelector(".formular-fehler");
