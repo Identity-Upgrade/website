@@ -215,7 +215,7 @@
           "text": "Kleine Hinweise, scheinbare Widersprüche und Gedanken, die plötzlich alles in einem anderen Licht erscheinen lassen."
         }
       ],
-      "notiz": "Der Ausgang ist nicht unbedingt dort, wo man ihn vermutet.",
+      "notiz": "Der Ausgang ist nicht unbedingt dort,\nwo man ihn vermutet.",
       "button": "Den ersten Raum betreten"
     },
     "haltung": {
@@ -403,7 +403,7 @@
           "text": "Kleine Hinweise, scheinbare Widersprüche und Gedanken, die plötzlich alles in einem anderen Licht erscheinen lassen."
         }
       ],
-      "notiz": "Der Ausgang ist nicht unbedingt dort, wo man ihn vermutet."
+      "notiz": "Der Ausgang ist nicht unbedingt dort,\nwo man ihn vermutet."
     },
     "haltung": {
       "label": "",
@@ -436,7 +436,7 @@
         ]
       },
       "button": "Jetzt kaufen",
-      "schlussNotiz": "Hinterfrage, was du bisher für selbstverständlich gehalten hast."
+      "schlussNotiz": "Hinterfrage, was du bisher\nfür selbstverständlich gehalten hast."
     }
   },
   "gemeinsam": {

@@ -891,3 +891,16 @@ a { color: inherit; }
   .preis-abschnitt .anmeldung-bild-spalte { margin: -45px 0; }
 }
 .fuerwen p.fw-schluss { margin: 48px auto 0; }
+/* Notizen schräg und linksbündig: Ausgang, Warum-Frage, Schlussnotiz */
+.sofunktionierts p.notiz.notiz-b { margin: 40px auto 0 0; text-align: left; transform: rotate(-3deg) !important; transform-origin: left center; }
+.wiedererkennen p.notiz.wieder-frage { margin: 36px auto 0 20px; text-align: left; white-space: nowrap; transform: rotate(-3deg) !important; transform-origin: left center; }
+@media (max-width: 899px) { .wiedererkennen p.notiz.wieder-frage { white-space: normal; margin-left: 8px; } .sofunktionierts p.notiz.notiz-b { margin-left: 8px; } }
+.fw-notiz-reihe { display: grid; margin-top: 30px; }
+@media (min-width: 900px) { .fw-notiz-reihe { grid-template-columns: 1fr 1fr; column-gap: 40px; } }
+.fuerwen p.fw-schluss { margin: 0 0 0 30px; text-align: left; transform-origin: left center; }
+.fuerwen .fw-button { margin-top: 28px; }
+/* Haus: Liste und Haus näher an die Überschrift (Abstand wie bei „Wer ist Heike?“), Schornstein darf in den Abstand ragen */
+@media (min-width: 900px) {
+  .haus-abschnitt .haus-raster { margin-top: 36px; align-items: start; }
+  .haus-abschnitt .haus-stein { margin-top: -46px; }
+}

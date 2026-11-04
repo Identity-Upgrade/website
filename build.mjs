@@ -106,7 +106,7 @@ function soFunktionierts(lang, farbe = "creme", daten) {
   <h2 class="titel t-gross">${akzent(s.titel)}</h2>
   ${absaetze(s.text)}
   <ol class="stationen">${s.stationen.map((st, i) => `<li class="station"><div class="station-zahl" aria-hidden="true">${SYMBOLE[i] ? symbol(i) : i + 1}</div><h3>${esc(st.titel)}</h3><p>${esc(st.text)}</p></li>`).join("")}</ol>
-  <p class="notiz notiz-b">${esc(s.notiz)}</p>
+  <p class="notiz notiz-b">${esc(s.notiz).replace(/\n/g, "<br>")}</p>
   ${s.button ? `<a class="button button-rot" href="#anmeldung">${esc(s.button)} <span aria-hidden="true">→</span></a>` : ""}
 </div></section>`;
 }
@@ -262,9 +262,9 @@ function fuerWen(lang) {
   return `<section class="abschnitt weiss fuerwen"><div class="huelle">
   <h2 class="titel t-gross">${akzent(f.titel)}</h2>
   <div class="fw-raster">${spalte(f.ja, "ja")}${spalte(f.nein, "nein")}</div>
+  ${f.schlussNotiz ? `<div class="fw-notiz-reihe"><p class="notiz notiz-a fw-schluss">${esc(f.schlussNotiz).replace(/\n/g, "<br>")}</p></div>` : ""}
   <div class="fw-button"><a class="button button-rot" href="${esc(href)}" rel="nofollow">${esc(f.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a></div>
-  ${f.schlussNotiz ? `<p class="notiz notiz-c fw-schluss">${esc(f.schlussNotiz)}</p>` : ""}
-</div></section>`;
+  </div></section>`;
 }
 
 function preisAbschnitt(lang) {

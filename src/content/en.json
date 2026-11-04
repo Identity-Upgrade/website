@@ -215,7 +215,7 @@
           "text": "Small hints, apparent contradictions, and thoughts that suddenly put everything in a different light."
         }
       ],
-      "notiz": "The exit isn't necessarily where you'd expect it to be.",
+      "notiz": "The exit isn't necessarily\nwhere you'd expect it to be.",
       "button": "Step into the first room"
     },
     "ueber": {
@@ -397,7 +397,7 @@
           "text": "Small hints, apparent contradictions, and thoughts that suddenly put everything in a different light."
         }
       ],
-      "notiz": "The exit isn't necessarily where you'd expect it to be."
+      "notiz": "The exit isn't necessarily\nwhere you'd expect it to be."
     },
     "haltung": {
       "label": "",
@@ -430,7 +430,7 @@
         ]
       },
       "button": "Buy now",
-      "schlussNotiz": "Question what you've always taken for granted."
+      "schlussNotiz": "Question what you've\nalways taken for granted."
     }
   },
   "gemeinsam": {
