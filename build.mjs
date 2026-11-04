@@ -266,7 +266,7 @@ function fuerWen(lang) {
   </div></section>`;
 }
 
-function preisAbschnitt(lang, { vorLabel = "" } = {}) {
+function preisAbschnitt(lang, { vorLabel = "", label = "", titel = "" } = {}) {
   const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang], img = IMG[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
   const href = istPlatzhalter(link) ? "#preis" : link;
@@ -278,8 +278,8 @@ function preisAbschnitt(lang, { vorLabel = "" } = {}) {
       ${p.bildNotiz ? `<p class="notiz notiz-c anmeldung-notiz">${esc(p.bildNotiz)}</p>` : ""}
     </div>
     <div class="anmeldung-inhalt preis-inhalt">
-      ${labelP(p.label)}
-      <h2 class="titel t-gross">${akzent(p.titel).replace(/\n/g, "<br>")}</h2>
+      ${labelP(label || p.label)}
+      <h2 class="titel t-gross">${akzent(titel || p.titel).replace(/\n/g, "<br>")}</h2>
       ${absaetze(p.text)}
       <div class="preis-zeile"><p class="preis-zahl">${esc(pr.einfuehrung)}</p><p class="notiz preis-notiz">${esc(p.danach)} ${esc(pr.regulaer)}</p></div>
       <ul class="preis-punkte">${p.punkte.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
@@ -380,7 +380,7 @@ function seiteDanke(lang) {
   <p class="fliess">${esc(d.text)}</p>
 </div></section>
 ${laufband(lang)}
-${preisAbschnitt(lang, { vorLabel: d.angebotLabel })}
+${preisAbschnitt(lang, { label: d.angebotLabel, titel: d.angebotTitel })}
 ${fuerWen(lang)}
 </main>
 ${fuss(lang)}`;
