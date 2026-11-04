@@ -904,3 +904,8 @@ a { color: inherit; }
   .haus-abschnitt .haus-raster { margin-top: 40px; align-items: start; }
   .haus-abschnitt .haus-stein { margin-top: -46px; }
 }
+/* Für wen: Schlussnotiz links unter dem Ja-Kasten, Button mittig in derselben Zeile */
+@media (min-width: 900px) { .fw-notiz-reihe { grid-template-columns: 1fr auto 1fr; column-gap: 24px; align-items: center; margin-top: 34px; } .fuerwen .fw-notiz-reihe .fw-button { margin-top: 0; } }
+@media (max-width: 899px) { .fuerwen .fw-notiz-reihe .fw-button { margin-top: 28px; } }
+@media (min-width: 900px) { .fuerwen p.fw-schluss { white-space: nowrap; margin-left: 20px; } }
+@media (min-width: 900px) { .fw-notiz-reihe { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 40px; } .fw-notiz-reihe > span:last-child { display: none; } .fuerwen .fw-notiz-reihe .fw-button { text-align: center; } }
