@@ -924,3 +924,4 @@ a { color: inherit; }
 /* Kauf-Button in der Kopfleiste: erst ab dem Laufband sichtbar */
 .kopf-kauf { opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s; }
 .kopf-kauf.sichtbar { opacity: 1; visibility: visible; transform: none; transition: opacity .3s ease, transform .3s ease, visibility 0s; }
+.preis-vorlabel { text-align: center; color: var(--rot); margin: 0 0 40px; }

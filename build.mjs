@@ -266,11 +266,12 @@ function fuerWen(lang) {
   </div></section>`;
 }
 
-function preisAbschnitt(lang) {
+function preisAbschnitt(lang, { vorLabel = "" } = {}) {
   const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang], img = IMG[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
   const href = istPlatzhalter(link) ? "#preis" : link;
   return `<section class="abschnitt creme preis-abschnitt" id="preis"><div class="huelle">
+  ${vorLabel ? `<p class="label preis-vorlabel">${esc(vorLabel)}</p>` : ""}
   <div class="anmeldung-raster">
     <div class="anmeldung-bild-spalte">
       <div class="faecher faecher-vier preis-faecher" aria-hidden="true">${img.eb.map((n, i) => bild(n, "", "f-s" + (i + 1))).join("")}${bild(img.buch, "", "f-mitte")}</div>
@@ -370,7 +371,7 @@ ${fuss(lang)}`;
 }
 
 function seiteDanke(lang) {
-  const t = T[lang], d = t.danke, img = IMG[lang];
+  const t = T[lang], d = t.danke;
   const body = `${kopf(lang, "danke")}
 <main>
 <section class="abschnitt creme mitte"><div class="huelle">
@@ -379,15 +380,8 @@ function seiteDanke(lang) {
   <p class="fliess">${esc(d.text)}</p>
 </div></section>
 ${laufband(lang)}
-<section class="abschnitt weiss"><div class="huelle zwei-spalten">
-  <div class="aufgeschlagen">${bild(img.buch, "Escape Self-Sabotage – E-Book")}</div>
-  <div>
-    <p class="label">${esc(d.angebotLabel)}</p>
-    <h2 class="titel t-gross">${akzent(d.angebotTitel)}</h2>
-    <p class="fliess">${esc(d.angebotText)}</p>
-  </div>
-</div></section>
-<section class="abschnitt creme linie-oben" id="preis"><div class="huelle">${preisbox(lang)}</div></section>
+${preisAbschnitt(lang, { vorLabel: d.angebotLabel })}
+${fuerWen(lang)}
 </main>
 ${fuss(lang)}`;
   return seitenRahmen(lang, "danke", { titel: d.seo.titel, noindex: true }, body);
