@@ -372,7 +372,7 @@ ${fuss(lang)}`;
 
 function seiteDanke(lang) {
   const t = T[lang], d = t.danke;
-  const body = `${kopf(lang, "danke")}
+  const body = `${kopf(lang, "danke", { kaufen: true })}
 <main>
 <section class="abschnitt creme mitte"><div class="huelle">
   <p class="label">${esc(d.label)}</p>
