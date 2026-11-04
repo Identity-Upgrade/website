@@ -915,3 +915,9 @@ a { color: inherit; }
 /* Für wen: Notiz links, Button mittig in derselben Zeile */
 @media (min-width: 900px) { .fw-notiz-reihe.mit-button { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; column-gap: 24px; margin-top: 30px; } .fw-notiz-reihe.mit-button .fw-button { margin-top: 0; text-align: center; } .fw-notiz-reihe.mit-button .fw-schluss { white-space: nowrap; margin-left: 20px; } }
 @media (max-width: 899px) { .fw-notiz-reihe.mit-button .fw-button { margin-top: 24px; } }
+/* Startseite identity-upgrade.com: nur Wortmarke auf Rot */
+.startseite { margin: 0; background: var(--rot); }
+.start-flaeche { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.start-wortmarke { margin: 0; color: #fff; font-size: clamp(48px, 9vw, 120px); line-height: 1; text-align: center; }
+.start-wortmarke em, .start-wortmarke sup { color: #fff; }
+.start-wortmarke sup { font-size: .3em; }

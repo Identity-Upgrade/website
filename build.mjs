@@ -516,18 +516,11 @@ function startseite() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Identity Upgrade</title>
-<link rel="alternate" hreflang="de" href="${cfg.domain}${PFADE.freebie.de}">
-<link rel="alternate" hreflang="en" href="${cfg.domain}${PFADE.freebie.en}">
-<link rel="alternate" hreflang="x-default" href="${cfg.domain}${PFADE.freebie.en}">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/site.css?v=${VERSION}">
-<script src="/assets/js/sprache.js"></script>
 </head>
-<body>
-<main class="abschnitt creme mitte"><div class="huelle">
-  <p class="wortmarke" style="font-size:40px">Identity <em>Upgrade</em><sup>™</sup></p>
-  <p style="margin-top:32px"><a class="button button-leer" href="${PFADE.freebie.de}" hreflang="de">Deutsch</a> <a class="button button-leer" href="${PFADE.freebie.en}" hreflang="en">English</a></p>
-</div></main>
+<body class="startseite">
+<main class="start-flaeche"><h1 class="wortmarke start-wortmarke">Identity <em>Upgrade</em><sup>™</sup></h1></main>
 </body>
 </html>`;
 }
