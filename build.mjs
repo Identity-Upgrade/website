@@ -263,6 +263,7 @@ function fuerWen(lang) {
   <h2 class="titel t-gross">${akzent(f.titel)}</h2>
   <div class="fw-raster">${spalte(f.ja, "ja")}${spalte(f.nein, "nein")}</div>
   <div class="fw-button"><a class="button button-rot" href="${esc(href)}" rel="nofollow">${esc(f.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a></div>
+  ${f.schlussNotiz ? `<p class="notiz notiz-c fw-schluss">${esc(f.schlussNotiz)}</p>` : ""}
 </div></section>`;
 }
 

@@ -884,3 +884,10 @@ a { color: inherit; }
 .wl-option input { width: 20px; height: 20px; accent-color: var(--rot); margin: 0; }
 .wl-erfolg { margin-top: 28px; }
 @media (min-width: 900px) { .wl-kopf, .wl-produkte, .wl-anmeldung, .danke-schlicht { padding: 120px 0; } }
+.fw-schluss { margin: 40px auto 0; text-align: center; }
+/* Preis: Text bestimmt die Höhe, Fächer ragt in den Rand */
+@media (min-width: 900px) {
+  .preis-abschnitt .anmeldung-raster { align-items: center; }
+  .preis-abschnitt .anmeldung-bild-spalte { margin: -45px 0; }
+}
+.fuerwen p.fw-schluss { margin: 48px auto 0; }
