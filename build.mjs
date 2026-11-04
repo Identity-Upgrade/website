@@ -262,7 +262,7 @@ function fuerWen(lang) {
   return `<section class="abschnitt weiss fuerwen"><div class="huelle">
   <h2 class="titel t-gross">${akzent(f.titel)}</h2>
   <div class="fw-raster">${spalte(f.ja, "ja")}${spalte(f.nein, "nein")}</div>
-  <div class="fw-notiz-reihe">${f.schlussNotiz ? `<p class="notiz notiz-a fw-schluss">${esc(f.schlussNotiz).replace(/\n/g, "<br>")}</p>` : "<span></span>"}<div class="fw-button"><a class="button button-rot" href="${esc(href)}" rel="nofollow">${esc(f.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a></div><span></span></div>
+  <div class="fw-notiz-reihe mit-button">${f.schlussNotiz ? `<p class="notiz notiz-a fw-schluss">${esc(f.schlussNotiz).replace(/\n/g, "<br>")}</p>` : "<span></span>"}<div class="fw-button fw-button-mitte"><a class="button button-rot" href="${esc(href)}" rel="nofollow">${esc(f.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a></div><span></span></div>
   </div></section>`;
 }
 

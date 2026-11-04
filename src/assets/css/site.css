@@ -909,3 +909,9 @@ a { color: inherit; }
 @media (max-width: 899px) { .fuerwen .fw-notiz-reihe .fw-button { margin-top: 28px; } }
 @media (min-width: 900px) { .fuerwen p.fw-schluss { white-space: nowrap; margin-left: 20px; } }
 @media (min-width: 900px) { .fw-notiz-reihe { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 40px; } .fw-notiz-reihe > span:last-child { display: none; } .fuerwen .fw-notiz-reihe .fw-button { text-align: center; } }
+/* Für wen: Button mittig, dicht unter der Schlussnotiz */
+@media (min-width: 900px) { .fw-notiz-reihe { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); margin-top: 22px; } .fuerwen .fw-button.fw-button-mitte { margin-top: 6px; text-align: center; } }
+@media (max-width: 899px) { .fuerwen .fw-button.fw-button-mitte { margin-top: 24px; } }
+/* Für wen: Notiz links, Button mittig in derselben Zeile */
+@media (min-width: 900px) { .fw-notiz-reihe.mit-button { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; column-gap: 24px; margin-top: 30px; } .fw-notiz-reihe.mit-button .fw-button { margin-top: 0; text-align: center; } .fw-notiz-reihe.mit-button .fw-schluss { white-space: nowrap; margin-left: 20px; } }
+@media (max-width: 899px) { .fw-notiz-reihe.mit-button .fw-button { margin-top: 24px; } }
