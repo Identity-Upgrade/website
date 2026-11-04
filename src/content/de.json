@@ -795,10 +795,14 @@
       },
       {
         "id": "urheber",
-        "t": "*Urheberrecht.*",
+        "t": "Urheberrecht und *Nutzung.*",
         "teile": [
           {
-            "p": "Texte, Bilder, Grafiken und Bücher auf dieser Website sind urheberrechtlich geschützt. Jede Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Verwertung braucht unsere vorherige schriftliche Zustimmung."
+            "p": [
+              "Alle Inhalte von Identity Upgrade sind urheberrechtlich geschützt. Dazu gehören Texte, Bilder, Grafiken, Bücher, Übungen und das Konzept des Hauses mit seinen Stockwerken, Räumen und Spuren.",
+              "Wer ein Buch oder ein anderes Produkt kauft, erhält eine persönliche, nicht übertragbare Lizenz zur eigenen Nutzung. Weitergeben, Teilen, Hochladen, Weiterverkaufen und Bearbeiten sind nicht erlaubt, auch nicht in Auszügen. Ebenso nicht erlaubt ist es, Inhalte in KI-Anwendungen einzuspeisen oder automatisch auszulesen.",
+              "Für eine gewerbliche Nutzung brauchst du unsere vorherige schriftliche Zustimmung. Das gilt auch für den Einsatz in Coachings, Kursen, Workshops oder Therapien. Schreib uns dazu an [[EMAIL]]."
+            ]
           }
         ]
       },

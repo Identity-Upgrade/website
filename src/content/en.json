@@ -752,10 +752,14 @@
       },
       {
         "id": "urheber",
-        "t": "*Copyright.*",
+        "t": "Copyright and *use.*",
         "teile": [
           {
-            "p": "Texts, images, graphics, and books on this website are protected by copyright. Any reproduction, editing, distribution, or other use requires our prior written consent."
+            "p": [
+              "All Identity Upgrade content is protected by copyright. This includes texts, images, graphics, books, exercises, and the concept of the house with its levels, rooms, and clues.",
+              "When you buy a book or another product, you receive a personal, non-transferable license for your own use. You may not pass on, share, upload, resell, or modify it, not even in parts. You may also not feed any content into AI tools or extract it automatically.",
+              "Any commercial use requires our prior written permission. This includes using it in coaching, courses, workshops, or therapy. To ask about licensing, email us at [[EMAIL]]."
+            ]
           }
         ]
       },
