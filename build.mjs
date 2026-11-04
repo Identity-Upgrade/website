@@ -446,7 +446,7 @@ ${fuss(lang)}`;
 function seiteBuchDanke(lang) {
   const d = T[lang].buchDanke;
   const body = `${kopf(lang, "buchDanke")}
-<main>
+<main class="voll-main">
 <section class="abschnitt creme mitte danke-schlicht"><div class="huelle">
   ${labelP(d.label)}
   <h1 class="titel t-gross">${akzent(d.titel)}</h1>

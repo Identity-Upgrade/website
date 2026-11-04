@@ -925,3 +925,8 @@ a { color: inherit; }
 .kopf-kauf { opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity .3s ease, transform .3s ease, visibility 0s linear .3s; }
 .kopf-kauf.sichtbar { opacity: 1; visibility: visible; transform: none; transition: opacity .3s ease, transform .3s ease, visibility 0s; }
 .preis-vorlabel { text-align: center; color: var(--rot); margin: 0 0 40px; }
+/* Danke nach Kauf: ganze Bildschirmhöhe, Inhalt mittig, Footer unten */
+body:has(.voll-main) { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+.voll-main { flex: 1; display: flex; flex-direction: column; background: var(--creme); }
+.voll-main .danke-schlicht { flex: 1; display: flex; align-items: center; justify-content: center; }
+.voll-main .danke-schlicht > .huelle { width: 100%; }
