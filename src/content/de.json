@@ -510,7 +510,7 @@
         "teile": [
           {
             "p": [
-              "Verantwortlich für diese Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die **KlewerINN LLP**, eine Partnerschaft mit beschränkter Haftung mit Sitz in Kanada. Heike Klewer ist die Autorin der Bücher und Inhalte auf dieser Seite. Wenn hier „wir“ oder „uns“ steht, ist die KlewerINN LLP gemeint.",
+              "Verantwortlich für diese Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die **KLEWERINN LLP**, eine Partnerschaft mit beschränkter Haftung mit Sitz in Kanada. Heike Klewer ist die Autorin der Bücher und Inhalte auf dieser Seite. Wenn hier „wir“ oder „uns“ steht, ist die KLEWERINN LLP gemeint.",
               "Du erreichst uns jederzeit unter [[EMAIL]]. Die vollständige Anschrift findest du ganz unten und im Impressum. Einen Datenschutzbeauftragten haben wir nicht benannt, weil wir dazu nicht verpflichtet sind."
             ]
           }
@@ -724,9 +724,10 @@
           {
             "p": "Schreib an [[EMAIL]] oder per Post an:",
             "adresse": [
-              "KlewerINN LLP",
-              "[Straße und Hausnummer]",
-              "[Ort, Provinz, Postleitzahl]",
+              "KLEWERINN LLP",
+              "44322 Yale Rd",
+              "Unit 3B #250",
+              "Chilliwack, BC V2R 4H1",
               "Kanada"
             ]
           }
@@ -751,27 +752,23 @@
     "angaben": [
       [
         "Anbieter",
-        "**KlewerINN LLP**\nMarke: Identity Upgrade™"
+        "**KLEWERINN LLP**\nMarke: Identity Upgrade™"
       ],
       [
         "Rechtsform",
-        "Limited Liability Partnership (Partnerschaft mit beschränkter Haftung nach kanadischem Recht, [Provinz])"
+        "Limited Liability Partnership (Partnerschaft mit beschränkter Haftung nach kanadischem Recht, British Columbia)"
       ],
       [
         "Sitz",
-        "[Straße und Hausnummer]\n[Ort, Provinz, Postleitzahl]\nKanada"
+        "44322 Yale Rd\nUnit 3B #250\nChilliwack, BC V2R 4H1\nKanada"
       ],
       [
         "Kontakt",
         "E-Mail: [[EMAIL]]"
       ],
       [
-        "Register",
-        "[Registerbehörde]"
-      ],
-      [
         "Registernummer",
-        "[Nummer]"
+        "LL0002596"
       ]
     ],
     "abschnitte": [

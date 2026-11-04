@@ -504,7 +504,7 @@
         "teile": [
           {
             "p": [
-              "Identity Upgrade is run by **KlewerINN LLP**, a limited liability partnership based in Canada. Heike Klewer is the author of the books and content you find here. When this page says “we” or “us,” it means KlewerINN LLP. When it says “you,” that's you.",
+              "Identity Upgrade is run by **KLEWERINN LLP**, a limited liability partnership based in Canada. Heike Klewer is the author of the books and content you find here. When this page says “we” or “us,” it means KLEWERINN LLP. When it says “you,” that's you.",
               "You can reach us anytime at [[EMAIL]]."
             ]
           }
@@ -639,9 +639,10 @@
           {
             "p": "Email [[EMAIL]], or write to us:",
             "adresse": [
-              "KlewerINN LLP",
-              "[Street address]",
-              "[City, Province, Postal code]",
+              "KLEWERINN LLP",
+              "44322 Yale Rd",
+              "Unit 3B #250",
+              "Chilliwack, BC V2R 4H1",
               "Canada"
             ]
           }
@@ -708,27 +709,23 @@
     "angaben": [
       [
         "Provider",
-        "**KlewerINN LLP**\nBrand: Identity Upgrade™"
+        "**KLEWERINN LLP**\nBrand: Identity Upgrade™"
       ],
       [
         "Legal form",
-        "Limited Liability Partnership under Canadian law ([Province])"
+        "Limited Liability Partnership under Canadian law (British Columbia)"
       ],
       [
         "Registered office",
-        "[Street address]\n[City, Province, Postal code]\nCanada"
+        "44322 Yale Rd\nUnit 3B #250\nChilliwack, BC V2R 4H1\nCanada"
       ],
       [
         "Contact",
         "Email: [[EMAIL]]"
       ],
       [
-        "Registry",
-        "[Registry authority]"
-      ],
-      [
         "Registration number",
-        "[Number]"
+        "LL0002596"
       ]
     ],
     "abschnitte": [
