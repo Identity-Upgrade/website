@@ -8,7 +8,8 @@
 //
 // Regeln (festgelegt mit Heike, 07.11.2026):
 // - Gültig 30 Tage ab dem ersten Aufruf der Danke-Seite, solange noch nicht heruntergeladen wurde.
-// - Nach dem ersten Download bleiben 15 Minuten Nachfrist, danach ist die Bestellung gesperrt.
+// - Nach dem ersten Download bleiben 15 Minuten Nachfrist für höchstens einen weiteren Download
+//   (insgesamt maximal 2), danach ist die Bestellung gesperrt.
 // - Pro Bestellung liegt eine Notiz im Lagerraum: bestellungen/<Bestellnummer>.json
 //   (nur Bestellnummer, Produkt und Zeitpunkte – keine E-Mail-Adresse).
 // - Freischalten im Einzelfall: Notiz im Lagerraum löschen.
@@ -19,6 +20,7 @@
 
 const GUELTIG_MS = 30 * 24 * 60 * 60 * 1000;
 const NACHFRIST_MS = 15 * 60 * 1000;
+const MAX_DOWNLOADS = 2;
 
 const PRODUKTE = {
   "761708": { datei: "Escape-Self-Sabotage_DE_L1.pdf", lang: "de" },
@@ -87,6 +89,7 @@ function stand(notiz, jetzt) {
   if (downloads.length === 0) {
     return jetzt - notiz.erstAufruf <= GUELTIG_MS ? "bereit" : "abgelaufen";
   }
+  if (downloads.length >= MAX_DOWNLOADS) return "abgelaufen";
   return jetzt - downloads[0] <= NACHFRIST_MS ? "bereit" : "abgelaufen";
 }
 
