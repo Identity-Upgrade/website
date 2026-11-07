@@ -55,7 +55,8 @@ function kopf(lang, seite, { kaufen = false } = {}) {
       ? `<span class="aktiv" aria-current="true">DE</span><a href="${PFADE[seite].en || PFADE.privacy.en}" hreflang="en" lang="en">EN</a>`
       : `<a href="${PFADE[seite].de}" hreflang="de" lang="de">DE</a><span class="aktiv" aria-current="true">EN</span>`
   }</nav>`;
-  const kauf = kaufen ? `<a class="button button-rot button-klein kopf-kauf" href="#preis" data-kopf-kauf tabindex="-1" aria-hidden="true">${esc(t.ui.kaufen)}</a>` : "";
+  const kaufHref = (() => { const l = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn; return istPlatzhalter(l) ? "#price" : l; })();
+  const kauf = kaufen ? `<a class="button button-rot button-klein kopf-kauf" href="${esc(kaufHref)}" rel="nofollow" data-kopf-kauf tabindex="-1" aria-hidden="true">${esc(t.ui.kaufen)}</a>` : "";
   return `${VORSCHAU ? `<div class="vorschau-band">${esc(t.ui.vorschau)} · Stand ${STAND}</div>` : ""}
 <header class="kopf"><div class="huelle">
   <a class="wortmarke" href="${PFADE.freebie[lang]}">Identity <em>Upgrade</em><sup>™</sup></a>
@@ -109,7 +110,7 @@ function soFunktionierts(lang, farbe = "creme", daten) {
   ${absaetze(s.text)}
   <ol class="stationen">${s.stationen.map((st, i) => `<li class="station"><div class="station-zahl" aria-hidden="true">${SYMBOLE[i] ? symbol(i) : i + 1}</div><h3>${esc(st.titel)}</h3><p>${esc(st.text)}</p></li>`).join("")}</ol>
   <p class="notiz notiz-b">${esc(s.notiz).replace(/\n/g, "<br>")}</p>
-  ${s.button ? `<a class="button button-rot" href="#anmeldung">${esc(s.button)} <span aria-hidden="true">→</span></a>` : ""}
+  ${s.button ? `<a class="button button-rot" href="#signup">${esc(s.button)} <span aria-hidden="true">→</span></a>` : ""}
 </div></section>`;
 }
 
@@ -119,7 +120,7 @@ function haltung(lang, daten) {
   ${labelP(h.label)}
   <h2 class="titel t-gross">${akzent(h.titel).replace(/\n/g, "<br>")}</h2>
   ${absaetze(h.text)}
-  ${h.button ? `<a class="button button-rot" href="#anmeldung">${esc(h.button)} <span aria-hidden="true">→</span></a>` : ""}
+  ${h.button ? `<a class="button button-rot" href="#signup">${esc(h.button)} <span aria-hidden="true">→</span></a>` : ""}
 </div></section>`;
 }
 
@@ -214,7 +215,7 @@ function seiteFreebie(lang) {
     <p class="label">${esc(f.hero.label)}</p>
     <h1 class="titel t-hero t-hero-lang">${akzent(f.hero.titel)}</h1>
     ${absaetze(f.hero.text)}
-    <a class="button button-rot" href="#anmeldung">${esc(f.hero.button || t.ui.freebieButton)} <span aria-hidden="true">→</span></a>
+    <a class="button button-rot" href="#signup">${esc(f.hero.button || t.ui.freebieButton)} <span aria-hidden="true">→</span></a>
     <p class="notiz notiz-a">${esc(f.hero.notiz)}</p>
   </div>
   <div class="faecher">${bild(img.raum1, "", "f-links")}${bild(img.fund, "", "f-rechts")}${bild(img.freebie, "Escape Self-Sabotage – Raum 1", "f-mitte")}</div>
@@ -224,7 +225,7 @@ ${wiedererkennen(f.wiedererkennen, "weiss")}
 ${haltung(lang, f.haltung)}
 ${soFunktionierts(lang, "creme", f.sofunktionierts)}
 ${ueber(lang, null, "weiss", f.ueber)}
-<section class="abschnitt beige mitte anmeldung" id="anmeldung"><div class="huelle">
+<section class="abschnitt beige mitte anmeldung" id="signup"><div class="huelle">
   <div class="anmeldung-raster">
     <div class="anmeldung-bild-spalte">
       <div class="faecher anmeldung-faecher" aria-hidden="true">${bild(img.raum1, "", "f-links")}${bild(img.fund, "", "f-rechts")}${bild(img.freebie, "", "f-mitte")}</div>
@@ -259,7 +260,7 @@ const KREUZ = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" strok
 function fuerWen(lang) {
   const f = T[lang].buch.fuerwen, pr = cfg.preise[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
-  const href = istPlatzhalter(link) ? "#preis" : link;
+  const href = istPlatzhalter(link) ? "#price" : link;
   const spalte = (x, art) => `<div class="fw-spalte fw-${art}"><p class="fw-kopf">${esc(x.kopf)}</p><ol class="fw-liste">${x.punkte.map((t, i) => `<li><span class="fw-nr" aria-hidden="true">${art === "ja" ? HAKEN : KREUZ}</span><p>${esc(t)}</p></li>`).join("")}</ol></div>`;
   return `<section class="abschnitt weiss fuerwen"><div class="huelle">
   <h2 class="titel t-gross">${akzent(f.titel)}</h2>
@@ -268,11 +269,13 @@ function fuerWen(lang) {
   </div></section>`;
 }
 
+const kaufLink = (lang) => { const l = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn; return istPlatzhalter(l) ? "#price" : l; };
+
 function preisAbschnitt(lang, { vorLabel = "", label = "", titel = "" } = {}) {
   const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang], img = IMG[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
-  const href = istPlatzhalter(link) ? "#preis" : link;
-  return `<section class="abschnitt creme preis-abschnitt" id="preis"><div class="huelle">
+  const href = istPlatzhalter(link) ? "#price" : link;
+  return `<section class="abschnitt creme preis-abschnitt" id="price"><div class="huelle">
   ${vorLabel ? `<p class="label preis-vorlabel">${esc(vorLabel)}</p>` : ""}
   <div class="anmeldung-raster">
     <div class="anmeldung-bild-spalte">
@@ -294,7 +297,7 @@ function preisAbschnitt(lang, { vorLabel = "", label = "", titel = "" } = {}) {
 function preisbox(lang) {
   const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
-  const href = istPlatzhalter(link) ? "#preis" : link;
+  const href = istPlatzhalter(link) ? "#price" : link;
   return `<div class="preisbox">
   <p class="label">${esc(p.label)}</p>
   <p class="preis-produkt">${esc(p.produkt)}</p>
@@ -321,7 +324,7 @@ function hausZeichnung(h) {
 </div>`;
 }
 
-function hausAbschnitt(hs, stil = hs.stil, preisText = "") {
+function hausAbschnitt(hs, stil = hs.stil, preisText = "", kaufHref = "#price") {
   return `<section class="abschnitt beige haus-abschnitt"><div class="huelle">
   <div class="mitte">
     ${hs.label ? `<p class="label">${esc(hs.label)}</p>` : ""}
@@ -335,7 +338,7 @@ function hausAbschnitt(hs, stil = hs.stil, preisText = "") {
     </div>
     ${hausZeichnung(hs.haus)}
   </div>
-  ${hs.button ? `<div class="mitte haus-button-zeile"><a class="button button-rot" href="#preis">${esc(hs.button)}${preisText ? ` · ${esc(preisText)}` : ""} <span aria-hidden="true">→</span></a></div>` : ""}
+  ${hs.button ? `<div class="mitte haus-button-zeile"><a class="button button-rot" href="${esc(kaufHref)}" rel="nofollow">${esc(hs.button)}${preisText ? ` · ${esc(preisText)}` : ""} <span aria-hidden="true">→</span></a></div>` : ""}
 </div></section>`;
 }
 
@@ -348,7 +351,7 @@ function seiteBuch(lang) {
     <p class="label">${esc(b.hero.label)}</p>
     <h1 class="titel t-hero t-hero-lang">${akzent(b.hero.titel)}</h1>
     ${absaetze(b.hero.text)}
-    <a class="button button-rot" href="#preis">${esc(b.hero.button || b.preis.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a>
+    <a class="button button-rot" href="${esc(kaufLink(lang))}" rel="nofollow">${esc(b.hero.button || b.preis.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a>
     <p class="notiz notiz-a">${esc(b.hero.notiz)}</p>
   </div>
   <div class="faecher faecher-vier">${img.eb.map((n, i) => bild(n, "", "f-s" + (i + 1))).join("")}${bild(img.buch, "Escape Self-Sabotage – E-Book", "f-mitte")}</div>
@@ -356,7 +359,7 @@ function seiteBuch(lang) {
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme", b.sofunktionierts)}
-${hausAbschnitt(b.haus, "foto", pr.einfuehrung)}
+${hausAbschnitt(b.haus, "foto", pr.einfuehrung, kaufLink(lang))}
 ${haltung(lang, b.haltung)}
 ${ueber(lang, null, "weiss", b.ueber)}
 ${preisAbschnitt(lang)}
@@ -494,7 +497,7 @@ function seiteWaitlist(lang) {
 <section class="abschnitt weiss mitte wl-produkte"><div class="huelle">
   <div class="karten wl-karten">${w.optionen.map((o) => `<div class="karte" data-produkt="${esc(o.key)}"><h3 class="label">${esc(o.kartenTitel)}</h3><p>${esc(o.kartenText)}</p></div>`).join("")}</div>
 </div></section>
-<section class="abschnitt beige mitte wl-anmeldung" id="anmeldung"><div class="huelle">
+<section class="abschnitt beige mitte wl-anmeldung" id="signup"><div class="huelle">
   <h2 class="titel t-mittel">${akzent(w.formTitel)}</h2>
   <div class="wl-erfolg" data-erfolg hidden><p class="notiz notiz-c">${esc(w.erfolg)}</p></div>
   ${waitlistFormular(lang)}

@@ -26,8 +26,8 @@
   },
   "digistore": {
     "_hinweis": "Bestell-Links aus Digistore24 eintragen.",
-    "kaufLinkDe": "[DIGISTORE-LINK-DE]",
-    "kaufLinkEn": "[DIGISTORE-LINK-EN]"
+    "kaufLinkDe": "https://www.checkout-ds24.com/product/761708",
+    "kaufLinkEn": "https://www.checkout-ds24.com/product/761745"
   },
   "anbieter": {
     "name": "KLEWERINN LLP",
