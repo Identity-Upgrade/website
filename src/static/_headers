@@ -19,3 +19,7 @@
 
 /en/escape-self-sabotage-l1-thanks/*
   X-Robots-Tag: noindex, nofollow
+
+/api/*
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow

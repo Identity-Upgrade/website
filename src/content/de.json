@@ -826,7 +826,12 @@
     "text": [
       "[Ein bis zwei Sätze: Der Download kommt per E-Mail.]"
     ],
-    "notiz": "[Handschriftliche Notiz]"
+    "notiz": "[Handschriftliche Notiz]",
+    "download": {
+      "button": "E-Book herunterladen",
+      "hinweis": "Der Download funktioniert einmal. Speichere das E-Book am besten gleich auf deinem Gerät.",
+      "laden": "Einen Moment, wir prüfen deinen Kauf …"
+    }
   },
   "waitlist": {
     "seo": {

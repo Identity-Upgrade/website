@@ -456,6 +456,12 @@ function seiteBuchDanke(lang) {
   ${labelP(d.label)}
   <h1 class="titel t-gross">${akzent(d.titel)}</h1>
   ${absaetze(d.text)}
+  <div class="ebook-download" data-ebook hidden>
+    <p class="ebook-laden" data-ebook-laden>${esc(d.download.laden)}</p>
+    <a class="button button-rot" data-ebook-button href="#" hidden>${esc(d.download.button)} <span aria-hidden="true">↓</span></a>
+    <p class="ebook-hinweis" data-ebook-hinweis hidden>${esc(d.download.hinweis)}</p>
+    <p class="ebook-meldung" data-ebook-meldung role="status" hidden></p>
+  </div>
   ${d.notiz ? `<p class="notiz notiz-c">${esc(d.notiz)}</p>` : ""}
 </div></section>
 </main>

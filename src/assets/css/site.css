@@ -937,3 +937,8 @@ body:has(.voll-main) { min-height: 100vh; min-height: 100svh; display: flex; fle
   -webkit-text-fill-color: var(--tinte) !important; caret-color: var(--tinte); transition: background-color 9999s ease-out 0s;
 }
 .feld input:autofill, .feld select:autofill { box-shadow: 0 0 0 1000px var(--weiss) inset !important; -webkit-text-fill-color: var(--tinte) !important; }
+/* E-Book-Download auf der Danke-Seite nach dem Kauf */
+.ebook-download { margin: 32px auto 0; max-width: 560px; }
+.ebook-download .button { margin-top: 4px; }
+.ebook-hinweis, .ebook-laden { font-size: 15px; color: var(--text); margin: 14px 0 0; }
+.ebook-meldung { font-size: 16px; color: var(--rot); margin: 0; }

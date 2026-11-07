@@ -667,7 +667,12 @@
     "text": [
       "[One or two sentences: the download link is on its way by email.]"
     ],
-    "notiz": "[Handwritten note]"
+    "notiz": "[Handwritten note]",
+    "download": {
+      "button": "Download your e-book",
+      "hinweis": "The download works once, so save the e-book to your device right away.",
+      "laden": "One moment, we're confirming your purchase …"
+    }
   },
   "waitlist": {
     "seo": {
