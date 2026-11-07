@@ -534,6 +534,10 @@
           {
             "label": "What we never see",
             "p": "If you buy the e-book, payment is handled entirely by Digistore24. Your card or bank details go straight to them. We never see them."
+          },
+          {
+            "label": "When you download the e-book",
+            "p": "When you buy an e-book, we store the times you opened the thank-you page and downloaded the e-book, together with your order number. We use this information only to provide the download and to help you if something goes wrong. We don't store your email address for this purpose; it remains with Digistore24. This information is stored with Cloudflare."
           }
         ]
       },
@@ -672,7 +676,8 @@
       "button": "Download your e-book",
       "hinweis": "The download works once, so save the e-book to your device right away.",
       "laden": "One moment, we're confirming your purchase …"
-    }
+    },
+    "abbuchung": "The charge will appear on your statement as Digistore24.com."
   },
   "waitlist": {
     "seo": {

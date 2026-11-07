@@ -462,6 +462,7 @@ function seiteBuchDanke(lang) {
     <p class="ebook-hinweis" data-ebook-hinweis hidden>${esc(d.download.hinweis)}</p>
     <p class="ebook-meldung" data-ebook-meldung role="status" hidden></p>
   </div>
+  ${d.abbuchung ? `<p class="ebook-abbuchung">${esc(d.abbuchung)}</p>` : ""}
   ${d.notiz ? `<p class="notiz notiz-c">${esc(d.notiz)}</p>` : ""}
 </div></section>
 </main>
