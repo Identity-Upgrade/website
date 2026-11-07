@@ -1,0 +1,21 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; form-action 'self' https://app.kit.com; frame-ancestors 'none'; base-uri 'self'
+
+/assets/*
+  Cache-Control: public, max-age=604800
+
+/de/escape-self-sabotage-r1-thanks/*
+  X-Robots-Tag: noindex, nofollow
+
+/en/escape-self-sabotage-r1-thanks/*
+  X-Robots-Tag: noindex, nofollow
+
+/de/escape-self-sabotage-l1-thanks/*
+  X-Robots-Tag: noindex, nofollow
+
+/en/escape-self-sabotage-l1-thanks/*
+  X-Robots-Tag: noindex, nofollow

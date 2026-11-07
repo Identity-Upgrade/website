@@ -1,0 +1,114 @@
+/* Identity Upgrade – kleine Helfer, ohne Cookies und ohne Speicherung im Browser.
+   1. Herkunft (Quelle/Kampagne) aus dem Link lesen und an das Kit-Formular geben.
+   2. Die Kennung an interne Links weiterreichen, damit sie beim Seitenwechsel erhalten bleibt.
+   3. Formular pruefen; ohne Kit-Formular-ID nur Vorschaumodus (Weiterleitung zur Danke-Seite). */
+(function () {
+  "use strict";
+
+  var params = new URLSearchParams(window.location.search);
+  var quelle = params.get("quelle") || params.get("utm_source") || "";
+  var kampagne = params.get("kampagne") || params.get("utm_campaign") || "";
+
+  // Ohne Kennung: verweisende Seite (nur fremde Domains), soweit der Browser sie mitliefert.
+  if (!quelle && document.referrer) {
+    try {
+      var ref = new URL(document.referrer);
+      if (ref.hostname && ref.hostname !== window.location.hostname) {
+        quelle = "verweis:" + ref.hostname.replace(/^www\./, "");
+      }
+    } catch (e) { /* ungueltiger Referrer – ignorieren */ }
+  }
+  if (!quelle) quelle = "direkt";
+
+  // Versteckte Felder fuellen
+  document.querySelectorAll("input[data-feld='quelle']").forEach(function (el) { el.value = quelle.slice(0, 120); });
+  document.querySelectorAll("input[data-feld='kampagne']").forEach(function (el) { el.value = kampagne.slice(0, 120); });
+
+  // Kennung an interne Links anhaengen (nur wenn sie aus dem Link kam)
+  var kennung = params.get("quelle") || params.get("utm_source");
+  if (kennung) {
+    document.querySelectorAll("a[href^='/']").forEach(function (a) {
+      try {
+        var u = new URL(a.getAttribute("href"), window.location.origin);
+        if (!u.searchParams.has("quelle")) u.searchParams.set("quelle", kennung);
+        if (kampagne && !u.searchParams.has("kampagne")) u.searchParams.set("kampagne", kampagne);
+        a.setAttribute("href", u.pathname + u.search + u.hash);
+      } catch (e) { /* Link unveraendert lassen */ }
+    });
+  }
+
+
+  // Warteliste: Auswahl aus dem Link (?for=book|course) vorbelegen, passende Karte zeigen
+  var wl = document.querySelector("form[data-waitlist]");
+  if (wl) {
+    var fuer = params.get("for");
+    if (fuer) {
+      wl.querySelectorAll("input[data-fuer]").forEach(function (el) { if (el.getAttribute("data-fuer") === fuer) el.checked = true; });
+      document.querySelectorAll("[data-produkt]").forEach(function (k) { if (k.getAttribute("data-produkt") !== fuer) k.hidden = true; });
+    }
+    if (params.get("eingetragen")) {
+      var erfolg = document.querySelector("[data-erfolg]");
+      if (erfolg) { erfolg.hidden = false; wl.hidden = true; }
+    }
+    wl.addEventListener("submit", function (ev) {
+      if (!wl.querySelector("input[data-fuer]:checked")) {
+        ev.preventDefault(); ev.stopImmediatePropagation();
+        var f = wl.querySelector(".formular-fehler"); if (f) f.textContent = wl.getAttribute("data-fehler");
+      }
+    }, true);
+  }
+
+
+  // Kauf-Button in der Kopfleiste: erscheint, sobald das Laufband oben an der Leiste ankommt
+  var kk = document.querySelector("[data-kopf-kauf]"), lb = document.querySelector(".laufband"), kopf = document.querySelector(".kopf");
+  if (kk && lb && kopf) {
+    var pruefe = function () {
+      var an = lb.getBoundingClientRect().top <= kopf.getBoundingClientRect().bottom + 1;
+      kk.classList.toggle("sichtbar", an);
+      if (an) { kk.removeAttribute("tabindex"); kk.removeAttribute("aria-hidden"); } else { kk.setAttribute("tabindex", "-1"); kk.setAttribute("aria-hidden", "true"); }
+    };
+    window.addEventListener("scroll", pruefe, { passive: true });
+    window.addEventListener("resize", pruefe);
+    pruefe();
+  }
+
+  // Formular
+  document.querySelectorAll("form[data-formular]").forEach(function (form) {
+    var fehler = form.querySelector(".formular-fehler");
+    form.addEventListener("submit", function (ev) {
+      var ok = true;
+      form.querySelectorAll("input[required], select[required], input[data-telefon]").forEach(function (el) {
+        var wert = (el.value || "").trim();
+        var istTelefon = el.hasAttribute("data-telefon");
+        var telefonFalsch = istTelefon && wert !== "" && wert.replace(/[^0-9]/g, "").length < 6;
+        if ((!wert && !istTelefon) || telefonFalsch || (el.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(wert))) {
+          ok = false;
+          el.setAttribute("aria-invalid", "true");
+        } else {
+          el.removeAttribute("aria-invalid");
+        }
+      });
+      if (!ok) {
+        ev.preventDefault();
+        if (fehler) fehler.textContent = form.getAttribute("data-fehler");
+        var erstes = form.querySelector("[aria-invalid='true']");
+        if (erstes) erstes.focus();
+        return;
+      }
+      if (fehler) fehler.textContent = "";
+      // Telefonnummer mit Ländervorwahl zusammensetzen (führende Null entfällt)
+      var vw = form.querySelector("[data-vorwahl]"), tel = form.querySelector("[data-telefon]"), ziel = form.querySelector("input[data-feld='telefon']");
+      if (vw && tel && ziel) { var nr = tel.value.replace(/[^0-9]/g, "").replace(/^0+/, ""); ziel.value = nr ? vw.value + " " + nr : ""; }
+      if (form.getAttribute("data-vorschau") === "ja") {
+        ev.preventDefault();
+        window.location.href = form.getAttribute("data-danke");
+      }
+    });
+    form.querySelectorAll("input, select").forEach(function (el) {
+      el.addEventListener(el.tagName === "SELECT" ? "change" : "input", function () {
+        el.removeAttribute("aria-invalid");
+        if (fehler) fehler.textContent = "";
+      });
+    });
+  });
+})();

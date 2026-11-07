@@ -1,0 +1,777 @@
+{
+  "_hinweis": "All texts for the English pages. *Asterisks* = italic red accent word. Text in square brackets is a placeholder.",
+  "lang": "en",
+  "ui": {
+    "sprache": "Choose language",
+    "kaufen": "Buy now",
+    "footerRecht": "Legal notice & privacy",
+    "vorschau": "Preview – placeholder texts",
+    "freebieButton": "Free access to Room 1",
+    "pfeil": "→",
+    "footerDatenschutz": "Privacy",
+    "footerImpressum": "Legal notice"
+  },
+  "laufband": [
+    "Recognize",
+    "Question",
+    "Understand",
+    "Choose differently",
+    "New results"
+  ],
+  "freebie": {
+    "seo": {
+      "titel": "Room 1 free · Escape Self-Sabotage",
+      "beschreibung": "Why do you keep getting the opposite of what you want? Step into Room 1 and follow the first clues."
+    },
+    "hero": {
+      "label": "Escape Self-Sabotage · Free Sample",
+      "titel": "You know what you want. So why are you constantly getting *the exact opposite?*",
+      "text": [
+        "Some decisions are hard to make sense of in hindsight. Especially your own.",
+        "What if it's not a weakness at all, but a logic you just haven't cracked yet?"
+      ],
+      "button": "Free access to Room 1",
+      "notiz": "Maybe not everything is as illogical as it seems …"
+    },
+    "wiedererkennen": {
+      "label": "",
+      "titel": "Do you ever feel like you somehow keep ending up *in the same place* where you started?",
+      "text": "The situations change. The people change, too. But somehow, the outcome feels strangely familiar.",
+      "karten": [
+        {
+          "label": "Finances",
+          "text": "You work so hard that you should have more than enough left over by now. And yet it feels like you're running on a hamster wheel that just keeps spinning faster. You have to keep pushing harder just to make ends meet. And there's barely anything left for yourself."
+        },
+        {
+          "label": "Relationships",
+          "text": "Different people. Different stories. Everything seemed different this time. And yet, sooner or later, that familiar feeling creeps back in. Things start slipping out of your control again, and somewhere along the way, you realize you've lost yourself."
+        },
+        {
+          "label": "Body & Wellbeing",
+          "text": "The decision is made. And you're disciplined. This time, it's finally paying off and you're getting exactly the results you want. Until the progress suddenly stops, and your old patterns take over again, even though you really should have known better by now."
+        }
+      ],
+      "abschluss": "Why does this keep happening to you?"
+    },
+    "selbstcheck": {
+      "label": "Self-check",
+      "titel": "Do you recognize *yourself?*",
+      "aussagen": [
+        "[Statement one]",
+        "[Statement two]",
+        "[Statement three]",
+        "[Statement four]"
+      ],
+      "button": "Free access to Room 1"
+    },
+    "anmeldung": {
+      "label": "",
+      "titel": "The first door is *open* for you.",
+      "text": [
+        "Room 1 focuses on the question that starts it all: Why does this keep happening to me?",
+        "A first shift in perspective. No ready-made answers, no quick fixes. Rather, it’s the beginning of a truly fascinating search for clues."
+      ],
+      "vorname": "First name",
+      "nachname": "Last name",
+      "email": "Email address",
+      "button": "Free access to Room 1",
+      "hinweis": "Signing up gets you access to Room 1 and my newsletter on self-sabotage, pattern recognition, and Identity Upgrade products. You can unsubscribe anytime with one click.",
+      "fehler": "Please fill in your first name, last name, and email address, choose your biggest struggle, and check your details.",
+      "vorwahl": "Country",
+      "telefon": "Phone number",
+      "situation": "Your biggest struggle",
+      "situationLeer": "Please choose",
+      "situationen": [
+        [
+          "finanzen",
+          "Finances"
+        ],
+        [
+          "beziehungen",
+          "Relationships"
+        ],
+        [
+          "koerper",
+          "Body & Wellbeing"
+        ],
+        [
+          "mehrere",
+          "More than one"
+        ]
+      ],
+      "laender": [
+        [
+          "US",
+          "United States",
+          "+1"
+        ],
+        [
+          "CA",
+          "Canada",
+          "+1"
+        ],
+        [
+          "GB",
+          "United Kingdom",
+          "+44"
+        ],
+        [
+          "AU",
+          "Australia",
+          "+61"
+        ],
+        [
+          "NZ",
+          "New Zealand",
+          "+64"
+        ],
+        [
+          "IE",
+          "Ireland",
+          "+353"
+        ],
+        [
+          "ZA",
+          "South Africa",
+          "+27"
+        ],
+        [
+          "DE",
+          "Germany",
+          "+49"
+        ],
+        [
+          "AT",
+          "Austria",
+          "+43"
+        ],
+        [
+          "CH",
+          "Switzerland",
+          "+41"
+        ],
+        [
+          "NL",
+          "Netherlands",
+          "+31"
+        ],
+        [
+          "FR",
+          "France",
+          "+33"
+        ],
+        [
+          "ES",
+          "Spain",
+          "+34"
+        ],
+        [
+          "IT",
+          "Italy",
+          "+39"
+        ],
+        [
+          "MX",
+          "Mexico",
+          "+52"
+        ],
+        [
+          "IN",
+          "India",
+          "+91"
+        ]
+      ],
+      "bildNotiz": "All you need is a notebook."
+    },
+    "haltung": {
+      "label": "",
+      "titel": "Maybe your behavior was never as *illogical* as you thought.",
+      "text": "You can give other people pretty great advice, but somehow, when it comes to yourself, it just doesn't work? And now it gets interesting: looking back, all your decisions can seem completely incomprehensible, not only to others, but above all to yourself. Yet they still made perfect sense within your own world. Spoiler: Only when you begin to see how these things connect can real change happen. Until then, like clockwork, you keep ending up back at square one.",
+      "button": "Figure out my patterns"
+    },
+    "sofunktionierts": {
+      "label": "",
+      "titel": "Not an ordinary book. An *escape room.*",
+      "text": "One house. Three levels. Countless rooms, and behind every door, a different perspective on what you've taken pretty much for granted until now. This isn't about finding the exit as fast as possible. It's about you asking the right questions and understanding why certain doors keep leading you back to the same place.",
+      "stationen": [
+        {
+          "titel": "The House",
+          "text": "From the outside, it looks like any other house. But once you're inside, you realize how little you actually know it."
+        },
+        {
+          "titel": "The Elevator",
+          "text": "The elevator connects the levels. But it only comes back for you once you've explored every room on your level."
+        },
+        {
+          "titel": "The Levels",
+          "text": "They take you step by step deeper into the question of why you keep ending up where you don't actually want to be."
+        },
+        {
+          "titel": "The Rooms",
+          "text": "Every room revolves around a question. To move on, you have to examine the clues inside."
+        },
+        {
+          "titel": "The Clues",
+          "text": "Small hints, apparent contradictions, and thoughts that suddenly put everything in a different light."
+        }
+      ],
+      "notiz": "The exit isn't necessarily\nwhere you'd expect it to be.",
+      "button": "Step into the first room"
+    },
+    "ueber": {
+      "label": "",
+      "titel": "Who is Heike, *really?*",
+      "text": [
+        "That question took me down paths the little girl who was determined to become an opera singer could never even have dreamed of. More than anything, though, those paths kept leading me, with astonishing consistency, straight into devastating setbacks in the areas of my life that mattered most. So I started digging deep into human behavior, perception, external manipulation, and self-sabotage. I trained as a hypnotist, obsessively researched every possible way to improve my life, and spent more than twenty years building up a pretty extensive body of knowledge.",
+        "And yet, before long, I was right back in it, up to my neck: another toxic relationship, broke again. Once again, nothing was turning out the way I wanted.",
+        "In June 2025, I filled out an enormous questionnaire. As part of a program, my answers were supposed to be analyzed to identify my patterns of self-sabotage. But that never happened, because someone had made sure I was kicked out of the program before we got that far. So I analyzed myself. And what I discovered changed not only how I saw the life I had lived up to that point, but everything that came after."
+      ],
+      "signatur": "Heike Klewer"
+    }
+  },
+  "buch": {
+    "seo": {
+      "titel": "Level 1 · Escape Self-Sabotage",
+      "beschreibung": "8 rooms, 48 clues: discover what really drives your thinking, your decisions, and your behavior."
+    },
+    "hero": {
+      "label": "Escape Self-Sabotage · Level 1",
+      "titel": "Why you keep getting what you don’t want — and what you’ve *been overlooking.*",
+      "text": [
+        "Across 8 rooms, 48 clues gradually reveal what drives your thoughts, decisions, and behavior.",
+        "This isn’t a book you simply read. You become the investigator of your own life — and may begin to see things in a completely different light."
+      ],
+      "notiz": "Maybe it’s time to start asking the right questions.",
+      "button": "Explore Level 1"
+    },
+    "wiedererkennen": {
+      "label": "",
+      "titel": "Do you ever feel like you somehow keep ending up *in the same place* where you started?",
+      "text": "The situations change. The people change, too. But somehow, the outcome feels strangely familiar.",
+      "karten": [
+        {
+          "label": "Finances",
+          "text": "You work so hard that you should have more than enough left over by now. And yet it feels like you're running on a hamster wheel that just keeps spinning faster. You have to keep pushing harder just to make ends meet. And there's barely anything left for yourself."
+        },
+        {
+          "label": "Relationships",
+          "text": "Different people. Different stories. Everything seemed different this time. And yet, sooner or later, that familiar feeling creeps back in. Things start slipping out of your control again, and somewhere along the way, you realize you've lost yourself."
+        },
+        {
+          "label": "Body & Wellbeing",
+          "text": "The decision is made. And you're disciplined. This time, it's finally paying off and you're getting exactly the results you want. Until the progress suddenly stops, and your old patterns take over again, even though you really should have known better by now."
+        }
+      ],
+      "abschluss": "Why does this keep happening to you?"
+    },
+    "haus": {
+      "label": "",
+      "titel": "Come in, one level is *open.*",
+      "kopf": "Level 1",
+      "raumWort": "Room",
+      "raeume": [
+        {
+          "t": "Why does this keep happening to me?",
+          "x": "You promised yourself you’d never do it again. And yet, here you are."
+        },
+        {
+          "t": "Behavior needs context",
+          "x": "Without knowing the circumstances, almost any decision can look like the wrong one."
+        },
+        {
+          "t": "Your decisions made sense",
+          "x": "A whole new look at decisions you question today."
+        },
+        {
+          "t": "The invisible rules",
+          "x": "The hidden rules that guide you, usually without you even noticing."
+        },
+        {
+          "t": "Who planted that thought in your head?",
+          "x": "How do you know that what you’re so sure of is actually true?"
+        },
+        {
+          "t": "Which menu did you choose from?",
+          "x": "Who decides what your options are in the first place?"
+        },
+        {
+          "t": "Knowing better doesn’t automatically mean doing better",
+          "x": "There’s more between knowing and doing than you think."
+        },
+        {
+          "t": "The contradictions that give you away",
+          "x": "“But that’s not who I am.” That’s exactly where it gets interesting."
+        }
+      ],
+      "haus": {
+        "s3": "Level 3",
+        "s2": "Level 2",
+        "zu": "Locked · coming soon",
+        "s1": "Level 1",
+        "s1titel": "Why your self-sabotage makes sense",
+        "s1info": "8 rooms · 48 clues",
+        "eg": "Entrance · Elevator",
+        "s1zu": "Open · 8 rooms",
+        "skFolgt": "locked",
+        "skOffen": "open"
+      },
+      "stil": "foto",
+      "notiz": "You can go in. The elevator is waiting.",
+      "button": "Crack your patterns"
+    },
+    "ueber": {
+      "label": "",
+      "titel": "Who is Heike, *really?*",
+      "text": [
+        "That question took me down paths the little girl who was determined to become an opera singer could never even have dreamed of. More than anything, though, those paths kept leading me, with astonishing consistency, straight into devastating setbacks in the areas of my life that mattered most. So I started digging deep into human behavior, perception, external manipulation, and self-sabotage. I trained as a hypnotist, obsessively researched every possible way to improve my life, and spent more than twenty years building up a pretty extensive body of knowledge.",
+        "And yet, before long, I was right back in it, up to my neck: another toxic relationship, broke again. Once again, nothing was turning out the way I wanted.",
+        "In June 2025, I filled out an enormous questionnaire. As part of a program, my answers were supposed to be analyzed to identify my patterns of self-sabotage. But that never happened, because someone had made sure I was kicked out of the program before we got that far. So I analyzed myself. And what I discovered changed not only how I saw the life I had lived up to that point, but everything that came after."
+      ],
+      "signatur": "Heike Klewer"
+    },
+    "preis": {
+      "label": "Escape Self-Sabotage",
+      "danach": "from January 1, 2027:",
+      "punkte": [
+        "8 rooms with 48 clues to explore",
+        "Questions and exercises for self-reflection",
+        "The complete first level as an e-book"
+      ],
+      "button": "Buy now",
+      "titel": "The first level.\nNow it's *yours.*",
+      "text": [
+        "Inside, you'll find 8 rooms, 48 clues, and questions that make you look a little closer. This isn't a book that tells you who you should be. It's one that helps you understand what you've been overlooking."
+      ],
+      "bildNotiz": "Sometimes, a single question can change your entire world."
+    },
+    "rueckweg": {
+      "notiz": "Not sure yet?",
+      "titel": "Then take a look around *the first room.*",
+      "button": "Try Room 1"
+    },
+    "faq": {
+      "label": "Questions",
+      "titel": "Good to *know.*",
+      "fragen": [
+        {
+          "f": "What format is the book?",
+          "a": "[Answer format]"
+        },
+        {
+          "f": "Does the book replace therapy?",
+          "a": "[Answer: The book is meant for self-reflection and does not replace medical or psychotherapeutic treatment.]"
+        },
+        {
+          "f": "When will Levels 2 and 3 be available?",
+          "a": "[Answer sequel]"
+        },
+        {
+          "f": "[Another question]",
+          "a": "[Answer]"
+        }
+      ]
+    },
+    "sofunktionierts": {
+      "label": "",
+      "titel": "Not an ordinary book. An *escape room.*",
+      "text": "One house. Three levels. Countless rooms, and behind every door, a different perspective on what you've taken pretty much for granted until now. This isn't about finding the exit as fast as possible. It's about you asking the right questions and understanding why certain doors keep leading you back to the same place.",
+      "stationen": [
+        {
+          "titel": "The House",
+          "text": "From the outside, it looks like any other house. But once you're inside, you realize how little you actually know it."
+        },
+        {
+          "titel": "The Elevator",
+          "text": "The elevator connects the levels. But it only comes back for you once you've explored every room on your level."
+        },
+        {
+          "titel": "The Levels",
+          "text": "They take you step by step deeper into the question of why you keep ending up where you don't actually want to be."
+        },
+        {
+          "titel": "The Rooms",
+          "text": "Every room revolves around a question. To move on, you have to examine the clues inside."
+        },
+        {
+          "titel": "The Clues",
+          "text": "Small hints, apparent contradictions, and thoughts that suddenly put everything in a different light."
+        }
+      ],
+      "notiz": "The exit isn't necessarily\nwhere you'd expect it to be."
+    },
+    "haltung": {
+      "label": "",
+      "titel": "Not every decision you make\nis truly *your own.*",
+      "text": [
+        "Many of your beliefs were passed down to you long before you were even able to question them. Some rules you still follow today, without really knowing where they came from. Sometimes, you're simply choosing between options someone else has laid out for you. And ultimately, some decisions you make are shaped by the simple fact that, at the time, you can't possibly know what possibilities you're not yet aware of.",
+        "Maybe real change doesn't begin with trying to make better decisions. Maybe it begins with understanding how you came to make those decisions in the first place."
+      ]
+    },
+    "fuerwen": {
+      "titel": "Who is *Escape Self-Sabotage* for?",
+      "ja": {
+        "kopf": "This Book Is for You If…",
+        "punkte": [
+          "… you've promised yourself a hundred times you'd never go through something like that again, yet somehow you keep ending up in the same situation.",
+          "… you know exactly what you want to change, but there's a huge gap between knowing what to do and actually doing it.",
+          "… you make decisions that feel right at the time, only to look back later and wonder how you could ever have made them.",
+          "… you're starting to suspect that some of the beliefs and rules you live by aren't really your own, yet you still follow them.",
+          "… you're tired of constantly questioning yourself without ever understanding what's behind the patterns that keep repeating in your life."
+        ]
+      },
+      "nein": {
+        "kopf": "This Book Is Not for You If…",
+        "punkte": [
+          "… you're looking for a quick fix that makes your problems disappear without having to take a closer look at them.",
+          "… you'd rather have someone tell you what to do than find out why you are the way you are.",
+          "… you believe you already know yourself completely and there's nothing else you could possibly need to know.",
+          "… you're unwilling to question your own beliefs and you're convinced that the problem always lies with everyone else.",
+          "… you're only looking for answers that confirm what you already believe about yourself and your life."
+        ]
+      },
+      "button": "Buy now",
+      "schlussNotiz": "Question what you've\nalways taken for granted."
+    }
+  },
+  "gemeinsam": {
+    "sofunktionierts": {
+      "label": "How the book works",
+      "titel": "[Not an ordinary book. An] *[escape room.]*",
+      "text": "[One or two sentences explaining the idea.]",
+      "stationen": [
+        {
+          "titel": "The house",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "The elevator",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "Levels",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "Rooms",
+          "text": "[Short sentence]"
+        },
+        {
+          "titel": "Clues",
+          "text": "[Short sentence]"
+        }
+      ],
+      "notiz": "[Handwritten note]",
+      "_hinweis": "Optional sixth station: append {\"titel\": \"Finds\", \"text\": \"...\"}."
+    },
+    "haltung": {
+      "label": "[Label mindset section]",
+      "titel": "[The one big] *[insight.]*",
+      "text": "[Two or three sentences that deepen the thought.]"
+    },
+    "ueber": {
+      "label": "About me",
+      "titel": "[Short headline about] *[you.]*",
+      "text": "[Your story in three or four sentences. No photo.]",
+      "signatur": "Heike"
+    }
+  },
+  "danke": {
+    "seo": {
+      "titel": "Almost there | Identity Upgrade"
+    },
+    "label": "Almost there",
+    "titel": "Please confirm your *email address.*",
+    "text": "We've already sent you an email. Just click the link in that email to confirm your email address, and Room 1 will land right in your inbox.",
+    "angebotLabel": "While you wait",
+    "angebotTitel": "The first level\ncan be *yours* too.",
+    "angebotText": "[One or two sentences about the e-book.]"
+  },
+  "privacy": {
+    "seo": {
+      "titel": "Privacy policy | Identity Upgrade"
+    },
+    "label": "The fine print",
+    "titel": "Privacy *policy.*",
+    "stand": "Last updated November 1, 2026",
+    "kurzLabel": "In short",
+    "kurz": "We collect your name and email so we can send you Room 1 and our newsletter. No cookies, no tracking tools, and we *never sell your data.* Here are the details.",
+    "inhaltLabel": "On this page",
+    "abschnitte": [
+      {
+        "id": "wer",
+        "nav": "Who's behind this",
+        "t": "Who's *behind this.*",
+        "teile": [
+          {
+            "p": [
+              "Identity Upgrade is run by **KLEWERINN LLP**, a limited liability partnership based in Canada. Heike Klewer is the author of the books and content you find here. When this page says “we” or “us,” it means KLEWERINN LLP. When it says “you,” that's you.",
+              "You can reach us anytime at [[EMAIL]]."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "was",
+        "nav": "What we collect",
+        "t": "What we *collect.*",
+        "teile": [
+          {
+            "label": "What you give us",
+            "p": "When you sign up for Room 1, you give us:",
+            "liste": [
+              "your first and last name and your email address",
+              "your biggest struggle (finances, relationships, body & wellbeing, or more than one)",
+              "your phone number, if you choose to add it. It's optional."
+            ]
+          },
+          {
+            "label": "What gets recorded automatically",
+            "p": [
+              "This website is hosted on Cloudflare. Like any web server, it briefly processes some technical data so the page can reach you: your IP address, browser and device type, the page you requested, and the time.",
+              "We also note where you came from, for example a campaign link or the website that sent you, and save it with your sign-up. That's it. No cookies, no tracking pixels, no analytics tools on this site."
+            ]
+          },
+          {
+            "label": "What we never see",
+            "p": "If you buy the e-book, payment is handled entirely by Digistore24. Your card or bank details go straight to them. We never see them."
+          }
+        ]
+      },
+      {
+        "id": "wozu",
+        "nav": "What we do with it",
+        "t": "What we *do with it.*",
+        "teile": [
+          {
+            "liste": [
+              "Send you Room 1",
+              "Send you our newsletter on self-sabotage, pattern recognition, and Identity Upgrade products",
+              "Match our emails to your biggest struggle",
+              "Use your phone number, if you gave it, only to ask whether you'd like to be contacted by phone or text for other programs. We won't call or text you without your explicit consent.",
+              "Answer you when you write to us",
+              "Understand which campaigns bring people here"
+            ]
+          },
+          {
+            "p": "That's the whole list. We don't sell, rent, or trade your personal information."
+          }
+        ]
+      },
+      {
+        "id": "wer-noch",
+        "nav": "Who else handles it",
+        "t": "Who else *handles it.*",
+        "teile": [
+          {
+            "p": "We rely on a few companies to run this. They only get what they need to do their job.",
+            "liste": [
+              "**Cloudflare, Inc.** (USA) hosts and delivers this website",
+              "**Kit** (ConvertKit LLC, USA) stores your sign-up and sends our emails. Kit records whether an email was opened and which links were clicked.",
+              "**Digistore24 GmbH** (Germany) sells the e-book as a reseller and handles your purchase under its own privacy policy"
+            ]
+          },
+          {
+            "p": "This means your data may be processed in the United States and Canada. We may also share information if the law requires it, or if the business is ever sold or transferred, in which case this policy goes with it."
+          }
+        ]
+      },
+      {
+        "id": "email",
+        "nav": "Email, and how to stop it",
+        "t": "Email, and how to *stop it.*",
+        "teile": [
+          {
+            "p": [
+              "After you sign up, you'll get one email asking you to confirm your address. You're only added once you click that link.",
+              "Every email we send has an unsubscribe link at the bottom. It works immediately and costs you nothing. You can also just reply and ask us to take you off."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rechte",
+        "nav": "Your rights",
+        "t": "Your *rights.*",
+        "teile": [
+          {
+            "p": [
+              "You can ask us what we have about you, have it corrected or deleted, and withdraw your consent at any time. Just email [[EMAIL]]. Depending on where you live, privacy laws such as Canada's PIPEDA, the California Consumer Privacy Act, or the EU's GDPR give you these rights specifically, and you can file a complaint with your privacy regulator.",
+              "We keep your sign-up data as long as you're subscribed. Once you unsubscribe, we delete it, except for a record of your consent and unsubscribe, which we keep as proof."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kinder",
+        "nav": "About kids",
+        "t": "About *kids.*",
+        "teile": [
+          {
+            "p": "This site is for adults. It's not directed at anyone under 16, and we don't knowingly collect their information. If you think your child signed up, email us and we'll delete it."
+          }
+        ]
+      },
+      {
+        "id": "sicher",
+        "nav": "Keeping it safe",
+        "t": "Keeping it *safe.*",
+        "teile": [
+          {
+            "p": "This site only runs over an encrypted connection, and our providers use industry-standard protection. No system is perfect, and we won't pretend ours is."
+          }
+        ]
+      },
+      {
+        "id": "aenderungen",
+        "nav": "When this changes",
+        "t": "When this *changes.*",
+        "teile": [
+          {
+            "p": "If we change this policy, the date at the top changes with it. If it's a significant change, we'll let you know by email."
+          }
+        ]
+      },
+      {
+        "id": "fragen",
+        "nav": "Still have questions?",
+        "t": "Still have *questions?*",
+        "teile": [
+          {
+            "p": "Email [[EMAIL]], or write to us:",
+            "adresse": [
+              "KLEWERINN LLP",
+              "44322 Yale Rd",
+              "Unit 3B #250",
+              "Chilliwack, BC V2R 4H1",
+              "Canada"
+            ]
+          }
+        ]
+      }
+    ],
+    "schluss": "We don't sell your information. *Not now, not ever.*",
+    "schlussNotiz": "Some things really are that simple.",
+    "impressumTitel": "Legal notice",
+    "anbieterLabel": "Provider",
+    "kontaktLabel": "Contact",
+    "registerLabel": "Registration",
+    "vertretenLabel": "Represented by",
+    "datenschutzTitel": "Privacy policy"
+  },
+  "buchDanke": {
+    "seo": {
+      "titel": "Thank you | Identity Upgrade"
+    },
+    "label": "",
+    "titel": "[Thank-you headline after *purchase.*]",
+    "text": [
+      "[One or two sentences: the download link is on its way by email.]"
+    ],
+    "notiz": "[Handwritten note]"
+  },
+  "waitlist": {
+    "seo": {
+      "titel": "Waitlist | Identity Upgrade",
+      "beschreibung": "[Short waitlist description]"
+    },
+    "label": "",
+    "titel": "[Waitlist *headline.*]",
+    "text": [
+      "[One or two sentences about the waitlist.]"
+    ],
+    "optionen": [
+      {
+        "key": "book",
+        "text": "the complete book Escape Self-Sabotage",
+        "kartenTitel": "Escape Self-Sabotage",
+        "kartenText": "[One or two sentences about the complete book.]"
+      },
+      {
+        "key": "course",
+        "text": "the course",
+        "kartenTitel": "[Course]",
+        "kartenText": "[One or two sentences about the course.]"
+      }
+    ],
+    "auswahlFrage": "I'm interested in:",
+    "formTitel": "[Form *headline.*]",
+    "button": "[Button text]",
+    "fehler": "Please choose at least one option and fill in your first name, last name, and email address.",
+    "erfolg": "[Thank you, you're on the list.]",
+    "hinweis": "[Note about newsletter and unsubscribing]"
+  },
+  "impressum": {
+    "seo": {
+      "titel": "Legal notice | Identity Upgrade"
+    },
+    "label": "The fine print",
+    "titel": "Legal *notice.*",
+    "angaben": [
+      [
+        "Provider",
+        "**KLEWERINN LLP**\nBrand: Identity Upgrade™"
+      ],
+      [
+        "Legal form",
+        "Limited Liability Partnership under Canadian law (British Columbia)"
+      ],
+      [
+        "Registered office",
+        "44322 Yale Rd\nUnit 3B #250\nChilliwack, BC V2R 4H1\nCanada"
+      ],
+      [
+        "Contact",
+        "Email: [[EMAIL]]"
+      ],
+      [
+        "Registration number",
+        "LL0002596"
+      ]
+    ],
+    "abschnitte": [
+      {
+        "id": "hinweis",
+        "t": "Important *note.*",
+        "teile": [
+          {
+            "p": "The books and content of Identity Upgrade are designed for self-reflection. They are not psychotherapy and do not replace psychological, medical, or therapeutic advice, diagnosis, or treatment."
+          }
+        ]
+      },
+      {
+        "id": "haftung",
+        "t": "Liability for content and *links.*",
+        "teile": [
+          {
+            "p": [
+              "We create our content with care. Even so, we cannot guarantee that it is accurate, complete, or up to date.",
+              "Where we link to other websites, we have no control over their content; the respective provider is responsible for it. If we become aware of any legal violations, we will remove the affected content or links immediately."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "urheber",
+        "t": "Copyright and *use.*",
+        "teile": [
+          {
+            "p": [
+              "All Identity Upgrade content is protected by copyright. This includes texts, images, graphics, books, exercises, and the concept of the house with its levels, rooms, and clues.",
+              "When you buy a book or another product, you receive a personal, non-transferable license for your own use. You may not pass on, share, upload, resell, or modify it, not even in parts. You may also not feed any content into AI tools or extract it automatically.",
+              "Any commercial use requires our prior written permission. This includes using it in coaching, courses, workshops, or therapy. To ask about licensing, email us at [[EMAIL]]."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "streit",
+        "t": "Dispute *resolution.*",
+        "teile": [
+          {
+            "p": "We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board."
+          }
+        ]
+      }
+    ]
+  }
+}

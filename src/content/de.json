@@ -1,0 +1,862 @@
+{
+  "_hinweis": "Alle Texte der deutschen Seiten. *Sternchen* = kursives rotes Akzentwort. Texte in eckigen Klammern sind Platzhalter.",
+  "lang": "de",
+  "ui": {
+    "sprache": "Sprache wählen",
+    "kaufen": "Jetzt kaufen",
+    "footerRecht": "Impressum & Datenschutz",
+    "vorschau": "Vorschau – Platzhaltertexte",
+    "freebieButton": "Kostenfreier Zutritt zu Raum 1",
+    "pfeil": "→",
+    "footerImpressum": "Impressum",
+    "footerDatenschutz": "Datenschutz"
+  },
+  "laufband": [
+    "Erkennen",
+    "Hinterfragen",
+    "Verstehen",
+    "Neu entscheiden",
+    "Neue Ergebnisse"
+  ],
+  "freebie": {
+    "seo": {
+      "titel": "Raum 1 kostenfrei · Escape Self-Sabotage",
+      "beschreibung": "Warum bekommst du immer wieder das Gegenteil von dem, was du willst? Betritt Raum 1 und folge den ersten Spuren."
+    },
+    "hero": {
+      "label": "Escape Self-Sabotage · Leseprobe",
+      "titel": "Du weißt, was du willst. Warum erlebst du dann immer wieder *das Gegenteil?*",
+      "text": [
+        "Manche Entscheidungen sind im Nachhinein kaum zu verstehen. Vor allem die eigenen.",
+        "Was, wenn dahinter keine Schwäche steckt, sondern eine Logik, die du bisher noch nicht erkannt hast?"
+      ],
+      "button": "Kostenfreier Zutritt zu Raum 1",
+      "notiz": "Vielleicht ist nicht alles so unlogisch, wie es aussieht …"
+    },
+    "wiedererkennen": {
+      "label": "",
+      "titel": "Kennst du das Gefühl, irgendwie immer wieder *am selben Punkt* zu landen?",
+      "text": "Die Situationen verändern sich. Die Menschen verändern sich auch. Nur das Ergebnis kommt einem verdächtig bekannt vor.",
+      "karten": [
+        {
+          "label": "Finanzen",
+          "text": "Du leistest so viel, dass eigentlich längst mehr übrig bleiben sollte. Und trotzdem hast du das Gefühl, dein Hamsterrad dreht sich immer schneller und du musst noch mehr tun, um normal leben zu können. Für dich selbst bleibt da nicht viel übrig."
+        },
+        {
+          "label": "Beziehungen",
+          "text": "Andere Menschen, andere Geschichten, alles war anders dieses Mal. Und dennoch war da irgendwann wieder dieses vertraute Gefühl, dass dir schon wieder alles entgleitet und du selbst dich irgendwo auf dem Weg verloren hast."
+        },
+        {
+          "label": "Körper & Wohlbefinden",
+          "text": "Dein Entschluss steht fest. Und du bist diszipliniert. Diesmal bekommst du endlich die Ergebnisse, die du dir wünschst. Bis sie eben nicht mehr kommen und dein altes Muster das Ruder wieder übernimmt, obwohl du es doch eigentlich längst besser weißt."
+        }
+      ],
+      "abschluss": "Warum passiert dir das immer wieder?"
+    },
+    "selbstcheck": {
+      "label": "Selbstcheck",
+      "titel": "Erkennst du dich *wieder?*",
+      "text": "Manchmal reichen ein paar scheinbar harmlose Sätze, um festzustellen, wie vertraut ein bestimmtes Muster geworden ist.",
+      "aussagen": [
+        "Ich weiß oft ganz genau, was ich ändern möchte. Und lande trotzdem wieder beim Alten.",
+        "Manche Situationen wiederholen sich in meinem Leben, obwohl ich sie längst hinter mir lassen wollte.",
+        "Ich kann anderen Menschen gute Ratschläge geben, aber bei mir selbst funktioniert das nicht immer.",
+        "Ich habe mich schon gefragt, warum ich manchmal Entscheidungen treffe, die meinen eigenen Zielen widersprechen."
+      ],
+      "button": "Kostenfreier Zutritt zu Raum 1"
+    },
+    "anmeldung": {
+      "label": "",
+      "titel": "Die erste Tür steht dir *offen.*",
+      "text": [
+        "In Raum 1 geht es um die Frage, mit der alles beginnt: Warum passiert mir das immer wieder?",
+        "Ein erster Perspektivwechsel. Keine fertigen Antworten, keine schnellen Patentrezepte. Sondern der Beginn einer ziemlich interessanten Spurensuche."
+      ],
+      "vorname": "Vorname",
+      "nachname": "Nachname",
+      "email": "E-Mail-Adresse",
+      "button": "Kostenfreier Zutritt zu Raum 1",
+      "hinweis": "Deine Anmeldung sichert dir Zutritt zu Raum 1 und meinen Newsletter rund um Selbstsabotage, Mustererkennung und Produkte von Identity Upgrade. Du kannst dich jederzeit mit einem Klick abmelden.",
+      "fehler": "Bitte fülle Vorname, Nachname und E-Mail-Adresse aus, wähle dein größtes Problem und prüfe deine Angaben.",
+      "vorwahl": "Land",
+      "telefon": "Telefonnummer",
+      "situation": "Dein größtes Problem",
+      "situationLeer": "Bitte auswählen",
+      "situationen": [
+        [
+          "finanzen",
+          "Finanzen"
+        ],
+        [
+          "beziehungen",
+          "Beziehungen"
+        ],
+        [
+          "koerper",
+          "Körper & Wohlbefinden"
+        ],
+        [
+          "mehrere",
+          "Mehrere Bereiche"
+        ]
+      ],
+      "laender": [
+        [
+          "DE",
+          "Deutschland",
+          "+49"
+        ],
+        [
+          "AT",
+          "Österreich",
+          "+43"
+        ],
+        [
+          "CH",
+          "Schweiz",
+          "+41"
+        ],
+        [
+          "LI",
+          "Liechtenstein",
+          "+423"
+        ],
+        [
+          "LU",
+          "Luxemburg",
+          "+352"
+        ],
+        [
+          "NL",
+          "Niederlande",
+          "+31"
+        ],
+        [
+          "BE",
+          "Belgien",
+          "+32"
+        ],
+        [
+          "IT",
+          "Italien",
+          "+39"
+        ],
+        [
+          "ES",
+          "Spanien",
+          "+34"
+        ],
+        [
+          "FR",
+          "Frankreich",
+          "+33"
+        ],
+        [
+          "PL",
+          "Polen",
+          "+48"
+        ],
+        [
+          "DK",
+          "Dänemark",
+          "+45"
+        ],
+        [
+          "SE",
+          "Schweden",
+          "+46"
+        ],
+        [
+          "GB",
+          "Vereinigtes Königreich",
+          "+44"
+        ],
+        [
+          "US",
+          "USA",
+          "+1"
+        ],
+        [
+          "CA",
+          "Kanada",
+          "+1"
+        ],
+        [
+          "AU",
+          "Australien",
+          "+61"
+        ]
+      ],
+      "bildNotiz": "Du brauchst nur ein Notizbuch."
+    },
+    "sofunktionierts": {
+      "label": "",
+      "titel": "Kein normales Buch. Ein *Escape Room.*",
+      "text": "Ein Haus. Drei Stockwerke. Unzählige Räume und hinter jeder Tür wartet ein anderer Blick auf das, was dir bisher ziemlich selbstverständlich erschien. Hier geht es nicht darum, möglichst schnell einen Ausgang zu finden. Sondern die richtigen Fragen zu stellen und zu verstehen, weshalb bestimmte Türen immer wieder an denselben Ort führen.",
+      "stationen": [
+        {
+          "titel": "Das Haus",
+          "text": "Von außen wirkt es wie jedes andere Haus. Erst drinnen merkst du, wie wenig du es eigentlich kennst."
+        },
+        {
+          "titel": "Der Lift",
+          "text": "Der Lift verbindet die Stockwerke miteinander. Und erst wenn du dort alle Räume durchquert hast, wartet er wieder auf dich."
+        },
+        {
+          "titel": "Die Stockwerke",
+          "text": "Sie führen dich Schritt für Schritt tiefer in die Frage, warum du immer wieder dort landest, wo du eigentlich nicht landen willst."
+        },
+        {
+          "titel": "Die Räume",
+          "text": "In jedem Raum geht es um eine Frage. Um weiterzukommen, musst du die Spuren untersuchen, die darin liegen."
+        },
+        {
+          "titel": "Die Spuren",
+          "text": "Kleine Hinweise, scheinbare Widersprüche und Gedanken, die plötzlich alles in einem anderen Licht erscheinen lassen."
+        }
+      ],
+      "notiz": "Der Ausgang ist nicht unbedingt dort,\nwo man ihn vermutet.",
+      "button": "Den ersten Raum betreten"
+    },
+    "haltung": {
+      "label": "",
+      "titel": "Vielleicht war dein Verhalten nie so *unlogisch,* wie du dachtest.",
+      "text": "Du kannst anderen Menschen ziemlich gute Ratschläge geben, aber bei dir selbst funktioniert das irgendwie nicht? Und jetzt wird es interessant, denn all deine Entscheidungen können rückblickend nicht nur von außen, sondern vor allem für dich selbst völlig unverständlich wirken und innerhalb der eigenen Welt trotzdem einen Sinn ergeben haben. Spoiler: Erst wenn diese Zusammenhänge für dich sichtbar werden, kannst du wirklich etwas verändern. Vorher landest du mit absoluter Zuverlässigkeit immer wieder bei Null.",
+      "button": "Meinen Mustern auf die Spur kommen"
+    },
+    "ueber": {
+      "label": "",
+      "titel": "Wer ist eigentlich *Heike?*",
+      "text": [
+        "Diese Frage führte mich auf Wege, von denen das kleine Mädchen, das unbedingt einmal Opernsängerin werden wollte, nicht einmal geträumt hätte. Vor allem jedoch führten diese Wege mich mit erstaunlich zuverlässiger Regelmäßigkeit immer wieder zu massiven Tiefschlägen in wirklich relevanten Bereichen meines Lebens. Also begann ich, mich intensiv mit menschlichem Verhalten, Wahrnehmung, externer Manipulation und Selbstsabotage zu befassen. Ich ließ mich zur Hypnotiseurin ausbilden, recherchierte wie besessen nach allen Möglichkeiten, mein Leben zu verbessern, und eignete mir so über mehr als zwanzig Jahre ein ziemlich umfangreiches Wissen an.",
+        "Und trotzdem steckte ich nach kurzer Zeit schon wieder bis zum Hals fest: schon wieder in einer toxischen Beziehung, schon wieder pleite, schon wieder alles anders, als ich es wollte.",
+        "Im Juni 2025 füllte ich einen riesigen Fragebogen aus. Im Rahmen eines Programms sollten meine Antworten auf meine Selbstsabotage-Muster analysiert werden. Doch dazu kam es nicht mehr, da jemand dafür gesorgt hatte, dass ich vorzeitig aus dem Programm flog. Also analysierte ich mich selbst. Und was ich dabei entdeckte, veränderte nicht nur meinen Blick auf mein bisheriges Leben, sondern alles, was danach kam."
+      ],
+      "signatur": "Heike Klewer"
+    }
+  },
+  "buch": {
+    "seo": {
+      "titel": "Stockwerk 1 · Escape Self-Sabotage",
+      "beschreibung": "8 Räume, 48 Spuren: Finde heraus, was dein Denken, deine Entscheidungen und dein Verhalten wirklich steuert."
+    },
+    "hero": {
+      "label": "Escape Self-Sabotage · Stockwerk 1",
+      "titel": "Warum du bekommst, was du nicht willst – und was du *bisher übersehen hast.*",
+      "text": [
+        "Dich erwarten 8 Räume und 48 Spuren, die Schritt für Schritt sichtbar machen, was dein Denken, deine Entscheidungen und dein Verhalten steuert.",
+        "In diesem Buch liest du nicht nur, sondern ermittelst in deinem eigenen Leben – und wirst manches vielleicht zum ersten Mal mit anderen Augen sehen."
+      ],
+      "notiz": "Vielleicht ist es Zeit, die richtigen Fragen zu stellen.",
+      "button": "Stockwerk 1 entdecken"
+    },
+    "wiedererkennen": {
+      "label": "",
+      "titel": "Kennst du das Gefühl, irgendwie immer wieder *am selben Punkt* zu landen?",
+      "text": "Die Situationen verändern sich. Die Menschen verändern sich auch. Nur das Ergebnis kommt einem verdächtig bekannt vor.",
+      "karten": [
+        {
+          "label": "Finanzen",
+          "text": "Du leistest so viel, dass eigentlich längst mehr übrig bleiben sollte. Und trotzdem hast du das Gefühl, dein Hamsterrad dreht sich immer schneller und du musst noch mehr tun, um normal leben zu können. Für dich selbst bleibt da nicht viel übrig."
+        },
+        {
+          "label": "Beziehungen",
+          "text": "Andere Menschen, andere Geschichten, alles war anders dieses Mal. Und dennoch war da irgendwann wieder dieses vertraute Gefühl, dass dir schon wieder alles entgleitet und du selbst dich irgendwo auf dem Weg verloren hast."
+        },
+        {
+          "label": "Körper & Wohlbefinden",
+          "text": "Dein Entschluss steht fest. Und du bist diszipliniert. Diesmal bekommst du endlich die Ergebnisse, die du dir wünschst. Bis sie eben nicht mehr kommen und dein altes Muster das Ruder wieder übernimmt, obwohl du es doch eigentlich längst besser weißt."
+        }
+      ],
+      "abschluss": "Warum passiert dir das immer wieder?"
+    },
+    "haus": {
+      "label": "",
+      "titel": "Komm rein, ein Stockwerk ist *geöffnet.*",
+      "kopf": "Stockwerk 1",
+      "raumWort": "Raum",
+      "raeume": [
+        {
+          "t": "Warum passiert mir das immer wieder?",
+          "x": "Du hattest dir geschworen: nie wieder. Und dann stehst du doch wieder da."
+        },
+        {
+          "t": "Verhalten braucht Kontext",
+          "x": "Ohne die Umstände zu kennen, sieht fast jede Entscheidung falsch aus."
+        },
+        {
+          "t": "Deine Entscheidungen haben Sinn ergeben",
+          "x": "Ein völlig neuer Blick auf Entscheidungen, die du heute infrage stellst."
+        },
+        {
+          "t": "Die unsichtbaren Regeln",
+          "x": "Welche inneren Regeln dich lenken – meistens, ohne dass du es merkst."
+        },
+        {
+          "t": "Wer hat dir diesen Gedanken eingepflanzt?",
+          "x": "Woher weißt du, was du so sicher weißt?"
+        },
+        {
+          "t": "Aus welchem Menü hast du gewählt?",
+          "x": "Wer bestimmt überhaupt, was zur Auswahl steht?"
+        },
+        {
+          "t": "Es besser zu wissen bedeutet nicht gleichzeitig, es besser zu machen",
+          "x": "Zwischen Wissen und Handeln liegt mehr, als du denkst."
+        },
+        {
+          "t": "Die Widersprüche, die dich verraten",
+          "x": "„Eigentlich bin ich doch ganz anders.“ Genau da wird es interessant."
+        }
+      ],
+      "haus": {
+        "s3": "Stockwerk 3",
+        "s2": "Stockwerk 2",
+        "zu": "Verschlossen · folgt",
+        "s1": "Stockwerk 1",
+        "s1titel": "Warum deine Selbstsabotage Sinn ergibt",
+        "s1info": "8 Räume · 48 Spuren",
+        "eg": "Eingang · Lift",
+        "s1zu": "Geöffnet · 8 Räume",
+        "skFolgt": "verschlossen",
+        "skOffen": "geöffnet"
+      },
+      "stil": "foto",
+      "notiz": "Du kannst reingehen. Der Lift wartet.",
+      "button": "Deinen Mustern auf die Spur kommen"
+    },
+    "ueber": {
+      "label": "",
+      "titel": "Wer ist eigentlich *Heike?*",
+      "text": [
+        "Diese Frage führte mich auf Wege, von denen das kleine Mädchen, das unbedingt einmal Opernsängerin werden wollte, nicht einmal geträumt hätte. Vor allem jedoch führten diese Wege mich mit erstaunlich zuverlässiger Regelmäßigkeit immer wieder zu massiven Tiefschlägen in wirklich relevanten Bereichen meines Lebens. Also begann ich, mich intensiv mit menschlichem Verhalten, Wahrnehmung, externer Manipulation und Selbstsabotage zu befassen. Ich ließ mich zur Hypnotiseurin ausbilden, recherchierte wie besessen nach allen Möglichkeiten, mein Leben zu verbessern, und eignete mir so über mehr als zwanzig Jahre ein ziemlich umfangreiches Wissen an.",
+        "Und trotzdem steckte ich nach kurzer Zeit schon wieder bis zum Hals fest: schon wieder in einer toxischen Beziehung, schon wieder pleite, schon wieder alles anders, als ich es wollte.",
+        "Im Juni 2025 füllte ich einen riesigen Fragebogen aus. Im Rahmen eines Programms sollten meine Antworten auf meine Selbstsabotage-Muster analysiert werden. Doch dazu kam es nicht mehr, da jemand dafür gesorgt hatte, dass ich vorzeitig aus dem Programm flog. Also analysierte ich mich selbst. Und was ich dabei entdeckte, veränderte nicht nur meinen Blick auf mein bisheriges Leben, sondern alles, was danach kam."
+      ],
+      "signatur": "Heike Klewer"
+    },
+    "preis": {
+      "label": "Escape Self-Sabotage",
+      "danach": "ab 1. Januar 2027:",
+      "punkte": [
+        "8 Räume mit 48 Spuren zum Entdecken",
+        "Fragen und Übungen zur Selbstreflexion",
+        "Das komplette erste Stockwerk als E-Book"
+      ],
+      "button": "Jetzt kaufen",
+      "titel": "Das erste Stockwerk.\nJetzt gehört es *dir.*",
+      "text": [
+        "Hier erwarten dich 8 Räume, 48 Spuren und Fragen, die dich genauer hinsehen lassen. Kein Buch, das dir sagt, wie du sein sollst. Sondern eines, das dir hilft zu verstehen, was du bisher übersehen hast."
+      ],
+      "bildNotiz": "Manchmal verändert eine einzige Frage deine ganze Welt."
+    },
+    "rueckweg": {
+      "notiz": "Noch nicht sicher?",
+      "titel": "Dann schau dich vorab im *ersten Raum* um.",
+      "button": "Raum 1 testen"
+    },
+    "faq": {
+      "label": "Häufige Fragen",
+      "titel": "Gut zu *wissen.*",
+      "fragen": [
+        {
+          "f": "In welchem Format erhalte ich das Buch?",
+          "a": "[Antwort Format]"
+        },
+        {
+          "f": "Ersetzt das Buch eine Therapie?",
+          "a": "[Antwort: Das Buch dient der Selbstreflexion und ersetzt keine ärztliche oder psychotherapeutische Behandlung.]"
+        },
+        {
+          "f": "Wann kommen Stockwerk 2 und 3?",
+          "a": "[Antwort Fortsetzung]"
+        },
+        {
+          "f": "[Weitere Frage]",
+          "a": "[Antwort]"
+        }
+      ]
+    },
+    "sofunktionierts": {
+      "label": "",
+      "titel": "Kein normales Buch. Ein *Escape Room.*",
+      "text": "Ein Haus. Drei Stockwerke. Unzählige Räume und hinter jeder Tür wartet ein anderer Blick auf das, was dir bisher ziemlich selbstverständlich erschien. Hier geht es nicht darum, möglichst schnell einen Ausgang zu finden. Sondern die richtigen Fragen zu stellen und zu verstehen, weshalb bestimmte Türen immer wieder an denselben Ort führen.",
+      "stationen": [
+        {
+          "titel": "Das Haus",
+          "text": "Von außen wirkt es wie jedes andere Haus. Erst drinnen merkst du, wie wenig du es eigentlich kennst."
+        },
+        {
+          "titel": "Der Lift",
+          "text": "Der Lift verbindet die Stockwerke miteinander. Und erst wenn du dort alle Räume durchquert hast, wartet er wieder auf dich."
+        },
+        {
+          "titel": "Die Stockwerke",
+          "text": "Sie führen dich Schritt für Schritt tiefer in die Frage, warum du immer wieder dort landest, wo du eigentlich nicht landen willst."
+        },
+        {
+          "titel": "Die Räume",
+          "text": "In jedem Raum geht es um eine Frage. Um weiterzukommen, musst du die Spuren untersuchen, die darin liegen."
+        },
+        {
+          "titel": "Die Spuren",
+          "text": "Kleine Hinweise, scheinbare Widersprüche und Gedanken, die plötzlich alles in einem anderen Licht erscheinen lassen."
+        }
+      ],
+      "notiz": "Der Ausgang ist nicht unbedingt dort,\nwo man ihn vermutet."
+    },
+    "haltung": {
+      "label": "",
+      "titel": "Nicht jede Entscheidung, die du triffst, ist wirklich *deine eigene.*",
+      "text": [
+        "Viele deiner Überzeugungen hast du übernommen, lange bevor du sie überhaupt hinterfragen konntest. Manche Regeln befolgst du noch heute, ohne zu wissen, woher sie eigentlich stammen. Dann entscheidest du manchmal nur zwischen Möglichkeiten, die andere für dich vorgegeben haben. Und schlussendlich triffst du manche Entscheidungen nur deshalb, weil du zum Zeitpunkt deiner Entscheidung gar nicht wissen kannst, welche Möglichkeiten du noch nicht kennst.",
+        "Vielleicht beginnt eine echte Veränderung nicht damit, bessere Entscheidungen treffen zu wollen. Sondern damit, zu erkennen, wie deine bisherigen Entscheidungen überhaupt entstanden sind."
+      ]
+    },
+    "fuerwen": {
+      "titel": "Für wen ist *Escape Self-Sabotage?*",
+      "ja": {
+        "kopf": "Dieses Buch ist für dich, wenn …",
+        "punkte": [
+          "… du dir schon hundertmal geschworen hast, etwas nie wieder zu erleben, und trotzdem immer wieder genau dort landest.",
+          "… du genau weißt, was du verändern möchtest, aber zwischen diesem Wissen und deinem tatsächlichen Handeln eine riesige Lücke ist.",
+          "… du Entscheidungen triffst, die sich im Moment richtig anfühlen, und dich später verwundert fragst, wie du jemals so entscheiden konntest.",
+          "… du langsam ahnst, dass manche deiner Überzeugungen und Regeln gar nicht deine eigenen sind, du aber trotzdem nach ihnen lebst.",
+          "… du keine Lust mehr hast, dich ständig selbst zu hinterfragen, ohne jemals zu verstehen, was hinter deinen wiederkehrenden Mustern steckt."
+        ]
+      },
+      "nein": {
+        "kopf": "Dieses Buch ist nicht für dich, wenn …",
+        "punkte": [
+          "… du eine schnelle Lösung suchst, die deine Probleme verschwinden lässt, ohne dass du dich näher mit ihnen beschäftigen musst.",
+          "… du lieber jemanden hast, der dir sagt, was du tun sollst, statt herauszufinden, warum du so bist, wie du bist.",
+          "… du glaubst, dass du dich selbst bereits vollständig kennst und es nichts mehr gibt, was du darüber hinaus noch wissen müsstest.",
+          "… du nicht bereit bist, deine Überzeugungen infrage zu stellen und sicher bist, dass das Problem immer bei den anderen liegt.",
+          "… du ausschließlich nach Antworten suchst, die bestätigen, was du ohnehin schon über dich und dein Leben glaubst."
+        ]
+      },
+      "button": "Jetzt kaufen",
+      "schlussNotiz": "Hinterfrage, was du bisher für\nselbstverständlich gehalten hast."
+    }
+  },
+  "gemeinsam": {
+    "sofunktionierts": {
+      "label": "So funktioniert das Buch",
+      "titel": "[Kein normales Buch. Ein] *[Escape Room.]*",
+      "text": "[Ein bis zwei Sätze, die das Prinzip erklären.]",
+      "stationen": [
+        {
+          "titel": "Das Haus",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Der Lift",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Stockwerke",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Räume",
+          "text": "[Kurzer Satz]"
+        },
+        {
+          "titel": "Spuren",
+          "text": "[Kurzer Satz]"
+        }
+      ],
+      "notiz": "[Handschrift-Notiz]",
+      "_hinweis": "Optional sechste Station: {\"titel\": \"Fundstücke\", \"text\": \"...\"} anhängen."
+    },
+    "haltung": {
+      "label": "[Label Haltungs-Abschnitt]",
+      "titel": "[Die eine große] *[Erkenntnis.]*",
+      "text": "[Zwei bis drei Sätze, die den Gedanken vertiefen.]"
+    },
+    "ueber": {
+      "label": "Über mich",
+      "titel": "[Kurze Überschrift zu] *[dir.]*",
+      "text": "[Deine Geschichte in drei bis vier Sätzen. Ohne Foto.]",
+      "signatur": "Heike"
+    }
+  },
+  "danke": {
+    "seo": {
+      "titel": "Fast geschafft | Identity Upgrade"
+    },
+    "label": "Fast geschafft",
+    "titel": "Bitte bestätige deine *E-Mail-Adresse.*",
+    "text": "Wir haben dir schon eine E-Mail geschickt. Klicke einfach auf den Link in der Mail und bestätige deine E-Mail-Adresse. Danach kommt Raum 1 direkt in dein Postfach.",
+    "angebotLabel": "Während du wartest",
+    "angebotTitel": "Das erste Stockwerk\nkann auch *dir* gehören.",
+    "angebotText": "[Ein bis zwei Sätze zum E-Book.]"
+  },
+  "privacy": {
+    "seo": {
+      "titel": "Datenschutzerklärung | Identity Upgrade"
+    },
+    "label": "Das Kleingedruckte",
+    "titel": "Daten*schutz.*",
+    "stand": "Stand: 1. November 2026",
+    "kurzLabel": "Kurz gesagt",
+    "kurz": "Wir erheben deinen Namen, deine E-Mail-Adresse und dein größtes Problem, um dir Raum 1 und unseren Newsletter zu schicken. Keine Cookies, keine Tracking-Tools auf der Website, und wir *verkaufen deine Daten niemals.* Hier sind die Details.",
+    "inhaltLabel": "Auf dieser Seite",
+    "abschnitte": [
+      {
+        "id": "wer",
+        "nav": "Wer dahintersteht",
+        "t": "Wer *dahintersteht.*",
+        "teile": [
+          {
+            "p": [
+              "Verantwortlich für diese Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die **KLEWERINN LLP**, eine Partnerschaft mit beschränkter Haftung mit Sitz in Kanada. Heike Klewer ist die Autorin der Bücher und Inhalte auf dieser Seite. Wenn hier „wir“ oder „uns“ steht, ist die KLEWERINN LLP gemeint.",
+              "Du erreichst uns jederzeit unter [[EMAIL]]. Die vollständige Anschrift findest du ganz unten und im Impressum. Einen Datenschutzbeauftragten haben wir nicht benannt, weil wir dazu nicht verpflichtet sind."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "website",
+        "nav": "Website und Server-Logs",
+        "t": "Website und *Server-Logs.*",
+        "teile": [
+          {
+            "p": [
+              "Diese Website liegt bei **Cloudflare, Inc.** (USA), die sie über ein weltweites Netz ausliefert. Bei jedem Aufruf verarbeitet Cloudflare kurzzeitig technische Daten, damit die Seite bei dir ankommt und vor Angriffen geschützt ist: deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite, Browser- und Gerätetyp sowie die zuvor besuchte Seite.",
+              "Diese Daten führen wir nicht mit anderen Daten zusammen und werten sie nicht persönlich aus. Cloudflare arbeitet für uns als Auftragsverarbeiter.",
+              "Rechtsgrundlage: unser berechtigtes Interesse an einer funktionierenden und sicheren Website (Art. 6 Abs. 1 lit. f DSGVO)."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cookies",
+        "nav": "Cookies und Statistik",
+        "t": "Cookies und *Statistik.*",
+        "teile": [
+          {
+            "p": [
+              "Diese Website setzt keine Cookies, speichert nichts in deinem Browser und verwendet keine Analyse- oder Tracking-Tools. Deshalb gibt es auch kein Cookie-Banner.",
+              "Wenn du die Startseite aufrufst, leiten wir dich anhand der Spracheinstellung deines Browsers auf die deutsche oder englische Seite. Dabei wird nichts gespeichert."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "newsletter",
+        "nav": "Raum 1 und Newsletter",
+        "t": "Raum 1 und *Newsletter.*",
+        "teile": [
+          {
+            "p": "Wenn du dich für Raum 1 anmeldest, erheben wir:",
+            "liste": [
+              "Vor- und Nachname und E-Mail-Adresse (Pflichtangaben)",
+              "dein größtes Problem (Finanzen, Beziehungen, Körper & Wohlbefinden oder mehrere Bereiche, Pflichtangabe)",
+              "deine Telefonnummer (freiwillig)",
+              "woher du kommst, zum Beispiel über einen Kampagnen-Link oder eine verweisende Website"
+            ]
+          },
+          {
+            "p": "Damit schicken wir dir Raum 1 und unseren Newsletter rund um Selbstsabotage, Mustererkennung und Produkte von Identity Upgrade. Dein größtes Problem nutzen wir, um unsere E-Mails darauf abzustimmen. Deine Telefonnummer nutzen wir nur, um dich zu fragen, ob du im Rahmen anderer Programme telefonisch oder per SMS kontaktiert werden möchtest. Ohne deine ausdrückliche Zustimmung rufen wir nicht an und schreiben keine SMS."
+          },
+          {
+            "label": "Double-Opt-in und Nachweis",
+            "p": "Nach der Anmeldung bekommst du eine E-Mail, in der du deine Adresse bestätigst. Erst danach wirst du eingetragen. Zeitpunkt der Anmeldung und der Bestätigung sowie deine IP-Adresse speichern wir als Nachweis deiner Einwilligung."
+          },
+          {
+            "label": "Versand mit Kit",
+            "p": "Den Newsletter verschicken wir mit **Kit** (ConvertKit LLC, USA). Kit speichert deine Angaben in unserem Auftrag."
+          },
+          {
+            "label": "Erfolgsmessung",
+            "p": "Unsere E-Mails enthalten Zählpixel und Links, mit denen Kit erfasst, ob eine E-Mail geöffnet und welche Links angeklickt wurden. So sehen wir, welche Inhalte dich interessieren."
+          },
+          {
+            "label": "Abmeldung",
+            "p": "Jede E-Mail enthält einen Link zum Abmelden. Er wirkt sofort. Du kannst uns auch einfach antworten. Mit der Abmeldung widerrufst du deine Einwilligung für die Zukunft, auch für die Erfolgsmessung."
+          },
+          {
+            "p": "Rechtsgrundlage: deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Für die Herkunft der Anmeldung und den Nachweis der Einwilligung: unser berechtigtes Interesse, unsere Werbung auszuwerten und die Einwilligung belegen zu können (Art. 6 Abs. 1 lit. f DSGVO)."
+          }
+        ]
+      },
+      {
+        "id": "kauf",
+        "nav": "Kauf des E-Books",
+        "t": "Kauf des *E-Books.*",
+        "teile": [
+          {
+            "p": [
+              "Das E-Book verkauft die **Digistore24 GmbH** (Deutschland) als Wiederverkäufer. Digistore24 ist dein Vertragspartner, wickelt die Zahlung ab und verarbeitet deine Daten in eigener Verantwortung nach seiner eigenen Datenschutzerklärung. Deine Zahlungsdaten sehen wir nie.",
+              "Digistore24 übermittelt uns deinen Namen, deine E-Mail-Adresse und die Bestelldaten, soweit wir sie brauchen, um dir das E-Book bereitzustellen und bei Fragen zu helfen.",
+              "Rechtsgrundlage: Durchführung des Kaufs (Art. 6 Abs. 1 lit. b DSGVO) und gesetzliche Aufbewahrungspflichten (Art. 6 Abs. 1 lit. c DSGVO)."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kontakt",
+        "nav": "Kontakt per E-Mail",
+        "t": "Kontakt per *E-Mail.*",
+        "teile": [
+          {
+            "p": [
+              "Wenn du uns schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten.",
+              "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, wenn es um einen Kauf oder ein Angebot geht, sonst unser berechtigtes Interesse, Anfragen zu beantworten (Art. 6 Abs. 1 lit. f DSGVO)."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "empfaenger",
+        "nav": "Empfänger und Drittländer",
+        "t": "Empfänger und *Drittländer.*",
+        "teile": [
+          {
+            "p": "Deine Daten geben wir nur an diese Dienstleister weiter, und nur soweit sie sie für ihre Aufgabe brauchen:",
+            "tabelle": {
+              "kopf": [
+                "Empfänger",
+                "Zweck",
+                "Ort / Grundlage"
+              ],
+              "zeilen": [
+                [
+                  "Cloudflare, Inc.",
+                  "Hosting und Auslieferung der Website",
+                  "USA · Data Privacy Framework"
+                ],
+                [
+                  "ConvertKit LLC (Kit)",
+                  "Anmeldung und E-Mail-Versand",
+                  "USA · Data Privacy Framework bzw. Standardvertragsklauseln"
+                ],
+                [
+                  "Digistore24 GmbH",
+                  "Verkauf des E-Books (eigene Verantwortung)",
+                  "Deutschland"
+                ]
+              ]
+            }
+          },
+          {
+            "p": [
+              "Wir selbst sitzen in Kanada. Für Kanada hat die EU-Kommission ein angemessenes Datenschutzniveau festgestellt (Angemessenheitsbeschluss). Für Übermittlungen in die USA stützen wir uns auf das EU-US Data Privacy Framework, soweit der Anbieter zertifiziert ist, und sonst auf die Standardvertragsklauseln der EU-Kommission.",
+              "Wir verkaufen, vermieten oder tauschen deine Daten nicht. Weitergeben würden wir sie nur, wenn ein Gesetz uns dazu verpflichtet."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dauer",
+        "nav": "Wie lange wir speichern",
+        "t": "Wie lange wir *speichern.*",
+        "teile": [
+          {
+            "liste": [
+              "**Server-Logs bei Cloudflare:** nur kurzzeitig, in der Regel wenige Tage",
+              "**Newsletter-Daten:** solange du angemeldet bist; nach der Abmeldung löschen wir sie",
+              "**Nachweis von Einwilligung und Abmeldung:** solange wir ihn zu unserer rechtlichen Absicherung brauchen, in der Regel bis zu drei Jahre nach der Abmeldung",
+              "**E-Mail-Anfragen:** bis die Anfrage erledigt ist, längstens zwölf Monate, sofern keine Aufbewahrungspflicht besteht",
+              "**Kaufdaten:** so lange, wie es gesetzliche Aufbewahrungspflichten verlangen"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rechte",
+        "nav": "Deine Rechte",
+        "t": "Deine *Rechte.*",
+        "teile": [
+          {
+            "p": "Du hast jederzeit das Recht,",
+            "liste": [
+              "Auskunft über deine gespeicherten Daten zu bekommen (Art. 15 DSGVO)",
+              "falsche Daten berichtigen zu lassen (Art. 16 DSGVO)",
+              "deine Daten löschen zu lassen (Art. 17 DSGVO)",
+              "die Verarbeitung einschränken zu lassen (Art. 18 DSGVO)",
+              "deine Daten in einem gängigen Format zu erhalten (Art. 20 DSGVO)",
+              "eine erteilte Einwilligung mit Wirkung für die Zukunft zu widerrufen (Art. 7 Abs. 3 DSGVO)"
+            ]
+          },
+          {
+            "p": "Schreib dafür einfach an [[EMAIL]]. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, insbesondere in dem Land, in dem du lebst oder arbeitest (Art. 77 DSGVO)."
+          }
+        ]
+      },
+      {
+        "id": "widerspruch",
+        "nav": "Widerspruchsrecht",
+        "t": "Dein *Widerspruchsrecht.*",
+        "box": true,
+        "teile": [
+          {
+            "p": [
+              "**Verarbeiten wir deine Daten auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO), kannst du dem jederzeit aus Gründen widersprechen, die sich aus deiner besonderen Situation ergeben (Art. 21 Abs. 1 DSGVO).**",
+              "**Verarbeiten wir deine Daten für Direktwerbung, kannst du dem jederzeit ohne Angabe von Gründen widersprechen (Art. 21 Abs. 2 DSGVO). Dann verwenden wir deine Daten nicht mehr für diesen Zweck.**",
+              "Ein formloser Widerspruch an [[EMAIL]] oder der Abmeldelink in unseren E-Mails genügt."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hinweise",
+        "nav": "Weitere Hinweise",
+        "t": "Weitere *Hinweise.*",
+        "teile": [
+          {
+            "p": [
+              "**Pflicht zur Angabe:** Du bist weder gesetzlich noch vertraglich verpflichtet, uns Daten zu geben. Ohne Vorname, Nachname, E-Mail-Adresse und dein größtes Problem können wir dir Raum 1 und den Newsletter aber nicht schicken. Die Telefonnummer ist freiwillig.",
+              "**Mindestalter:** Unsere Angebote richten sich an Erwachsene, nicht an Personen unter 16 Jahren. Wenn du glaubst, dass sich dein Kind angemeldet hat, schreib uns, und wir löschen die Daten.",
+              "**Datensicherheit:** Diese Website läuft ausschließlich über eine verschlüsselte Verbindung (TLS), und unsere Dienstleister schützen deine Daten nach gängigen Sicherheitsstandards. Kein System ist perfekt, und wir behaupten auch nicht, dass unseres es ist.",
+              "**Automatisierte Entscheidungen:** Wir treffen keine automatisierten Entscheidungen im Sinne von Art. 22 DSGVO.",
+              "**Änderungen:** Ändern sich unsere Angebote oder die Rechtslage, passen wir diese Erklärung an. Es gilt die jeweils hier veröffentlichte Fassung; das Datum oben zeigt den Stand."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fragen",
+        "nav": "Noch Fragen?",
+        "t": "Noch *Fragen?*",
+        "teile": [
+          {
+            "p": "Schreib an [[EMAIL]] oder per Post an:",
+            "adresse": [
+              "KLEWERINN LLP",
+              "44322 Yale Rd",
+              "Unit 3B #250",
+              "Chilliwack, BC V2R 4H1",
+              "Canada"
+            ]
+          }
+        ]
+      }
+    ],
+    "schluss": "Wir verkaufen deine Daten nicht. *Weder jetzt noch irgendwann.*",
+    "schlussNotiz": "Manche Dinge sind wirklich so einfach.",
+    "impressumTitel": "Impressum",
+    "anbieterLabel": "Anbieter",
+    "kontaktLabel": "Kontakt",
+    "registerLabel": "Register",
+    "vertretenLabel": "Vertreten durch",
+    "datenschutzTitel": "Datenschutzerklärung"
+  },
+  "impressum": {
+    "seo": {
+      "titel": "Impressum | Identity Upgrade"
+    },
+    "label": "Das Kleingedruckte",
+    "titel": "Impres*sum.*",
+    "angaben": [
+      [
+        "Anbieter",
+        "**KLEWERINN LLP**\nMarke: Identity Upgrade™"
+      ],
+      [
+        "Rechtsform",
+        "Limited Liability Partnership (Partnerschaft mit beschränkter Haftung nach kanadischem Recht, British Columbia)"
+      ],
+      [
+        "Sitz",
+        "44322 Yale Rd\nUnit 3B #250\nChilliwack, BC V2R 4H1\nCanada"
+      ],
+      [
+        "Kontakt",
+        "E-Mail: [[EMAIL]]"
+      ],
+      [
+        "Registernummer",
+        "LL0002596"
+      ]
+    ],
+    "abschnitte": [
+      {
+        "id": "hinweis",
+        "t": "Wichtiger *Hinweis.*",
+        "teile": [
+          {
+            "p": "Die Bücher und Inhalte von Identity Upgrade dienen der Selbstreflexion. Sie sind keine Psychotherapie und ersetzen keine psychologische, medizinische oder therapeutische Beratung, Diagnose oder Behandlung."
+          }
+        ]
+      },
+      {
+        "id": "haftung",
+        "t": "Haftung für Inhalte und *Links.*",
+        "teile": [
+          {
+            "p": [
+              "Wir erstellen unsere Inhalte mit Sorgfalt. Für ihre Richtigkeit, Vollständigkeit und Aktualität können wir trotzdem keine Gewähr übernehmen.",
+              "Wo wir auf Websites anderer Anbieter verlinken, haben wir auf deren Inhalte keinen Einfluss; verantwortlich ist der jeweilige Anbieter. Erfahren wir von Rechtsverletzungen, entfernen wir die betroffenen Inhalte oder Links umgehend."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "urheber",
+        "t": "Urheberrecht und *Nutzung.*",
+        "teile": [
+          {
+            "p": [
+              "Alle Inhalte von Identity Upgrade sind urheberrechtlich geschützt. Dazu gehören Texte, Bilder, Grafiken, Bücher, Übungen und das Konzept des Hauses mit seinen Stockwerken, Räumen und Spuren.",
+              "Wer ein Buch oder ein anderes Produkt kauft, erhält eine persönliche, nicht übertragbare Lizenz zur eigenen Nutzung. Weitergeben, Teilen, Hochladen, Weiterverkaufen und Bearbeiten sind nicht erlaubt, auch nicht in Auszügen. Ebenso nicht erlaubt ist es, Inhalte in KI-Anwendungen einzuspeisen oder automatisch auszulesen.",
+              "Für eine gewerbliche Nutzung brauchst du unsere vorherige schriftliche Zustimmung. Das gilt auch für den Einsatz in Coachings, Kursen, Workshops oder Therapien. Schreib uns dazu an [[EMAIL]]."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "streit",
+        "t": "*Streitbeilegung.*",
+        "teile": [
+          {
+            "p": "Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+          }
+        ]
+      }
+    ]
+  },
+  "buchDanke": {
+    "seo": {
+      "titel": "Danke | Identity Upgrade"
+    },
+    "label": "",
+    "titel": "[Danke-Überschrift nach dem *Kauf.*]",
+    "text": [
+      "[Ein bis zwei Sätze: Der Download kommt per E-Mail.]"
+    ],
+    "notiz": "[Handschriftliche Notiz]"
+  },
+  "waitlist": {
+    "seo": {
+      "titel": "Warteliste | Identity Upgrade",
+      "beschreibung": "[Kurzbeschreibung Warteliste]"
+    },
+    "label": "",
+    "titel": "[Überschrift *Warteliste.*]",
+    "text": [
+      "[Ein bis zwei Sätze zur Warteliste.]"
+    ],
+    "optionen": [
+      {
+        "key": "book",
+        "text": "das ganze Buch Escape Self-Sabotage",
+        "kartenTitel": "Escape Self-Sabotage",
+        "kartenText": "[Ein bis zwei Sätze zum ganzen Buch.]"
+      },
+      {
+        "key": "course",
+        "text": "den Kurs",
+        "kartenTitel": "[Kurs]",
+        "kartenText": "[Ein bis zwei Sätze zum Kurs.]"
+      }
+    ],
+    "auswahlFrage": "Ich interessiere mich für:",
+    "formTitel": "[Überschrift *Formular.*]",
+    "button": "[Button-Text]",
+    "fehler": "Bitte wähle mindestens eine Option und fülle Vorname, Nachname und E-Mail-Adresse aus.",
+    "erfolg": "[Danke, du stehst auf der Liste.]",
+    "hinweis": "[Hinweis zu Newsletter und Abmeldung]"
+  }
+}

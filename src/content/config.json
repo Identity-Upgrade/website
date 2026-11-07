@@ -1,0 +1,39 @@
+{
+  "_hinweis": "Zentrale Einstellungen. Alles in eckigen Klammern ist ein Platzhalter und wird vor dem Start ersetzt.",
+  "domain": "https://identity-upgrade.com",
+  "preise": {
+    "de": {
+      "einfuehrung": "12,99 €",
+      "regulaer": "15,99 €"
+    },
+    "en": {
+      "einfuehrung": "$13.99",
+      "regulaer": "$17.99"
+    },
+    "einfuehrungBis": "2026-12-31",
+    "regulaerAb": "2027-01-01"
+  },
+  "kit": {
+    "_hinweis": "Formular-ID aus Kit eintragen. Solange hier ein Platzhalter steht, laeuft das Formular im Vorschaumodus und leitet nur zur Danke-Seite weiter.",
+    "formIdDe": "10126010",
+    "formIdEn": "10126067",
+    "waitlistFormId": "[KIT-FORM-ID-WAITLIST]",
+    "waitlistTags": {
+      "_hinweis": "Tag-IDs aus Kit eintragen (Buch / Kurs).",
+      "book": "[KIT-TAG-ID-BUCH]",
+      "course": "[KIT-TAG-ID-KURS]"
+    }
+  },
+  "digistore": {
+    "_hinweis": "Bestell-Links aus Digistore24 eintragen.",
+    "kaufLinkDe": "[DIGISTORE-LINK-DE]",
+    "kaufLinkEn": "[DIGISTORE-LINK-EN]"
+  },
+  "anbieter": {
+    "name": "KLEWERINN LLP",
+    "adresse": "44322 Yale Rd, Unit 3B #250, Chilliwack, BC V2R 4H1, Canada",
+    "register": "LL0002596",
+    "vertreten": "[VERTRETUNGSBERECHTIGTE PERSON]",
+    "email": "hello@identity-upgrade.com"
+  }
+}
