@@ -930,3 +930,10 @@ body:has(.voll-main) { min-height: 100vh; min-height: 100svh; display: flex; fle
 .voll-main { flex: 1; display: flex; flex-direction: column; background: var(--creme); }
 .voll-main .danke-schlicht { flex: 1; display: flex; align-items: center; justify-content: center; }
 .voll-main .danke-schlicht > .huelle { width: 100%; }
+/* Automatisch ausgefüllte Felder: gleiche Farbe wie alle anderen (kein Browser-Blau) */
+.feld input:-webkit-autofill, .feld input:-webkit-autofill:hover, .feld input:-webkit-autofill:focus,
+.feld select:-webkit-autofill, .feld select:-webkit-autofill:hover, .feld select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--weiss) inset !important; box-shadow: 0 0 0 1000px var(--weiss) inset !important;
+  -webkit-text-fill-color: var(--tinte) !important; caret-color: var(--tinte); transition: background-color 9999s ease-out 0s;
+}
+.feld input:autofill, .feld select:autofill { box-shadow: 0 0 0 1000px var(--weiss) inset !important; -webkit-text-fill-color: var(--tinte) !important; }
