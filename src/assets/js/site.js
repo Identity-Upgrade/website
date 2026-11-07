@@ -72,6 +72,24 @@
     pruefe();
   }
 
+
+  // E-Book-Download auf der Danke-Seite nach dem Kauf (Pförtner: /api/ebook)
+  var eb = document.querySelector("[data-ebook]");
+  if (eb && params.get("sha_sign")) {
+    eb.hidden = false;
+    var q = window.location.search.replace(/^\?/, "");
+    var btn = eb.querySelector("[data-ebook-button]"), laden = eb.querySelector("[data-ebook-laden]");
+    var meldung = eb.querySelector("[data-ebook-meldung]"), hinweis = eb.querySelector("[data-ebook-hinweis]");
+    fetch("/api/ebook?aktion=status&" + q, { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        laden.hidden = true;
+        if (d.stand === "bereit") { btn.href = "/api/ebook?aktion=download&" + q; btn.hidden = false; hinweis.hidden = false; }
+        else { meldung.textContent = d.text || ""; meldung.hidden = false; }
+      })
+      .catch(function () { laden.hidden = true; meldung.textContent = "hello@identity-upgrade.com"; meldung.hidden = false; });
+  }
+
   // Formular
   document.querySelectorAll("form[data-formular]").forEach(function (form) {
     var fehler = form.querySelector(".formular-fehler");

@@ -590,6 +590,7 @@
             "p": [
               "Das E-Book verkauft die **Digistore24 GmbH** (Deutschland) als Wiederverkäufer. Digistore24 ist dein Vertragspartner, wickelt die Zahlung ab und verarbeitet deine Daten in eigener Verantwortung nach seiner eigenen Datenschutzerklärung. Deine Zahlungsdaten sehen wir nie.",
               "Digistore24 übermittelt uns deinen Namen, deine E-Mail-Adresse und die Bestelldaten, soweit wir sie brauchen, um dir das E-Book bereitzustellen und bei Fragen zu helfen.",
+              "Wenn du ein E-Book kaufst, speichern wir zu deiner Bestellnummer, wann du die Danke-Seite aufgerufen und das E-Book heruntergeladen hast. Wir nutzen diese Angaben nur, um den Download bereitzustellen und dir bei Problemen zu helfen. Deine E-Mail-Adresse speichern wir dafür nicht, sie liegt nur bei Digistore24. Die Angaben werden bei Cloudflare gespeichert.",
               "Rechtsgrundlage: Durchführung des Kaufs (Art. 6 Abs. 1 lit. b DSGVO) und gesetzliche Aufbewahrungspflichten (Art. 6 Abs. 1 lit. c DSGVO)."
             ]
           }
@@ -822,11 +823,17 @@
       "titel": "Danke | Identity Upgrade"
     },
     "label": "",
-    "titel": "[Danke-Überschrift nach dem *Kauf.*]",
+    "titel": "Willkommen im ersten *Stockwerk.*",
     "text": [
-      "[Ein bis zwei Sätze: Der Download kommt per E-Mail.]"
+      "Danke für dein Vertrauen. Hier kannst du dein E-Book herunterladen. Leg dir ein Notizbuch bereit, die Spuren warten schon auf dich."
     ],
-    "notiz": "[Handschriftliche Notiz]"
+    "notiz": "Die Tür ist offen. Geh hinein.",
+    "download": {
+      "button": "E-Book herunterladen",
+      "hinweis": "Der Download funktioniert einmal. Speichere das E-Book am besten gleich auf deinem Gerät.",
+      "laden": "Einen Moment, wir prüfen deinen Kauf …"
+    },
+    "abbuchung": "Die Abbuchung erfolgt durch Digistore24.com."
   },
   "waitlist": {
     "seo": {
