@@ -15,8 +15,8 @@
   },
   "kit": {
     "_hinweis": "Formular-ID aus Kit eintragen. Solange hier ein Platzhalter steht, laeuft das Formular im Vorschaumodus und leitet nur zur Danke-Seite weiter.",
-    "formIdDe": "[KIT-FORM-ID-DE]",
-    "formIdEn": "[KIT-FORM-ID-EN]",
+    "formIdDe": "10126010",
+    "formIdEn": "10126067",
     "waitlistFormId": "[KIT-FORM-ID-WAITLIST]",
     "waitlistTags": {
       "_hinweis": "Tag-IDs aus Kit eintragen (Buch / Kurs).",
