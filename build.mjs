@@ -269,6 +269,8 @@ function fuerWen(lang) {
   </div></section>`;
 }
 
+const kaufLink = (lang) => { const l = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn; return istPlatzhalter(l) ? "#price" : l; };
+
 function preisAbschnitt(lang, { vorLabel = "", label = "", titel = "" } = {}) {
   const t = T[lang], p = t.buch.preis, pr = cfg.preise[lang], img = IMG[lang];
   const link = lang === "de" ? cfg.digistore.kaufLinkDe : cfg.digistore.kaufLinkEn;
@@ -322,7 +324,7 @@ function hausZeichnung(h) {
 </div>`;
 }
 
-function hausAbschnitt(hs, stil = hs.stil, preisText = "") {
+function hausAbschnitt(hs, stil = hs.stil, preisText = "", kaufHref = "#price") {
   return `<section class="abschnitt beige haus-abschnitt"><div class="huelle">
   <div class="mitte">
     ${hs.label ? `<p class="label">${esc(hs.label)}</p>` : ""}
@@ -336,7 +338,7 @@ function hausAbschnitt(hs, stil = hs.stil, preisText = "") {
     </div>
     ${hausZeichnung(hs.haus)}
   </div>
-  ${hs.button ? `<div class="mitte haus-button-zeile"><a class="button button-rot" href="#price">${esc(hs.button)}${preisText ? ` · ${esc(preisText)}` : ""} <span aria-hidden="true">→</span></a></div>` : ""}
+  ${hs.button ? `<div class="mitte haus-button-zeile"><a class="button button-rot" href="${esc(kaufHref)}" rel="nofollow">${esc(hs.button)}${preisText ? ` · ${esc(preisText)}` : ""} <span aria-hidden="true">→</span></a></div>` : ""}
 </div></section>`;
 }
 
@@ -349,7 +351,7 @@ function seiteBuch(lang) {
     <p class="label">${esc(b.hero.label)}</p>
     <h1 class="titel t-hero t-hero-lang">${akzent(b.hero.titel)}</h1>
     ${absaetze(b.hero.text)}
-    <a class="button button-rot" href="#price">${esc(b.hero.button || b.preis.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a>
+    <a class="button button-rot" href="${esc(kaufLink(lang))}" rel="nofollow">${esc(b.hero.button || b.preis.button)} · ${esc(pr.einfuehrung)} <span aria-hidden="true">→</span></a>
     <p class="notiz notiz-a">${esc(b.hero.notiz)}</p>
   </div>
   <div class="faecher faecher-vier">${img.eb.map((n, i) => bild(n, "", "f-s" + (i + 1))).join("")}${bild(img.buch, "Escape Self-Sabotage – E-Book", "f-mitte")}</div>
@@ -357,7 +359,7 @@ function seiteBuch(lang) {
 ${laufband(lang)}
 ${wiedererkennen(b.wiedererkennen, "weiss")}
 ${soFunktionierts(lang, "creme", b.sofunktionierts)}
-${hausAbschnitt(b.haus, "foto", pr.einfuehrung)}
+${hausAbschnitt(b.haus, "foto", pr.einfuehrung, kaufLink(lang))}
 ${haltung(lang, b.haltung)}
 ${ueber(lang, null, "weiss", b.ueber)}
 ${preisAbschnitt(lang)}
