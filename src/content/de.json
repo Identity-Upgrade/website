@@ -823,11 +823,11 @@
       "titel": "Danke | Identity Upgrade"
     },
     "label": "",
-    "titel": "[Danke-Überschrift nach dem *Kauf.*]",
+    "titel": "Willkommen im ersten *Stockwerk.*",
     "text": [
-      "[Ein bis zwei Sätze: Der Download kommt per E-Mail.]"
+      "Danke für dein Vertrauen. Hier kannst du dein E-Book herunterladen. Leg dir ein Notizbuch bereit, die Spuren warten schon auf dich."
     ],
-    "notiz": "[Handschriftliche Notiz]",
+    "notiz": "Die Tür ist offen. Geh hinein.",
     "download": {
       "button": "E-Book herunterladen",
       "hinweis": "Der Download funktioniert einmal. Speichere das E-Book am besten gleich auf deinem Gerät.",

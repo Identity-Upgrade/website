@@ -667,11 +667,11 @@
       "titel": "Thank you | Identity Upgrade"
     },
     "label": "",
-    "titel": "[Thank-you headline after *purchase.*]",
+    "titel": "Welcome to the first *level.*",
     "text": [
-      "[One or two sentences: the download link is on its way by email.]"
+      "Thank you for your trust. You can download your e-book right here. Grab a notebook, the clues are already waiting for you."
     ],
-    "notiz": "[Handwritten note]",
+    "notiz": "The door is open. Step inside.",
     "download": {
       "button": "Download your e-book",
       "hinweis": "The download works once, so save the e-book to your device right away.",
