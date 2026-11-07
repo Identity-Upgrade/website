@@ -75,9 +75,11 @@
 
   // E-Book-Download auf der Danke-Seite nach dem Kauf (Pförtner: /api/ebook)
   var eb = document.querySelector("[data-ebook]");
-  if (eb && params.get("sha_sign")) {
+  if (eb) {
     eb.hidden = false;
     var q = window.location.search.replace(/^\?/, "");
+    // Ohne Bestelldaten: Pförtner trotzdem fragen (er notiert den Aufruf und liefert den Hinweistext)
+    if (!params.get("sha_sign") && !params.get("SHASIGN")) q = "seite=" + (document.documentElement.lang || "en").slice(0, 2);
     var btn = eb.querySelector("[data-ebook-button]"), laden = eb.querySelector("[data-ebook-laden]");
     var meldung = eb.querySelector("[data-ebook-meldung]"), hinweis = eb.querySelector("[data-ebook-hinweis]");
     fetch("/api/ebook?aktion=status&" + q, { cache: "no-store" })
