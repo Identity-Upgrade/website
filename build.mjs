@@ -28,7 +28,9 @@ const PFADE = {
 };
 
 const istPlatzhalter = (s) => typeof s === "string" && /^\[.*\]$/.test(s.trim());
-const VORSCHAU = JSON.stringify(cfg).includes("[") || JSON.stringify(T).includes("[");
+// Vorschau-Band nur in der Vorschau, nie auf dem Live-Zweig (Cloudflare setzt CF_PAGES_BRANCH beim Build)
+const IST_LIVE = process.env.CF_PAGES_BRANCH === "main";
+const VORSCHAU = !IST_LIVE && (JSON.stringify(cfg).includes("[") || JSON.stringify(T).includes("["));
 
 // Text sicher machen und *Akzentwörter* kursiv setzen
 const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
