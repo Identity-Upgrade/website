@@ -6,7 +6,7 @@
 //
 // Benötigt in Cloudflare: Geheimwert KIT_API_KEY, R2-Bindung EBOOKS (Protokoll unter anmeldung-protokoll/)
 
-import { FORMULARE, TAGS, eintragen, protokoll } from "../../lib/kit.js";
+import { FORMULARE, TAGS, PROBLEM_TEXT, eintragen, protokoll } from "../../lib/kit.js";
 
 const ZIEL = {
   freebie: { de: "/de/escape-self-sabotage-r1-thanks/", en: "/en/escape-self-sabotage-r1-thanks/" },
@@ -61,6 +61,7 @@ export async function onRequestPost({ request, env }) {
       nachname: sauber(p.get("last_name")),
       telefon: sauber(p.get("phone"), 40),
       sprache: lang,
+      problem: PROBLEM_TEXT[problem] || "",
       quelle: sauber(p.get("source")),
       kampagne: sauber(p.get("campaign")),
       formId,
