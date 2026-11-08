@@ -837,6 +837,10 @@
     "warteliste": {
       "text": "The next levels are under construction. Join the waitlist and be the first to know when the next door opens.",
       "button": "Join the waitlist"
+    },
+    "level1": {
+      "text": "Have you stepped into Level 1 yet? Until the next floors are ready, 8 rooms and 48 clues are waiting for you there.",
+      "button": "Discover Level 1"
     }
   }
 }

@@ -3,8 +3,8 @@
 // Ablauf:
 // 1. Digistore24 leitet nach dem Kauf auf die Danke-Seite weiter und hängt die Bestelldaten
 //    samt digitaler Unterschrift (sha_sign, erzeugt mit dem Danke-Seiten-Schlüssel) an.
-// 2. Die Danke-Seite fragt hier den Stand ab (?aktion=status) und zeigt den Download-Button.
-// 3. Der Download (?aktion=download) liefert das PDF aus dem R2-Lagerraum aus.
+// 2. Die Danke-Seite fragt hier den Stand ab (?action=status) und zeigt den Download-Button.
+// 3. Der Download (?action=download) liefert das PDF aus dem R2-Lagerraum aus.
 //
 // Regeln (festgelegt mit Heike, 07.11.2026):
 // - Gültig 30 Tage ab dem ersten Aufruf der Danke-Seite, solange noch nicht heruntergeladen wurde.
@@ -49,7 +49,7 @@ const TEXTE = {
 // und wahlweise mit dekodierten HTML-Zeichen (&amp; usw.).
 async function signatur(paare, passwort, grossbuchstaben, htmlDekodieren) {
   const liste = paare
-    .filter(([k]) => k !== "sha_sign" && k !== "SHASIGN" && k !== "aktion")
+    .filter(([k]) => k !== "sha_sign" && k !== "SHASIGN" && k !== "action")
     .map(([k, v]) => [grossbuchstaben ? k.toUpperCase() : k, v]);
   liste.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
   let s = "";
@@ -150,9 +150,9 @@ function stand(notiz, jetzt) {
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
   const params = url.searchParams;
-  const aktion = params.get("aktion") || "status";
+  const aktion = params.get("action") || "status";
   const produkt = PRODUKTE[params.get("product_id") || ""];
-  const lang = produkt ? produkt.lang : (params.get("buyer_language") || params.get("seite")) === "de" ? "de" : "en";
+  const lang = produkt ? produkt.lang : (params.get("buyer_language") || params.get("page")) === "de" ? "de" : "en";
   const t = TEXTE[lang];
   const orderId = (params.get("order_id") || "").replace(/[^A-Za-z0-9_-]/g, "");
 

@@ -457,9 +457,13 @@ function seiteNewsletter(lang) {
   <h1 class="titel t-gross">${akzent(d.titel)}</h1>
   ${absaetze(d.text)}
   ${d.notiz ? `<p class="notiz notiz-c">${esc(d.notiz)}</p>` : ""}
-  <div class="newsletter-warteliste">
+  <div class="newsletter-warteliste" data-nl-warteliste>
     <p>${esc(d.warteliste.text)}</p>
-    <a class="button button-rot" href="${PFADE.waitlist[lang]}?for=book">${esc(d.warteliste.button)} <span aria-hidden="true">→</span></a>
+    <a class="button button-rot" href="${PFADE.waitlist[lang]}?for=book&amp;from=buyer">${esc(d.warteliste.button)} <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="newsletter-warteliste" data-nl-level1 hidden>
+    <p>${esc(d.level1.text)}</p>
+    <a class="button button-rot" href="${PFADE.buch[lang]}">${esc(d.level1.button)} <span aria-hidden="true">→</span></a>
   </div>
 </div></section>
 </main>
@@ -492,11 +496,12 @@ ${fuss(lang)}`;
 function waitlistFormular(lang) {
   const w = T[lang].waitlist, a = T[lang].freebie.anmeldung;
   const id = lang === "de" ? cfg.kit.waitlistFormIdDe : cfg.kit.waitlistFormIdEn;
+  const kaeuferId = lang === "de" ? cfg.kit.waitlistBuyerFormIdDe : cfg.kit.waitlistBuyerFormIdEn;
   const vorschau = istPlatzhalter(id);
-  const action = vorschau ? PFADE.waitlist[lang] + "#danke" : `https://app.kit.com/forms/${encodeURIComponent(id)}/subscriptions`;
+  const action = vorschau ? PFADE.waitlist[lang] + "#thanks" : `https://app.kit.com/forms/${encodeURIComponent(id)}/subscriptions`;
   const tags = (cfg.kit.waitlistTags && cfg.kit.waitlistTags[lang]) || {};
   const tag = (k) => (tags[k] && !istPlatzhalter(tags[k]) ? tags[k] : k);
-  return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?eingetragen=1" data-fehler="${esc(w.fehler)}" novalidate>
+  return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?subscribed=1"${!vorschau && kaeuferId && !istPlatzhalter(kaeuferId) ? ` data-kaeufer-action="https://app.kit.com/forms/${encodeURIComponent(kaeuferId)}/subscriptions"` : ""} data-fehler="${esc(w.fehler)}" novalidate>
   <fieldset class="wl-auswahl" data-auswahl><legend class="wl-legende">${esc(w.auswahlFrage)}</legend>
     ${w.optionen.map((o) => `<label class="wl-option"><input type="checkbox" name="tags[]" value="${esc(tag(o.key))}" data-fuer="${esc(o.key)}"><span>${esc(o.text)}</span></label>`).join("")}
   </fieldset>

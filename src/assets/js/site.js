@@ -41,13 +41,15 @@
   // Warteliste: Auswahl aus dem Link (?for=book|course) vorbelegen, passende Karte zeigen
   var wl = document.querySelector("form[data-waitlist]");
   if (wl) {
+    // Käufer (Link von der Seite nach dem Kauf): Eintrag geht an das Käufer-Formular in Kit
+    if (params.get("from") === "buyer" && wl.getAttribute("data-kaeufer-action")) wl.setAttribute("action", wl.getAttribute("data-kaeufer-action"));
     var fuer = params.get("for");
     if (fuer) {
       wl.querySelectorAll("input[data-fuer]").forEach(function (el) { if (el.getAttribute("data-fuer") === fuer) el.checked = true; });
     }
-    if (params.get("eingetragen")) {
+    if (params.get("subscribed")) {
       var erfolg = document.querySelector("[data-erfolg]");
-      if (erfolg) { erfolg.hidden = false; wl.hidden = true; }
+      if (erfolg) { erfolg.hidden = false; wl.hidden = true; var ab = document.getElementById("signup"); if (ab) ab.scrollIntoView(); }
     }
     wl.addEventListener("submit", function (ev) {
       if (!wl.querySelector("input[data-fuer]:checked")) {
@@ -72,20 +74,30 @@
   }
 
 
+  // Newsletter-Seite: Warteliste-Hinweis ausblenden, wenn jemand von der Warteliste kommt
+  // from=waitlist: Stockwerk-1-Hinweis statt Warteliste; from=waitlist-buyer: keiner von beiden
+  var von = params.get("from");
+  if (von === "waitlist" || von === "waitlist-buyer") {
+    var nlw = document.querySelector("[data-nl-warteliste]");
+    if (nlw) nlw.hidden = true;
+    var nl1 = document.querySelector("[data-nl-level1]");
+    if (nl1 && von === "waitlist") nl1.hidden = false;
+  }
+
   // E-Book-Download auf der Danke-Seite nach dem Kauf (Pförtner: /api/ebook)
   var eb = document.querySelector("[data-ebook]");
   if (eb) {
     eb.hidden = false;
     var q = window.location.search.replace(/^\?/, "");
     // Ohne Bestelldaten: Pförtner trotzdem fragen (er notiert den Aufruf und liefert den Hinweistext)
-    if (!params.get("sha_sign") && !params.get("SHASIGN")) q = "seite=" + (document.documentElement.lang || "en").slice(0, 2);
+    if (!params.get("sha_sign") && !params.get("SHASIGN")) q = "page=" + (document.documentElement.lang || "en").slice(0, 2);
     var btn = eb.querySelector("[data-ebook-button]"), laden = eb.querySelector("[data-ebook-laden]");
     var meldung = eb.querySelector("[data-ebook-meldung]"), hinweis = eb.querySelector("[data-ebook-hinweis]");
-    fetch("/api/ebook?aktion=status&" + q, { cache: "no-store" })
+    fetch("/api/ebook?action=status&" + q, { cache: "no-store" })
       .then(function (r) { return r.json(); })
       .then(function (d) {
         laden.hidden = true;
-        if (d.stand === "bereit") { btn.href = "/api/ebook?aktion=download&" + q; btn.hidden = false; hinweis.hidden = false; }
+        if (d.stand === "bereit") { btn.href = "/api/ebook?action=download&" + q; btn.hidden = false; hinweis.hidden = false; }
         else { meldung.textContent = d.text || ""; meldung.hidden = false; }
       })
       .catch(function () { laden.hidden = true; meldung.textContent = "hello@identity-upgrade.com"; meldung.hidden = false; });
