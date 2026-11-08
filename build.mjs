@@ -520,10 +520,10 @@ function seiteWaitlist(lang) {
   <h1 class="titel t-gross">${akzent(w.titel)}</h1>
   ${absaetze(w.text)}
 </div></section>
-<section class="abschnitt weiss mitte wl-produkte"><div class="huelle">
+<section class="abschnitt weiss mitte wl-produkte linie-oben"><div class="huelle">
   <div class="karten wl-karten">${w.optionen.map((o) => `<div class="karte" data-produkt="${esc(o.key)}"><h3 class="label">${esc(o.kartenTitel)}</h3><p>${esc(o.kartenText)}</p></div>`).join("")}</div>
 </div></section>
-<section class="abschnitt beige mitte wl-anmeldung" id="signup"><div class="huelle">
+<section class="abschnitt beige mitte wl-anmeldung linie-oben" id="signup"><div class="huelle">
   <h2 class="titel t-mittel">${akzent(w.formTitel)}</h2>
   <div class="wl-erfolg" data-erfolg hidden><p class="notiz notiz-c">${esc(w.erfolg)}</p></div>
   ${waitlistFormular(lang)}

@@ -682,33 +682,33 @@
   "waitlist": {
     "seo": {
       "titel": "Waitlist | Identity Upgrade",
-      "beschreibung": "[Short waitlist description]"
+      "beschreibung": "Join the list and be the first to know when the next level of Escape Self-Sabotage or the course launches."
     },
     "label": "",
-    "titel": "[Waitlist *headline.*]",
+    "titel": "The next doors *open soon.*",
     "text": [
-      "[One or two sentences about the waitlist.]"
+      "Level 1 is just the beginning. Join the list and be the first to know when the next level or the course is ready."
     ],
     "optionen": [
       {
         "key": "book",
         "text": "the complete book Escape Self-Sabotage",
         "kartenTitel": "Escape Self-Sabotage",
-        "kartenText": "[One or two sentences about the complete book.]"
+        "kartenText": "Every level, every room. The whole way through the house of your patterns, level by level."
       },
       {
         "key": "course",
         "text": "the course",
-        "kartenTitel": "[Course]",
-        "kartenText": "[One or two sentences about the course.]"
+        "kartenTitel": "The course",
+        "kartenText": "Going deeper together. Guidance through the rooms where you might get stuck on your own."
       }
     ],
     "auswahlFrage": "I'm interested in:",
-    "formTitel": "[Form *headline.*]",
-    "button": "[Button text]",
+    "formTitel": "Join the *list.*",
+    "button": "Join the waitlist",
     "fehler": "Please choose at least one option and fill in your first name, last name, and email address.",
-    "erfolg": "[Thank you, you're on the list.]",
-    "hinweis": "[Note about newsletter and unsubscribing]"
+    "erfolg": "Thank you, you're on the list. Check your inbox and confirm your signup.",
+    "hinweis": "You'll get an email to confirm. You can unsubscribe anytime with one click."
   },
   "impressum": {
     "seo": {
