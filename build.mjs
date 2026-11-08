@@ -147,11 +147,12 @@ function formular(lang) {
   const a = T[lang].freebie.anmeldung;
   const id = lang === "de" ? cfg.kit.formIdDe : cfg.kit.formIdEn;
   const vorschau = istPlatzhalter(id);
-  const action = vorschau ? PFADE.danke[lang] : `https://app.kit.com/forms/${encodeURIComponent(id)}/subscriptions`;
-  return `<form class="formular" data-formular method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.danke[lang]}" data-fehler="${esc(a.fehler)}" novalidate>
+  const action = vorschau ? PFADE.danke[lang] : "/api/subscribe";
+  return `<form class="formular" data-formular method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.danke[lang]}" data-fehler="${esc(a.fehler)}" data-sendefehler="${lang === "de" ? "Das hat leider nicht geklappt. Bitte versuch es noch einmal oder schreib uns an hello@identity-upgrade.com." : "Something went wrong. Please try again or email us at hello@identity-upgrade.com."}" novalidate>
+  <input type="hidden" name="form" value="freebie">
   <div class="feld-reihe">
-    <div class="feld"><label class="nur-vorlesen" for="vorname-${lang}">${esc(a.vorname)}</label><input id="vorname-${lang}" name="fields[first_name]" autocomplete="given-name" placeholder="${esc(a.vorname)}" required></div>
-    <div class="feld"><label class="nur-vorlesen" for="nachname-${lang}">${esc(a.nachname)}</label><input id="nachname-${lang}" name="fields[nachname]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
+    <div class="feld"><label class="nur-vorlesen" for="vorname-${lang}">${esc(a.vorname)}</label><input id="vorname-${lang}" name="first_name" autocomplete="given-name" placeholder="${esc(a.vorname)}" required></div>
+    <div class="feld"><label class="nur-vorlesen" for="nachname-${lang}">${esc(a.nachname)}</label><input id="nachname-${lang}" name="last_name" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
   </div>
   <div class="feld"><label class="nur-vorlesen" for="email-${lang}">${esc(a.email)}</label><input id="email-${lang}" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="${esc(a.email)}" required></div>
   <div class="feld"><label class="nur-vorlesen" for="telefon-${lang}">${esc(a.telefon)}</label>
@@ -160,12 +161,14 @@ function formular(lang) {
       <input id="telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(a.telefon)}" data-telefon>
     </div>
   </div>
-  <input type="hidden" name="fields[telephone]" data-feld="telefon">
+  <input type="hidden" name="phone" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="situation-${lang}">${esc(a.situation)}</label>
-    <select id="situation-${lang}" name="tags[]" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(problemTag(v))}">${esc(n)}</option>`).join("")}</select>
+    <select id="situation-${lang}" name="problem" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
   </div>
-  <input type="hidden" name="fields[quelle]" data-feld="quelle">
-  <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
+  <input type="hidden" name="source" data-feld="quelle">
+  <input type="hidden" name="campaign" data-feld="kampagne">
+  <input type="hidden" name="lang" value="${lang}">
+  <div class="nur-vorlesen" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
   <p class="formular-fehler" role="alert" aria-live="polite"></p>
   <button class="button button-rot" type="submit">${esc(a.button)} <span aria-hidden="true">→</span></button>
 </form>`;
@@ -501,16 +504,18 @@ function waitlistFormular(lang) {
   const id = lang === "de" ? cfg.kit.waitlistFormIdDe : cfg.kit.waitlistFormIdEn;
   const kaeuferId = lang === "de" ? cfg.kit.waitlistBuyerFormIdDe : cfg.kit.waitlistBuyerFormIdEn;
   const vorschau = istPlatzhalter(id);
-  const action = vorschau ? PFADE.waitlist[lang] + "#thanks" : `https://app.kit.com/forms/${encodeURIComponent(id)}/subscriptions`;
+  const action = vorschau ? PFADE.waitlist[lang] + "#thanks" : "/api/subscribe";
   const tags = (cfg.kit.waitlistTags && cfg.kit.waitlistTags[lang]) || {};
   const tag = (k) => (tags[k] && !istPlatzhalter(tags[k]) ? tags[k] : k);
-  return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?subscribed=1"${!vorschau && kaeuferId && !istPlatzhalter(kaeuferId) ? ` data-kaeufer-action="https://app.kit.com/forms/${encodeURIComponent(kaeuferId)}/subscriptions"` : ""} data-fehler="${esc(w.fehler)}" novalidate>
+  return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?subscribed=1" data-fehler="${esc(w.fehler)}" data-sendefehler="${lang === "de" ? "Das hat leider nicht geklappt. Bitte versuch es noch einmal oder schreib uns an hello@identity-upgrade.com." : "Something went wrong. Please try again or email us at hello@identity-upgrade.com."}" novalidate>
+  <input type="hidden" name="form" value="waitlist">
+  <input type="hidden" name="buyer" value="" data-kaeufer>
   <fieldset class="wl-auswahl" data-auswahl><legend class="wl-legende">${esc(w.auswahlFrage)}</legend>
-    ${w.optionen.map((o) => `<label class="wl-option"><input type="checkbox" name="tags[]" value="${esc(tag(o.key))}" data-fuer="${esc(o.key)}"><span>${esc(o.text)}</span></label>`).join("")}
+    ${w.optionen.map((o) => `<label class="wl-option"><input type="checkbox" name="interest" value="${esc(o.key)}" data-fuer="${esc(o.key)}"><span>${esc(o.text)}</span></label>`).join("")}
   </fieldset>
   <div class="feld-reihe">
-    <div class="feld"><label class="nur-vorlesen" for="wl-vorname-${lang}">${esc(a.vorname)}</label><input id="wl-vorname-${lang}" name="fields[first_name]" autocomplete="given-name" placeholder="${esc(a.vorname)}" required></div>
-    <div class="feld"><label class="nur-vorlesen" for="wl-nachname-${lang}">${esc(a.nachname)}</label><input id="wl-nachname-${lang}" name="fields[nachname]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
+    <div class="feld"><label class="nur-vorlesen" for="wl-vorname-${lang}">${esc(a.vorname)}</label><input id="wl-vorname-${lang}" name="first_name" autocomplete="given-name" placeholder="${esc(a.vorname)}" required></div>
+    <div class="feld"><label class="nur-vorlesen" for="wl-nachname-${lang}">${esc(a.nachname)}</label><input id="wl-nachname-${lang}" name="last_name" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
   </div>
   <div class="feld"><label class="nur-vorlesen" for="wl-email-${lang}">${esc(a.email)}</label><input id="wl-email-${lang}" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="${esc(a.email)}" required></div>
   <div class="feld"><label class="nur-vorlesen" for="wl-telefon-${lang}">${esc(w.telefon)}</label>
@@ -519,12 +524,14 @@ function waitlistFormular(lang) {
       <input id="wl-telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(w.telefon)}" data-telefon>
     </div>
   </div>
-  <input type="hidden" name="fields[telephone]" data-feld="telefon">
+  <input type="hidden" name="phone" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="wl-situation-${lang}">${esc(w.situation)}</label>
-    <select id="wl-situation-${lang}" name="tags[]" required><option value="" selected disabled>${esc(w.situation)}</option>${w.situationen.map(([v, n]) => `<option value="${esc(problemTag(v))}">${esc(n)}</option>`).join("")}</select>
+    <select id="wl-situation-${lang}" name="problem" required><option value="" selected disabled>${esc(w.situation)}</option>${w.situationen.map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
   </div>
-  <input type="hidden" name="fields[quelle]" data-feld="quelle">
-  <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
+  <input type="hidden" name="source" data-feld="quelle">
+  <input type="hidden" name="campaign" data-feld="kampagne">
+  <input type="hidden" name="lang" value="${lang}">
+  <div class="nur-vorlesen" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
   <p class="formular-fehler" role="alert" aria-live="polite"></p>
   <button class="button button-rot" type="submit">${esc(w.button)} <span aria-hidden="true">→</span></button>
 </form>`;

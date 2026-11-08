@@ -38,11 +38,19 @@
   }
 
 
+  // Rückmeldung nach fehlgeschlagener Anmeldung (?error=1)
+  if (params.get("error")) {
+    document.querySelectorAll("form[data-formular]").forEach(function (f) {
+      var el = f.querySelector(".formular-fehler");
+      if (el) el.textContent = f.getAttribute("data-sendefehler") || "";
+    });
+  }
+
   // Warteliste: Auswahl aus dem Link (?for=book|course) vorbelegen, passende Karte zeigen
   var wl = document.querySelector("form[data-waitlist]");
   if (wl) {
     // Käufer (Link von der Seite nach dem Kauf): Eintrag geht an das Käufer-Formular in Kit
-    if (params.get("from") === "buyer" && wl.getAttribute("data-kaeufer-action")) wl.setAttribute("action", wl.getAttribute("data-kaeufer-action"));
+    if (params.get("from") === "buyer") { var kf = wl.querySelector("[data-kaeufer]"); if (kf) kf.value = "1"; }
     var fuer = params.get("for");
     if (fuer) {
       wl.querySelectorAll("input[data-fuer]").forEach(function (el) { if (el.getAttribute("data-fuer") === fuer) el.checked = true; });
