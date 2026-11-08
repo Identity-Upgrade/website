@@ -157,9 +157,9 @@ function formular(lang) {
       <input id="telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(a.telefon)}" data-telefon>
     </div>
   </div>
-  <input type="hidden" name="fields[telefon]" data-feld="telefon">
+  <input type="hidden" name="fields[phone_number]" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="situation-${lang}">${esc(a.situation)}</label>
-    <select id="situation-${lang}" name="fields[situation]" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
+    <select id="situation-${lang}" name="fields[problem]" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
   </div>
   <input type="hidden" name="fields[quelle]" data-feld="quelle">
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
@@ -516,9 +516,9 @@ function waitlistFormular(lang) {
       <input id="wl-telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(w.telefon)}" data-telefon>
     </div>
   </div>
-  <input type="hidden" name="fields[telefon]" data-feld="telefon">
+  <input type="hidden" name="fields[phone_number]" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="wl-situation-${lang}">${esc(w.situation)}</label>
-    <select id="wl-situation-${lang}" name="fields[situation]" required><option value="" selected disabled>${esc(w.situation)}</option>${w.situationen.map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
+    <select id="wl-situation-${lang}" name="fields[problem]" required><option value="" selected disabled>${esc(w.situation)}</option>${w.situationen.map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
   </div>
   <input type="hidden" name="fields[quelle]" data-feld="quelle">
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
