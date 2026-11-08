@@ -77,18 +77,48 @@ async function notieren(env, ergebnis, params, extra = {}) {
   } catch (e) {}
 }
 
+// Eigene Felder in Kit: interne Schlüssel nachschlagen (z. B. „last_name“ oder „nachname“)
+async function kitFelder(kopf) {
+  try {
+    const r = await fetch("https://api.kit.com/v4/custom_fields?per_page=500", { headers: kopf });
+    if (!r.ok) return [];
+    const d = await r.json();
+    return (d.custom_fields || []).map((f) => ({ key: f.key, label: String(f.label || "").toLowerCase() }));
+  } catch (e) {
+    return [];
+  }
+}
+const feldSuchen = (felder, ...namen) => {
+  for (const n of namen) {
+    const f = felder.find((x) => x.key === n || x.label === n);
+    if (f) return f.key;
+  }
+  return null;
+};
+
 // Käufer in Kit eintragen (API v4): erst als unbestätigt anlegen, dann dem Formular hinzufügen.
 // Hat das Formular Double Opt-in, verschickt Kit dabei die Bestätigungsmail.
 async function inKitEintragen(env, formId, email, vorname, nachname) {
   const kopf = { "Content-Type": "application/json", Accept: "application/json", "X-Kit-Api-Key": env.KIT_API_KEY };
-  const anlegen = { email_address: email, state: "inactive", fields: { quelle: "digistore24" } };
+  const felder = await kitFelder(kopf);
+  const keyNachname = feldSuchen(felder, "last_name", "nachname", "last name", "lastname");
+  const keyQuelle = feldSuchen(felder, "quelle", "source");
+  const anlegen = { email_address: email, state: "inactive" };
   if (vorname) anlegen.first_name = vorname;
-  if (nachname) anlegen.fields.last_name = nachname;
+  const f = {};
+  if (nachname && keyNachname) f[keyNachname] = nachname;
+  if (keyQuelle) f[keyQuelle] = "digistore24";
+  if (Object.keys(f).length) anlegen.fields = f;
   const r1 = await fetch("https://api.kit.com/v4/subscribers", { method: "POST", headers: kopf, body: JSON.stringify(anlegen) });
+  let meldungAnlegen = "";
+  if (r1.status >= 400) { try { meldungAnlegen = (await r1.text()).slice(0, 300); } catch (e) {} }
   const r2 = await fetch(`https://api.kit.com/v4/forms/${formId}/subscribers`, { method: "POST", headers: kopf, body: JSON.stringify({ email_address: email }) });
   let meldung = "";
   if (r2.status >= 400) { try { meldung = (await r2.text()).slice(0, 300); } catch (e) {} }
-  return { anlegen: r1.status, formular: r2.status, meldung };
+  return {
+    anlegen: r1.status, meldungAnlegen, formular: r2.status, meldung,
+    nachnameGeliefert: !!nachname, feldNachname: keyNachname || "nicht gefunden", feldQuelle: keyQuelle || "nicht gefunden",
+  };
 }
 
 export async function onRequestPost({ request, env }) {
