@@ -49,7 +49,7 @@ const TEXTE = {
 // und wahlweise mit dekodierten HTML-Zeichen (&amp; usw.).
 async function signatur(paare, passwort, grossbuchstaben, htmlDekodieren) {
   const liste = paare
-    .filter(([k]) => k !== "sha_sign" && k !== "SHASIGN" && k !== "action")
+    .filter(([k]) => k !== "sha_sign" && k !== "SHASIGN" && k !== "action" && k !== "notice")
     .map(([k, v]) => [grossbuchstaben ? k.toUpperCase() : k, v]);
   liste.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
   let s = "";
@@ -132,9 +132,14 @@ function json(daten, status = 200) {
   });
 }
 
-function hinweisSeite(text, lang, status) {
-  const html = `<!DOCTYPE html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Identity Upgrade</title><link rel="stylesheet" href="/assets/css/site.css"></head><body class="startseite"><main class="start-flaeche"><p style="color:#fff;font-size:20px;line-height:1.5;max-width:560px;text-align:center;margin:0">${text.split("\n").map((z) => z.replace(/(hello@identity-upgrade\.com)/g, '<a href="mailto:$1" style="color:#fff;white-space:nowrap">$1</a>')).join("<br>")}</p></main></body></html>`;
-  return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" } });
+// Bei einem Download-Problem zurück auf die Danke-Seite; dort erscheint die Meldung in der Mitte.
+function zurueck(url, lang, fehler) {
+  const q = new URLSearchParams(url.search);
+  q.delete("action");
+  q.delete("notice");
+  if (fehler) q.set("notice", "error");
+  const ziel = `/${lang === "de" ? "de" : "en"}/escape-self-sabotage-l1-thanks/?${q.toString()}`;
+  return new Response(null, { status: 303, headers: { Location: ziel, "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" } });
 }
 
 // Stand einer Bestellung berechnen
@@ -158,7 +163,7 @@ export async function onRequestGet({ request, env }) {
 
   try {
     if (!env.EBOOKS || !env.DS24_THANKYOU_KEY) {
-      return aktion === "download" ? hinweisSeite(t.fehler, lang, 503) : json({ stand: "fehler", text: t.fehler }, 503);
+      return aktion === "download" ? zurueck(url, lang, true) : json({ stand: "fehler", text: t.fehler }, 503);
     }
     const hatUnterschrift = !!(params.get("sha_sign") || params.get("SHASIGN"));
     let grund = "";
@@ -169,7 +174,7 @@ export async function onRequestGet({ request, env }) {
     if (grund) {
       await abweisungNotieren(env, grund, params, orderId, aktion);
       const text = hatUnterschrift ? t.ungueltig : t.ohneDaten;
-      return aktion === "download" ? hinweisSeite(text, lang, 403) : json({ stand: "ungueltig", text }, 403);
+      return aktion === "download" ? zurueck(url, lang, false) : json({ stand: "ungueltig", text }, 403);
     }
 
     const jetzt = Date.now();
@@ -182,13 +187,14 @@ export async function onRequestGet({ request, env }) {
     }
 
     const s = stand(notiz, jetzt);
+    if (aktion !== "download" && params.get("notice") === "error") return json({ stand: "fehler", text: t.fehler });
     if (aktion !== "download") {
       return json({ stand: s, text: s === "abgelaufen" ? t.abgelaufen : "" });
     }
-    if (s !== "bereit") return hinweisSeite(t.abgelaufen, lang, 410);
+    if (s !== "bereit") return zurueck(url, lang, false);
 
     const pdf = await env.EBOOKS.get(produkt.datei);
-    if (!pdf) return hinweisSeite(t.fehler, lang, 503);
+    if (!pdf) return zurueck(url, lang, true);
 
     notiz.downloads = [...(notiz.downloads || []), jetzt];
     notiz.downloadsLesbar = notiz.downloads.map((d) => new Date(d).toISOString());
@@ -204,6 +210,6 @@ export async function onRequestGet({ request, env }) {
       },
     });
   } catch (e) {
-    return aktion === "download" ? hinweisSeite(t.fehler, lang, 500) : json({ stand: "fehler", text: t.fehler }, 500);
+    return aktion === "download" ? zurueck(url, lang, true) : json({ stand: "fehler", text: t.fehler }, 500);
   }
 }
