@@ -838,33 +838,33 @@
   "waitlist": {
     "seo": {
       "titel": "Warteliste | Identity Upgrade",
-      "beschreibung": "[Kurzbeschreibung Warteliste]"
+      "beschreibung": "Trag dich ein und erfahre als Erstes, wenn das nächste Stockwerk von Escape Self-Sabotage oder der Kurs startet."
     },
     "label": "",
-    "titel": "[Überschrift *Warteliste.*]",
+    "titel": "Die nächsten Türen *öffnen sich bald.*",
     "text": [
-      "[Ein bis zwei Sätze zur Warteliste.]"
+      "Stockwerk 1 ist erst der Anfang. Trag dich ein, und du erfährst als Erstes, wenn das nächste Stockwerk oder der Kurs bereit ist."
     ],
     "optionen": [
       {
         "key": "book",
         "text": "das ganze Buch Escape Self-Sabotage",
         "kartenTitel": "Escape Self-Sabotage",
-        "kartenText": "[Ein bis zwei Sätze zum ganzen Buch.]"
+        "kartenText": "Alle Stockwerke, alle Räume. Der ganze Weg durch das Haus deiner Muster, Stockwerk für Stockwerk."
       },
       {
         "key": "course",
         "text": "den Kurs",
-        "kartenTitel": "[Kurs]",
-        "kartenText": "[Ein bis zwei Sätze zum Kurs.]"
+        "kartenTitel": "Der Kurs",
+        "kartenText": "Gemeinsam tiefer gehen. Mit Begleitung durch die Räume, in denen du allein vielleicht hängen bleibst."
       }
     ],
     "auswahlFrage": "Ich interessiere mich für:",
-    "formTitel": "[Überschrift *Formular.*]",
-    "button": "[Button-Text]",
+    "formTitel": "Trag dich *ein.*",
+    "button": "Auf die Warteliste",
     "fehler": "Bitte wähle mindestens eine Option und fülle Vorname, Nachname und E-Mail-Adresse aus.",
-    "erfolg": "[Danke, du stehst auf der Liste.]",
-    "hinweis": "[Hinweis zu Newsletter und Abmeldung]"
+    "erfolg": "Danke, du stehst auf der Liste. Schau in dein Postfach und bestätige deine Anmeldung.",
+    "hinweis": "Du bekommst eine Mail zur Bestätigung. Abmelden kannst du dich jederzeit mit einem Klick."
   },
   "newsletter": {
     "seo": {
