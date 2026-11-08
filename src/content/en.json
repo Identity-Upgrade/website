@@ -693,14 +693,14 @@
     ],
     "boxen": [
       {
-        "label": "The next two floors",
+        "label": "The next two levels",
         "titel": "Escape Self-Sabotage",
         "unterzeile": "Question the rules. Understand the mechanisms. Discover new possibilities.",
         "text": [
-          "The next two floors take you deeper into how your seemingly self-chosen beliefs were formed, revealing who played a part in shaping them and how much of what you believe was ever truly your own choice.",
+          "The next two levels take you deeper into how your seemingly self-chosen beliefs were formed, revealing who played a part in shaping them and how much of what you believe was ever truly your own choice.",
           "And once you understand why certain beliefs became so deeply rooted within you, it's time to look ahead. You'll begin using that knowledge not only to live more consciously and on your own terms, but to actually move toward the life you want to create."
         ],
-        "schluss": "All three floors. The complete picture, from how it all began to how you can consciously change it."
+        "schluss": "All three levels. The complete picture, from how it all began to how you can consciously change it."
       },
       {
         "label": "What's coming next",
@@ -840,7 +840,7 @@
       "button": "Join the waitlist"
     },
     "level1": {
-      "text": "Have you stepped into Level 1 yet? Until the next floors are ready, 8 rooms and 48 clues are waiting for you there.",
+      "text": "Have you stepped into Level 1 yet? Until the next levels are ready, 8 rooms and 48 clues are waiting for you there.",
       "button": "Discover Level 1"
     }
   }
