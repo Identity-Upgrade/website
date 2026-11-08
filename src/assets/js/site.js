@@ -45,7 +45,7 @@
     if (fuer) {
       wl.querySelectorAll("input[data-fuer]").forEach(function (el) { if (el.getAttribute("data-fuer") === fuer) el.checked = true; });
     }
-    if (params.get("eingetragen")) {
+    if (params.get("subscribed")) {
       var erfolg = document.querySelector("[data-erfolg]");
       if (erfolg) { erfolg.hidden = false; wl.hidden = true; }
     }
@@ -78,14 +78,14 @@
     eb.hidden = false;
     var q = window.location.search.replace(/^\?/, "");
     // Ohne Bestelldaten: Pförtner trotzdem fragen (er notiert den Aufruf und liefert den Hinweistext)
-    if (!params.get("sha_sign") && !params.get("SHASIGN")) q = "seite=" + (document.documentElement.lang || "en").slice(0, 2);
+    if (!params.get("sha_sign") && !params.get("SHASIGN")) q = "page=" + (document.documentElement.lang || "en").slice(0, 2);
     var btn = eb.querySelector("[data-ebook-button]"), laden = eb.querySelector("[data-ebook-laden]");
     var meldung = eb.querySelector("[data-ebook-meldung]"), hinweis = eb.querySelector("[data-ebook-hinweis]");
-    fetch("/api/ebook?aktion=status&" + q, { cache: "no-store" })
+    fetch("/api/ebook?action=status&" + q, { cache: "no-store" })
       .then(function (r) { return r.json(); })
       .then(function (d) {
         laden.hidden = true;
-        if (d.stand === "bereit") { btn.href = "/api/ebook?aktion=download&" + q; btn.hidden = false; hinweis.hidden = false; }
+        if (d.stand === "bereit") { btn.href = "/api/ebook?action=download&" + q; btn.hidden = false; hinweis.hidden = false; }
         else { meldung.textContent = d.text || ""; meldung.hidden = false; }
       })
       .catch(function () { laden.hidden = true; meldung.textContent = "hello@identity-upgrade.com"; meldung.hidden = false; });
