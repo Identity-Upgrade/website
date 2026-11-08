@@ -743,13 +743,14 @@
       ],
       [
         "mehrere",
-        "More than one of the above"
+        "More than one"
       ]
     ],
     "button": "Join the waitlist",
     "hinweis": "You'll receive an email to confirm your subscription.",
     "erfolg": "Thank you, you're on the list. Check your inbox and confirm your subscription.",
-    "fehler": "Please choose at least one option and fill in your first name, last name, email address, and biggest challenge."
+    "fehler": "Please choose at least one option and fill in your first name, last name, email address, and biggest challenge.",
+    "fehlerAuswahl": "Please choose what you're interested in: the book, the courses, or both."
   },
   "impressum": {
     "seo": {

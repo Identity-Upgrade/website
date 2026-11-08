@@ -905,7 +905,8 @@
     "button": "Auf die Warteliste",
     "hinweis": "Du erhältst eine E-Mail zur Bestätigung deiner Anmeldung.",
     "erfolg": "Danke, du stehst auf der Liste. Schau in dein Postfach und bestätige deine Anmeldung.",
-    "fehler": "Bitte wähle mindestens eine Option und fülle Vorname, Nachname, E-Mail-Adresse und dein größtes Problem aus."
+    "fehler": "Bitte wähle mindestens eine Option und fülle Vorname, Nachname, E-Mail-Adresse und dein größtes Problem aus.",
+    "fehlerAuswahl": "Bitte wähle aus, wofür du dich interessierst: das Buch, die Kurse oder beides."
   },
   "newsletter": {
     "seo": {

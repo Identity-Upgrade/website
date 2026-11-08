@@ -507,7 +507,7 @@ function waitlistFormular(lang) {
   const action = vorschau ? PFADE.waitlist[lang] + "#thanks" : "/api/subscribe";
   const tags = (cfg.kit.waitlistTags && cfg.kit.waitlistTags[lang]) || {};
   const tag = (k) => (tags[k] && !istPlatzhalter(tags[k]) ? tags[k] : k);
-  return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?subscribed=1" data-fehler="${esc(w.fehler)}" data-sendefehler="${lang === "de" ? "Das hat leider nicht geklappt. Bitte versuch es noch einmal oder schreib uns an hello@identity-upgrade.com." : "Something went wrong. Please try again or email us at hello@identity-upgrade.com."}" novalidate>
+  return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?subscribed=1" data-fehler="${esc(w.fehler)}" data-fehler-auswahl="${esc(w.fehlerAuswahl)}" data-sendefehler="${lang === "de" ? "Das hat leider nicht geklappt. Bitte versuch es noch einmal oder schreib uns an hello@identity-upgrade.com." : "Something went wrong. Please try again or email us at hello@identity-upgrade.com."}" novalidate>
   <input type="hidden" name="form" value="waitlist">
   <input type="hidden" name="buyer" value="" data-kaeufer>
   <fieldset class="wl-auswahl" data-auswahl><legend class="wl-legende">${esc(w.auswahlFrage)}</legend>
