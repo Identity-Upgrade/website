@@ -874,6 +874,10 @@
     "text": [
       "Danke für deine Bestätigung. Ab jetzt bekommst du unsere Mails direkt in dein Postfach."
     ],
-    "notiz": "Bis gleich in deinem Postfach."
+    "notiz": "Bis bald in deinem Postfach.",
+    "warteliste": {
+      "text": "Die nächsten Stockwerke sind in Arbeit. Trag dich ein und erfahre als Erstes, wenn sich die nächste Tür öffnet.",
+      "button": "Auf die Warteliste"
+    }
   }
 }

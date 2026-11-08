@@ -457,6 +457,10 @@ function seiteNewsletter(lang) {
   <h1 class="titel t-gross">${akzent(d.titel)}</h1>
   ${absaetze(d.text)}
   ${d.notiz ? `<p class="notiz notiz-c">${esc(d.notiz)}</p>` : ""}
+  <div class="newsletter-warteliste">
+    <p>${esc(d.warteliste.text)}</p>
+    <a class="button button-rot" href="${PFADE.waitlist[lang]}?for=book">${esc(d.warteliste.button)} <span aria-hidden="true">→</span></a>
+  </div>
 </div></section>
 </main>
 ${fuss(lang)}`;
