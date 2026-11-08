@@ -504,6 +504,16 @@ function waitlistFormular(lang) {
     <div class="feld"><label class="nur-vorlesen" for="wl-nachname-${lang}">${esc(a.nachname)}</label><input id="wl-nachname-${lang}" name="fields[last_name]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
   </div>
   <div class="feld"><label class="nur-vorlesen" for="wl-email-${lang}">${esc(a.email)}</label><input id="wl-email-${lang}" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="${esc(a.email)}" required></div>
+  <div class="feld"><label class="nur-vorlesen" for="wl-telefon-${lang}">${esc(w.telefon)}</label>
+    <div class="telefon-reihe">
+      <select id="wl-vorwahl-${lang}" aria-label="${esc(a.vorwahl)}" data-vorwahl>${(a.laender || []).map(([c, n, v], i) => `<option value="${esc(v)}"${i === 0 ? " selected" : ""}>${esc(c)} ${esc(v)}</option>`).join("")}</select>
+      <input id="wl-telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(w.telefon)}" data-telefon>
+    </div>
+  </div>
+  <input type="hidden" name="fields[telefon]" data-feld="telefon">
+  <div class="feld"><label class="nur-vorlesen" for="wl-situation-${lang}">${esc(w.situation)}</label>
+    <select id="wl-situation-${lang}" name="fields[situation]" required><option value="" selected disabled>${esc(w.situation)}</option>${w.situationen.map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
+  </div>
   <input type="hidden" name="fields[quelle]" data-feld="quelle">
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
   <p class="formular-fehler" role="alert" aria-live="polite"></p>
@@ -513,6 +523,13 @@ function waitlistFormular(lang) {
 
 function seiteWaitlist(lang) {
   const w = T[lang].waitlist;
+  const box = (x) => `<div class="wl-box">
+    <p class="label">${esc(x.label)}</p>
+    <h3 class="wl-box-titel">${esc(x.titel)}</h3>
+    <p class="wl-unterzeile">${esc(x.unterzeile)}</p>
+    ${absaetze(x.text, "wl-text")}
+    <p class="wl-schluss">${esc(x.schluss)}</p>
+  </div>`;
   const body = `${kopf(lang, "waitlist")}
 <main>
 <section class="abschnitt creme mitte wl-kopf"><div class="huelle">
@@ -520,11 +537,12 @@ function seiteWaitlist(lang) {
   <h1 class="titel t-gross">${akzent(w.titel)}</h1>
   ${absaetze(w.text)}
 </div></section>
-<section class="abschnitt weiss mitte wl-produkte linie-oben"><div class="huelle">
-  <div class="karten wl-karten">${w.optionen.map((o) => `<div class="karte" data-produkt="${esc(o.key)}"><h3 class="label">${esc(o.kartenTitel)}</h3><p>${esc(o.kartenText)}</p></div>`).join("")}</div>
+<section class="abschnitt weiss wl-produkte linie-oben"><div class="huelle">
+  <div class="wl-boxen">${w.boxen.map(box).join("")}</div>
 </div></section>
 <section class="abschnitt beige mitte wl-anmeldung linie-oben" id="signup"><div class="huelle">
-  <h2 class="titel t-mittel">${akzent(w.formTitel)}</h2>
+  <h2 class="titel t-gross">${akzent(w.formTitel)}</h2>
+  ${absaetze(w.formText)}
   <div class="wl-erfolg" data-erfolg hidden><p class="notiz notiz-c">${esc(w.erfolg)}</p></div>
   ${waitlistFormular(lang)}
   <p class="kleingedruckt">${esc(w.hinweis)}</p>
