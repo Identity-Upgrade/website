@@ -62,7 +62,7 @@
     wl.addEventListener("submit", function (ev) {
       if (!wl.querySelector("input[data-fuer]:checked")) {
         ev.preventDefault(); ev.stopImmediatePropagation();
-        var f = wl.querySelector(".formular-fehler"); if (f) f.textContent = wl.getAttribute("data-fehler");
+        var f = wl.querySelector(".formular-fehler"); if (f) f.textContent = wl.getAttribute("data-fehler-auswahl") || wl.getAttribute("data-fehler");
       }
     }, true);
   }
