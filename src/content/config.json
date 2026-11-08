@@ -29,7 +29,11 @@
       }
     },
     "waitlistFormIdDe": "10161920",
-    "waitlistFormIdEn": "10161924"
+    "waitlistFormIdEn": "10161924",
+    "waitlistBuyerFormIdDe": "10162096",
+    "waitlistBuyerFormIdEn": "10162099",
+    "buyerL1FormIdDe": "10161368",
+    "buyerL1FormIdEn": "10161703"
   },
   "digistore": {
     "_hinweis": "Bestell-Links aus Digistore24 eintragen.",

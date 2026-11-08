@@ -1,0 +1,130 @@
+// Empfänger für Kauf-Benachrichtigungen (IPN) von Digistore24
+//
+// Ablauf:
+// 1. Digistore24 schickt nach einem Kauf eine Benachrichtigung an /api/purchase –
+//    eingestellt so, dass sie nur kommt, wenn der Käufer das Newsletter-Häkchen gesetzt hat.
+// 2. Wir prüfen die digitale Unterschrift (sha_sign, erzeugt mit dem IPN-Passwort).
+// 3. Wir tragen den Käufer in das passende Kit-Formular „Käufer Level 1“ (DE/EN) ein.
+//    Kit schickt danach die Bestätigungsmail (Double Opt-in ist im Formular eingeschaltet).
+//
+// Der Anbieter (Digistore24) steckt nur in diesem Empfänger. Bei einem Wechsel wird nur er angepasst,
+// an Kit ändert sich nichts.
+//
+// Benötigt in Cloudflare (Production und Preview):
+// - Geheimwert DS24_IPN_KEY = IPN-Passwort aus Digistore24
+// - R2-Bindung EBOOKS (nur für Fehlernotizen unter kit-fehler/, ohne Kundendaten)
+
+const PRODUKTE = {
+  "761708": { lang: "de", kitForm: "10161368" },
+  "761745": { lang: "en", kitForm: "10161703" },
+};
+
+function htmlDekodiert(v) {
+  return v
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&quot;/g, '"').replace(/&#039;|&apos;/g, "'")
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+}
+
+// Digistore24-Signatur nachbilden (wie digistore_signature(): sortierte „schlüssel=wertPASSWORT“-Paare, SHA-512)
+async function signatur(paare, passwort, grossbuchstaben, htmlDekodieren) {
+  const liste = paare
+    .filter(([k]) => k !== "sha_sign" && k !== "SHASIGN")
+    .map(([k, v]) => [grossbuchstaben ? k.toUpperCase() : k, v]);
+  liste.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
+  let s = "";
+  for (const [k, roh] of liste) {
+    if (roh === null || roh === undefined || roh === "") continue;
+    s += `${k}=${htmlDekodieren ? htmlDekodiert(roh) : roh}${passwort}`;
+  }
+  const hash = await crypto.subtle.digest("SHA-512", new TextEncoder().encode(s));
+  return [...new Uint8Array(hash)].map((b) => b.toString(16).padStart(2, "0")).join("").toUpperCase();
+}
+
+function gleich(a, b) {
+  if (a.length !== b.length) return false;
+  let r = 0;
+  for (let i = 0; i < a.length; i++) r |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return r === 0;
+}
+
+async function unterschriftGueltig(params, passwort) {
+  const sha = (params.get("sha_sign") || params.get("SHASIGN") || "").toUpperCase();
+  if (!sha || !passwort) return false;
+  const paare = [...params.entries()];
+  for (const gross of [false, true]) {
+    for (const html of [false, true]) {
+      if (gleich(await signatur(paare, passwort, gross, html), sha)) return true;
+    }
+  }
+  return false;
+}
+
+const antwort = (text, status = 200) =>
+  new Response(text, { status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" } });
+
+async function fehlerNotieren(env, grund, params) {
+  try {
+    if (!env.EBOOKS) return;
+    const zeit = new Date().toISOString();
+    const bestellnummer = (params.get("order_id") || "ohne").replace(/[^A-Za-z0-9_-]/g, "");
+    await env.EBOOKS.put(`kit-fehler/${zeit.replace(/[:.]/g, "-")}-${bestellnummer}.json`, JSON.stringify({ zeit, grund, bestellnummer, produkt: params.get("product_id") || null, ereignis: params.get("event") || null }, null, 2), {
+      httpMetadata: { contentType: "application/json" },
+    });
+  } catch (e) {}
+}
+
+export async function onRequestPost({ request, env }) {
+  let params;
+  try {
+    params = new URLSearchParams(await request.text());
+  } catch (e) {
+    return antwort("ERROR: unreadable", 400);
+  }
+
+  if (!(await unterschriftGueltig(params, env.DS24_IPN_KEY))) {
+    await fehlerNotieren(env, "Unterschrift passt nicht", params);
+    return antwort("ERROR: invalid sha signature", 403);
+  }
+
+  const ereignis = params.get("event") || "";
+  // Verbindungstest aus Digistore24
+  if (ereignis === "connection_test") return antwort("OK");
+  // Nur bei Zahlung eintragen; alle anderen Ereignisse (Rückgabe, Rückbuchung …) bestätigen wir nur
+  if (ereignis !== "on_payment") return antwort("OK");
+
+  const produkt = PRODUKTE[params.get("product_id") || ""];
+  const email = (params.get("email") || "").trim();
+  if (!produkt || !email) {
+    await fehlerNotieren(env, !produkt ? "unbekanntes Produkt" : "ohne E-Mail", params);
+    return antwort("OK");
+  }
+
+  const daten = new URLSearchParams();
+  daten.set("email_address", email);
+  const vorname = params.get("address_first_name") || params.get("first_name") || "";
+  const nachname = params.get("address_last_name") || params.get("last_name") || "";
+  if (vorname) daten.set("fields[first_name]", vorname);
+  if (nachname) daten.set("fields[last_name]", nachname);
+  daten.set("fields[quelle]", "digistore24");
+
+  try {
+    const r = await fetch(`https://app.kit.com/forms/${produkt.kitForm}/subscriptions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" },
+      body: daten.toString(),
+      redirect: "manual",
+    });
+    if (r.status >= 400) await fehlerNotieren(env, `Kit antwortet ${r.status}`, params);
+  } catch (e) {
+    await fehlerNotieren(env, "Kit nicht erreichbar", params);
+  }
+
+  // Digistore24 erwartet „OK“, sonst wiederholt es die Benachrichtigung
+  return antwort("OK");
+}
+
+export async function onRequestGet() {
+  return antwort("OK");
+}

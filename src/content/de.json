@@ -919,6 +919,10 @@
     "warteliste": {
       "text": "Die nächsten Stockwerke sind in Arbeit. Trag dich ein und erfahre als Erstes, wenn sich die nächste Tür öffnet.",
       "button": "Auf die Warteliste"
+    },
+    "level1": {
+      "text": "Hast du Stockwerk 1 schon betreten? Bis die nächsten Stockwerke fertig sind, warten dort 8 Räume und 48 Spuren auf dich.",
+      "button": "Stockwerk 1 entdecken"
     }
   }
 }

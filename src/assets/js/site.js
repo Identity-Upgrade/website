@@ -41,6 +41,8 @@
   // Warteliste: Auswahl aus dem Link (?for=book|course) vorbelegen, passende Karte zeigen
   var wl = document.querySelector("form[data-waitlist]");
   if (wl) {
+    // Käufer (Link von der Seite nach dem Kauf): Eintrag geht an das Käufer-Formular in Kit
+    if (params.get("from") === "buyer" && wl.getAttribute("data-kaeufer-action")) wl.setAttribute("action", wl.getAttribute("data-kaeufer-action"));
     var fuer = params.get("for");
     if (fuer) {
       wl.querySelectorAll("input[data-fuer]").forEach(function (el) { if (el.getAttribute("data-fuer") === fuer) el.checked = true; });
@@ -73,9 +75,13 @@
 
 
   // Newsletter-Seite: Warteliste-Hinweis ausblenden, wenn jemand von der Warteliste kommt
-  if (params.get("from") === "waitlist") {
+  // from=waitlist: Stockwerk-1-Hinweis statt Warteliste; from=waitlist-buyer: keiner von beiden
+  var von = params.get("from");
+  if (von === "waitlist" || von === "waitlist-buyer") {
     var nlw = document.querySelector("[data-nl-warteliste]");
     if (nlw) nlw.hidden = true;
+    var nl1 = document.querySelector("[data-nl-level1]");
+    if (nl1 && von === "waitlist") nl1.hidden = false;
   }
 
   // E-Book-Download auf der Danke-Seite nach dem Kauf (Pförtner: /api/ebook)
