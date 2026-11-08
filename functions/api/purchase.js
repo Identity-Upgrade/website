@@ -15,7 +15,7 @@
 // - Geheimwert KIT_API_KEY = API-Schlüssel (v4) aus Kit
 // - R2-Bindung EBOOKS (Protokoll unter ipn-protokoll/, ohne Kundendaten)
 
-import { FORMULARE, eintragen } from "../../lib/kit.js";
+import { TAGS, eintragen, markieren } from "../../lib/kit.js";
 
 const PRODUKTE = {
   "761708": { lang: "de", kitForm: "10161368" },
@@ -95,7 +95,20 @@ export async function onRequestPost({ request, env }) {
   const ereignis = params.get("event") || "";
   // Verbindungstest aus Digistore24
   if (ereignis === "connection_test") { await notieren(env, "Verbindungstest", params); return antwort("OK"); }
-  // Nur bei Zahlung eintragen; alle anderen Ereignisse (Rückgabe, Rückbuchung …) bestätigen wir nur
+  // Rückgabe oder Rücklastschrift: Käufer in Kit mit dem Refund-Tag markieren
+  if (ereignis === "on_refund" || ereignis === "on_chargeback") {
+    const p = PRODUKTE[params.get("product_id") || ""];
+    const mail = (params.get("email") || "").trim();
+    if (!p || !mail || !env.KIT_API_KEY) { await notieren(env, "Rückgabe: nicht markiert (Produkt, E-Mail oder Schlüssel fehlt)", params); return antwort("OK"); }
+    try {
+      const kit = await markieren(env.KIT_API_KEY, mail, TAGS.refund[p.lang]);
+      await notieren(env, kit.ok ? "Rückgabe markiert" : "Rückgabe: Kit hat abgelehnt", params, { kit });
+    } catch (e) {
+      await notieren(env, "Rückgabe: Kit nicht erreichbar", params);
+    }
+    return antwort("OK");
+  }
+  // Nur bei Zahlung eintragen; alle anderen Ereignisse bestätigen wir nur
   if (ereignis !== "on_payment") { await notieren(env, "anderes Ereignis, nichts zu tun", params); return antwort("OK"); }
 
   const produkt = PRODUKTE[params.get("product_id") || ""];
