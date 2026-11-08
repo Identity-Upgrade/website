@@ -140,6 +140,9 @@ function ueber(lang, text, farbe = "creme", daten) {
 </div></section>`;
 }
 
+// „Größtes Problem“: Kit speichert die Auswahl als Tag
+const problemTag = (k) => (cfg.kit.problemTags && cfg.kit.problemTags[k] && !istPlatzhalter(cfg.kit.problemTags[k]) ? cfg.kit.problemTags[k] : k);
+
 function formular(lang) {
   const a = T[lang].freebie.anmeldung;
   const id = lang === "de" ? cfg.kit.formIdDe : cfg.kit.formIdEn;
@@ -148,7 +151,7 @@ function formular(lang) {
   return `<form class="formular" data-formular method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.danke[lang]}" data-fehler="${esc(a.fehler)}" novalidate>
   <div class="feld-reihe">
     <div class="feld"><label class="nur-vorlesen" for="vorname-${lang}">${esc(a.vorname)}</label><input id="vorname-${lang}" name="fields[first_name]" autocomplete="given-name" placeholder="${esc(a.vorname)}" required></div>
-    <div class="feld"><label class="nur-vorlesen" for="nachname-${lang}">${esc(a.nachname)}</label><input id="nachname-${lang}" name="fields[last_name]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
+    <div class="feld"><label class="nur-vorlesen" for="nachname-${lang}">${esc(a.nachname)}</label><input id="nachname-${lang}" name="fields[nachname]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
   </div>
   <div class="feld"><label class="nur-vorlesen" for="email-${lang}">${esc(a.email)}</label><input id="email-${lang}" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="${esc(a.email)}" required></div>
   <div class="feld"><label class="nur-vorlesen" for="telefon-${lang}">${esc(a.telefon)}</label>
@@ -157,9 +160,9 @@ function formular(lang) {
       <input id="telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(a.telefon)}" data-telefon>
     </div>
   </div>
-  <input type="hidden" name="fields[phone_number]" data-feld="telefon">
+  <input type="hidden" name="fields[telephone]" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="situation-${lang}">${esc(a.situation)}</label>
-    <select id="situation-${lang}" name="fields[problem]" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
+    <select id="situation-${lang}" name="tags[]" required><option value="" selected disabled>${esc(a.situation)}</option>${(a.situationen || []).map(([v, n]) => `<option value="${esc(problemTag(v))}">${esc(n)}</option>`).join("")}</select>
   </div>
   <input type="hidden" name="fields[quelle]" data-feld="quelle">
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">
@@ -507,7 +510,7 @@ function waitlistFormular(lang) {
   </fieldset>
   <div class="feld-reihe">
     <div class="feld"><label class="nur-vorlesen" for="wl-vorname-${lang}">${esc(a.vorname)}</label><input id="wl-vorname-${lang}" name="fields[first_name]" autocomplete="given-name" placeholder="${esc(a.vorname)}" required></div>
-    <div class="feld"><label class="nur-vorlesen" for="wl-nachname-${lang}">${esc(a.nachname)}</label><input id="wl-nachname-${lang}" name="fields[last_name]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
+    <div class="feld"><label class="nur-vorlesen" for="wl-nachname-${lang}">${esc(a.nachname)}</label><input id="wl-nachname-${lang}" name="fields[nachname]" autocomplete="family-name" placeholder="${esc(a.nachname)}" required></div>
   </div>
   <div class="feld"><label class="nur-vorlesen" for="wl-email-${lang}">${esc(a.email)}</label><input id="wl-email-${lang}" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="${esc(a.email)}" required></div>
   <div class="feld"><label class="nur-vorlesen" for="wl-telefon-${lang}">${esc(w.telefon)}</label>
@@ -516,9 +519,9 @@ function waitlistFormular(lang) {
       <input id="wl-telefon-${lang}" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="${esc(w.telefon)}" data-telefon>
     </div>
   </div>
-  <input type="hidden" name="fields[phone_number]" data-feld="telefon">
+  <input type="hidden" name="fields[telephone]" data-feld="telefon">
   <div class="feld"><label class="nur-vorlesen" for="wl-situation-${lang}">${esc(w.situation)}</label>
-    <select id="wl-situation-${lang}" name="fields[problem]" required><option value="" selected disabled>${esc(w.situation)}</option>${w.situationen.map(([v, n]) => `<option value="${esc(v)}">${esc(n)}</option>`).join("")}</select>
+    <select id="wl-situation-${lang}" name="tags[]" required><option value="" selected disabled>${esc(w.situation)}</option>${w.situationen.map(([v, n]) => `<option value="${esc(problemTag(v))}">${esc(n)}</option>`).join("")}</select>
   </div>
   <input type="hidden" name="fields[quelle]" data-feld="quelle">
   <input type="hidden" name="fields[kampagne]" data-feld="kampagne">

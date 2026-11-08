@@ -33,7 +33,14 @@
     "waitlistBuyerFormIdDe": "10162096",
     "waitlistBuyerFormIdEn": "10162099",
     "buyerL1FormIdDe": "10161368",
-    "buyerL1FormIdEn": "10161703"
+    "buyerL1FormIdEn": "10161703",
+    "problemTags": {
+      "_hinweis": "Tag-IDs aus Kit für „größtes Problem“ (Dropdown speichert als Tag).",
+      "finanzen": "25281528",
+      "beziehungen": "25281532",
+      "koerper": "25281536",
+      "mehrere": "25281544"
+    }
   },
   "digistore": {
     "_hinweis": "Bestell-Links aus Digistore24 eintragen.",
