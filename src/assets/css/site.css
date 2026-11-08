@@ -965,3 +965,4 @@ body:has(.voll-main) { min-height: 100vh; min-height: 100svh; display: flex; fle
 .wl-text { color: var(--text); margin: 0 0 18px; line-height: 1.6; }
 .wl-schluss { margin: auto 0 0; padding-top: 18px; border-top: 1px solid var(--rand); color: var(--text); font-weight: 600; line-height: 1.5; }
 .wl-anmeldung .fliess { margin-bottom: 0; }
+[data-nl-warteliste][hidden], .wl-formular[hidden] { display: none; }

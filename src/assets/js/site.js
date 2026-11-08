@@ -47,7 +47,7 @@
     }
     if (params.get("subscribed")) {
       var erfolg = document.querySelector("[data-erfolg]");
-      if (erfolg) { erfolg.hidden = false; wl.hidden = true; }
+      if (erfolg) { erfolg.hidden = false; wl.hidden = true; var ab = document.getElementById("signup"); if (ab) ab.scrollIntoView(); }
     }
     wl.addEventListener("submit", function (ev) {
       if (!wl.querySelector("input[data-fuer]:checked")) {
@@ -71,6 +71,12 @@
     pruefe();
   }
 
+
+  // Newsletter-Seite: Warteliste-Hinweis ausblenden, wenn jemand von der Warteliste kommt
+  if (params.get("from") === "waitlist") {
+    var nlw = document.querySelector("[data-nl-warteliste]");
+    if (nlw) nlw.hidden = true;
+  }
 
   // E-Book-Download auf der Danke-Seite nach dem Kauf (Pförtner: /api/ebook)
   var eb = document.querySelector("[data-ebook]");
