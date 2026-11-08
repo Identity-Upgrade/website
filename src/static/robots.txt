@@ -4,5 +4,7 @@ Disallow: /de/escape-self-sabotage-r1-thanks/
 Disallow: /en/escape-self-sabotage-r1-thanks/
 Disallow: /de/escape-self-sabotage-l1-thanks/
 Disallow: /en/escape-self-sabotage-l1-thanks/
+Disallow: /de/newsletter/
+Disallow: /en/newsletter/
 
 Sitemap: https://identity-upgrade.com/sitemap.xml

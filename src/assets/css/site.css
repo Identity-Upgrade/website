@@ -946,3 +946,7 @@ body:has(.voll-main) { min-height: 100vh; min-height: 100svh; display: flex; fle
 
 /* Danke-Seite E-Book: ausgeblendete Elemente wirklich ausblenden (.button setzt sonst display) */
 [data-ebook] [hidden] { display: none !important; }
+
+/* Newsletter-Bestätigung: Hinweis auf die Warteliste */
+.newsletter-warteliste { margin-top: 48px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.newsletter-warteliste p { margin: 0; max-width: 520px; }

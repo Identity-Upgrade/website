@@ -783,5 +783,19 @@
         ]
       }
     ]
+  },
+  "newsletter": {
+    "seo": {
+      "titel": "Newsletter confirmed | Identity Upgrade"
+    },
+    "titel": "You're *in.*",
+    "text": [
+      "Thanks for confirming. From now on, our emails will land straight in your inbox."
+    ],
+    "notiz": "See you in your inbox.",
+    "warteliste": {
+      "text": "The next levels are under construction. Join the waitlist and be the first to know when the next door opens.",
+      "button": "Join the waitlist"
+    }
   }
 }
