@@ -135,6 +135,18 @@ export async function onRequestPost({ request, env }) {
   return antwort("OK");
 }
 
-export async function onRequestGet() {
-  return antwort("OK");
+// Prüfseite: /api/purchase?check=1 zeigt, ob Code, Geheimwerte und R2 bereit sind (ohne Geheimnisse zu verraten)
+export async function onRequestGet({ request, env }) {
+  const url = new URL(request.url);
+  if (url.searchParams.get("check") !== "1") return antwort("OK");
+  let r2 = "keine Bindung";
+  if (env.EBOOKS) {
+    try {
+      await env.EBOOKS.put("ipn-protokoll/check.json", JSON.stringify({ zeit: new Date().toISOString(), ergebnis: "Prüfseite aufgerufen" }), { httpMetadata: { contentType: "application/json" } });
+      r2 = "ok";
+    } catch (e) {
+      r2 = "Fehler: " + String((e && e.message) || e).slice(0, 120);
+    }
+  }
+  return antwort(`version 2 · IPN-Passwort: ${env.DS24_IPN_KEY ? "ja" : "nein"} · Kit-Schlüssel: ${env.KIT_API_KEY ? "ja" : "nein"} · R2 schreiben: ${r2}`);
 }
