@@ -12,7 +12,8 @@
 //
 // Benötigt in Cloudflare (Production und Preview):
 // - Geheimwert DS24_IPN_KEY = IPN-Passwort aus Digistore24
-// - R2-Bindung EBOOKS (nur für Fehlernotizen unter kit-fehler/, ohne Kundendaten)
+// - Geheimwert KIT_API_KEY = API-Schlüssel (v4) aus Kit
+// - R2-Bindung EBOOKS (Protokoll unter ipn-protokoll/, ohne Kundendaten)
 
 const PRODUKTE = {
   "761708": { lang: "de", kitForm: "10161368" },
@@ -64,15 +65,30 @@ async function unterschriftGueltig(params, passwort) {
 const antwort = (text, status = 200) =>
   new Response(text, { status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" } });
 
-async function fehlerNotieren(env, grund, params) {
+// Protokoll pro Benachrichtigung (ohne E-Mail, ohne Namen)
+async function notieren(env, ergebnis, params, extra = {}) {
   try {
     if (!env.EBOOKS) return;
     const zeit = new Date().toISOString();
     const bestellnummer = (params.get("order_id") || "ohne").replace(/[^A-Za-z0-9_-]/g, "");
-    await env.EBOOKS.put(`kit-fehler/${zeit.replace(/[:.]/g, "-")}-${bestellnummer}.json`, JSON.stringify({ zeit, grund, bestellnummer, produkt: params.get("product_id") || null, ereignis: params.get("event") || null }, null, 2), {
+    await env.EBOOKS.put(`ipn-protokoll/${zeit.replace(/[:.]/g, "-")}-${bestellnummer}.json`, JSON.stringify({ zeit, ergebnis, bestellnummer, produkt: params.get("product_id") || null, ereignis: params.get("event") || null, ...extra }, null, 2), {
       httpMetadata: { contentType: "application/json" },
     });
   } catch (e) {}
+}
+
+// Käufer in Kit eintragen (API v4): erst als unbestätigt anlegen, dann dem Formular hinzufügen.
+// Hat das Formular Double Opt-in, verschickt Kit dabei die Bestätigungsmail.
+async function inKitEintragen(env, formId, email, vorname, nachname) {
+  const kopf = { "Content-Type": "application/json", Accept: "application/json", "X-Kit-Api-Key": env.KIT_API_KEY };
+  const anlegen = { email_address: email, state: "inactive", fields: { quelle: "digistore24" } };
+  if (vorname) anlegen.first_name = vorname;
+  if (nachname) anlegen.fields.last_name = nachname;
+  const r1 = await fetch("https://api.kit.com/v4/subscribers", { method: "POST", headers: kopf, body: JSON.stringify(anlegen) });
+  const r2 = await fetch(`https://api.kit.com/v4/forms/${formId}/subscribers`, { method: "POST", headers: kopf, body: JSON.stringify({ email_address: email }) });
+  let meldung = "";
+  if (r2.status >= 400) { try { meldung = (await r2.text()).slice(0, 300); } catch (e) {} }
+  return { anlegen: r1.status, formular: r2.status, meldung };
 }
 
 export async function onRequestPost({ request, env }) {
@@ -84,41 +100,35 @@ export async function onRequestPost({ request, env }) {
   }
 
   if (!(await unterschriftGueltig(params, env.DS24_IPN_KEY))) {
-    await fehlerNotieren(env, "Unterschrift passt nicht", params);
+    await notieren(env, "Unterschrift passt nicht", params);
     return antwort("ERROR: invalid sha signature", 403);
   }
 
   const ereignis = params.get("event") || "";
   // Verbindungstest aus Digistore24
-  if (ereignis === "connection_test") return antwort("OK");
+  if (ereignis === "connection_test") { await notieren(env, "Verbindungstest", params); return antwort("OK"); }
   // Nur bei Zahlung eintragen; alle anderen Ereignisse (Rückgabe, Rückbuchung …) bestätigen wir nur
-  if (ereignis !== "on_payment") return antwort("OK");
+  if (ereignis !== "on_payment") { await notieren(env, "anderes Ereignis, nichts zu tun", params); return antwort("OK"); }
 
   const produkt = PRODUKTE[params.get("product_id") || ""];
   const email = (params.get("email") || "").trim();
   if (!produkt || !email) {
-    await fehlerNotieren(env, !produkt ? "unbekanntes Produkt" : "ohne E-Mail", params);
+    await notieren(env, !produkt ? "unbekanntes Produkt" : "ohne E-Mail", params);
     return antwort("OK");
   }
 
-  const daten = new URLSearchParams();
-  daten.set("email_address", email);
   const vorname = params.get("address_first_name") || params.get("first_name") || "";
   const nachname = params.get("address_last_name") || params.get("last_name") || "";
-  if (vorname) daten.set("fields[first_name]", vorname);
-  if (nachname) daten.set("fields[last_name]", nachname);
-  daten.set("fields[quelle]", "digistore24");
 
+  if (!env.KIT_API_KEY) {
+    await notieren(env, "KIT_API_KEY fehlt in Cloudflare", params);
+    return antwort("OK");
+  }
   try {
-    const r = await fetch(`https://app.kit.com/forms/${produkt.kitForm}/subscriptions`, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" },
-      body: daten.toString(),
-      redirect: "manual",
-    });
-    if (r.status >= 400) await fehlerNotieren(env, `Kit antwortet ${r.status}`, params);
+    const kit = await inKitEintragen(env, produkt.kitForm, email, vorname, nachname);
+    await notieren(env, kit.formular < 300 ? "in Kit eingetragen" : "Kit hat abgelehnt", params, { kit });
   } catch (e) {
-    await fehlerNotieren(env, "Kit nicht erreichbar", params);
+    await notieren(env, "Kit nicht erreichbar", params);
   }
 
   // Digistore24 erwartet „OK“, sonst wiederholt es die Benachrichtigung
