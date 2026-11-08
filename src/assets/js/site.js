@@ -92,6 +92,19 @@
     if (nl1 && von === "waitlist") nl1.hidden = false;
   }
 
+  // Meldung in Zeilen setzen, E-Mail-Adresse anklickbar machen (ohne innerHTML)
+  function meldungSetzen(el, text) {
+    el.textContent = "";
+    text.split("\n").forEach(function (zeile, i) {
+      if (i) el.appendChild(document.createElement("br"));
+      zeile.split(/(hello@identity-upgrade\.com)/).forEach(function (teil) {
+        if (teil === "hello@identity-upgrade.com") {
+          var a = document.createElement("a"); a.href = "mailto:" + teil; a.textContent = teil; a.className = "ebook-mail"; el.appendChild(a);
+        } else if (teil) el.appendChild(document.createTextNode(teil));
+      });
+    });
+  }
+
   // E-Book-Download auf der Danke-Seite nach dem Kauf (Pförtner: /api/ebook)
   var eb = document.querySelector("[data-ebook]");
   if (eb) {
@@ -106,7 +119,7 @@
       .then(function (d) {
         laden.hidden = true;
         if (d.stand === "bereit") { btn.href = "/api/ebook?action=download&" + q; btn.hidden = false; hinweis.hidden = false; }
-        else { meldung.textContent = d.text || ""; meldung.hidden = false; }
+        else { meldungSetzen(meldung, d.text || ""); meldung.hidden = false; }
       })
       .catch(function () { laden.hidden = true; meldung.textContent = "hello@identity-upgrade.com"; meldung.hidden = false; });
   }

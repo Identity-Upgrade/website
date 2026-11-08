@@ -31,16 +31,16 @@ const PRODUKTE = {
 
 const TEXTE = {
   de: {
-    abgelaufen: "Dieser Download-Link ist abgelaufen. Schreib uns an hello@identity-upgrade.com, wir helfen dir weiter.",
-    ungueltig: "Wir konnten deinen Kauf nicht bestätigen. Schreib uns an hello@identity-upgrade.com, wir helfen dir weiter.",
-    ohneDaten: "Den Download-Link findest du auch in deiner Bestellbestätigung von Digistore24. Falls etwas nicht klappt, schreib uns an hello@identity-upgrade.com.",
-    fehler: "Gerade ist etwas schiefgelaufen. Bitte versuch es gleich noch einmal oder schreib uns an hello@identity-upgrade.com.",
+    abgelaufen: "Dieser Download-Link ist abgelaufen.\nSchreib uns an hello@identity-upgrade.com, wir helfen dir weiter.",
+    ungueltig: "Wir konnten deinen Kauf nicht bestätigen.\nSchreib uns an hello@identity-upgrade.com, wir helfen dir weiter.",
+    ohneDaten: "Den Download-Link findest du auch in deiner Bestellbestätigung von Digistore24.\nFalls etwas nicht klappt, schreib uns an hello@identity-upgrade.com.",
+    fehler: "Gerade ist etwas schiefgelaufen.\nBitte versuch es gleich noch einmal oder schreib uns an hello@identity-upgrade.com.",
   },
   en: {
-    abgelaufen: "This download link has expired. Email us at hello@identity-upgrade.com and we'll help you out.",
-    ungueltig: "We couldn't confirm your purchase. Email us at hello@identity-upgrade.com and we'll help you out.",
-    ohneDaten: "You'll also find the download link in your order confirmation from Digistore24. If anything doesn't work, email us at hello@identity-upgrade.com.",
-    fehler: "Something went wrong just now. Please try again in a moment or email us at hello@identity-upgrade.com.",
+    abgelaufen: "This download link has expired.\nEmail us at hello@identity-upgrade.com and we'll help you out.",
+    ungueltig: "We couldn't confirm your purchase.\nEmail us at hello@identity-upgrade.com and we'll help you out.",
+    ohneDaten: "You'll also find the download link in your order confirmation from Digistore24.\nIf anything doesn't work, email us at hello@identity-upgrade.com.",
+    fehler: "Something went wrong just now.\nPlease try again in a moment or email us at hello@identity-upgrade.com.",
   },
 };
 
@@ -133,7 +133,7 @@ function json(daten, status = 200) {
 }
 
 function hinweisSeite(text, lang, status) {
-  const html = `<!DOCTYPE html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Identity Upgrade</title><link rel="stylesheet" href="/assets/css/site.css"></head><body class="startseite"><main class="start-flaeche"><p style="color:#fff;font-size:20px;line-height:1.5;max-width:560px;text-align:center;margin:0">${text}</p></main></body></html>`;
+  const html = `<!DOCTYPE html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>Identity Upgrade</title><link rel="stylesheet" href="/assets/css/site.css"></head><body class="startseite"><main class="start-flaeche"><p style="color:#fff;font-size:20px;line-height:1.5;max-width:560px;text-align:center;margin:0">${text.split("\n").map((z) => z.replace(/(hello@identity-upgrade\.com)/g, '<a href="mailto:$1" style="color:#fff;white-space:nowrap">$1</a>')).join("<br>")}</p></main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" } });
 }
 
