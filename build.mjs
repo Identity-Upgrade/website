@@ -464,8 +464,7 @@ function seiteNewsletter(lang) {
   ${absaetze(d.text)}
   ${d.notiz ? `<p class="notiz notiz-c">${esc(d.notiz)}</p>` : ""}
   <div class="newsletter-warteliste" data-nl-warteliste>
-    <p>${esc(d.warteliste.text)}</p>
-    <a class="button button-rot" href="${PFADE.waitlist[lang]}?for=book&amp;from=buyer">${esc(d.warteliste.button)} <span aria-hidden="true">→</span></a>
+    <p>${esc(d.lesen)}</p>
   </div>
   <div class="newsletter-warteliste" data-nl-level1 hidden>
     <p>${esc(d.level1.text)}</p>
