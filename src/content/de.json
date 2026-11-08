@@ -841,30 +841,71 @@
       "beschreibung": "Trag dich ein und erfahre als Erstes, wenn das nächste Stockwerk von Escape Self-Sabotage oder der Kurs startet."
     },
     "label": "",
-    "titel": "Die nächsten Türen *öffnen sich bald.*",
+    "titel": "Wie viel mehr wäre möglich, wenn du alle Zusammenhänge *wirklich verstehst?*",
     "text": [
-      "Stockwerk 1 ist erst der Anfang. Trag dich ein, und du erfährst als Erstes, wenn das nächste Stockwerk oder der Kurs bereit ist."
+      "Du hast bereits gelernt, dass manche Überzeugungen dich ein Leben lang begleiten, ohne dass du je hinterfragt hast, woher sie kommen. Denn manche Entscheidungen fühlen sich einfach so sehr nach dir an, dass du noch nicht einmal bemerkst, wie viel sie von anderen beeinflusst worden sind.",
+      "Doch was passiert, wenn du beginnst, all diese Mechanismen zu durchschauen? Wenn du nicht nur erkennst, wer und was dich bisher tatsächlich geprägt hat, sondern dazu noch entdeckst, wie du selbst Einfluss auf deine Zukunft nehmen kannst?",
+      "Genau darum geht es in den nächsten Veröffentlichungen von Escape Self-Sabotage und den weiterführenden Angeboten von Identity Upgrade."
     ],
+    "boxen": [
+      {
+        "label": "Die nächsten Stockwerke",
+        "titel": "Escape Self-Sabotage",
+        "unterzeile": "Hinterfrage die Regeln. Verstehe die Mechanismen. Entdecke neue Möglichkeiten.",
+        "text": [
+          "Die nächsten beiden Stockwerke führen dich weiter in die Entstehung deiner scheinbar selbstgewählten Überzeugungen, erklären, wer daran beteiligt war und was du davon tatsächlich selbst entschieden hast.",
+          "Und nachdem du verstanden hast, warum gewisse Überzeugungen in dir verankert wurden, richten wir den Blick nach vorne und beginnen damit, dieses Wissen zu nutzen, damit du dein Leben nicht nur bewusster und selbstbestimmter gestalten kannst, sondern auch wirklich in Zukunft da ankommst, wo du hinwillst."
+        ],
+        "schluss": "Alle drei Stockwerke. Alle Zusammenhänge, von ihrer Entstehung bis zur bewussten Veränderung."
+      },
+      {
+        "label": "Die weiterführenden Angebote",
+        "titel": "Identity Upgrade Kurse",
+        "unterzeile": "Vom Wissen zur persönlichen Veränderung.",
+        "text": [
+          "Die eigenen Muster zu verstehen, ist eine Sache. Zu verstehen, wo sie herkommen, sie dann im Alltag zu erkennen und anders mit ihnen umzugehen, eine andere.",
+          "Die weiterführenden Angebote von Identity Upgrade helfen dir, die Erkenntnisse auf deine persönlichen Erfahrungen zu übertragen, Zusammenhänge genauer zu untersuchen und die Autorität über dein eigenes Leben wieder zurückzugewinnen."
+        ],
+        "schluss": "In deinem Tempo und auf einem Weg, der zu dir passt. Unser Angebot wächst kontinuierlich."
+      }
+    ],
+    "formTitel": "Erfahre als Erstes, *wenn es so weit ist.*",
+    "formText": "Das vollständige Buch und die weiterführenden Angebote sind in Vorbereitung. Wähle aus, wofür du dich interessierst, und lass dich informieren, sobald es Neuigkeiten gibt.",
+    "auswahlFrage": "Ich interessiere mich für:",
     "optionen": [
       {
         "key": "book",
-        "text": "das ganze Buch Escape Self-Sabotage",
-        "kartenTitel": "Escape Self-Sabotage",
-        "kartenText": "Alle Stockwerke, alle Räume. Der ganze Weg durch das Haus deiner Muster, Stockwerk für Stockwerk."
+        "text": "Das vollständige Buch Escape Self-Sabotage"
       },
       {
         "key": "course",
-        "text": "den Kurs",
-        "kartenTitel": "Der Kurs",
-        "kartenText": "Gemeinsam tiefer gehen. Mit Begleitung durch die Räume, in denen du allein vielleicht hängen bleibst."
+        "text": "Die weiterführenden Angebote und Kurse von Identity Upgrade"
       }
     ],
-    "auswahlFrage": "Ich interessiere mich für:",
-    "formTitel": "Trag dich *ein.*",
+    "telefon": "Telefonnummer (optional)",
+    "situation": "Dein größtes Problem",
+    "situationen": [
+      [
+        "finanzen",
+        "Finanzen"
+      ],
+      [
+        "beziehungen",
+        "Beziehungen"
+      ],
+      [
+        "koerper",
+        "Körper & Wohlbefinden"
+      ],
+      [
+        "mehrere",
+        "Mehrere Bereiche"
+      ]
+    ],
     "button": "Auf die Warteliste",
-    "fehler": "Bitte wähle mindestens eine Option und fülle Vorname, Nachname und E-Mail-Adresse aus.",
+    "hinweis": "Du erhältst eine E-Mail zur Bestätigung deiner Anmeldung.",
     "erfolg": "Danke, du stehst auf der Liste. Schau in dein Postfach und bestätige deine Anmeldung.",
-    "hinweis": "Du bekommst eine Mail zur Bestätigung. Abmelden kannst du dich jederzeit mit einem Klick."
+    "fehler": "Bitte wähle mindestens eine Option und fülle Vorname, Nachname, E-Mail-Adresse und dein größtes Problem aus."
   },
   "newsletter": {
     "seo": {

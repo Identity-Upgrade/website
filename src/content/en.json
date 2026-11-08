@@ -685,30 +685,71 @@
       "beschreibung": "Join the list and be the first to know when the next level of Escape Self-Sabotage or the course launches."
     },
     "label": "",
-    "titel": "The next doors *open soon.*",
+    "titel": "How much more could be possible if you *truly understood the whole picture?*",
     "text": [
-      "Level 1 is just the beginning. Join the list and be the first to know when the next level or the course is ready."
+      "You've already discovered that some beliefs stay with you for a lifetime, without you ever questioning where they came from. Because some decisions feel so completely your own that you don't even notice how much they've been influenced by others.",
+      "But what happens when you begin to see through all these hidden mechanisms? When you not only recognize who and what has truly shaped you, but also discover how you can take control of your own future?",
+      "That's exactly what the upcoming releases of Escape Self-Sabotage and the new offerings from Identity Upgrade are all about."
     ],
+    "boxen": [
+      {
+        "label": "The next two floors",
+        "titel": "Escape Self-Sabotage",
+        "unterzeile": "Question the rules. Understand the mechanisms. Discover new possibilities.",
+        "text": [
+          "The next two floors take you deeper into how your seemingly self-chosen beliefs were formed, revealing who played a part in shaping them and how much of what you believe was ever truly your own choice.",
+          "And once you understand why certain beliefs became so deeply rooted within you, it's time to look ahead. You'll begin using that knowledge not only to live more consciously and on your own terms, but to actually move toward the life you want to create."
+        ],
+        "schluss": "All three floors. The complete picture, from how it all began to how you can consciously change it."
+      },
+      {
+        "label": "What's coming next",
+        "titel": "Identity Upgrade Courses",
+        "unterzeile": "From understanding to personal transformation.",
+        "text": [
+          "Understanding your patterns is one thing. Discovering where they came from, recognizing them in everyday life, and learning to respond differently is another.",
+          "The upcoming Identity Upgrade offerings will help you apply these insights to your own experiences, explore the connections more deeply, and reclaim authority over your own life."
+        ],
+        "schluss": "At your own pace, in a way that works for you. And with new offerings continually being added."
+      }
+    ],
+    "formTitel": "Be the first to know *when it's ready.*",
+    "formText": "The complete book and our upcoming courses and programs are currently in development. Choose what interests you, and we'll let you know as soon as there's news.",
+    "auswahlFrage": "I'm interested in:",
     "optionen": [
       {
         "key": "book",
-        "text": "the complete book Escape Self-Sabotage",
-        "kartenTitel": "Escape Self-Sabotage",
-        "kartenText": "Every level, every room. The whole way through the house of your patterns, level by level."
+        "text": "The complete Escape Self-Sabotage book"
       },
       {
         "key": "course",
-        "text": "the course",
-        "kartenTitel": "The course",
-        "kartenText": "Going deeper together. Guidance through the rooms where you might get stuck on your own."
+        "text": "Identity Upgrade courses and upcoming programs"
       }
     ],
-    "auswahlFrage": "I'm interested in:",
-    "formTitel": "Join the *list.*",
+    "telefon": "Phone Number (optional)",
+    "situation": "What's your biggest challenge?",
+    "situationen": [
+      [
+        "finanzen",
+        "Finances"
+      ],
+      [
+        "beziehungen",
+        "Relationships"
+      ],
+      [
+        "koerper",
+        "Body & Wellbeing"
+      ],
+      [
+        "mehrere",
+        "More than one of the above"
+      ]
+    ],
     "button": "Join the waitlist",
-    "fehler": "Please choose at least one option and fill in your first name, last name, and email address.",
-    "erfolg": "Thank you, you're on the list. Check your inbox and confirm your signup.",
-    "hinweis": "You'll get an email to confirm. You can unsubscribe anytime with one click."
+    "hinweis": "You'll receive an email to confirm your subscription.",
+    "erfolg": "Thank you, you're on the list. Check your inbox and confirm your subscription.",
+    "fehler": "Please choose at least one option and fill in your first name, last name, email address, and biggest challenge."
   },
   "impressum": {
     "seo": {

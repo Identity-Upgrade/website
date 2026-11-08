@@ -44,7 +44,6 @@
     var fuer = params.get("for");
     if (fuer) {
       wl.querySelectorAll("input[data-fuer]").forEach(function (el) { if (el.getAttribute("data-fuer") === fuer) el.checked = true; });
-      document.querySelectorAll("[data-produkt]").forEach(function (k) { if (k.getAttribute("data-produkt") !== fuer) k.hidden = true; });
     }
     if (params.get("eingetragen")) {
       var erfolg = document.querySelector("[data-erfolg]");
