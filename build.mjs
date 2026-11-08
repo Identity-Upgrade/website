@@ -491,10 +491,11 @@ ${fuss(lang)}`;
 
 function waitlistFormular(lang) {
   const w = T[lang].waitlist, a = T[lang].freebie.anmeldung;
-  const id = cfg.kit.waitlistFormId;
+  const id = lang === "de" ? cfg.kit.waitlistFormIdDe : cfg.kit.waitlistFormIdEn;
   const vorschau = istPlatzhalter(id);
   const action = vorschau ? PFADE.waitlist[lang] + "#danke" : `https://app.kit.com/forms/${encodeURIComponent(id)}/subscriptions`;
-  const tag = (k) => (cfg.kit.waitlistTags && !istPlatzhalter(cfg.kit.waitlistTags[k]) ? cfg.kit.waitlistTags[k] : k);
+  const tags = (cfg.kit.waitlistTags && cfg.kit.waitlistTags[lang]) || {};
+  const tag = (k) => (tags[k] && !istPlatzhalter(tags[k]) ? tags[k] : k);
   return `<form class="formular wl-formular" data-formular data-waitlist method="post" action="${action}" data-vorschau="${vorschau ? "ja" : "nein"}" data-danke="${PFADE.waitlist[lang]}?eingetragen=1" data-fehler="${esc(w.fehler)}" novalidate>
   <fieldset class="wl-auswahl" data-auswahl><legend class="wl-legende">${esc(w.auswahlFrage)}</legend>
     ${w.optionen.map((o) => `<label class="wl-option"><input type="checkbox" name="tags[]" value="${esc(tag(o.key))}" data-fuer="${esc(o.key)}"><span>${esc(o.text)}</span></label>`).join("")}
