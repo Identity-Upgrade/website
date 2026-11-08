@@ -17,12 +17,19 @@
     "_hinweis": "Formular-ID aus Kit eintragen. Solange hier ein Platzhalter steht, laeuft das Formular im Vorschaumodus und leitet nur zur Danke-Seite weiter.",
     "formIdDe": "10126010",
     "formIdEn": "10126067",
-    "waitlistFormId": "[KIT-FORM-ID-WAITLIST]",
     "waitlistTags": {
-      "_hinweis": "Tag-IDs aus Kit eintragen (Buch / Kurs).",
-      "book": "[KIT-TAG-ID-BUCH]",
-      "course": "[KIT-TAG-ID-KURS]"
-    }
+      "_hinweis": "Tag-IDs aus Kit (Buch / Kurs) je Sprache.",
+      "de": {
+        "book": "25592491",
+        "course": "25592498"
+      },
+      "en": {
+        "book": "25592492",
+        "course": "25592501"
+      }
+    },
+    "waitlistFormIdDe": "10161920",
+    "waitlistFormIdEn": "10161924"
   },
   "digistore": {
     "_hinweis": "Bestell-Links aus Digistore24 eintragen.",
