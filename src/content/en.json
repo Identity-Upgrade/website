@@ -783,5 +783,15 @@
         ]
       }
     ]
+  },
+  "newsletter": {
+    "seo": {
+      "titel": "Newsletter confirmed | Identity Upgrade"
+    },
+    "titel": "You're *in.*",
+    "text": [
+      "Thanks for confirming. From now on, our emails will land straight in your inbox."
+    ],
+    "notiz": "See you in your inbox."
   }
 }

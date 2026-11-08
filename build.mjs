@@ -25,6 +25,7 @@ const PFADE = {
   waitlist: { de: "/de/waitlist/", en: "/en/waitlist/" },
   impressum: { de: "/de/impressum/", en: "/en/legal-notice/" },
   privacy: { de: "/de/privacy/", en: "/en/privacy/" },
+  newsletter: { de: "/de/newsletter/", en: "/en/newsletter/" },
 };
 
 const istPlatzhalter = (s) => typeof s === "string" && /^\[.*\]$/.test(s.trim());
@@ -448,6 +449,20 @@ ${fuss(lang)}`;
   return seitenRahmen(lang, "impressum", { titel: im.seo.titel }, body);
 }
 
+function seiteNewsletter(lang) {
+  const d = T[lang].newsletter;
+  const body = `${kopf(lang, "newsletter")}
+<main class="voll-main">
+<section class="abschnitt creme mitte danke-schlicht"><div class="huelle">
+  <h1 class="titel t-gross">${akzent(d.titel)}</h1>
+  ${absaetze(d.text)}
+  ${d.notiz ? `<p class="notiz notiz-c">${esc(d.notiz)}</p>` : ""}
+</div></section>
+</main>
+${fuss(lang)}`;
+  return seitenRahmen(lang, "newsletter", { titel: d.seo.titel, noindex: true }, body);
+}
+
 function seiteBuchDanke(lang) {
   const d = T[lang].buchDanke;
   const body = `${kopf(lang, "buchDanke")}
@@ -562,6 +577,7 @@ for (const lang of ["de", "en"]) {
   schreibe(PFADE.danke[lang], seiteDanke(lang));
   schreibe(PFADE.buchDanke[lang], seiteBuchDanke(lang));
   schreibe(PFADE.waitlist[lang], seiteWaitlist(lang));
+  schreibe(PFADE.newsletter[lang], seiteNewsletter(lang));
   if (PFADE.impressum[lang]) schreibe(PFADE.impressum[lang], seiteImpressum(lang));
   schreibe(PFADE.privacy[lang], seitePrivacy(lang));
 }
