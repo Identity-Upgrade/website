@@ -7,7 +7,7 @@
       "regulaer": "15,99 €"
     },
     "en": {
-      "einfuehrung": "$14.50",
+      "einfuehrung": "$14.99",
       "regulaer": "$17.99"
     },
     "einfuehrungBis": "2026-12-31",
@@ -45,7 +45,7 @@
   "digistore": {
     "_hinweis": "Bestell-Links aus Digistore24 eintragen.",
     "kaufLinkDe": "https://www.checkout-ds24.com/product/761708",
-    "kaufLinkEn": "https://www.checkout-ds24.com/product/761745"
+    "kaufLinkEn": "https://buy.stripe.com/28EbJ01w5dmuaev6qe67S00"
   },
   "anbieter": {
     "name": "KLEWERINN LLP",

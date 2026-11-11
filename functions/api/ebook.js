@@ -19,6 +19,11 @@
 // Benötigt in Cloudflare (Production und Preview):
 // - R2-Bindung EBOOKS → identity-upgrade-ebooks
 // - Geheimwert DS24_THANKYOU_KEY = Danke-Seiten-Schlüssel aus Digistore24
+//
+// Englisches Buch über Stripe (seit 11.11.2026):
+// - Der Stripe-Zahlungslink leitet auf die Danke-Seite mit ?session_id=cs_… weiter.
+// - Der Pförtner fragt Stripe, ob diese Sitzung bezahlt ist (Geheimwert STRIPE_SECRET_KEY,
+//   eingeschränkter Schlüssel mit Lesezugriff auf Checkout Sessions). Danach gelten dieselben Regeln.
 
 const GUELTIG_MS = 30 * 24 * 60 * 60 * 1000;
 const NACHFRIST_MS = 15 * 60 * 1000;
@@ -39,7 +44,7 @@ const TEXTE = {
   en: {
     abgelaufen: "This download link has expired.\nEmail us at hello@identity-upgrade.com and we'll help you out.",
     ungueltig: "We couldn't confirm your purchase.\nEmail us at hello@identity-upgrade.com and we'll help you out.",
-    ohneDaten: "You'll also find the download link in your order confirmation from Digistore24.\nIf anything doesn't work, email us at hello@identity-upgrade.com.",
+    ohneDaten: "We couldn't find your purchase details on this page.\nEmail us at hello@identity-upgrade.com and we'll send you your e-book.",
     fehler: "Something went wrong just now.\nPlease try again in a moment or email us at hello@identity-upgrade.com.",
   },
 };
@@ -152,10 +157,80 @@ function stand(notiz, jetzt) {
   return jetzt - downloads[0] <= NACHFRIST_MS ? "bereit" : "abgelaufen";
 }
 
+// Gemeinsamer Teil: Notiz anlegen, Stand prüfen, PDF ausliefern
+async function ausliefern({ url, params, env, aktion, lang, t, produkt, orderId, produktNr }) {
+  const jetzt = Date.now();
+  const notizKey = `bestellungen/${orderId}.json`;
+  const vorhanden = await env.EBOOKS.get(notizKey);
+  let notiz = vorhanden ? await vorhanden.json() : null;
+  if (!notiz) {
+    notiz = { bestellnummer: orderId, produkt: produktNr, erstAufruf: jetzt, downloads: [] };
+    await env.EBOOKS.put(notizKey, JSON.stringify(notiz, null, 2), { httpMetadata: { contentType: "application/json" } });
+  }
+
+  const s = stand(notiz, jetzt);
+  if (aktion !== "download" && params.get("notice") === "error") return json({ stand: "fehler", text: t.fehler });
+  if (aktion !== "download") {
+    return json({ stand: s, text: s === "abgelaufen" ? t.abgelaufen : "" });
+  }
+  if (s !== "bereit") return zurueck(url, lang, false);
+
+  const pdf = await env.EBOOKS.get(produkt.datei);
+  if (!pdf) return zurueck(url, lang, true);
+
+  notiz.downloads = [...(notiz.downloads || []), jetzt];
+  notiz.downloadsLesbar = notiz.downloads.map((d) => new Date(d).toISOString());
+  notiz.erstAufrufLesbar = new Date(notiz.erstAufruf).toISOString();
+  await env.EBOOKS.put(notizKey, JSON.stringify(notiz, null, 2), { httpMetadata: { contentType: "application/json" } });
+
+  return new Response(pdf.body, {
+    headers: {
+      "Content-Type": "application/pdf",
+      "Content-Disposition": `attachment; filename="${produkt.datei}"`,
+      "Cache-Control": "no-store",
+      "X-Robots-Tag": "noindex, nofollow",
+    },
+  });
+}
+
+// Englisches Buch über Stripe: Sitzung bei Stripe prüfen, dann wie gewohnt ausliefern
+async function stripeAbwickeln({ url, params, env, aktion, sessionId }) {
+  const lang = "en";
+  const t = TEXTE.en;
+  const produkt = PRODUKTE["761745"];
+  try {
+    if (!env.EBOOKS || !env.STRIPE_SECRET_KEY) {
+      return aktion === "download" ? zurueck(url, lang, true) : json({ stand: "fehler", text: t.fehler }, 503);
+    }
+    let grund = "";
+    if (!sessionId.startsWith("cs_")) grund = "ungültige Stripe-Sitzung";
+    else {
+      const r = await fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, {
+        headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}` },
+      });
+      if (r.status >= 500) throw new Error("Stripe nicht erreichbar");
+      if (r.status !== 200) grund = `Stripe-Sitzung unbekannt (${r.status})`;
+      else {
+        const sitzung = await r.json();
+        if (sitzung.payment_status !== "paid") grund = "Stripe-Sitzung nicht bezahlt";
+      }
+    }
+    if (grund) {
+      await abweisungNotieren(env, grund, params, sessionId.slice(-24), aktion);
+      return aktion === "download" ? zurueck(url, lang, false) : json({ stand: "ungueltig", text: t.ungueltig }, 403);
+    }
+    return await ausliefern({ url, params, env, aktion, lang, t, produkt, orderId: sessionId, produktNr: "stripe-en" });
+  } catch (e) {
+    return aktion === "download" ? zurueck(url, lang, true) : json({ stand: "fehler", text: t.fehler }, 500);
+  }
+}
+
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
   const params = url.searchParams;
   const aktion = params.get("action") || "status";
+  const sessionId = (params.get("session_id") || "").replace(/[^A-Za-z0-9_]/g, "");
+  if (sessionId) return stripeAbwickeln({ url, params, env, aktion, sessionId });
   const produkt = PRODUKTE[params.get("product_id") || ""];
   const lang = produkt ? produkt.lang : (params.get("buyer_language") || params.get("page")) === "de" ? "de" : "en";
   const t = TEXTE[lang];
@@ -177,38 +252,7 @@ export async function onRequestGet({ request, env }) {
       return aktion === "download" ? zurueck(url, lang, false) : json({ stand: "ungueltig", text }, 403);
     }
 
-    const jetzt = Date.now();
-    const notizKey = `bestellungen/${orderId}.json`;
-    const vorhanden = await env.EBOOKS.get(notizKey);
-    let notiz = vorhanden ? await vorhanden.json() : null;
-    if (!notiz) {
-      notiz = { bestellnummer: orderId, produkt: params.get("product_id"), erstAufruf: jetzt, downloads: [] };
-      await env.EBOOKS.put(notizKey, JSON.stringify(notiz, null, 2), { httpMetadata: { contentType: "application/json" } });
-    }
-
-    const s = stand(notiz, jetzt);
-    if (aktion !== "download" && params.get("notice") === "error") return json({ stand: "fehler", text: t.fehler });
-    if (aktion !== "download") {
-      return json({ stand: s, text: s === "abgelaufen" ? t.abgelaufen : "" });
-    }
-    if (s !== "bereit") return zurueck(url, lang, false);
-
-    const pdf = await env.EBOOKS.get(produkt.datei);
-    if (!pdf) return zurueck(url, lang, true);
-
-    notiz.downloads = [...(notiz.downloads || []), jetzt];
-    notiz.downloadsLesbar = notiz.downloads.map((d) => new Date(d).toISOString());
-    notiz.erstAufrufLesbar = new Date(notiz.erstAufruf).toISOString();
-    await env.EBOOKS.put(notizKey, JSON.stringify(notiz, null, 2), { httpMetadata: { contentType: "application/json" } });
-
-    return new Response(pdf.body, {
-      headers: {
-        "Content-Type": "application/pdf",
-        "Content-Disposition": `attachment; filename="${produkt.datei}"`,
-        "Cache-Control": "no-store",
-        "X-Robots-Tag": "noindex, nofollow",
-      },
-    });
+    return await ausliefern({ url, params, env, aktion, lang, t, produkt, orderId, produktNr: params.get("product_id") });
   } catch (e) {
     return aktion === "download" ? zurueck(url, lang, true) : json({ stand: "fehler", text: t.fehler }, 500);
   }

@@ -590,7 +590,7 @@
             "p": [
               "Das E-Book verkauft die **Digistore24 GmbH** (Deutschland) als Wiederverkäufer. Digistore24 ist dein Vertragspartner, wickelt die Zahlung ab und verarbeitet deine Daten in eigener Verantwortung nach seiner eigenen Datenschutzerklärung. Deine Zahlungsdaten sehen wir nie.",
               "Digistore24 übermittelt uns deinen Namen, deine E-Mail-Adresse und die Bestelldaten, soweit wir sie brauchen, um dir das E-Book bereitzustellen und bei Fragen zu helfen.",
-              "Wenn du ein E-Book kaufst, speichern wir zu deiner Bestellnummer, wann du die Danke-Seite aufgerufen und das E-Book heruntergeladen hast. Wir nutzen diese Angaben nur, um den Download bereitzustellen und dir bei Problemen zu helfen. Deine E-Mail-Adresse speichern wir dafür nicht, sie liegt nur bei Digistore24. Die Angaben werden bei Cloudflare gespeichert.",
+              "Wenn du ein E-Book kaufst, speichern wir zu deiner Bestellnummer, wann du die Danke-Seite aufgerufen und das E-Book heruntergeladen hast. Wir nutzen diese Angaben nur, um den Download bereitzustellen und dir bei Problemen zu helfen. Die Angaben werden bei Cloudflare gespeichert.",
               "Rechtsgrundlage: Durchführung des Kaufs (Art. 6 Abs. 1 lit. b DSGVO) und gesetzliche Aufbewahrungspflichten (Art. 6 Abs. 1 lit. c DSGVO)."
             ]
           }
@@ -813,6 +813,56 @@
         "teile": [
           {
             "p": "Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+          }
+        ]
+      },
+      {
+        "id": "terms",
+        "t": "Verkaufs*bedingungen.*",
+        "teile": [
+          {
+            "label": "1. Herausgeberin",
+            "p": "„Escape Self-Sabotage – Stockwerk 1“ wird von der KLEWERINN LLP, Kanada (Marke: Identity Upgrade), herausgegeben. Die Angaben zum Unternehmen findest du oben im Impressum."
+          },
+          {
+            "label": "2. Vertragspartner",
+            "p": "Den Verkauf übernimmt die Digistore24 GmbH (Deutschland) als Wiederverkäufer. Digistore24 ist dein Vertragspartner, wickelt die Zahlung ab, stellt die Rechnung aus und führt die Umsatzsteuer ab. Ergänzend gelten die Bedingungen von Digistore24."
+          },
+          {
+            "label": "3. Produkt und Preis",
+            "p": "Das Produkt ist ein digitales E-Book (PDF). Der Preis wird im Bestellvorgang in Euro angezeigt und enthält die gesetzliche Umsatzsteuer."
+          },
+          {
+            "label": "4. Lieferung",
+            "p": "Nach erfolgreicher Zahlung wirst du auf eine Download-Seite weitergeleitet und erhältst sofort Zugang zum E-Book. Falls das nicht klappt, schreib uns an [[EMAIL]]."
+          },
+          {
+            "label": "5. Lizenz",
+            "p": "Du erhältst eine persönliche, nicht übertragbare Lizenz, das E-Book für dich selbst zu lesen und zu nutzen. Kopieren, Teilen, Weiterverkaufen und Veröffentlichen sind nicht erlaubt, auch nicht in Auszügen. Für Lizenzanfragen (z. B. für Teams oder Coaching-Programme) schreib uns an [[EMAIL]]."
+          },
+          {
+            "label": "6. Widerruf und Rückgabe",
+            "p": "Siehe „[[#refund-policy|Widerruf und Rückgabe]]“ weiter unten."
+          },
+          {
+            "label": "7. Keine Erfolgsgarantie",
+            "p": "Das E-Book bietet Informationen und Übungen zur persönlichen Entwicklung. Es ersetzt keine medizinische, psychologische oder therapeutische Behandlung. Die Ergebnisse hängen davon ab, wie du es anwendest."
+          },
+          {
+            "label": "8. Kontakt",
+            "p": "[[EMAIL]]"
+          }
+        ]
+      },
+      {
+        "id": "refund-policy",
+        "t": "Widerruf und *Rückgabe.*",
+        "teile": [
+          {
+            "p": [
+              "„Escape Self-Sabotage – Stockwerk 1“ ist ein digitales Produkt (E-Book), das direkt nach dem Kauf zum Download bereitsteht. Bei der Bestellung stimmst du ausdrücklich zu, dass die Bereitstellung sofort beginnt, und bestätigst, dass du damit dein Widerrufsrecht verlierst. Rückgabe, Umtausch und Erstattung sind deshalb ausgeschlossen. Deine gesetzlichen Rechte bei Mängeln bleiben davon unberührt.",
+              "Die Bestellung wickelt die Digistore24 GmbH als Vertragspartner ab. Fragen zu deiner Zahlung kannst du an den Support von Digistore24 oder an [[EMAIL]] richten."
+            ]
           }
         ]
       }
