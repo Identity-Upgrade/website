@@ -823,6 +823,48 @@
             "p": "We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board."
           }
         ]
+      },
+      {
+        "id": "terms",
+        "t": "Terms of *Sale.*",
+        "teile": [
+          {
+            "label": "Product",
+            "p": "\"Escape Self-Sabotage – Level 1\" (English edition) is a digital e-book in PDF format. After payment, you are taken to a download page. The download link is valid for 30 days and can be used up to two times."
+          },
+          {
+            "label": "Seller and payment",
+            "p": "Purchases are processed by Link (Stripe) as merchant of record. Prices are shown in USD at checkout and include any applicable taxes. The content is provided by KLEWERINN LLP, 44322 Yale Rd, Unit 3B #250, Chilliwack, BC V2R 4H1, Canada."
+          },
+          {
+            "label": "Use",
+            "p": "The e-book is for your personal use only. You may not copy, share, resell or publish it, in whole or in part."
+          },
+          {
+            "label": "Refunds",
+            "p": "See our [[#refund-policy|Refund Policy]] below."
+          },
+          {
+            "label": "No guarantee",
+            "p": "The e-book offers self-reflection and insights. It is not a substitute for medical, psychological or therapeutic advice, and individual results vary."
+          },
+          {
+            "label": "Contact",
+            "p": "[[EMAIL]]"
+          }
+        ]
+      },
+      {
+        "id": "refund-policy",
+        "t": "Refund *Policy.*",
+        "teile": [
+          {
+            "p": [
+              "\"Escape Self-Sabotage – Level 1\" is a digital product (e-book) that is made available for download immediately after purchase. By completing your purchase, you agree to immediate delivery and acknowledge that all sales are final. We do not offer returns, exchanges or refunds.",
+              "Purchases are processed by Link (Stripe) as merchant of record. Questions about your payment can be directed to Link support or to [[EMAIL]]."
+            ]
+          }
+        ]
       }
     ]
   },
