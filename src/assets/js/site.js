@@ -105,6 +105,21 @@
     });
   }
 
+  // Zustimmung vor dem Stripe-Checkout (englisches Buch)
+  var zd = document.querySelector("[data-zustimmung]");
+  if (zd && typeof zd.showModal === "function") {
+    var zHaken = zd.querySelector("[data-zustimmung-haken]"), zWeiter = zd.querySelector("[data-zustimmung-weiter]");
+    var zZiel = zWeiter.getAttribute("href");
+    var zStand = function () { zWeiter.setAttribute("aria-disabled", zHaken.checked ? "false" : "true"); };
+    zHaken.addEventListener("change", zStand);
+    zWeiter.addEventListener("click", function (e) { if (!zHaken.checked) { e.preventDefault(); zHaken.focus(); } });
+    document.querySelectorAll('a[href="' + zZiel + '"]').forEach(function (a) {
+      if (a === zWeiter) return;
+      a.addEventListener("click", function (e) { e.preventDefault(); zHaken.checked = false; zStand(); zd.showModal(); });
+    });
+    zd.addEventListener("click", function (e) { if (e.target === zd) zd.close(); });
+  }
+
   // E-Book-Download auf der Danke-Seite nach dem Kauf (Pförtner: /api/ebook)
   var eb = document.querySelector("[data-ebook]");
   if (eb) {

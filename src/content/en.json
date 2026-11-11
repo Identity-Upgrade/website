@@ -431,6 +431,12 @@
       },
       "button": "Buy now",
       "schlussNotiz": "Question what you've\nalways taken for granted."
+    },
+    "zustimmung": {
+      "titel": "One last *step.*",
+      "text": "I agree to the [[/en/legal-notice/#terms|Terms of Sale]] and request immediate access to the e-book. I understand that I lose my right of withdrawal once the download is available.",
+      "button": "Continue to checkout",
+      "schliessen": "Close"
     }
   },
   "gemeinsam": {
