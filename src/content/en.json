@@ -829,27 +829,35 @@
         "t": "Terms of *Sale.*",
         "teile": [
           {
-            "label": "Product",
-            "p": "\"Escape Self-Sabotage – Level 1\" (English edition) is a digital e-book in PDF format. After payment, you are taken to a download page. The download link is valid for 30 days and can be used up to two times."
+            "label": "1. Seller",
+            "p": "\"Escape Self-Sabotage – Level 1\" is published by KLEWERINN LLP, Canada (brand: Identity Upgrade). Company details are listed in the Legal Notice above."
           },
           {
-            "label": "Seller and payment",
-            "p": "Purchases are processed by Link (Stripe) as merchant of record. Prices are shown in USD at checkout and include any applicable taxes. The content is provided by KLEWERINN LLP, 44322 Yale Rd, Unit 3B #250, Chilliwack, BC V2R 4H1, Canada."
+            "label": "2. Merchant of record",
+            "p": "Payments are processed by Link (Stripe) as merchant of record. Link handles payment, sales tax/VAT, invoicing and payment support. Your purchase is shown as \"Sold through Link\"."
           },
           {
-            "label": "Use",
-            "p": "The e-book is for your personal use only. You may not copy, share, resell or publish it, in whole or in part."
+            "label": "3. Product and price",
+            "p": "The product is a digital e-book (PDF). The price is shown at checkout in US dollars and includes all applicable taxes."
           },
           {
-            "label": "Refunds",
-            "p": "See our [[#refund-policy|Refund Policy]] below."
+            "label": "4. Delivery",
+            "p": "After successful payment, you are redirected to a download page and receive access to the e-book immediately. If you do not receive access, please contact [[EMAIL]]."
           },
           {
-            "label": "No guarantee",
-            "p": "The e-book offers self-reflection and insights. It is not a substitute for medical, psychological or therapeutic advice, and individual results vary."
+            "label": "5. License",
+            "p": "You receive a personal, non-transferable license to read and use the e-book for your own purposes. You may not copy, share, resell or publish the e-book or parts of it, in whole or in part. For license requests (e.g. for teams or coaching programs), please contact [[EMAIL]]."
           },
           {
-            "label": "Contact",
+            "label": "6. Refund Policy",
+            "p": "See \"[[#refund-policy|Refund Policy]]\" below."
+          },
+          {
+            "label": "7. No guarantee of results",
+            "p": "The e-book provides information and exercises for personal development. It does not replace medical, psychological or therapeutic treatment. Results depend on your own application."
+          },
+          {
+            "label": "8. Contact",
             "p": "[[EMAIL]]"
           }
         ]
