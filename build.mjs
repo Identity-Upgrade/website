@@ -179,6 +179,20 @@ function formularHinweis(lang) {
   return `<p class="kleingedruckt">${esc(a.hinweis)}</p>`;
 }
 
+// Zustimmung vor dem Stripe-Checkout (englisches Buch): Verzicht auf das Widerrufsrecht per Häkchen.
+// Erscheint nur auf Seiten, die zum Stripe-Zahlungslink führen.
+function zustimmungsDialog(lang, body) {
+  const link = lang === "en" ? cfg.digistore.kaufLinkEn : "";
+  if (!link || !/buy\.stripe\.com/.test(link) || !body.includes(esc(link))) return "";
+  const z = T.en.buch.zustimmung;
+  return `<dialog class="zustimmung" data-zustimmung aria-labelledby="zustimmung-titel">
+  <form method="dialog" class="zustimmung-schliessen-form"><button class="zustimmung-x" aria-label="${esc(z.schliessen)}">×</button></form>
+  <h2 class="titel t-gross" id="zustimmung-titel">${akzent(z.titel)}</h2>
+  <label class="zustimmung-haken"><input type="checkbox" data-zustimmung-haken><span>${reich(z.text).replace(/<a href=/g, '<a target="_blank" rel="noopener" href=')}</span></label>
+  <a class="button button-rot zustimmung-weiter" href="${esc(link)}" rel="nofollow" aria-disabled="true" data-zustimmung-weiter>${esc(z.button)} <span aria-hidden="true">→</span></a>
+</dialog>`;
+}
+
 function seitenRahmen(lang, seite, { titel, beschreibung, noindex = false, ogBild }, body) {
   const alt = { de: PFADE[seite].de, en: PFADE[seite].en };
   const url = cfg.domain + PFADE[seite][lang];
@@ -206,6 +220,7 @@ ${ogBild ? `<meta property="og:image" content="${cfg.domain}/assets/img/${ogBild
 </head>
 <body>
 ${body}
+${zustimmungsDialog(lang, body)}
 <script src="/assets/js/site.js?v=${VERSION}" defer></script>
 </body>
 </html>`;
@@ -404,7 +419,7 @@ const reich = (x = "") => esc(x)
   .replace(/\*([^*]+)\*/g, "<em>$1</em>")
   .replace(/\[\[EMAIL\]\]/g, `<a href="mailto:${esc(cfg.anbieter.email)}">${esc(cfg.anbieter.email)}</a>`)
   .replace(/\[\[([^\]]+@[^\]|]+)\]\]/g, '<a href="mailto:$1">$1</a>')
-  .replace(/\[\[(#[a-z0-9-]+)\|([^\]]+)\]\]/g, '<a href="$1">$2</a>');
+  .replace(/\[\[((?:\/[a-z0-9\/-]*)?#[a-z0-9-]+)\|([^\]]+)\]\]/g, '<a href="$1">$2</a>');
 
 function seitePrivacy(lang) {
   const t = T[lang], p = t.privacy;

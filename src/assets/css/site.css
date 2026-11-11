@@ -969,3 +969,16 @@ body:has(.voll-main) { min-height: 100vh; min-height: 100svh; display: flex; fle
 
 /* Download-Meldung: E-Mail-Adresse anklickbar, nicht umbrechen */
 .ebook-meldung .ebook-mail { color: inherit; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+/* Zustimmung vor dem Stripe-Checkout */
+.zustimmung { width: min(520px, calc(100% - 32px)); border: 1px solid var(--tinte); border-radius: 10px; background: var(--creme); color: var(--text); padding: 40px 32px 32px; box-shadow: var(--schatten); }
+.zustimmung::backdrop { background: rgba(31, 27, 26, 0.55); }
+.zustimmung .titel { margin: 0 0 20px; }
+.zustimmung-schliessen-form { position: absolute; top: 10px; right: 12px; margin: 0; }
+.zustimmung-x { background: none; border: 0; font-size: 28px; line-height: 1; color: var(--tinte); cursor: pointer; padding: 6px 10px; }
+.zustimmung-haken { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; font-size: 15px; line-height: 1.55; cursor: pointer; margin-bottom: 28px; }
+.zustimmung-haken input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--rot); cursor: pointer; }
+.zustimmung-haken a { color: var(--tinte); }
+.zustimmung-weiter { width: 100%; justify-content: center; }
+.zustimmung-weiter[aria-disabled="true"] { opacity: .4; cursor: not-allowed; }
+.zustimmung-weiter[aria-disabled="true"]:hover { background: var(--rot); }
