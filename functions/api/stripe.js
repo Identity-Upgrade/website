@@ -5,7 +5,8 @@
 // 2. Wir prüfen die digitale Unterschrift (Kopfzeile Stripe-Signature, HMAC-SHA256 mit dem Webhook-Geheimwert).
 // 3. Kauf bezahlt → Käufer in das Kit-Formular „Käufer Level 1 EN“ eintragen.
 //    Kit schickt danach die Bestätigungsmail (Double Opt-in ist im Formular eingeschaltet).
-// 4. Erstattung oder Rückbuchung → Kontakt in Kit mit dem Refund-Tag (EN) markieren.
+// 4. Ist eine Zustimmung gespeichert (client_reference_id), wird sie mit der Bestellung verknüpft.
+// 5. Erstattung oder Rückbuchung → Kontakt in Kit mit dem Refund-Tag (EN) markieren.
 //
 // Benötigt in Cloudflare (Production und Preview):
 // - Geheimwert STRIPE_WEBHOOK_SECRET = Signaturgeheimnis des Webhooks (whsec_…)
@@ -64,6 +65,27 @@ async function emailZurZahlung(env, paymentIntent, ersatz) {
   return (s && ((s.customer_details && s.customer_details.email) || s.customer_email)) || "";
 }
 
+// Gespeicherte Zustimmung (aus /api/zustimmung) mit der Bestellung verknüpfen
+async function zustimmungVerknuepfen(env, sitzung) {
+  try {
+    const id = String(sitzung.client_reference_id || "").replace(/[^A-Za-z0-9]/g, "");
+    if (!id || !env.EBOOKS) return "ohne Kennung";
+    const key = `zustimmungen/${id}.json`;
+    const obj = await env.EBOOKS.get(key);
+    if (!obj) return "Kennung nicht gefunden";
+    const notiz = await obj.json();
+    notiz.bestellung = {
+      stripeSitzung: sitzung.id || null,
+      zahlung: sitzung.payment_intent || null,
+      bezahltUm: new Date((sitzung.created || Date.now() / 1000) * 1000).toISOString(),
+    };
+    await env.EBOOKS.put(key, JSON.stringify(notiz, null, 2), { httpMetadata: { contentType: "application/json" } });
+    return "verknüpft";
+  } catch (e) {
+    return "Fehler";
+  }
+}
+
 export async function onRequestPost({ request, env }) {
   const roh = await request.text();
   if (!(await unterschriftGueltig(request.headers.get("Stripe-Signature"), roh, env.STRIPE_WEBHOOK_SECRET))) {
@@ -92,6 +114,7 @@ export async function onRequestPost({ request, env }) {
           eintrag.ergebnis = kit.ok ? "in Kit eingetragen" : "Kit-Fehler";
           eintrag.kit = { anlegen: kit.anlegen, formular: kit.formular, meldung: kit.anlegenMeldung || kit.formularMeldung };
         }
+        eintrag.zustimmung = await zustimmungVerknuepfen(env, obj);
       }
     } else if (typ === "charge.refunded" || typ === "charge.dispute.created") {
       const paymentIntent = obj.payment_intent;

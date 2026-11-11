@@ -543,7 +543,7 @@
           },
           {
             "label": "When you download the e-book",
-            "p": "When you buy an e-book, we store the times you opened the thank-you page and downloaded the e-book, together with your order number. We use this information only to provide the download and to help you if something goes wrong. This information is stored with Cloudflare."
+            "p": "When you buy an e-book, we store the times you opened the thank-you page and downloaded the e-book, together with your order number. We use this information only to provide the download and to help you if something goes wrong. Before checkout, you confirm that you request immediate access and lose your right of withdrawal. We store the time and exact wording of this confirmation together with your order number, so we can prove it if there is ever a dispute. This information is stored with Cloudflare."
           }
         ]
       },

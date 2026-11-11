@@ -112,7 +112,21 @@
     var zZiel = zWeiter.getAttribute("href");
     var zStand = function () { zWeiter.setAttribute("aria-disabled", zHaken.checked ? "false" : "true"); };
     zHaken.addEventListener("change", zStand);
-    zWeiter.addEventListener("click", function (e) { if (!zHaken.checked) { e.preventDefault(); zHaken.focus(); } });
+    zWeiter.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (!zHaken.checked) { zHaken.focus(); return; }
+      // Zustimmung mit zufälliger Kennung speichern und dieselbe Kennung an Stripe mitgeben (Nachweis im Streitfall)
+      var zId = "";
+      try { zId = crypto.randomUUID().replace(/-/g, ""); } catch (x) { zId = (Date.now().toString(36) + Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2)).replace(/[^a-z0-9]/g, ""); }
+      var zText = zHaken.parentNode.textContent.replace(/\s+/g, " ").trim();
+      var zDaten = JSON.stringify({ id: zId, lang: document.documentElement.lang || "en", text: zText, seite: location.pathname });
+      var zLos = false, weiter = function () { if (zLos) return; zLos = true; location.href = zZiel + (zZiel.indexOf("?") < 0 ? "?" : "&") + "client_reference_id=" + zId; };
+      try {
+        fetch("/api/zustimmung", { method: "POST", headers: { "Content-Type": "application/json" }, body: zDaten, keepalive: true })
+          .then(weiter, weiter);
+        setTimeout(weiter, 2500);
+      } catch (x) { weiter(); }
+    });
     document.querySelectorAll('a[href="' + zZiel + '"]').forEach(function (a) {
       if (a === zWeiter) return;
       a.addEventListener("click", function (e) { e.preventDefault(); zHaken.checked = false; zStand(); zd.showModal(); });
