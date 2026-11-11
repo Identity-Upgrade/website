@@ -403,7 +403,8 @@ const reich = (x = "") => esc(x)
   .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
   .replace(/\*([^*]+)\*/g, "<em>$1</em>")
   .replace(/\[\[EMAIL\]\]/g, `<a href="mailto:${esc(cfg.anbieter.email)}">${esc(cfg.anbieter.email)}</a>`)
-  .replace(/\[\[([^\]]+@[^\]]+)\]\]/g, '<a href="mailto:$1">$1</a>');
+  .replace(/\[\[([^\]]+@[^\]|]+)\]\]/g, '<a href="mailto:$1">$1</a>')
+  .replace(/\[\[(#[a-z0-9-]+)\|([^\]]+)\]\]/g, '<a href="$1">$2</a>');
 
 function seitePrivacy(lang) {
   const t = T[lang], p = t.privacy;

@@ -823,6 +823,56 @@
             "p": "We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board."
           }
         ]
+      },
+      {
+        "id": "terms",
+        "t": "Terms of *Sale.*",
+        "teile": [
+          {
+            "label": "1. Seller",
+            "p": "\"Escape Self-Sabotage – Level 1\" is published by KLEWERINN LLP, Canada (brand: Identity Upgrade). Company details are listed in the Legal Notice above."
+          },
+          {
+            "label": "2. Merchant of record",
+            "p": "Payments are processed by Link (Stripe) as merchant of record. Link handles payment, sales tax/VAT, invoicing and payment support. Your purchase is shown as \"Sold through Link\"."
+          },
+          {
+            "label": "3. Product and price",
+            "p": "The product is a digital e-book (PDF). The price is shown at checkout in US dollars and includes all applicable taxes."
+          },
+          {
+            "label": "4. Delivery",
+            "p": "After successful payment, you are redirected to a download page and receive access to the e-book immediately. If you do not receive access, please contact [[EMAIL]]."
+          },
+          {
+            "label": "5. License",
+            "p": "You receive a personal, non-transferable license to read and use the e-book for your own purposes. You may not copy, share, resell or publish the e-book or parts of it, in whole or in part. For license requests (e.g. for teams or coaching programs), please contact [[EMAIL]]."
+          },
+          {
+            "label": "6. Refund Policy",
+            "p": "See \"[[#refund-policy|Refund Policy]]\" below."
+          },
+          {
+            "label": "7. No guarantee of results",
+            "p": "The e-book provides information and exercises for personal development. It does not replace medical, psychological or therapeutic treatment. Results depend on your own application."
+          },
+          {
+            "label": "8. Contact",
+            "p": "[[EMAIL]]"
+          }
+        ]
+      },
+      {
+        "id": "refund-policy",
+        "t": "Refund *Policy.*",
+        "teile": [
+          {
+            "p": [
+              "\"Escape Self-Sabotage – Level 1\" is a digital product (e-book) that is made available for download immediately after purchase. By completing your purchase, you agree to immediate delivery and acknowledge that all sales are final. We do not offer returns, exchanges or refunds.",
+              "Purchases are processed by Link (Stripe) as merchant of record. Questions about your payment can be directed to Link support or to [[EMAIL]]."
+            ]
+          }
+        ]
       }
     ]
   },
