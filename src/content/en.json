@@ -537,7 +537,7 @@
           },
           {
             "label": "When you download the e-book",
-            "p": "When you buy an e-book, we store the times you opened the thank-you page and downloaded the e-book, together with your order number. We use this information only to provide the download and to help you if something goes wrong. We don't store your email address for this purpose; it remains with Link (Stripe). This information is stored with Cloudflare."
+            "p": "When you buy an e-book, we store the times you opened the thank-you page and downloaded the e-book, together with your order number. We use this information only to provide the download and to help you if something goes wrong. This information is stored with Cloudflare."
           }
         ]
       },
